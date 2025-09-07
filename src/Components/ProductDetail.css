@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* Background wrapper */
+.product-detail-container {
+  height: 93VH;
+  background-image: url("/img/IMG31.JPEG");
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Card */
+.product-detail-card {
+  background: #000000aa;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  text-align: center;
+  width: 90%;
+}
+
+/* Product image */
+.product-detail-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.product-title {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Description */
+.product-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ececec;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.back-button {
+  background: #6b4226;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #8b5e3c;
+}

@@ -1,0 +1,141 @@
+.social-section {
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/img/smbg1.jpg") no-repeat center center/cover;
+  filter: blur(0px) brightness(0.8);
+  transform: scale(1.1); 
+ 
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.social-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Owner Image with glow */
+.owner-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+.owner-image img:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+/* Owner Details */
+.owner-detail {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.owner-name {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  font-family: "Anton", sans-serif;
+}
+.owner-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 0px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  color: #e0e0e0;
+}
+.social-heading {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #ffd6aa;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+}
+
+/* Social Cards */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.social-card img {
+  width: 26px;
+  height: 26px;
+}
+
+/* Specific branding colors */
+.youtube { background: linear-gradient(135deg, #ff0000, #b31217); }
+.instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+.facebook { background: linear-gradient(135deg, #1877f2, #004aad); }
+.snapchat { background: linear-gradient(135deg, #fffc00, #ffcc00); color: #000; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .social-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
+  }
+  .owner-image img {
+    margin: 0 auto 20px;
+  }
+  .social-links {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .owner-name {
+    font-size: 1.8rem;
+  }
+  .owner-image img {
+    width: 200px;
+    height: 200px;
+  }
+}

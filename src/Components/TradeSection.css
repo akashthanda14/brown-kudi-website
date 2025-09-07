@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.trade-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: url("/img/Imgbg.jpg") no-repeat center center fixed;
+    /* ✅ parallax bg */
+    background-size: cover;
+    position: relative;
+}
+
+.trade-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    /* dark overlay */
+    z-index: 0;
+}
+
+.section-title {
+    font-size: 4rem;
+    margin-bottom: 40px;
+    font-weight: 100;
+    font-family: "Anton";
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.995);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.trade-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.trade-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.499);
+    color: white;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trade-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.trade-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.trade-name {
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 15px 0 10px;
+    color: #ffffff;
+    font-family: "Bebas Neue";
+}
+
+.trade-detail {
+    font-size: 0.95rem;
+    color: #cac4c4;
+    font-family: "Oswald", sans-serif;
+}
+
+.more-info-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.more-info-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #6b4226;
+    /* brown shade */
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.more-info-btn:hover {
+    background: #8b5e34;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 100;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.995);
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+}
+

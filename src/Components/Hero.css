@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: url("/images/bg-fallback.jpg") no-repeat center center/cover; /* fallback */
+}
+
+/* Fallback div jab tak video load ho rahi ho */
+.fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/bg-fallback.jpg") no-repeat center center/cover;
+    z-index: 0;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Shared h1 style */
+.hero-content h1 {
+    margin: 10px 0;
+    animation: fadeInDown 1s ease;
+}
+
+/* Fonts alag-alag */
+.brown-text {
+    font-family: "efont", Georgia, serif;
+    font-size: 4rem;
+    text-shadow: 1px 1px 1px rgb(255, 182, 126);
+}
+
+.kudi-text {
+    font-family: "pfont";
+    font-size: 5rem;
+    text-shadow: 1px 1px 1px rgb(255, 182, 126);
+}
+
+.welder-text {
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: rgb(255, 204, 170);
+    font-family: "Anton";
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    animation: fadeInUp 1.2s ease;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Language Select */
+.language-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #ffffff;
+    color: #543636;
+    transition: 0.3s ease;
+}
+
+.language-select:hover {
+    background: #ffccac;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .language-select {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    .brown-text {
+        font-size: 3rem;
+    }
+}

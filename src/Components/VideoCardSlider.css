@@ -1,0 +1,58 @@
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: #3e272300;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.video-swiper {
+  width: 100%;
+}
+
+.video-card {
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
+}
+
+.video-card video {
+  width: 100%;
+  height: 500px;
+  border: 2px solid rgb(255, 255, 255);
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(255, 255, 255);
+  right: 10px;
+  transition: 0.3s ease;
+  z-index: 1;
+    padding: 30px;
+  border-radius: 50%;
+  background-color: #613624;
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 50%;
+  background-color: white;
+}

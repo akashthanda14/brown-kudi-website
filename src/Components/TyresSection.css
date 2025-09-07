@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+.tyre-section {
+background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url("/img/tyrepng.png");
+    background-repeat: no-repeat;
+    background-size: 308px;
+    height: auto;
+}
+.tyre-section {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  background-image: url("/img/tyrepng.png");
+  background-repeat: no-repeat;
+  height: auto;
+  position: relative; /* 👈 required */
+  z-index: 1;
+}
+
+/* Container */
+.tyre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Tyre Image with Rotation */
+.tyre-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+    animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Content Styling */
+.tyre-content h2 {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #b1b1b1;
+    font-family: "Anton", sans-serif;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.tyre-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+     font-family: "Oswald", sans-serif;
+}
+
+.tyre-content button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #3e2723;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tyre-content button:hover {
+    background: #ffffff;
+    color: #3e2723;
+    border: 1px solid #3e2723;
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+    .tyre-content h2 {
+        font-size: 3rem;
+    }
+
+    .tyre-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 430px) {
+    .tyre-content h2 {
+        font-size: 3rem;
+    }
+
+    .tyre-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tyre-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .tyre-image img {
+        margin: 0 auto;
+    }
+    .tyre-section{
+        background: #ffffff;
+    }
+    .tyre-image img {
+    width: 276px;
+    height: 277px;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+    animation: spin 12s linear infinite;
+}
+}
+
+

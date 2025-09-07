@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.tyres-page {
+  position: relative; /* overlay ke liye */
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/tyrebg.jpeg");
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Black overlay */
+.tyres-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* ✅ Dark overlay */
+  z-index: -1; /* overlay background ke neeche */
+}
+
+/* ---------- Owner Section ---------- */
+.owner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 40px;
+  flex-wrap: wrap; /* ✅ Mobile pe automatic wrap */
+}
+
+.owner-image img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.owner-details {
+  max-width: 600px;
+  flex: 1;
+  text-align: left;
+}
+
+#ownerh1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: rgb(255, 255, 255); 
+}
+
+.owner-details p {
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: white;
+  
+}
+
+/* ---------- Tyres Section ---------- */
+.tyres-section {
+  text-align: center;
+}
+
+.tyres-section h2 {
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+
+  margin-bottom: 30px;
+
+  color: rgb(255, 255, 255);
+}
+
+.tyres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Default: responsive */
+  gap: 25px;
+}
+
+.tyre-card {
+  background: #ffffffa7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tyre-card:hover {
+  transform: translateY(-8px);
+}
+
+.tyre-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tyre-card h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: "Bebas Neue", sans-serif;
+
+  color: #222;
+}
+
+.tyre-card p {
+  font-size: 0.95rem;
+  color: #464444;
+  font-family: 'Oswald', sans-serif;
+
+  line-height: 1.5;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .owner-section {
+    gap: 20px;
+    text-align: center;
+  }
+
+  .owner-details {
+    text-align: center;
+  }
+
+  .owner-details h1 {
+    font-size: 1.8rem;
+  }
+
+  .owner-details p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .owner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 40px;
+  flex-direction: column; /* ✅ Mobile pe automatic wrap */
+}
+  .tyres-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Force 2 cards per row */
+    gap: 15px;
+  }
+
+  .tyre-card {
+    padding: 12px;
+  }
+
+  .tyre-card h3 {
+    font-size: 1rem;
+  }
+
+  .tyre-card p {
+    font-size: 0.85rem;
+  }
+}

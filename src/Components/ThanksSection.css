@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.thanks-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* default: 50% of screen */
+  background: url("/img/thanks.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* 👉 text right side */
+  overflow: hidden;
+  padding-right: 5%;
+}
+
+.thanks-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.thanks-content {
+  color: #fff;
+  /* white text, background ke upar achha lagega */
+  font-size: 3rem;
+
+  /* readability ke liye */
+  margin: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+}
+
+.thanks-section h1 {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  color: rgb(255, 234, 202);
+  font-size: 5rem;
+  text-align: right;
+  font-weight: 900;
+  font-family: "Caveat";
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+@media (max-width: 1566px) {
+  .thanks-section h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1200px) {
+  .thanks-section h1 {
+    font-size: 3.5rem;
+    width: 49%;
+  }
+}
+@media (max-width: 915px) {
+  .thanks-section h1 {
+    font-size: 3rem;
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .thanks-section h1 {
+    font-size: 2.3rem;
+  }
+
+  .thanks-section {
+    height: 20vh;
+  }
+}
+@media (max-width: 680px) {
+  .thanks-section h1 {
+    font-size: 2rem;
+  }
+
+  .thanks-section {
+    height: 20vh;
+  }
+}
+@media (max-width: 530px) {
+  .thanks-section h1 {
+    font-size: 1.7rem;
+    width: 50%;
+  }
+
+  .thanks-section {
+    height: 20vh;
+  }
+}
+@media (max-width: 480px) {
+  .thanks-section {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+
+  }
+
+  .thanks-section h1 {
+    font-size: 1.2rem;
+    text-align: right;
+    width: 50%;
+  }
+
+  .thanks-section {
+    height: 15vh;
+  }
+}

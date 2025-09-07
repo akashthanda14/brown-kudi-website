@@ -1,0 +1,122 @@
+verlay shadows */ .shadow-left,
+.shadow-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 10;
+    pointer-events: none;
+
+}
+
+.shadow-left {
+    left: 0;
+    background: linear-gradient(to right, #17181d, rgba(255, 255, 255, 0) 100%);
+}
+
+.shadow-right {
+    right: 0;
+    background: linear-gradient(to left, #17181d, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Ensure wrapper is relative */
+.slider-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-section {
+    height: 60vh;
+    background: #fff8f0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-heading {
+    color: #b1b1b1;
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    font-family: "Anton";
+    font-weight: 100;
+    text-align: center;
+    animation: slideInFromTop 1s ease-out forwards;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.slider-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.slide video {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+@media (max-width: 1142px) {
+    .slider-heading {
+        font-size: 4rem;
+    }
+
+
+}
+
+@media (max-width: 920px) {
+    .slider-heading {
+        font-size: 3rem;
+    }
+
+
+}
+
+@media (max-width: 820px) {
+    .slider-heading {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .slider-heading {
+        font-size: 2rem;
+    }
+
+
+}
