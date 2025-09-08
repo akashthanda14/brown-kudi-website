@@ -110,18 +110,75 @@ nav ul li a:hover,
   color: var(--clr-primary) !important; /* Green instead of clay for "Brown" */
 }
 
-/* Ensure buttons use the agricultural palette */
-button:not(.navbar__toggle):not(.back-button):not(.contact-form button),
-.btn:not(.back-button),
-a[id="btn"] {
+/* Ensure buttons use the agricultural palette - but NOT navbar links */
+button:not(.navbar__toggle):not(.back-button):not(.contact-form button):not(.navbar__link):not(.navbar__dropdown-trigger),
+.btn:not(.back-button):not(.navbar__link):not(.navbar__dropdown-link),
+a[id="btn"]:not(.navbar__link) {
   background: var(--clr-primary) !important;
   color: white !important;
   border-color: var(--clr-primary) !important;
 }
 
-button:not(.navbar__toggle):not(.back-button):not(.contact-form button):hover,
-.btn:not(.back-button):hover,
-a[id="btn"]:hover {
+button:not(.navbar__toggle):not(.back-button):not(.contact-form button):not(.navbar__link):not(.navbar__dropdown-trigger):hover,
+.btn:not(.back-button):not(.navbar__link):not(.navbar__dropdown-link):hover,
+a[id="btn"]:not(.navbar__link):hover {
   background: var(--clr-primary-dark) !important;
   border-color: var(--clr-primary-dark) !important;
+}
+
+/* Ensure navbar links have proper styling - no background colors */
+.navbar__link,
+.navbar__dropdown-trigger,
+.navbar__dropdown-link,
+.navbar__mobile-link {
+  background: transparent !important;
+  color: var(--clr-text) !important;
+}
+
+.navbar__link:hover,
+.navbar__dropdown-trigger:hover,
+.navbar__dropdown-link:hover,
+.navbar__mobile-link:hover {
+  background: transparent !important;
+  color: var(--clr-primary) !important;
+}
+
+.navbar__dropdown-trigger--active {
+  background: transparent !important;
+  color: var(--clr-primary) !important;
+}
+
+/* Force language selector and CTA button to use agricultural colors */
+.navbar__language-select {
+  border-color: var(--clr-border) !important;
+  color: var(--clr-text) !important;
+}
+
+.navbar__language-select:hover,
+.navbar__language-select:focus {
+  border-color: var(--clr-primary) !important;
+}
+
+.navbar__cta {
+  background: var(--clr-primary) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+.navbar__cta:hover,
+.navbar__cta:focus {
+  background: transparent !important;
+  border-color: var(--clr-primary) !important;
+  color: var(--clr-primary) !important;
+}
+
+/* Force brand text colors */
+.navbar__brand-brown,
+.navbar__mobile-brand .navbar__brand-brown {
+  color: var(--clr-primary) !important;
+}
+
+/* Force dropdown icon colors */
+.navbar__dropdown-link svg {
+  color: var(--clr-primary) !important;
 }

@@ -33,12 +33,6 @@ const Hero = () => {
     },
   };
 
-  const stats = [
-    { number: "5+", label: "Years Farming", icon: "fas fa-calendar-alt" },
-    { number: "25", label: "Acres Managed", icon: "fas fa-seedling" },
-    { number: "50K+", label: "Community Reach", icon: "fas fa-users" }
-  ];
-
   // Intersection Observer for entrance animations
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -227,19 +221,6 @@ const Hero = () => {
               <option value="punjabi">ਪੰ</option>
             </select>
           </div>
-        </div>
-
-        {/* Stats */}
-        <div className="hero__stats" role="region" aria-label="Farming statistics">
-          {stats.map((stat, index) => (
-            <div key={index} className="hero__stat">
-              <i className={`${stat.icon} hero__stat-icon`} aria-hidden="true" />
-              <div className="hero__stat-content">
-                <div className="hero__stat-number">{stat.number}</div>
-                <div className="hero__stat-label">{stat.label}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
