@@ -17,7 +17,7 @@ const Hero = () => {
       title: "Brown Kudi",
       subtitle: "Cultivating Dreams, Growing Stories",
       tagline: "From soil to soul, sharing the farmer's journey",
-      cta: "Explore My Fields"
+      cta: "Explore My Work"
     },
     hindi: { 
       title: "ब्राउन कुड़ी", 
@@ -110,9 +110,9 @@ const Hero = () => {
   }, []);
 
   const handleCTAClick = () => {
-    const portfolioSection = document.getElementById('portfolio');
-    if (portfolioSection) {
-      portfolioSection.scrollIntoView({ 
+    const tyresSection = document.getElementById('tyres');
+    if (tyresSection) {
+      tyresSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
@@ -198,9 +198,9 @@ const Hero = () => {
           <button
             className="hero__cta"
             onClick={handleCTAClick}
-            aria-label={`${translations[language].cta} - Navigate to portfolio`}
+            aria-label={`${translations[language].cta} - Navigate to tyres section`}
           >
-            <i className="fas fa-leaf hero__cta-icon" aria-hidden="true" />
+            <i className="fas fa-tractor hero__cta-icon" aria-hidden="true" />
             <span>{translations[language].cta}</span>
           </button>
 

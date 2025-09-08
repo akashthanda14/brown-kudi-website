@@ -15,7 +15,7 @@ export default function TyreSection() {
   };
 
   return (
-    <section className="tyre-section">
+    <section id="tyres" className="tyre-section">
       <div className="tyre-container">
         {/* Left - Tyre Image */}
         <motion.div
