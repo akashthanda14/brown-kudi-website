@@ -58,7 +58,7 @@
 
 /* Button */
 .back-button {
-  background: #6b4226;
+  background: #6DA34D;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -70,5 +70,5 @@
 }
 
 .back-button:hover {
-  background: #8b5e3c;
+  background: #5a8f42;
 }

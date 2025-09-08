@@ -1,0 +1,466 @@
+/* ===========================
+   BROWN KUDI DESIGN SYSTEM
+   Farm-Chic Design Tokens
+   =========================== */
+
+/* ===========================
+   DESIGN FOUNDATIONS
+   =========================== */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ===========================
+     FARM-CHIC COLOR PALETTE
+     =========================== */
+  
+  /* Primary Colors - Earth & Soil */
+  --soil-brown: #3B2F2F;          /* Rich, dark soil - primary brand color */
+  --earth-brown: #8B7355;         /* Weathered earth - text and UI elements */
+  --clay-brown: #A68B5B;          /* Clay soil - secondary accents */
+  
+  /* Secondary Colors - Nature & Growth */
+  --leaf-green: #6DA34D;          /* Fresh leaf green - CTAs and highlights */
+  --sage-green: #87A96B;          /* Sage green - hover states and accents */
+  --forest-green: #5D8233;        /* Deep forest - active states */
+  
+  /* Accent Colors - Harvest & Sun */
+  --wheat-gold: #D5C586;          /* Golden wheat - borders and highlights */
+  --harvest-gold: #E6D49A;        /* Light harvest gold - subtle accents */
+  --sunrise-gold: #F2E7B3;        /* Pale sunrise - very subtle backgrounds */
+  
+  /* Neutral Colors - Natural Base */
+  --cream: #F8F6F0;               /* Warm cream - main background */
+  --milk-white: #FFFFFF;          /* Pure white - cards and overlays */
+  --stone-gray: #E8E5DD;          /* Light stone - borders and dividers */
+  --charcoal: #2C2C2C;            /* Dark charcoal - high contrast text */
+  
+  /* Semantic Colors */
+  --success-green: var(--leaf-green);
+  --warning-gold: var(--wheat-gold);
+  --error-red: #D44333;
+  --info-blue: #4A90A4;
+  
+  /* ===========================
+     TYPOGRAPHY SCALE
+     =========================== */
+  
+  /* Font Families */
+  --font-primary: 'Playfair Display', serif;    /* Headings, elegant text */
+  --font-secondary: 'Inter', sans-serif;        /* Body text, UI elements */
+  --font-punjabi: 'Noto Sans Gurmukhi', sans-serif; /* Punjabi text */
+  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  
+  /* Font Sizes - Fluid Typography */
+  --text-xs: clamp(0.75rem, 0.95vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 1.1vw, 1rem);
+  --text-base: clamp(1rem, 1.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.4vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.6vw, 1.375rem);
+  --text-2xl: clamp(1.5rem, 2vw, 1.75rem);
+  --text-3xl: clamp(1.875rem, 2.5vw, 2.25rem);
+  --text-4xl: clamp(2.25rem, 3vw, 3rem);
+  --text-5xl: clamp(3rem, 4vw, 4rem);
+  --text-6xl: clamp(3.75rem, 5vw, 5rem);
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* ===========================
+     SPACING SCALE
+     =========================== */
+  
+  --space-px: 1px;
+  --space-0: 0;
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 0.75rem;    /* 12px */
+  --space-lg: 1rem;       /* 16px */
+  --space-xl: 1.5rem;     /* 24px */
+  --space-2xl: 2rem;      /* 32px */
+  --space-3xl: 3rem;      /* 48px */
+  --space-4xl: 4rem;      /* 64px */
+  --space-5xl: 6rem;      /* 96px */
+  --space-6xl: 8rem;      /* 128px */
+  
+  /* Component Spacing */
+  --section-padding: clamp(var(--space-3xl), 8vw, var(--space-6xl));
+  --container-padding: clamp(var(--space-lg), 4vw, var(--space-3xl));
+  --card-padding: var(--space-xl);
+  --button-padding-x: var(--space-xl);
+  --button-padding-y: var(--space-md);
+  
+  /* ===========================
+     LAYOUT & SIZING
+     =========================== */
+  
+  /* Container Widths */
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+  --container-max: 1600px;
+  
+  /* Component Heights */
+  --navbar-height: 80px;
+  --navbar-height-scrolled: 70px;
+  --footer-height: auto;
+  --hero-height: 100vh;
+  --hero-height-mobile: 80vh;
+  
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+  
+  /* ===========================
+     SHADOWS & DEPTH
+     =========================== */
+  
+  /* Soft Natural Shadows */
+  --shadow-xs: 0 1px 2px rgba(59, 47, 47, 0.05);
+  --shadow-sm: 0 2px 4px rgba(59, 47, 47, 0.06);
+  --shadow-base: 0 4px 8px rgba(59, 47, 47, 0.08);
+  --shadow-md: 0 4px 16px rgba(59, 47, 47, 0.1);
+  --shadow-lg: 0 8px 24px rgba(59, 47, 47, 0.12);
+  --shadow-xl: 0 16px 40px rgba(59, 47, 47, 0.15);
+  --shadow-2xl: 0 24px 60px rgba(59, 47, 47, 0.2);
+  
+  /* Colored Shadows */
+  --shadow-green: 0 4px 16px rgba(109, 163, 77, 0.2);
+  --shadow-gold: 0 4px 16px rgba(213, 197, 134, 0.2);
+  --shadow-brown: 0 4px 16px rgba(139, 115, 85, 0.2);
+  
+  /* Inner Shadows */
+  --shadow-inner: inset 0 2px 4px rgba(59, 47, 47, 0.06);
+  --shadow-inner-lg: inset 0 4px 8px rgba(59, 47, 47, 0.1);
+  
+  /* ===========================
+     ANIMATIONS & TRANSITIONS
+     =========================== */
+  
+  /* Easing Functions - Organic Motion */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-organic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Duration Scale */
+  --duration-fast: 0.15s;
+  --duration-base: 0.2s;
+  --duration-medium: 0.3s;
+  --duration-slow: 0.5s;
+  --duration-slower: 0.75s;
+  --duration-slowest: 1s;
+  
+  /* Common Transitions */
+  --transition-fast: var(--duration-fast) var(--ease-organic);
+  --transition-base: var(--duration-base) var(--ease-organic);
+  --transition-medium: var(--duration-medium) var(--ease-organic);
+  --transition-slow: var(--duration-slow) var(--ease-organic);
+  --transition-colors: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+  --transition-transform: transform var(--transition-base);
+  --transition-opacity: opacity var(--transition-base);
+  --transition-all: all var(--transition-base);
+  
+  /* ===========================
+     BREAKPOINTS
+     =========================== */
+  
+  /* Mobile First Approach */
+  --bp-xs: 480px;     /* Small phones */
+  --bp-sm: 640px;     /* Large phones */
+  --bp-md: 768px;     /* Tablets */
+  --bp-lg: 1024px;    /* Small laptops */
+  --bp-xl: 1280px;    /* Laptops */
+  --bp-2xl: 1536px;   /* Desktop */
+  
+  /* ===========================
+     Z-INDEX SCALE
+     =========================== */
+  
+  --z-behind: -1;
+  --z-base: 0;
+  --z-docked: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-banner: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-skipLink: 700;
+  --z-toast: 800;
+  --z-tooltip: 900;
+  --z-navbar: 1000;
+  --z-max: 9999;
+}
+
+/* ===========================
+   COMPONENT TOKENS
+   =========================== */
+
+/* Button Variants */
+:root {
+  /* Primary Button - Leaf Green */
+  --btn-primary-bg: var(--leaf-green);
+  --btn-primary-hover-bg: var(--sage-green);
+  --btn-primary-active-bg: var(--forest-green);
+  --btn-primary-text: var(--milk-white);
+  --btn-primary-shadow: var(--shadow-green);
+  
+  /* Secondary Button - Wheat Gold */
+  --btn-secondary-bg: var(--wheat-gold);
+  --btn-secondary-hover-bg: var(--harvest-gold);
+  --btn-secondary-active-bg: var(--clay-brown);
+  --btn-secondary-text: var(--soil-brown);
+  --btn-secondary-shadow: var(--shadow-gold);
+  
+  /* Tertiary Button - Earth Brown */
+  --btn-tertiary-bg: transparent;
+  --btn-tertiary-hover-bg: rgba(139, 115, 85, 0.1);
+  --btn-tertiary-active-bg: rgba(139, 115, 85, 0.2);
+  --btn-tertiary-text: var(--earth-brown);
+  --btn-tertiary-border: var(--earth-brown);
+  
+  /* Card Components */
+  --card-bg: var(--milk-white);
+  --card-border: rgba(213, 197, 134, 0.3);
+  --card-shadow: var(--shadow-md);
+  --card-hover-shadow: var(--shadow-lg);
+  --card-radius: var(--radius-md);
+  
+  /* Form Elements */
+  --input-bg: var(--cream);
+  --input-border: rgba(139, 115, 85, 0.3);
+  --input-focus-border: var(--leaf-green);
+  --input-text: var(--earth-brown);
+  --input-placeholder: rgba(139, 115, 85, 0.6);
+  --input-radius: var(--radius-base);
+  
+  /* Navbar Specific */
+  --navbar-bg-transparent: transparent;
+  --navbar-bg-scrolled: rgba(248, 246, 240, 0.95);
+  --navbar-text-light: var(--cream);
+  --navbar-text-dark: var(--earth-brown);
+  --navbar-border-scrolled: rgba(213, 197, 134, 0.3);
+}
+
+/* ===========================
+   UTILITY CLASSES
+   =========================== */
+
+/* Typography Utilities */
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+.font-punjabi { font-family: var(--font-punjabi); }
+
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+.text-6xl { font-size: var(--text-6xl); }
+
+.weight-light { font-weight: var(--weight-light); }
+.weight-normal { font-weight: var(--weight-normal); }
+.weight-medium { font-weight: var(--weight-medium); }
+.weight-semibold { font-weight: var(--weight-semibold); }
+.weight-bold { font-weight: var(--weight-bold); }
+.weight-extrabold { font-weight: var(--weight-extrabold); }
+
+/* Color Utilities */
+.text-soil { color: var(--soil-brown); }
+.text-earth { color: var(--earth-brown); }
+.text-leaf { color: var(--leaf-green); }
+.text-sage { color: var(--sage-green); }
+.text-wheat { color: var(--wheat-gold); }
+.text-cream { color: var(--cream); }
+
+.bg-soil { background-color: var(--soil-brown); }
+.bg-earth { background-color: var(--earth-brown); }
+.bg-leaf { background-color: var(--leaf-green); }
+.bg-sage { background-color: var(--sage-green); }
+.bg-wheat { background-color: var(--wheat-gold); }
+.bg-cream { background-color: var(--cream); }
+
+/* Spacing Utilities */
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+.p-2xl { padding: var(--space-2xl); }
+.p-3xl { padding: var(--space-3xl); }
+
+.m-xs { margin: var(--space-xs); }
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }
+.m-lg { margin: var(--space-lg); }
+.m-xl { margin: var(--space-xl); }
+.m-2xl { margin: var(--space-2xl); }
+.m-3xl { margin: var(--space-3xl); }
+
+/* Border Radius Utilities */
+.rounded-none { border-radius: var(--radius-none); }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded { border-radius: var(--radius-base); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: var(--radius-2xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadow Utilities */
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow { box-shadow: var(--shadow-base); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+/* ===========================
+   COMPONENT BASE STYLES
+   =========================== */
+
+/* Card Base */
+.card-base {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding);
+  transition: var(--transition-all);
+}
+
+.card-base:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+}
+
+/* Button Base */
+.btn-base {
+  font-family: var(--font-secondary);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition: var(--transition-all);
+  white-space: nowrap;
+}
+
+.btn-base:hover {
+  transform: translateY(-1px);
+}
+
+.btn-base:active {
+  transform: translateY(0);
+}
+
+/* Input Base */
+.input-base {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  padding: var(--space-md) var(--space-lg);
+  color: var(--input-text);
+  transition: var(--transition-colors);
+  width: 100%;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px rgba(109, 163, 77, 0.1);
+}
+
+.input-base::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Focus Visible Styles */
+.focus-visible {
+  outline: 2px solid var(--leaf-green);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --card-border: var(--earth-brown);
+    --input-border: var(--earth-brown);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: none;
+    --transition-base: none;
+    --transition-medium: none;
+    --transition-slow: none;
+    --transition-colors: none;
+    --transition-transform: none;
+    --transition-opacity: none;
+    --transition-all: none;
+  }
+  
+  .card-base:hover,
+  .btn-base:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  :root {
+    --shadow-xs: none;
+    --shadow-sm: none;
+    --shadow-base: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+    --shadow-2xl: none;
+  }
+}

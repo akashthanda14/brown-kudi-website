@@ -89,8 +89,8 @@
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #6b4226;
-    /* brown shade */
+    background-color: #6DA34D;
+    /* agricultural green */
     color: #fff;
     border-radius: 8px;
     font-weight: bold;
@@ -99,7 +99,7 @@
 }
 
 .more-info-btn:hover {
-    background: #8b5e34;
+    background: #5a8f42;
 }
 
 @media (max-width: 768px) {

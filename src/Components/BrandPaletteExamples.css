@@ -1,0 +1,373 @@
+/* Agricultural Brand Palette Usage Examples for Brown Kudi */
+
+/* =============================================================================
+   BUTTON STYLES USING AGRICULTURAL PALETTE
+   ============================================================================= */
+
+/* Primary Action Button (Green) */
+.btn-primary {
+  background: var(--clr-primary);
+  color: var(--clr-text-on-primary);
+  border: 2px solid var(--clr-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: all var(--transition-duration) var(--ease-smooth);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--clr-primary-dark);
+  border-color: var(--clr-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Secondary Action Button (Clay) */
+.btn-secondary {
+  background: var(--clr-accent);
+  color: var(--clr-text-on-accent);
+  border: 2px solid var(--clr-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: all var(--transition-duration) var(--ease-smooth);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: var(--clr-accent-dark);
+  border-color: var(--clr-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Outline Button (Green) */
+.btn-outline {
+  background: transparent;
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: all var(--transition-duration) var(--ease-smooth);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-outline:hover {
+  background: var(--clr-primary);
+  color: var(--clr-text-on-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Ghost Button (Subtle) */
+.btn-ghost {
+  background: transparent;
+  color: var(--clr-text);
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: var(--text-base);
+  transition: all var(--transition-duration) var(--ease-smooth);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-ghost:hover {
+  background: var(--clr-neutral);
+  color: var(--clr-text);
+  border-color: var(--clr-border);
+}
+
+/* =============================================================================
+   CARD STYLES USING AGRICULTURAL PALETTE
+   ============================================================================= */
+
+/* Primary Product Card */
+.card-primary {
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-duration) var(--ease-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+}
+
+.card-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--clr-primary);
+}
+
+/* Feature Card with Accent Border */
+.card-feature {
+  background: var(--clr-neutral);
+  border: 2px solid var(--clr-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all var(--transition-duration) var(--ease-smooth);
+}
+
+.card-feature:hover {
+  background: var(--clr-accent);
+  color: var(--clr-text-on-accent);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-elevated);
+}
+
+.card-feature .card-icon {
+  width: 3rem;
+  height: 3rem;
+  background: var(--clr-primary);
+  color: var(--clr-text-on-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  transition: transform var(--transition-duration) var(--ease-smooth);
+}
+
+.card-feature:hover .card-icon {
+  background: var(--clr-text-on-accent);
+  color: var(--clr-accent);
+  transform: scale(1.1);
+}
+
+/* Product Showcase Card */
+.card-product {
+  background: var(--clr-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-duration) var(--ease-smooth);
+}
+
+.card-product:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.card-product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition-duration) var(--ease-smooth);
+}
+
+.card-product:hover .card-product-image img {
+  transform: scale(1.05);
+}
+
+.card-product-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--clr-primary);
+  color: var(--clr-text-on-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.card-product-content {
+  padding: var(--space-lg);
+}
+
+.card-product-title {
+  color: var(--clr-text);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.card-product-description {
+  color: var(--clr-text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.card-product-price {
+  color: var(--clr-accent);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+/* Testimonial Card */
+.card-testimonial {
+  background: var(--clr-neutral);
+  border-left: 4px solid var(--clr-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+  box-shadow: var(--shadow-soft);
+}
+
+.card-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  font-size: 3rem;
+  color: var(--clr-accent);
+  opacity: 0.3;
+  font-family: serif;
+  line-height: 1;
+}
+
+.card-testimonial-quote {
+  color: var(--clr-text);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.card-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--clr-text-secondary);
+  font-weight: 600;
+}
+
+.card-testimonial-author::before {
+  content: '—';
+  color: var(--clr-primary);
+}
+
+/* =============================================================================
+   USAGE EXAMPLES IN HTML
+   ============================================================================= */
+
+/*
+<!-- Primary Action Button -->
+<button class="btn-primary">
+  <Tractor size={16} />
+  Shop Equipment
+</button>
+
+<!-- Secondary Action Button -->
+<button class="btn-secondary">
+  Learn More
+</button>
+
+<!-- Outline Button -->
+<button class="btn-outline">
+  Get Quote
+</button>
+
+<!-- Ghost Button -->
+<button class="btn-ghost">
+  View Details
+</button>
+
+<!-- Primary Product Card -->
+<div class="card-primary">
+  <h3>Premium Tractors</h3>
+  <p>High-quality agricultural equipment for modern farming</p>
+  <button class="btn-primary">Explore</button>
+</div>
+
+<!-- Feature Card -->
+<div class="card-feature">
+  <div class="card-icon">
+    <Tractor size={24} />
+  </div>
+  <h4>Equipment Sales</h4>
+  <p>Top-quality farming equipment</p>
+</div>
+
+<!-- Product Showcase Card -->
+<div class="card-product">
+  <div class="card-product-image">
+    <img src="/img/tractor1.jpg" alt="Tractor" />
+    <div class="card-product-badge">New</div>
+  </div>
+  <div class="card-product-content">
+    <h3 class="card-product-title">John Deere 5055E</h3>
+    <p class="card-product-description">Reliable utility tractor perfect for small to medium farms</p>
+    <div class="card-product-price">₦2,500,000</div>
+    <button class="btn-primary">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Testimonial Card -->
+<div class="card-testimonial">
+  <p class="card-testimonial-quote">
+    Brown Kudi helped us modernize our farm with the best equipment. 
+    Their expertise and quality products transformed our agricultural operations.
+  </p>
+  <div class="card-testimonial-author">
+    Adebayo Ogundimu, Ogun State Farmer
+  </div>
+</div>
+*/
+
+/* =============================================================================
+   BRAND PALETTE QUICK REFERENCE
+   ============================================================================= */
+
+/*
+PRIMARY COLORS:
+- Primary Green: #6DA34D (Agricultural growth, nature, prosperity)
+- Accent Clay: #C46A3C (Earth, reliability, warmth)
+- Neutral Cream: #F5F1E6 (Cleanliness, simplicity, foundation)
+
+SEMANTIC COLORS:
+- Success: var(--clr-primary) - For positive actions and states
+- Warning: var(--clr-accent) - For attention and important notices
+- Info: var(--clr-neutral) - For neutral information
+- Error: #E74C3C - For errors and destructive actions
+
+TEXT COLORS:
+- Primary Text: var(--clr-text) - Main content
+- Secondary Text: var(--clr-text-secondary) - Supporting content
+- Muted Text: var(--clr-text-muted) - Less important content
+- On Primary: var(--clr-text-on-primary) - Text on green backgrounds
+- On Accent: var(--clr-text-on-accent) - Text on clay backgrounds
+
+USAGE GUIDELINES:
+1. Use Primary Green for main CTAs and positive actions
+2. Use Accent Clay for secondary actions and highlights
+3. Use Neutral Cream for backgrounds and subtle elements
+4. Maintain WCAG AA contrast ratios for accessibility
+5. Apply hover states with darker variations
+6. Use box-shadows and transforms for interactive feedback
+*/

@@ -45,14 +45,14 @@
   z-index: 1;
     padding: 30px;
   border-radius: 50%;
-  background-color: #613624;
+  background-color: #6DA34D;
 
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: rgb(0, 0, 0);
+  color: white;
   padding: 30px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #5a8f42;
 }

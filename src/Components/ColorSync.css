@@ -1,0 +1,127 @@
+/* ==========================================================================
+   BROWN KUDI COLOR SYNCHRONIZATION CSS
+   Forces all navbar elements to use the agricultural brand palette
+   ========================================================================== */
+
+/* Global Agricultural Brand Variables - Ensure they're available everywhere */
+:root {
+  /* Agricultural Brand Palette */
+  --clr-primary: #6DA34D !important;        /* Primary Green - Nature, growth, agriculture */
+  --clr-primary-light: #7BB35C !important;  /* Lighter green for hover states */
+  --clr-primary-dark: #5A8A41 !important;   /* Darker green for active states */
+  --clr-accent: #C46A3C !important;         /* Accent Clay - Earth, warmth, harvest */
+  --clr-accent-light: #D47A4F !important;   /* Lighter clay for hover states */
+  --clr-accent-dark: #A8572F !important;    /* Darker clay for active states */
+  --clr-neutral: #F5F1E6 !important;        /* Neutral Cream - Clean, organic, minimal */
+  --clr-text: #2D3E1F !important;           /* Dark green for text */
+  --clr-bg: rgba(245, 241, 230, 0.95) !important; /* Cream with transparency */
+}
+
+/* Force agricultural colors on any remaining old navbar elements */
+.logofirst,
+.logofirst span,
+nav .logo span,
+.navbar-brand,
+.brand-text {
+  color: var(--clr-primary) !important; /* Agricultural green */
+}
+
+/* Force agricultural colors on navigation buttons */
+#btn,
+.contact-btn,
+.navbar-contact,
+.btn-contact,
+.nav-cta {
+  background: var(--clr-primary) !important;
+  color: white !important;
+  border: 2px solid var(--clr-primary) !important;
+}
+
+#btn:hover,
+.contact-btn:hover,
+.navbar-contact:hover,
+.btn-contact:hover,
+.nav-cta:hover {
+  background: var(--clr-primary-dark) !important;
+  border-color: var(--clr-primary-dark) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Force agricultural colors on desktop menu links */
+.desktop-menu a,
+nav ul li a,
+.nav-link,
+.navbar-link {
+  color: var(--clr-text) !important;
+}
+
+.desktop-menu a:hover,
+nav ul li a:hover,
+.nav-link:hover,
+.navbar-link:hover {
+  color: var(--clr-primary) !important;
+}
+
+/* Force agricultural colors on hamburger menu */
+.hamburger .line {
+  background-color: var(--clr-text) !important;
+}
+
+.hamburger:hover .line {
+  background-color: var(--clr-primary) !important;
+}
+
+/* Force agricultural colors on mobile menu */
+.menubar,
+.mobile-menu {
+  background: var(--clr-bg) !important;
+}
+
+.menubar a,
+.mobile-menu a {
+  color: var(--clr-text) !important;
+}
+
+.menubar a:hover,
+.mobile-menu a:hover {
+  color: var(--clr-primary) !important;
+  background: rgba(109, 163, 77, 0.1) !important;
+}
+
+/* Override any brown/old colors with agricultural palette */
+* {
+  --old-brown-1: var(--clr-primary);
+  --old-brown-2: var(--clr-accent);
+  --old-brown-3: var(--clr-primary-dark);
+}
+
+/* Ensure any remaining #6b4226, #613624, etc. are overridden */
+[style*="#6b4226"],
+[style*="#613624"],
+[style*="#8b5e3c"] {
+  color: var(--clr-primary) !important;
+  background: var(--clr-primary) !important;
+}
+
+/* Make sure the brand elements are properly colored */
+.navbar__brand-brown,
+.brand-brown,
+.logo-brown {
+  color: var(--clr-primary) !important; /* Green instead of clay for "Brown" */
+}
+
+/* Ensure buttons use the agricultural palette */
+button:not(.navbar__toggle):not(.back-button):not(.contact-form button),
+.btn:not(.back-button),
+a[id="btn"] {
+  background: var(--clr-primary) !important;
+  color: white !important;
+  border-color: var(--clr-primary) !important;
+}
+
+button:not(.navbar__toggle):not(.back-button):not(.contact-form button):hover,
+.btn:not(.back-button):hover,
+a[id="btn"]:hover {
+  background: var(--clr-primary-dark) !important;
+  border-color: var(--clr-primary-dark) !important;
+}
