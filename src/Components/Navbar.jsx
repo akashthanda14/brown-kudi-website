@@ -232,7 +232,6 @@ export default function Navbar() {
                 <option value="punjabi">🌾 ਪੰ</option>
               </select>
             </div>
-
             {/* Social Links */}
             <div className="navbar__socials" aria-label="Social media links">
               <a
