@@ -216,9 +216,9 @@ const Hero = () => {
               onChange={(e) => setLanguage(e.target.value)}
               aria-label="Language selection"
             >
-              <option value="english">EN</option>
-              <option value="hindi">हि</option>
-              <option value="punjabi">ਪੰ</option>
+              <option value="english">English</option>
+              <option value="hindi">हिन्दी</option>
+              <option value="punjabi">ਪੰਜਾਬੀ</option>
             </select>
           </div>
         </div>

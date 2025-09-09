@@ -1,91 +1,176 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
+import { motion } from "framer-motion";
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaYoutube, 
+  FaArrowRight, 
+  FaEnvelope, 
+  FaPhone, 
+  FaMapMarkerAlt 
+} from "react-icons/fa";
 import "../Components/Footer.css";
-const title = {
-
-    english: "Be Bold. Be Beautiful. Be Brown Kudi,Where tradition meets modernity.",
-    hindi: "साहसी बनो। सुंदर बनो। ब्राउन कुड़ी बनो। जहां परंपरा आधुनिकता से मिलती है।",
-    punjabi: "ਬੋਲਡ ਬਣੋ। ਸੁੰਦਰ ਬਣੋ। ਬ੍ਰਾਊਨ ਕੁੜੀ ਬਣੋ। ਜਿੱਥੇ ਪਰੰਪਰਾ ਅਧੁਨਿਕਤਾ ਨਾਲ ਮਿਲਦੀ ਹੈ।",
-
-};
 
 const Footer = () => {
-    const { language } = useLanguage();
+  const footerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.1
+      }
+    }
+  };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 
-    return (
-        <footer>
-            <div className="footer-container">
-                {/* Logo & About */}
-                <div className="footer-section">
-                    <div className="logo-name">
+  return (
+    <motion.footer 
+      className="footer"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      {/* Main Content Section */}
+      <motion.div className="footer-main" variants={itemVariants}>
+        <div className="footer-content">
+          {/* Brand Section */}
+          <motion.div className="footer-brand" variants={itemVariants}>
+            <div className="brand-text">
+              <span className="brand-english">Brown</span>
+              <span className="brand-punjabi">ਕੁੜੀ</span>
+            </div>
+            <p className="brand-description">
+              Pioneering agricultural innovation through engineering excellence, empowering farmers with cutting-edge technology and sustainable solutions.
+            </p>
+            <div className="footer-contact-info">
+              <div className="contact-item">
+                <FaEnvelope className="contact-icon" />
+                <span>contact@brownkudi.com</span>
+              </div>
+              <div className="contact-item">
+                <FaPhone className="contact-icon" />
+                <span>+91 98765 43210</span>
+              </div>
+              <div className="contact-item">
+                <FaMapMarkerAlt className="contact-icon" />
+                <span>Punjab, India</span>
+              </div>
+            </div>
+          </motion.div>
 
-                        <span className="logofirst">
-
-                            Brown<span>ਕੁੜੀ</span>
-                        </span>
-                    </div>
-
-                    <p>
-                        {title[language]}
-
-                    </p>
-                </div>
-
-                {/* Useful Links */}
-
-                <div className="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li>
-                            <Link to="/tyres">Tyres</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/gallery">Gallery</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                </div>
-
-                {/* Contact Info */}
-                <div className="footer-section">
-                    <h3>Contact Us</h3>
-                    <p> <strong>Email:</strong> brownkuditeam@gmail.com</p>
-                    <p><strong>Phone:</strong> +91 8264468285</p>
-                    <p><strong>Phone:</strong> +91 9855119079</p>
-                    <p><strong>Calling time:</strong> 10AM To 7PM</p>
-                    <p><strong>Address:</strong> Brown Kudi Enterprices village gura Post Office Bara Pind (144418) Dist. Jalandhar Punjab</p>
-                </div>
-
-                <div className="footer-section newsletter">
-                    <form>
-                        <input type="email" placeholder="Your Email" />
-                        <br />
-                        <button type="submit">Get More</button>
-                    </form>
-                    <div className="social-icons" style={{ marginTop: "20px" }}>
-                        <a href="https://www.facebook.com/BrownKudiofficial">
-                            <img src="img/facebook.png" alt="Facebook" />
-                        </a>
-                        <a href="https://www.instagram.com/brown_kudi1/">
-                            <img src="img/instagram.png" alt="Instagram" />
-                        </a>
-                        <a href="http://www.youtube.com/@BrownKudiThewelderGirl">
-                            <img src="img/youtube.png" alt="YouTube" />
-                        </a>
-                    </div>
-                </div>
+          {/* Navigation Columns */}
+          <motion.div className="footer-columns" variants={itemVariants}>
+            <div className="footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/tyres">Tyres & Equipment</Link></li>
+                <li><Link to="/gallery">Our Gallery</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
+                <li><Link to="/team">Our Team</Link></li>
+              </ul>
             </div>
 
-            <div className="bottom-footer">&copy; 2025 Brown Kudi. All rights reserved.</div>
-        </footer>
-    );
+            <div className="footer-column">
+              <h3>Solutions</h3>
+              <ul>
+                <li><Link to="/precision-farming">Precision Farming</Link></li>
+                <li><Link to="/agricultural-tools">Agricultural Tools</Link></li>
+                <li><Link to="/tyre-solutions">Tyre Solutions</Link></li>
+                <li><Link to="/custom-engineering">Custom Engineering</Link></li>
+                <li><Link to="/consultation">Consultation</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-column">
+              <h3>Resources</h3>
+              <ul>
+                <li><Link to="/blog">Blog & Insights</Link></li>
+                <li><Link to="/case-studies">Case Studies</Link></li>
+                <li><Link to="/tutorials">How-to Guides</Link></li>
+                <li><Link to="/downloads">Downloads</Link></li>
+                <li><Link to="/support">Support Center</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-column">
+              <h3>Connect</h3>
+              <ul>
+                <li><Link to="/contact">Contact Us</Link></li>
+                <li><Link to="/careers">Careers</Link></li>
+                <li><Link to="/partnerships">Partnerships</Link></li>
+                <li><Link to="/newsletter">Newsletter</Link></li>
+                <li><Link to="/events">Events</Link></li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Social & Legal Section */}
+      <motion.div className="footer-bottom" variants={itemVariants}>
+        <div className="footer-bottom-content">
+          <div className="footer-social">
+            <span className="social-label">Follow Our Journey</span>
+            <div className="social-links">
+              <motion.a
+                href="https://www.facebook.com/BrownKudiofficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Follow on Facebook"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaFacebookF />
+              </motion.a>
+              <motion.a
+                href="https://instagram.com/brown_kudi1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Follow on Instagram"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaInstagram />
+              </motion.a>
+              <motion.a
+                href="https://www.youtube.com/@BrownKudiThewelderGirl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Subscribe on YouTube"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaYoutube />
+              </motion.a>
+            </div>
+          </div>
+
+          <div className="footer-legal">
+            <p className="copyright">
+              © {new Date().getFullYear()} Brown Kudi. All rights reserved.
+            </p>
+            <div className="legal-links">
+              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/terms">Terms of Service</Link>
+              <Link to="/cookies">Cookie Policy</Link>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.footer>
+  );
 };
 
 export default Footer;

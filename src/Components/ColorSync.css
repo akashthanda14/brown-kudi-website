@@ -74,7 +74,7 @@ nav ul li a:hover,
 /* Force agricultural colors on mobile menu */
 .menubar,
 .mobile-menu {
-  background: var(--clr-bg) !important;
+  background: transparent !important;
 }
 
 .menubar a,
@@ -126,13 +126,37 @@ a[id="btn"]:not(.navbar__link):hover {
   border-color: var(--clr-primary-dark) !important;
 }
 
-/* Ensure navbar links have proper styling - no background colors */
+/* Override any remaining white backgrounds on entire page */
+body, 
+#root,
+.App,
+main {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Force complete transparency for navbar and all child elements */
+nav,
+nav.navbar,
+.navbar,
+.navbar--scrolled,
+.navbar__container,
+.navbar__nav,
+.navbar__menu,
 .navbar__link,
 .navbar__dropdown-trigger,
 .navbar__dropdown-link,
-.navbar__mobile-link {
+.navbar__mobile-link,
+.navbar__actions,
+.navbar__language,
+.navbar__socials {
   background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
   color: var(--clr-text) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .navbar__link:hover,
