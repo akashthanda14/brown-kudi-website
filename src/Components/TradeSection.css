@@ -156,11 +156,22 @@
     }
 }
 
+@media (max-width: 350px) {
+    .trade-img {
+        height: 198px;
+    }
+
+    .trade-card {
+        width: 280px;
+    }
+}
+
 @media (max-width: 320px) {
     .trade-img {
         height: 198px;
     }
-    .trade-card{
+
+    .trade-card {
         width: 280px;
     }
 }

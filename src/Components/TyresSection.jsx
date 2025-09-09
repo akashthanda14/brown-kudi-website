@@ -15,48 +15,51 @@ export default function TyreSection() {
   };
 
   return (
-    <section id="tyres" className="tyre-section">
-      <div className="tyre-container">
-        {/* Left - Tyre Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.4 }}
-          className="tyre-image"
-        >
-          <img src="/img/browntyre.png" alt="Brown Kudi Tyres" />
-        </motion.div>
-
-        {/* Right - Content */}
-        <div className="tyre-content">
-          <motion.h2
-            initial={{ opacity: 0, x: 50 }}
+    <>
+      <section id="tyres" className="tyre-section">
+        <div className="tyre-container">
+          {/* Left - Tyre Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
-            className="relative inline-block"
+            viewport={{ once: true, amount: 0.4 }}
+            className="tyre-image"
           >
-            {translations.tyreSection.title[language]}
+            <img src="/img/browntyre.png" alt="Brown Kudi Tyres" />
+          </motion.div>
 
-            {/* Underline Animation */}
-            <motion.span
-              className="absolute left-0 -bottom-1 h-1 bg-yellow-500 rounded"
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
-              viewport={{ once: true }}
-            />
-          </motion.h2>
+          {/* Right - Content */}
+          <div className="tyre-content">
+            <motion.h2
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="relative inline-block"
+            >
+              {translations.tyreSection.title[language]}
 
-          <p>{translations.tyreSection.description[language]}</p>
+              {/* Underline Animation */}
+              <motion.span
+                className="absolute left-0 -bottom-1 h-1 bg-yellow-500 rounded"
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
+                viewport={{ once: true }}
+              />
+            </motion.h2>
 
-          {/*  Button with scroll + navigation */}
-          <button onClick={handleMoreInfoClick}>
-            {translations.tyreSection.button[language]}
-          </button>
+            <p>{translations.tyreSection.description[language]}</p>
+
+            {/*  Button with scroll + navigation */}
+            <button onClick={handleMoreInfoClick}>
+              {translations.tyreSection.button[language]}
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+     
+    </>
   );
 }
