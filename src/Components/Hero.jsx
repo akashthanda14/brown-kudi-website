@@ -181,7 +181,7 @@ const Hero = () => {
         <div className="hero__heading">
           <h1 className="hero__title">
             <span className="hero__title-brown">Brown</span>
-            <span className="hero__title-kudi">ਕੁੜੀ</span>
+            <span className="hero__title-kudi">ਕੁੜੀ 2</span>
           </h1>
           
           <h2 className="hero__subtitle">
