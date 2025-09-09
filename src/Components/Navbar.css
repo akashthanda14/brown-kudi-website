@@ -25,7 +25,7 @@
   /* Slightly darker cream for borders */
 
   /* Semantic Colors */
-  --clr-bg: rgba(245, 241, 230, 0.95);
+  --clr-bg: rgba(245, 241, 230, 0);
   /* Cream with transparency */
   --clr-bg-transparent: transparent;
   --clr-bg-overlay: rgba(109, 163, 77, 0.1);
@@ -94,20 +94,35 @@
    NAVBAR CONTAINER
    ========================================================================== */
 
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: transparent;
+  width: 100%;
+  z-index: 999;
+  background: transparent !important;
+  /* default transparent */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 38, 38, 0.359);
+  backdrop-filter: blur(var(--blur-amount));
+  box-shadow: var(--shadow-soft);
+  border-bottom: 1px solid var(--clr-border);
   transition: all var(--transition-duration) var(--ease-smooth);
-  min-height: var(--navbar-height);
-  backdrop-filter: none;
+
 }
 
 .navbar--scrolled {
-  background: transparent;
+  background: var(--clr-bg);
   backdrop-filter: none;
   box-shadow: none;
   border-bottom: none;
@@ -153,15 +168,16 @@
 }
 
 .navbar__brand-brown {
-  color: var(--clr-primary);
+  color: white !important;
   font-family: "efont";
   font-size: 2rem;
+
 }
 
 .navbar__brand-kudi {
-  color: var(--clr-text);
   font-size: 2rem;
   font-weight: 400;
+  color: #7BB35C !important;
   font-family: "pfont";
 }
 
@@ -203,12 +219,12 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  color: var(--clr-text);
   text-decoration: none;
   font-family: var(--font-body);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   font-weight: 500;
   background: none;
+  color: var(--clr-text);
   border: none;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -245,6 +261,17 @@
 
 .navbar__link:hover .navbar__link-icon {
   transform: scale(1.1);
+}
+
+.navbar__link,
+.navbar__link:link{
+  color: white !important;
+}
+
+
+.navbar__link:hover{
+  color: #7BB35C  !important;
+  
 }
 
 /* ==========================================================================
@@ -343,9 +370,9 @@
 /* Language Selector */
 .navbar__language-select {
   background: transparent;
-  border: 1px solid var(--clr-border);
+  border: 1px solid white !important;
   border-radius: 0.5rem;
-  color: var(--clr-text);
+  color: white !important;
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
   font-family: var(--font-body);
@@ -381,7 +408,7 @@
   height: 2.25rem;
   background: transparent;
   border-radius: 50%;
-  color: var(--clr-text);
+  color: white;
   text-decoration: none;
   transition: all var(--transition-duration) var(--ease-smooth);
   backdrop-filter: none;
