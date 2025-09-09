@@ -14,11 +14,11 @@
   --color-earth: #8B7355;
   --color-sage: #87A96B;
   --color-cream: #F8F6F0;
-  
+
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
+
   /* Spacing Scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -27,12 +27,12 @@
   --space-xl: 3rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
-  
+
   /* Animation Easing */
   --ease-natural: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-gentle: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-organic: cubic-bezier(0.645, 0.045, 0.355, 1);
-  
+
   /* Effects */
   --shadow-soft: 0 4px 20px rgba(59, 47, 47, 0.1);
   --shadow-lifted: 0 8px 30px rgba(59, 47, 47, 0.15);
@@ -54,6 +54,7 @@
 
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -62,17 +63,15 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   .hero__video {
     display: none;
   }
-  
+
   .hero__fallback {
-    background: linear-gradient(
-      45deg,
-      rgba(59, 47, 47, 0.85),
-      rgba(59, 47, 47, 0.75)
-    ), url("/images/bg-fallback.jpg") center/cover no-repeat;
+    background: linear-gradient(45deg,
+        rgba(59, 47, 47, 0.85),
+        rgba(59, 47, 47, 0.75)), url("/images/bg-fallback.jpg") center/cover no-repeat;
   }
 }
 
@@ -86,18 +85,17 @@
   background: var(--color-cream);
   overflow: hidden;
   isolation: isolate;
-  padding-top: 5rem; /* Account for fixed navbar */
+  padding-top: 5rem;
+  /* Account for fixed navbar */
 }
 
 /* Mobile-first background fallback */
 @media (max-width: 768px) {
   .hero {
-    background: linear-gradient(
-      135deg, 
-      rgba(0, 0, 0, 0.4) 0%, 
-      rgba(109, 163, 77, 0.2) 50%, 
-      rgba(0, 0, 0, 0.4) 100%
-    ), url('/img/IMG1.jpg') left center/cover no-repeat;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(109, 163, 77, 0.2) 50%,
+        rgba(0, 0, 0, 0.4) 100%), url('/img/IMG1.jpg') left center/cover no-repeat;
     background-position: 25% center;
   }
 }
@@ -112,11 +110,9 @@
 .hero__fallback {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(59, 47, 47, 0.75),
-    rgba(59, 47, 47, 0.65)
-  ), url("/images/bg-fallback.jpg") center/cover no-repeat;
+  background: linear-gradient(45deg,
+      rgba(59, 47, 47, 0.75),
+      rgba(59, 47, 47, 0.65)), url("/images/bg-fallback.jpg") center/cover no-repeat;
 }
 
 .hero__video {
@@ -133,12 +129,10 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 47, 47, 0.55) 0%,
-    rgba(59, 47, 47, 0.35) 50%,
-    rgba(59, 47, 47, 0.45) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(59, 47, 47, 0.55) 0%,
+      rgba(59, 47, 47, 0.35) 50%,
+      rgba(59, 47, 47, 0.45) 100%);
   mix-blend-mode: multiply;
   z-index: -2;
 }
@@ -150,33 +144,27 @@
   transform: translate(-50%, -50%);
   width: min(90vw, 900px);
   height: 60%;
-  background: radial-gradient(
-    ellipse 80% 100% at center,
-    rgba(59, 47, 47, 0.4) 0%,
-    rgba(59, 47, 47, 0.25) 40%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse 80% 100% at center,
+      rgba(59, 47, 47, 0.4) 0%,
+      rgba(59, 47, 47, 0.25) 40%,
+      transparent 70%);
   z-index: -1;
 }
 
 /* Enhanced overlays for bright scenes */
 .hero--bright-scene .hero__overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(59, 47, 47, 0.75) 0%,
-    rgba(59, 47, 47, 0.55) 50%,
-    rgba(59, 47, 47, 0.65) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(59, 47, 47, 0.75) 0%,
+      rgba(59, 47, 47, 0.55) 50%,
+      rgba(59, 47, 47, 0.65) 100%);
 }
 
 .hero--bright-scene .hero__text-backdrop {
-  background: radial-gradient(
-    ellipse 80% 100% at center,
-    rgba(59, 47, 47, 0.6) 0%,
-    rgba(59, 47, 47, 0.4) 40%,
-    rgba(59, 47, 47, 0.2) 70%,
-    transparent 90%
-  );
+  background: radial-gradient(ellipse 80% 100% at center,
+      rgba(59, 47, 47, 0.6) 0%,
+      rgba(59, 47, 47, 0.4) 40%,
+      rgba(59, 47, 47, 0.2) 70%,
+      transparent 90%);
 }
 
 /* === MAIN CONTENT === */
@@ -240,7 +228,10 @@
   color: var(--color-leaf);
   display: inline-block;
   opacity: 0;
+  font-family: "efont";
   animation: titleSlideIn 1s var(--ease-organic) 1s forwards;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+
 }
 
 .hero__title-kudi {
@@ -249,11 +240,14 @@
   margin-left: 0.2em;
   display: inline-block;
   opacity: 0;
+  font-family: "pfont";
   animation: titleSlideIn 1s var(--ease-organic) 1.3s forwards;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
+
 }
 
 .hero__subtitle {
-  font-family: var(--font-heading);
+  font-family: "Oswald";
   font-size: clamp(1.3rem, 4vw, 2.2rem);
   font-weight: 400;
   color: var(--color-milk);
@@ -394,12 +388,10 @@
 .hero__crop-row {
   position: absolute;
   height: 1px;
-  background: linear-gradient(
-    90deg, 
-    transparent 0%, 
-    var(--color-wheat) 50%, 
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--color-wheat) 50%,
+      transparent 100%);
   opacity: 0.4;
 }
 
@@ -446,11 +438,15 @@
 
 /* === ANIMATIONS === */
 @keyframes videoReveal {
-  to { opacity: 0.7; }
+  to {
+    opacity: 0.7;
+  }
 }
 
 @keyframes badgeAppear {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes titleSlideIn {
@@ -458,6 +454,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -465,54 +462,94 @@
 }
 
 @keyframes subtitleFade {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes taglineFade {
-  to { opacity: 0.9; }
+  to {
+    opacity: 0.9;
+  }
 }
 
 @keyframes ctaAppear {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes languageAppear {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scrollAppear {
-  to { opacity: 0.8; }
+  to {
+    opacity: 0.8;
+  }
 }
 
 @keyframes seedGrow {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.1); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
 }
 
 @keyframes rowGrow {
-  0%, 100% { transform: scaleX(1); }
-  50% { transform: scaleX(1.2); }
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(1.2);
+  }
 }
 
 @keyframes sunFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(180deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
 }
 
 @keyframes tractorIdle {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
+
   /* Keep full height but center content higher for above-the-fold impact */
   .hero {
     min-height: 100vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    padding-top: 4rem; /* Mobile navbar height */
+    padding-top: 4rem;
+    /* Mobile navbar height */
   }
 
   .hero__content {
@@ -536,6 +573,7 @@
     padding: var(--space-xs) var(--space-sm);
     background: rgba(255, 255, 255, 0.9);
   }
+
   /* Uncomment to hide badge on mobile:
   .hero__badge {
     display: none;
@@ -636,7 +674,8 @@
   }
 
   .hero__title-brown {
-    color: var(--color-wheat); /* Use wheat color for brand visibility */
+    color: var(--color-wheat);
+    /* Use wheat color for brand visibility */
   }
 
   .hero__title-kudi {
@@ -671,11 +710,13 @@
 }
 
 @media (max-width: 480px) {
+
   /* Keep full viewport coverage on small mobile too */
   .hero {
     min-height: 100vh;
     width: 100vw;
-    padding-top: 4rem; /* Mobile navbar height */
+    padding-top: 4rem;
+    /* Mobile navbar height */
   }
 
   .hero__content {
@@ -742,17 +783,15 @@
   .hero__overlay {
     background: rgba(59, 47, 47, 0.9);
   }
-  
+
   .hero__text-backdrop {
-    background: radial-gradient(
-      ellipse 80% 100% at center,
-      rgba(59, 47, 47, 0.8) 0%,
-      rgba(59, 47, 47, 0.6) 40%,
-      rgba(59, 47, 47, 0.4) 70%,
-      transparent 90%
-    );
+    background: radial-gradient(ellipse 80% 100% at center,
+        rgba(59, 47, 47, 0.8) 0%,
+        rgba(59, 47, 47, 0.6) 40%,
+        rgba(59, 47, 47, 0.4) 70%,
+        transparent 90%);
   }
-  
+
   .hero__title-brown,
   .hero__title-kudi,
   .hero__subtitle,
@@ -760,7 +799,7 @@
     color: var(--color-milk);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
   }
-  
+
   .hero__cta {
     background: var(--color-soil);
     border: 2px solid var(--color-milk);

@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import { 
-  Home, 
-  Tractor, 
-  User, 
-  Camera, 
-  ChevronDown, 
-  Sprout, 
-  Wrench, 
-  Wheat, 
-  Images, 
-  Video, 
-  PenTool, 
-  Mail, 
-  Instagram, 
-  Facebook, 
+import {
+  Home,
+  Tractor,
+  User,
+  Camera,
+  ChevronDown,
+  Sprout,
+  Wrench,
+  Wheat,
+  Images,
+  Video,
+  PenTool,
+  Mail,
+  Instagram,
+  Facebook,
   Youtube,
   Menu,
   X,
@@ -87,16 +87,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav 
+      <nav
         className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="navbar__container">
           {/* Brand Logo */}
-          <Link 
-            to="/" 
-            className="navbar__brand" 
+          <Link
+            to="/"
+            className="navbar__brand"
             onClick={closeMenu}
             aria-label="Brown Kudi - Home"
           >
@@ -104,15 +104,14 @@ export default function Navbar() {
               <span className="navbar__brand-brown">Brown</span>
               <span className="navbar__brand-kudi">ਕੁੜੀ</span>
             </span>
-            <Sprout className="navbar__brand-icon" size={20} aria-hidden="true" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="navbar__nav">
             <ul className="navbar__menu" role="menubar">
               <li className="navbar__item" role="none">
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="navbar__link"
                   role="menuitem"
                   onClick={closeMenu}
@@ -121,59 +120,39 @@ export default function Navbar() {
                   <span>Home</span>
                 </Link>
               </li>
-              
               <li className="navbar__item navbar__dropdown-container" role="none">
-                <button 
-                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'farm' ? 'navbar__dropdown-trigger--active' : ''}`} 
-                  onClick={() => toggleDropdown('farm')}
-                  aria-expanded={activeDropdown === 'farm'}
-                  aria-haspopup="true"
+                <div
+                  className="navbar__link navbar__dropdown-trigger"
                   role="menuitem"
                 >
                   <Tractor className="navbar__link-icon" size={18} aria-hidden="true" />
                   <span>Farm Work</span>
                   <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
-                </button>
-                <ul className={`navbar__dropdown ${activeDropdown === 'farm' ? 'navbar__dropdown--visible' : ''}`} role="menu">
+                </div>
+                <ul className="navbar__dropdown" role="menu">
                   <li role="none">
-                    <Link 
-                      to="/tyres" 
-                      className="navbar__dropdown-link" 
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
+                    <Link to="/tyres" className="navbar__dropdown-link" role="menuitem">
                       <Sprout size={16} aria-hidden="true" />
                       Tyres & Equipment
                     </Link>
                   </li>
                   <li role="none">
-                    <Link 
-                      to="/about" 
-                      className="navbar__dropdown-link" 
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
+                    <Link to="/about" className="navbar__dropdown-link" role="menuitem">
                       <Wrench size={16} aria-hidden="true" />
                       About Brown Kudi
                     </Link>
                   </li>
                   <li role="none">
-                    <Link 
-                      to="/contact" 
-                      className="navbar__dropdown-link" 
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
+                    <Link to="/contact" className="navbar__dropdown-link" role="menuitem">
                       <Wheat size={16} aria-hidden="true" />
                       Get In Touch
                     </Link>
                   </li>
                 </ul>
               </li>
-
               <li className="navbar__item" role="none">
-                <Link 
-                  to="/about" 
+                <Link
+                  to="/about"
                   className="navbar__link"
                   role="menuitem"
                   onClick={closeMenu}
@@ -184,8 +163,8 @@ export default function Navbar() {
               </li>
 
               <li className="navbar__item navbar__dropdown-container" role="none">
-                <button 
-                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'content' ? 'navbar__dropdown-trigger--active' : ''}`} 
+                <button
+                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'content' ? 'navbar__dropdown-trigger--active' : ''}`}
                   onClick={() => toggleDropdown('content')}
                   aria-expanded={activeDropdown === 'content'}
                   aria-haspopup="true"
@@ -197,9 +176,9 @@ export default function Navbar() {
                 </button>
                 <ul className={`navbar__dropdown ${activeDropdown === 'content' ? 'navbar__dropdown--visible' : ''}`} role="menu">
                   <li role="none">
-                    <Link 
-                      to="/gallery" 
-                      className="navbar__dropdown-link" 
+                    <Link
+                      to="/gallery"
+                      className="navbar__dropdown-link"
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
@@ -208,9 +187,9 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li role="none">
-                    <Link 
-                      to="/gallery" 
-                      className="navbar__dropdown-link" 
+                    <Link
+                      to="/gallery"
+                      className="navbar__dropdown-link"
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
@@ -219,9 +198,9 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li role="none">
-                    <Link 
-                      to="/about" 
-                      className="navbar__dropdown-link" 
+                    <Link
+                      to="/about"
+                      className="navbar__dropdown-link"
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
@@ -256,29 +235,29 @@ export default function Navbar() {
 
             {/* Social Links */}
             <div className="navbar__socials" aria-label="Social media links">
-              <a 
-                href="https://instagram.com/brown_kudi1" 
+              <a
+                href="https://instagram.com/brown_kudi1"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow on Instagram" 
+                aria-label="Follow on Instagram"
                 className="navbar__social-link"
               >
                 <Instagram size={18} aria-hidden="true" />
               </a>
-              <a 
-                href="https://www.facebook.com/BrownKudiofficial" 
+              <a
+                href="https://www.facebook.com/BrownKudiofficial"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow on Facebook" 
+                aria-label="Follow on Facebook"
                 className="navbar__social-link"
               >
                 <Facebook size={18} aria-hidden="true" />
               </a>
-              <a 
-                href="https://www.youtube.com/@BrownKudiThewelderGirl" 
+              <a
+                href="https://www.youtube.com/@BrownKudiThewelderGirl"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Subscribe on YouTube" 
+                aria-label="Subscribe on YouTube"
                 className="navbar__social-link"
               >
                 <Youtube size={18} aria-hidden="true" />
@@ -286,8 +265,8 @@ export default function Navbar() {
             </div>
 
             {/* Contact CTA */}
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="navbar__cta"
               aria-label="Contact Brown Kudi"
               onClick={closeMenu}
@@ -298,7 +277,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="navbar__toggle"
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
@@ -315,14 +294,14 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`navbar__overlay ${isMenuOpen ? 'navbar__overlay--visible' : ''}`} 
+      <div
+        className={`navbar__overlay ${isMenuOpen ? 'navbar__overlay--visible' : ''}`}
         onClick={toggleMenu}
         aria-hidden="true"
       />
-      
+
       {/* Mobile Navigation Panel */}
-      <nav 
+      <nav
         id="mobile-navigation"
         className={`navbar__mobile ${isMenuOpen ? 'navbar__mobile--open' : ''}`}
         aria-label="Mobile navigation"
@@ -334,7 +313,7 @@ export default function Navbar() {
           </span>
           <Leaf className="navbar__mobile-icon" size={20} aria-hidden="true" />
         </div>
-        
+
         <ul className="navbar__mobile-menu" role="menu">
           <li role="none">
             <Link to="/" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
@@ -367,32 +346,32 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-        
+
         <div className="navbar__mobile-footer">
           <div className="navbar__mobile-socials">
-            <a 
-              href="https://instagram.com/brown_kudi1" 
+            <a
+              href="https://instagram.com/brown_kudi1"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram" 
+              aria-label="Instagram"
               className="navbar__mobile-social"
             >
               <Instagram size={20} aria-hidden="true" />
             </a>
-            <a 
-              href="https://www.facebook.com/BrownKudiofficial" 
+            <a
+              href="https://www.facebook.com/BrownKudiofficial"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook" 
+              aria-label="Facebook"
               className="navbar__mobile-social"
             >
               <Facebook size={20} aria-hidden="true" />
             </a>
-            <a 
-              href="https://www.youtube.com/@BrownKudiThewelderGirl" 
+            <a
+              href="https://www.youtube.com/@BrownKudiThewelderGirl"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="YouTube" 
+              aria-label="YouTube"
               className="navbar__mobile-social"
             >
               <Youtube size={20} aria-hidden="true" />

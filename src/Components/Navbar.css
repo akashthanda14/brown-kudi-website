@@ -5,49 +5,69 @@
 /* Custom Properties - Brown Kudi Agricultural Brand System */
 :root {
   /* Agricultural Brand Palette */
-  --clr-primary: #6DA34D;        /* Primary Green - Nature, growth, agriculture */
-  --clr-primary-light: #7BB35C;  /* Lighter green for hover states */
-  --clr-primary-dark: #5A8A41;   /* Darker green for active states */
-  --clr-accent: #C46A3C;         /* Accent Clay - Earth, warmth, harvest */
-  --clr-accent-light: #D47A4F;   /* Lighter clay for hover states */
-  --clr-accent-dark: #A8572F;    /* Darker clay for active states */
-  --clr-neutral: #F5F1E6;        /* Neutral Cream - Clean, organic, minimal */
-  --clr-neutral-light: #FFFEF9;  /* Almost white cream */
-  --clr-neutral-dark: #E8E2D5;   /* Slightly darker cream for borders */
-  
+  --clr-primary: #6DA34D;
+  /* Primary Green - Nature, growth, agriculture */
+  --clr-primary-light: #7BB35C;
+  /* Lighter green for hover states */
+  --clr-primary-dark: #5A8A41;
+  /* Darker green for active states */
+  --clr-accent: #C46A3C;
+  /* Accent Clay - Earth, warmth, harvest */
+  --clr-accent-light: #D47A4F;
+  /* Lighter clay for hover states */
+  --clr-accent-dark: #A8572F;
+  /* Darker clay for active states */
+  --clr-neutral: #F5F1E6;
+  /* Neutral Cream - Clean, organic, minimal */
+  --clr-neutral-light: #FFFEF9;
+  /* Almost white cream */
+  --clr-neutral-dark: #E8E2D5;
+  /* Slightly darker cream for borders */
+
   /* Semantic Colors */
-  --clr-bg: rgba(245, 241, 230, 0.95);     /* Cream with transparency */
+  --clr-bg: rgba(245, 241, 230, 0.95);
+  /* Cream with transparency */
   --clr-bg-transparent: transparent;
-  --clr-bg-overlay: rgba(109, 163, 77, 0.1); /* Green overlay for videos */
-  --clr-text: #2D3E1F;                     /* Dark green for text */
-  --clr-text-light: #4A5D3A;               /* Medium green for secondary text */
-  --clr-text-muted: #6B7A5C;               /* Light green for muted text */
-  --clr-text-inverse: #F5F1E6;             /* Cream text on dark backgrounds */
-  --clr-shadow: rgba(45, 62, 31, 0.15);    /* Dark green shadow */
-  --clr-border: rgba(109, 163, 77, 0.2);   /* Green border */
-  
+  --clr-bg-overlay: rgba(109, 163, 77, 0.1);
+  /* Green overlay for videos */
+  --clr-text: #2D3E1F;
+  /* Dark green for text */
+  --clr-text-light: #4A5D3A;
+  /* Medium green for secondary text */
+  --clr-text-muted: #6B7A5C;
+  /* Light green for muted text */
+  --clr-text-inverse: #F5F1E6;
+  /* Cream text on dark backgrounds */
+  --clr-shadow: rgba(45, 62, 31, 0.15);
+  /* Dark green shadow */
+  --clr-border: rgba(109, 163, 77, 0.2);
+  /* Green border */
+
   /* WCAG 2.2 AA Compliant Text Colors for Video Overlays */
-  --clr-text-video: #FFFFFF;               /* White text on video */
-  --clr-text-video-bg: rgba(45, 62, 31, 0.8); /* Dark green background for text on video */
-  --clr-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Strong shadow for video text */
-  
+  --clr-text-video: #FFFFFF;
+  /* White text on video */
+  --clr-text-video-bg: rgba(45, 62, 31, 0.8);
+  /* Dark green background for text on video */
+  --clr-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  /* Strong shadow for video text */
+
   /* Typography */
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
-  
+
   /* Spacing & Sizing */
   --navbar-height: 5rem;
   --navbar-height-mobile: 4rem;
   --container-padding: clamp(1rem, 4vw, 2rem);
   --content-max-width: 1200px;
   --section-padding: clamp(3rem, 8vw, 6rem);
-  
+
   /* Transitions & Easing */
   --ease-smooth: cubic-bezier(0.25, 0.8, 0.5, 1);
   --ease-bounce: cubic-bezier(0.25, 1, 0.5, 1);
   --transition-duration: 300ms;
   --transition-slow: 500ms;
-  
+
   /* Effects */
   --shadow-soft: 0 4px 20px rgba(45, 62, 31, 0.1);
   --shadow-medium: 0 8px 32px rgba(45, 62, 31, 0.15);
@@ -75,15 +95,15 @@
    ========================================================================== */
 
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--clr-bg-transparent);
+  background-color: rgba(253, 253, 224, 0.055);
   transition: all var(--transition-duration) var(--ease-smooth);
   min-height: var(--navbar-height);
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(8px);
 }
 
 .navbar--scrolled {
@@ -134,11 +154,15 @@
 
 .navbar__brand-brown {
   color: var(--clr-primary);
+  font-family: "efont";
+  font-size: 2rem;
 }
 
 .navbar__brand-kudi {
   color: var(--clr-text);
-  font-size: 0.9em;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "pfont";
 }
 
 .navbar__brand-icon {
@@ -299,6 +323,13 @@
   color: var(--clr-primary);
 }
 
+/* Parent hover hone par dropdown show */
+.navbar__dropdown-container:hover .navbar__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* ==========================================================================
    RIGHT ACTIONS SECTION
    ========================================================================== */
@@ -365,7 +396,7 @@
 /* Platform-specific hover colors */
 .navbar__social-link[href*="instagram"]:hover,
 .navbar__mobile-social[href*="instagram"]:hover {
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .navbar__social-link[href*="facebook"]:hover,
@@ -581,11 +612,11 @@
   .navbar__nav {
     display: flex;
   }
-  
+
   .navbar__actions {
     display: flex;
   }
-  
+
   .navbar__toggle {
     display: none;
   }
@@ -595,11 +626,11 @@
   .navbar__container {
     padding: 0 2rem;
   }
-  
+
   .navbar__menu {
     gap: 3rem;
   }
-  
+
   .navbar__link {
     font-size: 1.125rem;
     padding: 1rem 1.25rem;
@@ -610,12 +641,12 @@
   .navbar {
     min-height: var(--navbar-height-mobile);
   }
-  
+
   .navbar__container {
     min-height: var(--navbar-height-mobile);
     padding: 0 1rem;
   }
-  
+
   .navbar__brand {
     font-size: 1.25rem;
   }
@@ -640,6 +671,7 @@
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -654,12 +686,12 @@
   .navbar {
     border-bottom: 2px solid var(--clr-text);
   }
-  
+
   .navbar__link,
   .navbar__dropdown-link {
     border: 1px solid transparent;
   }
-  
+
   .navbar__link:hover,
   .navbar__link:focus,
   .navbar__dropdown-link:hover,
