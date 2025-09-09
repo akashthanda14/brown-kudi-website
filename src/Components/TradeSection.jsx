@@ -8,7 +8,7 @@ const TradeSection = () => {
   const { language } = useLanguage();
   const [tilt, setTilt] = React.useState({});
 
-  const threshold = 12;
+  const threshold = 10;
 
   const handleMove = (e, id) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -39,10 +39,7 @@ const TradeSection = () => {
     punjabi: "ਹੋਰ ਜਾਣੋ",
   };
 
-
-
-
-
+   
   const products = [
     {
       id: 1,
@@ -126,6 +123,7 @@ const TradeSection = () => {
     },
 
   ];
+
   return (
     <section id="trade-section" className="trade-section">
       <h2 className="section-title">{sectionTitles[language]}</h2>
@@ -142,8 +140,9 @@ const TradeSection = () => {
             onMouseMove={(e) => handleMove(e, item.id)}
             onMouseLeave={() => handleLeave(item.id)}
             style={{
-              transform: `perspective(1000px) rotateX(${tilt[item.id]?.x || 0
-                }deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
+              transform: `perspective(1000px) rotateX(${
+                tilt[item.id]?.x || 0
+              }deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
             }}
           >
             <img
