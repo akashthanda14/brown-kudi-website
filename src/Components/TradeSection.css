@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
 
 .trade-section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
-    background: url("/img/Imgbg.jpg") no-repeat center center fixed;
-    /* ✅ parallax bg */
+    background-color: #ffffff;
     background-size: cover;
     position: relative;
 }
@@ -14,103 +16,91 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    /* dark overlay */
+    background: rgb(255, 255, 255);
     z-index: 0;
 }
 
 .section-title {
-    font-size: 4rem;
-    margin-bottom: 40px;
-    font-weight: 100;
-    font-family: "Anton";
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.995);
-    color: #fff;
+    font-family: "Oswald";
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: 900;
+    color: #7BB35C;
     position: relative;
     z-index: 1;
 }
 
 .trade-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
 .trade-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.499);
-    color: white;
-    text-align: center;
-    height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    will-change: transform;
 }
 
 .trade-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .trade-img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.trade-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .trade-name {
-    font-size: 1.2rem;
-    font-weight: 100;
-    letter-spacing: 2px;
-    margin: 15px 0 10px;
-    color: #ffffff;
-    font-family: "Bebas Neue";
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #222;
 }
 
 .trade-detail {
     font-size: 0.95rem;
-    color: #cac4c4;
-    font-family: "Oswald", sans-serif;
-}
-
-.more-info-container {
-    margin-top: 40px;
-    text-align: center;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .more-info-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #6DA34D;
-    /* agricultural green */
+    margin-top: auto;
+    padding: 12px 26px;
+    background: linear-gradient(to right, #5A8A41, #7BB35C);
     color: #fff;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
     text-decoration: none;
-    transition: 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .more-info-btn:hover {
-    background: #5a8f42;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(79, 70, 229, 0.4);
 }
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        font-weight: 100;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.995);
-        color: #fff;
-        position: relative;
-        z-index: 1;
-    }
-}
-

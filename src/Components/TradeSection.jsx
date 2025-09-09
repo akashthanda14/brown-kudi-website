@@ -1,23 +1,47 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./TradeSection.css";
 
 const TradeSection = () => {
   const { language } = useLanguage();
+  const [tilt, setTilt] = React.useState({});
 
-  //  Section Titles
+  const threshold = 12;
+
+  const handleMove = (e, id) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+    setTilt((prev) => ({
+      ...prev,
+      [id]: { x: y * -threshold, y: x * threshold },
+    }));
+  };
+
+  const handleLeave = (id) => {
+    setTilt((prev) => ({
+      ...prev,
+      [id]: { x: 0, y: 0 },
+    }));
+  };
+
   const sectionTitles = {
     english: "Our Trade Products",
     hindi: "हमारे ट्रेड उत्पाद",
     punjabi: "ਸਾਡੇ ਟ੍ਰੇਡ ਉਤਪਾਦ",
   };
+
   const button = {
     english: "Learn More",
     hindi: "और जानें",
     punjabi: "ਹੋਰ ਜਾਣੋ",
   };
+
+
+
+
 
   const products = [
     {
@@ -100,9 +124,8 @@ const TradeSection = () => {
         punjabi: "Brown Kudi ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ ਤਾਕਤ, ਸਟਾਈਲ ਤੇ ਭਰੋਸੇ ਦਾ ਮਿਲਾਪ ਹੈ। ਚੌੜੇ ਟਾਇਰ ਖੇਤਾਂ ਤੇ ਸੜਕਾਂ 'ਤੇ ਵਧੀਆ ਗ੍ਰਿਪ ਦਿੰਦੇ ਨੇ, ਜਦਕਿ ਢਿੱਲੋਂ ਕੁਆਲਟੀ ਫ੍ਰੇਮ ਇਸਦੀ ਲੰਬੀ ਉਮਰ ਯਕੀਨੀ ਬਣਾਉਂਦਾ ਹੈ। ਟੂਲ ਬਾਕਸ ਤੇ ਸਟਾਈਲਿਸ਼ ਡਿਜ਼ਾਈਨ ਨਾਲ, ਇਹ ਆਧੁਨਿਕ ਕਿਸਾਨ ਦੀ ਪਹਿਲੀ ਪਸੰਦ ਹੈ।",
       },
     },
-  
-  ];
 
+  ];
   return (
     <section id="trade-section" className="trade-section">
       <h2 className="section-title">{sectionTitles[language]}</h2>
@@ -116,6 +139,12 @@ const TradeSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
+            onMouseMove={(e) => handleMove(e, item.id)}
+            onMouseLeave={() => handleLeave(item.id)}
+            style={{
+              transform: `perspective(1000px) rotateX(${tilt[item.id]?.x || 0
+                }deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
+            }}
           >
             <img
               src={item.img}
@@ -123,13 +152,13 @@ const TradeSection = () => {
               className="trade-img"
               loading="lazy"
             />
-            <h3 className="trade-name">{item.name[language]}</h3>
-            <p className="trade-detail">{item.detail[language]}</p>
-
-            {/*  More Info Button */}
-            <Link to={`/product-detail/${item.id}`} className="more-info-btn">
-              {button[language]}
-            </Link>
+            <div className="trade-content">
+              <h3 className="trade-name">{item.name[language]}</h3>
+              <p className="trade-detail">{item.detail[language]}</p>
+              <Link to={`/product-detail/${item.id}`} className="more-info-btn">
+                {button[language]}
+              </Link>
+            </div>
           </motion.div>
         ))}
       </div>
