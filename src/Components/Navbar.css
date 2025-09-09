@@ -630,6 +630,9 @@
   margin: 0;
   letter-spacing: 0.5px;
 }
+.navbar__mobile-link{
+  color: white !important;
+}
 
 /* ==========================================================================
    RESPONSIVE DESIGN
