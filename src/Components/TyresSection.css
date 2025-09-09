@@ -88,6 +88,9 @@ background-color: #ffffff;
     color: #3e2723;
     border: 1px solid #3e2723;
 }
+.owner-section{
+    margin-top: 80px;
+}
 
 /* Responsive */
 @media (max-width: 320px) {

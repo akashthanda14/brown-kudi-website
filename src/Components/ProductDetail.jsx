@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import "../Components/ProductDetail.css";
+import Footer from "./Footer";
 
 const button = {
     english: "Go Back",
@@ -139,17 +140,21 @@ const ProductDetail = () => {
     };
 
     return (
-        <div className="product-detail-container">
-            <div className="product-detail-card">
-                <img src={product.img} alt={product.name[language]} />
-                <h2 className="product-title">{product.name[language]}</h2>
-                <p className="product-description">{product.detail[language]}</p>
+        <>
 
-                <button onClick={handleBack} className="back-button">
-                    {button[language]}
-                </button>
+            <div className="product-detail-container">
+                <div className="product-detail-card">
+                    <img src={product.img} alt={product.name[language]} />
+                    <h2 className="product-title">{product.name[language]}</h2>
+                    <p className="product-description">{product.detail[language]}</p>
+
+                    <button onClick={handleBack} className="back-button">
+                        {button[language]}
+                    </button>
+                </div>
             </div>
-        </div>
+            <Footer />
+        </>
     );
 };
 

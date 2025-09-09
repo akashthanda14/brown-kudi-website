@@ -72,7 +72,7 @@ const TradeSection = () => {
     },
     {
       id: 4,
-      img: "/img/IMG18.jpg",
+      img: "/img/tradeimg5.png",
       name: { english: "Rotary Tiller", hindi: "रोटावेटर टिलर", punjabi: "ਰੋਟਾਵੇਟਰ ਟਿਲਰ" },
       detail: {
         english: "Pulverizes soil, mixes manure, removes weeds.",
@@ -92,7 +92,7 @@ const TradeSection = () => {
     },
     {
       id: 6,
-      img: "/img/IMG28.jpg",
+      img: "/img/tradeimg6.png",
       name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
       detail: {
         english: "Cuts and turns soil for hard fields.",
@@ -102,7 +102,7 @@ const TradeSection = () => {
     },
     {
       id: 7,
-      img: "/img/IMG23.jpg",
+      img: "/img/tradeimg7.png",
       name: { english: "Hydraulic", hindi: "हाइड्रोलिक", punjabi: "ਹਾਈਡ੍ਰੋਲਿਕ" },
       detail: {
         english: "Prepares fine soil after ploughing.",
@@ -112,7 +112,7 @@ const TradeSection = () => {
     },
     {
       id: 8,
-      img: "/img/IMG_0325.jpg",
+      img: "/img/tradeimg8.png",
       name: { english: "Tractor Trolley", hindi: "ट्रैक्टर ट्रॉली", punjabi: "ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ" },
       detail: {
         english: "Strong, stylish trolley with wide tyres and toolbox.",

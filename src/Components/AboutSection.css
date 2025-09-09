@@ -10,8 +10,8 @@
     background-attachment: fixed; 
     background-position: center center;
     overflow: hidden;
+    margin-top: 70px;
 }
-
 
 .about-container {
     display: flex;
