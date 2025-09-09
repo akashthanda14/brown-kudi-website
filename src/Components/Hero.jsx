@@ -180,7 +180,7 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="hero__heading">
           <h1 className="hero__title">
-            <span className="hero__title-brown">Brown</span>
+            <span className="hero__title-brown">Brown lgrn2oiwionro</span>
             <span className="hero__title-kudi">ਕੁੜੀ 2</span>
           </h1>
           
