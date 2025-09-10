@@ -48,9 +48,15 @@ export default function SocialPage() {
                             of experience
                         </p>
                         <div className="icons">
-                            <FaFacebookF />
-                            <FaYoutube />
-                            <FaInstagram />
+                            <a href="http://www.facebook.com/BrownKudiofficial" target="_blank" rel="noreferrer">
+                                <FaFacebookF />
+                            </a>
+                            <a href="http://www.youtube.com/@BrownKudiThewelderGirl" target="_blank" rel="noreferrer">
+                                <FaYoutube />
+                            </a>
+                            <a href="https://www.instagram.com/brown_kudi1/" target="_blank" rel="noreferrer">
+                                <FaInstagram />
+                            </a>
                         </div>
                     </motion.div>
                 </div>
@@ -63,19 +69,19 @@ export default function SocialPage() {
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                 >
-                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer" className="social-btn">
+                    <a href="http://www.youtube.com/@BrownKudiThewelderGirl" target="_blank" rel="noreferrer" className="social-btn">
                         <img className="iconimg" src="/img/youtube.png" alt="YouTube" />
                         <span>YouTube</span>
                     </a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="social-btn">
+                    <a href="https://www.facebook.com/BrownKudiofficial" target="_blank" rel="noreferrer" className="social-btn">
                         <img className="iconimg" src="/img/facebook.png" alt="Facebook" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="social-btn">
+                    <a href="https://www.instagram.com/brown_kudi1/" target="_blank" rel="noreferrer" className="social-btn">
                         <img className="iconimg" src="/img/instagram.png" alt="Instagram" />
                         <span>Instagram</span>
                     </a>
-                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer" className="social-btn">
+                    <a href="https://snapchat.com/t/dqxVx8h6" target="_blank" rel="noreferrer" className="social-btn">
                         <img className="iconimg" src="/img/snapchat.png" alt="Snapchat" />
                         <span>Snapchat</span>
                     </a>
