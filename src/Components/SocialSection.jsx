@@ -8,7 +8,7 @@ export default function SocialSection() {
   const { language } = useLanguage();
 
   const ownername = {
-    english: "Harpal Kaur Dhanjal",
+    english: "I'm Harpal Kaur Dhanjal",
     hindi: "हरपाल कौर धांजल ",
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
   };

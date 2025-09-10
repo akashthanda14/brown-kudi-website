@@ -19,8 +19,7 @@ import ReactVideoSlider from "./Components/ReactVideoSlider";
 import VideoCardSlider from "./Components/VideoCardSlider";
 import ExportSection from "./Components/ExportSection";
 import FeedbackSection from "./Components/FeedbackSection";
-
-
+import SocialPage from "./Components/SocialPage";
 function App() {
   return (
     <LanguageProvider>
@@ -38,7 +37,7 @@ function App() {
                 <TyreSection />
                 <ExportSection />
                 <About />
-                <SocialSection />
+                <SocialPage />
                 <FeedbackSection />
                 <ThanksSection />
                 <Footer />
