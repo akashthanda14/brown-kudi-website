@@ -9,6 +9,7 @@
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-top: 80px;
 }
 
 .contact-title {
@@ -79,7 +80,7 @@
 .contact-form button {
   width: 100%;
   padding: 14px;
-  background: #6c63ff;
+  background: #7BB35C;
   color: white;
   font-size: 16px;
   border: none;
@@ -89,7 +90,7 @@
 }
 
 .contact-form button:hover {
-  background: #5548c8;
+  background: #5c8745;
   transform: translateY(-2px);
 }
 

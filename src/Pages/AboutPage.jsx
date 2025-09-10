@@ -1,30 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 import { useNavigate } from "react-router-dom";
 import "../Components/AboutSection.css";
 import Footer from "../Components/Footer";
 
-
-const images = [
-    "/img/aboutimg1.png",
-    "/img/aboutimg2.png",
-    "/img/aboutimg3.png",
-    "/img/aboutimg.png",
-    "/img/aboutimg.png",
-];
-
 const About = () => {
     const { language } = useLanguage();
-    const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
 
     const handleNavigate = () => {
         navigate("/about");
@@ -38,30 +21,28 @@ const About = () => {
 
     return (
         <>
+
             <section className="about">
-                {/* Background Video */}
-
-
-                <div className="about-container">
-                    <div className="about-image">
-                        {images.map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                alt="About Us"
-                                className={index === currentIndex ? "fade show" : "fade"}
-                            />
-                        ))}
+                <div className="about-wrapper">
+                    {/* Left side image */}
+                    <div className="about-left">
+                        <img
+                            className="about-main-img"
+                            src="/img/aboutimg1.png"
+                            alt="About Us"
+                        />
                     </div>
-                    <div className="about-content">
-                        <h2>{translations.about.heading[language]}</h2>
+
+                    {/* Right side content */}
+                    <div className="about-right">
+                        <h1>{translations.about.heading[language]}</h1>
+                        <div className="line"></div>
                         <p>{translations.about.para1[language]}</p>
                         <p>{translations.about.para2[language]}</p>
-
                     </div>
                 </div>
             </section>
-           <Footer />
+            <Footer />
         </>
     );
 };
