@@ -63,20 +63,20 @@ export default function SocialPage() {
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                 >
-                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer" className="btn">
-                        <FaYoutube className="icon" />
+                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer" className="social-btn">
+                        <img src="/img/youtube.png" alt="YouTube" />
                         <span>YouTube</span>
                     </a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="btn">
-                        <FaFacebookF className="icon" />
+                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="social-btn">
+                        <img src="/img/facebook.png" alt="Facebook" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="btn">
-                        <FaInstagram className="icon" />
+                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="social-btn">
+                        <img src="/img/instagram.png" alt="Instagram" />
                         <span>Instagram</span>
                     </a>
-                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer" className="btn">
-                        <FaSnapchatGhost className="icon" />
+                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer" className="social-btn">
+                        <img src="/img/snapchat.png" alt="Snapchat" />
                         <span>Snapchat</span>
                     </a>
                 </motion.div>
