@@ -10,11 +10,13 @@ import {
     FaYoutube,
     FaSnapchatGhost,
 } from "react-icons/fa";
+
 const ownername = {
     english: "I'm Harpal Kaur Dhanjal",
     hindi: "हरपाल कौर धांजल ",
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
 };
+
 export default function SocialPage() {
     const { language } = useLanguage();
 
@@ -22,25 +24,7 @@ export default function SocialPage() {
         <div className="container">
             <div className="wrapper">
                 <div className="top">
-                    {/* Left Section */}
-                    <motion.div
-                        className="left"
-                        initial={{ x: -200, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2>
-                           {ownername[language]}
-                        </h2>
-                        <p>
-                            A freelancer who provides services for digital programming and
-                            design content needs, for all businesses with more than 10 years
-                            of experience
-                        </p>
-                    </motion.div>
-
-                    {/* Center (Profile Image) */}
+                    {/* Left Section with Image */}
                     <div className="center">
                         <img
                             src="/img/owner.jpg"
@@ -49,7 +33,7 @@ export default function SocialPage() {
                         />
                     </div>
 
-                    {/* Right Section */}
+                    {/* Right Section (now shifted to left side with fade-right) */}
                     <motion.div
                         className="right"
                         initial={{ x: 200, opacity: 0 }}
@@ -57,16 +41,16 @@ export default function SocialPage() {
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
                     >
-                        <h3>Services</h3>
+                        <h2>{ownername[language]}</h2>
                         <p>
-                            Let&apos;s build quality products in programming and design with
-                            my services
+                            A freelancer who provides services for digital programming and
+                            design content needs, for all businesses with more than 10 years
+                            of experience
                         </p>
                         <div className="icons">
                             <FaFacebookF />
-                            <FaTwitter />
+                            <FaYoutube />
                             <FaInstagram />
-                            <FaPinterestP />
                         </div>
                     </motion.div>
                 </div>
@@ -79,19 +63,19 @@ export default function SocialPage() {
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                 >
-                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer" className="btn">
                         <FaYoutube className="icon" />
                         <span>YouTube</span>
                     </a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="btn">
                         <FaFacebookF className="icon" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="btn">
                         <FaInstagram className="icon" />
                         <span>Instagram</span>
                     </a>
-                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer">
+                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer" className="btn">
                         <FaSnapchatGhost className="icon" />
                         <span>Snapchat</span>
                     </a>
