@@ -83,24 +83,36 @@
 }
 
 .icons {
-    color: #6da34d;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
-    gap: 12px;
-    font-size: 22px;
+    gap: 15px;
 }
 
 .icons svg {
-    cursor: pointer;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #6da34d;
+    /* green outline */
     border-radius: 50%;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6da34d;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .icons svg:hover {
-    color: #4b6e36;
-
-
+    background-color: #6da34d;
+    /* fill on hover */
+    color: white;
+    /* icon white ho jaye */
+    transform: scale(1.1);
+    /* thoda zoom effect */
 }
+
 
 /* Bottom Section */
 .bottom {
@@ -110,7 +122,7 @@
     background: #7ab35c00;
     padding: 20px;
     border-radius: 12px;
-    margin-top: 40px;
+    margin-bottom: 100px;
     /* thoda margin niche se */
 }
 
@@ -135,13 +147,16 @@
     font-size: 18px;
 
 }
-.bottom .social-btn img{
+
+.bottom .social-btn img {
     width: 26px;
     height: 26px;
 }
-.social-btn span{
+
+.social-btn span {
     color: black;
 }
+
 .bottom a:hover {
     transition: 200ms;
 }
