@@ -39,11 +39,6 @@ const About = () => {
                         <div className="line"></div>
                         <p>{translations.about.para1[language]}</p>
                         <p>{translations.about.para2[language]}</p>
-                        <p>
-                            From UI design systems to automation-ready layouts,
-                            PrebuiltUI empowers you to build beautifully and scale
-                            effortlessly.
-                        </p>
                     </div>
                 </div>
             </section>
