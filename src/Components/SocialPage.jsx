@@ -1,0 +1,102 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
+import "./SocialPage.css";
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaInstagram,
+    FaPinterestP,
+    FaYoutube,
+    FaSnapchatGhost,
+} from "react-icons/fa";
+const ownername = {
+    english: "I'm Harpal Kaur Dhanjal",
+    hindi: "हरपाल कौर धांजल ",
+    punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
+};
+export default function SocialPage() {
+    const { language } = useLanguage();
+
+    return (
+        <div className="container">
+            <div className="wrapper">
+                <div className="top">
+                    {/* Left Section */}
+                    <motion.div
+                        className="left"
+                        initial={{ x: -200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2>
+                           {ownername[language]}
+                        </h2>
+                        <p>
+                            A freelancer who provides services for digital programming and
+                            design content needs, for all businesses with more than 10 years
+                            of experience
+                        </p>
+                    </motion.div>
+
+                    {/* Center (Profile Image) */}
+                    <div className="center">
+                        <img
+                            src="/img/owner.jpg"
+                            alt="profile"
+                            className="profile-img"
+                        />
+                    </div>
+
+                    {/* Right Section */}
+                    <motion.div
+                        className="right"
+                        initial={{ x: 200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        <h3>Services</h3>
+                        <p>
+                            Let&apos;s build quality products in programming and design with
+                            my services
+                        </p>
+                        <div className="icons">
+                            <FaFacebookF />
+                            <FaTwitter />
+                            <FaInstagram />
+                            <FaPinterestP />
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Bottom Section */}
+                <motion.div
+                    className="bottom"
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}
+                >
+                    <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+                        <FaYoutube className="icon" />
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                        <FaFacebookF className="icon" />
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                        <FaInstagram className="icon" />
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.snapchat.com" target="_blank" rel="noreferrer">
+                        <FaSnapchatGhost className="icon" />
+                        <span>Snapchat</span>
+                    </a>
+                </motion.div>
+            </div>
+        </div>
+    );
+}
