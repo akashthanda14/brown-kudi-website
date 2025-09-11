@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Components/AboutSection.css";
-import { FaUserTie, FaUsers, FaCheckCircle, FaClipboardList } from "react-icons/fa";
+import { Users, Briefcase, CheckCircle2, ClipboardList } from "lucide-react"; // ✅ Lucide icons
 
 const stats = [
-  { id: 1, icon: <FaUserTie />, number: 260, label: "Expert Consultants" },
-  { id: 2, icon: <FaUsers />, number: 975, label: "Active Clients" },
-  { id: 3, icon: <FaCheckCircle />, number: 724, label: "Projects Delivered" },
-  { id: 4, icon: <FaClipboardList />, number: 89, label: "Orders in Queue" },
+  { id: 1, icon: <Briefcase size={50} strokeWidth={1.5} />, number: 260, label: "Expert Consultants" },
+  { id: 2, icon: <Users size={50} strokeWidth={1.5} />, number: 975, label: "Active Clients" },
+  { id: 3, icon: <CheckCircle2 size={50} strokeWidth={1.5} />, number: 724, label: "Projects Delivered" },
+  { id: 4, icon: <ClipboardList size={50} strokeWidth={1.5} />, number: 89, label: "Orders in Queue" },
 ];
+
 
 const About = () => {
   const navigate = useNavigate();
@@ -66,7 +67,6 @@ const About = () => {
       {/* Top Section Heading */}
       <div className="about-top">
         <p className="small-heading">About Us</p>
-        <h1 className="main-heading">Innovative Design for Every Room</h1>
       </div>
 
       {/* Two Column Section */}
@@ -84,8 +84,20 @@ const About = () => {
         <div className="about-right">
           <h2>Brouwn Kudi</h2>
           <p>
-            Our blog offers practical advice and actionable tips on effective
-            goal-setting, helping you turn your aspirations into achievements.
+            At <strong>Brouwn Kudi</strong>, we believe that every space tells
+            a story. Our passion lies in creating innovative interior designs
+            that blend aesthetics with functionality.
+          </p>
+          <p>
+            With years of expertise, we have transformed numerous spaces into
+            elegant, practical, and inspiring environments. From modern offices
+            to cozy homes, our designs are tailored to reflect your unique
+            personality and needs.
+          </p>
+          <p>
+            We don’t just design interiors — we design experiences. Our team of
+            professionals ensures that every detail, from concept to execution,
+            aligns with your vision.
           </p>
           <button className="about-btn" onClick={handleNavigate}>
             <span>Contact Us</span>
