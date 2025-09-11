@@ -1,78 +1,75 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaQuoteLeft } from "react-icons/fa"; // Quote icon
 import "./Testimonials.css";
 
 export default function Testimonials() {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const testimonials = [
+    {
+      name: "Gurpreet Singh",
+      location: "Punjab, India",
+      text: "The Super Seeder from Brown Kudi is a marvel. It saves so much time and fuel, and my crop growth has been noticeably better. A must-have for modern farming."
+    },
+    {
+      name: "Harman Kaur",
+      location: "Haryana, India",
+      text: "I've been using the Reversible MB Plough, and the primary tillage is excellent. It turns over the soil perfectly and buries residue, making my land ready for sowing in no time."
+    },
+    {
+      name: "Manpreet Singh",
+      location: "Punjab, India",
+      text: "The Disc Harrow has made preparing my seedbed so much easier. It breaks up the clods and levels the soil beautifully. The quality is outstanding."
+    },
+    {
+      name: "Jaswinder Singh",
+      location: "Punjab, India",
+      text: "Using the Rotary Tiller has cut down my field preparation time significantly. It pulverizes the soil and removes weeds with ease. A very efficient machine."
+    },
+    {
+      name: "Balwinder Singh",
+      location: "Haryana, India",
+      text: "The Subsoiler is a powerful tool. It broke through my hardpan soil, and I've seen a great improvement in root growth and water absorption. My yield has definitely increased."
+    },
+    {
+      name: "Amritpal Singh",
+      location: "Punjab, India",
+      text: "I am very happy with the Disc Plough. It works exceptionally well in my hard and stony fields, where other ploughs have struggled. It's built tough."
+    }
+  ];
 
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        }
-    }, [controls, inView]);
+  return (
+    <section className="testimonials-section">
+      <span className="testimonials-label">TESTIMONIALS</span>
+      <h2 className="testimonials-heading">Our trusted clients</h2>
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, delay: i * 0.2 },
-        }),
-    };
+      <div className="testimonials-grid">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={i}
+            className="testimonial-card"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
+            viewport={{ once: true }}
+          >
+            <FaQuoteLeft className="quote-icon" />
 
-    return (
-        <section className="testimonials-section" ref={ref}>
-            <h2 className="testimonials-heading">What Our Customers Say</h2>
+            <p className="testimonial-text">
+              {t.text}
+            </p>
 
-            <div className="testimonials-container">
-                {[ 
-                    {
-                        name: "Donald Jackman",
-                        role: "Content Creator",
-                        img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    },
-                    {
-                        name: "Richard Nelson",
-                        role: "Instagram Influencer",
-                        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    },
-                    {
-                        name: "James",
-                        role: "Digital Content Creator",
-                        img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    }
-                ].map((card, i) => (
-                    <motion.div
-                        key={i}
-                        className="testimonial-card"
-                        variants={cardVariants}
-                        initial="hidden"
-                        animate={controls}
-                        custom={i}
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        <div className="testimonial-header">
-                            <img
-                                className="testimonial-avatar"
-                                src={card.img}
-                                alt={card.name}
-                            />
-                            <div>
-                                <h1 className="testimonial-name">{card.name}</h1>
-                                <p className="testimonial-role">{card.role}</p>
-                            </div>
-                        </div>
-                        <div className="testimonial-body">
-                            <p className="testimonial-text">"{card.text}"</p>
-                        </div>
-                    </motion.div>
-                ))}
+            {/* Divider line */}
+            <div className="testimonial-divider"></div>
+
+            <div className="testimonial-footer">
+              <div>
+                <h4 className="testimonial-name">{t.name}</h4>
+                <p className="testimonial-username">{t.location}</p>
+              </div>
             </div>
-        </section>
-    );
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 }
