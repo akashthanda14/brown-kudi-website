@@ -6,40 +6,36 @@ import "./Testimonials.css";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Fatima Khoury",
-      username: "dilatory_curtains_98",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+
+      name: "Gurpreet Singh",
+      location: "Punjab, India",
+      text: "The Super Seeder from Brown Kudi is a marvel. It saves so much time and fuel, and my crop growth has been noticeably better. A must-have for modern farming."
     },
     {
-      name: "Hassan Ali",
-      username: "turbulent_unicorn_29",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+      name: "Harman Kaur",
+      location: "Haryana, India",
+      text: "I've been using the Reversible MB Plough, and the primary tillage is excellent. It turns over the soil perfectly and buries residue, making my land ready for sowing in no time."
     },
     {
-      name: "Jorge Martínez",
-      username: "nefarious_jellybeans_91",
-      img: "https://randomuser.me/api/portraits/men/75.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+      name: "Manpreet Singh",
+      location: "Punjab, India",
+      text: "The Disc Harrow has made preparing my seedbed so much easier. It breaks up the clods and levels the soil beautifully. The quality is outstanding."
     },
     {
-      name: "Nicolás Sánchez",
-      username: "pervasive_inker_83",
-      img: "https://randomuser.me/api/portraits/men/41.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+      name: "Jaswinder Singh",
+      location: "Punjab, India",
+      text: "Using the Rotary Tiller has cut down my field preparation time significantly. It pulverizes the soil and removes weeds with ease. A very efficient machine."
     },
     {
-      name: "Noel Jensen",
-      username: "nefarious_shop_47",
-      img: "https://randomuser.me/api/portraits/men/21.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+      name: "Balwinder Singh",
+      location: "Haryana, India",
+      text: "The Subsoiler is a powerful tool. It broke through my hardpan soil, and I've seen a great improvement in root growth and water absorption. My yield has definitely increased."
     },
     {
-      name: "Ahmad Khan",
-      username: "antic_circus_76",
-      img: "https://randomuser.me/api/portraits/men/14.jpg",
-      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+      name: "Amritpal Singh",
+      location: "Punjab, India",
+      text: "I am very happy with the Disc Plough. It works exceptionally well in my hard and stony fields, where other ploughs have struggled. It's built tough."
+
     }
   ];
 
@@ -61,19 +57,21 @@ export default function Testimonials() {
             <FaQuoteLeft className="quote-icon" />
 
             <p className="testimonial-text">
-              {t.text.split("challenging")[0]}
-              <span className="highlight">challenging</span>
-              {t.text.split("challenging")[1]}
+
+              {t.text}
+
+
             </p>
 
             {/* Divider line */}
             <div className="testimonial-divider"></div>
 
             <div className="testimonial-footer">
-              <img src={t.img} alt={t.name} className="testimonial-avatar" />
+
               <div>
                 <h4 className="testimonial-name">{t.name}</h4>
-                <p className="testimonial-username">{t.username}</p>
+                <p className="testimonial-username">{t.location}</p>
+
               </div>
             </div>
           </motion.div>
