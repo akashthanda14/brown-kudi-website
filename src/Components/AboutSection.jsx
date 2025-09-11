@@ -1,60 +1,110 @@
-import React from "react";
-import { useLanguage } from "../context/LanguageContext";
-import translations from "../translations";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Components/AboutSection.css";
+import { FaUserTie, FaUsers, FaCheckCircle, FaClipboardList } from "react-icons/fa";
+
+const stats = [
+  { id: 1, icon: <FaUserTie />, number: 260, label: "Expert Consultants" },
+  { id: 2, icon: <FaUsers />, number: 975, label: "Active Clients" },
+  { id: 3, icon: <FaCheckCircle />, number: 724, label: "Projects Delivered" },
+  { id: 4, icon: <FaClipboardList />, number: 89, label: "Orders in Queue" },
+];
 
 const About = () => {
-    const { language } = useLanguage();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [inView, setInView] = useState(false);
+  const [counts, setCounts] = useState(stats.map(() => 0));
+  const sectionRef = useRef(null);
 
-    const handleNavigate = () => {
-        navigate("/about");
-        setTimeout(() => {
-            const aboutPage = document.querySelector(".about");
-            if (aboutPage) {
-                aboutPage.scrollIntoView({ behavior: "smooth" });
-            }
-        }, 200);
-    };
+  const handleNavigate = () => {
+    navigate("/about");
+    setTimeout(() => {
+      const aboutPage = document.querySelector(".about");
+      if (aboutPage) {
+        aboutPage.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 200);
+  };
 
-    return (
-        <section className="about">
-            <div className="about-wrapper">
-                {/* Left side image */}
-                <div className="about-left">
-                    <img
-                        className="about-main-img"
-                        src="/img/aboutimg1.png"
-                        alt="About Us"
-                    />
-                </div>
-
-                {/* Right side content */}
-                <div className="about-right">
-                    <h1>{translations.about.heading[language]}</h1>
-                    <div className="line"></div>
-                    <p>{translations.about.para1[language]}</p>
-                    <p>{translations.about.para2[language]}</p>
-                    <button className="about-btn" onClick={handleNavigate}>
-                        <span>Read more</span>
-                        <svg
-                            width="13"
-                            height="12"
-                            viewBox="0 0 13 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M12.53 6.53a.75.75 0 0 0 0-1.06L7.757.697a.75.75 0 1 0-1.06 1.06L10.939 6l-4.242 4.243a.75.75 0 0 0 1.06 1.06zM0 6v.75h12v-1.5H0z"
-                                fill="#fff"
-                            />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </section>
+  // Scroll detection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) setInView(true);
+      },
+      { threshold: 0.3 }
     );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
+  // Counter animation
+  useEffect(() => {
+    if (inView) {
+      stats.forEach((stat, index) => {
+        let start = 0;
+        const end = stat.number;
+        const duration = 1500;
+        const stepTime = Math.abs(Math.floor(duration / end));
+        const timer = setInterval(() => {
+          start += 1;
+          setCounts((prev) => {
+            const newCounts = [...prev];
+            newCounts[index] = start;
+            return newCounts;
+          });
+          if (start === end) clearInterval(timer);
+        }, stepTime);
+      });
+    }
+  }, [inView]);
+
+  return (
+    <section className="about" ref={sectionRef}>
+      {/* Top Section Heading */}
+      <div className="about-top">
+        <p className="small-heading">About Us</p>
+        <h1 className="main-heading">Innovative Design for Every Room</h1>
+      </div>
+
+      {/* Two Column Section */}
+      <div className="about-wrapper">
+        {/* Left side image */}
+        <div className="about-left">
+          <img
+            className="about-main-img"
+            src="/img/aboutimg1.png"
+            alt="About Us"
+          />
+        </div>
+
+        {/* Right side content */}
+        <div className="about-right">
+          <h2>Brouwn Kudi</h2>
+          <p>
+            Our blog offers practical advice and actionable tips on effective
+            goal-setting, helping you turn your aspirations into achievements.
+          </p>
+          <button className="about-btn" onClick={handleNavigate}>
+            <span>Contact Us</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="about-stats">
+        {stats.map((stat, index) => (
+          <div key={stat.id} className="stat-card">
+            <div className="stat-icon">{stat.icon}</div>
+            <h2>{counts[index]}+</h2>
+            <p>{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default About;

@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 const ownername = {
-    english: "I'm Harpal Kaur Dhanjal",
+    english: "Harpal Kaur Dhanjal",
     hindi: "हरपाल कौर धांजल ",
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
 };
