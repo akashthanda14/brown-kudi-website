@@ -6,6 +6,7 @@ import "./Testimonials.css";
 export default function Testimonials() {
   const testimonials = [
     {
+
       name: "Gurpreet Singh",
       location: "Punjab, India",
       text: "The Super Seeder from Brown Kudi is a marvel. It saves so much time and fuel, and my crop growth has been noticeably better. A must-have for modern farming."
@@ -34,6 +35,7 @@ export default function Testimonials() {
       name: "Amritpal Singh",
       location: "Punjab, India",
       text: "I am very happy with the Disc Plough. It works exceptionally well in my hard and stony fields, where other ploughs have struggled. It's built tough."
+
     }
   ];
 
@@ -55,16 +57,21 @@ export default function Testimonials() {
             <FaQuoteLeft className="quote-icon" />
 
             <p className="testimonial-text">
+
               {t.text}
+
+
             </p>
 
             {/* Divider line */}
             <div className="testimonial-divider"></div>
 
             <div className="testimonial-footer">
+
               <div>
                 <h4 className="testimonial-name">{t.name}</h4>
                 <p className="testimonial-username">{t.location}</p>
+
               </div>
             </div>
           </motion.div>
