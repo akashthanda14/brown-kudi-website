@@ -69,7 +69,6 @@ const About = () => {
       {/* Top Section Heading */}
       <div className="about-top">
         <p className="small-heading">About Us</p>
-        <h1 className="main-heading">Innovative Design for Every Room</h1>
       </div>
 
       {/* Two Column Section */}

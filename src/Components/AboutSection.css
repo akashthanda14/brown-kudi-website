@@ -130,12 +130,23 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
 
     .about-right {
         text-align: center;
+    }
+    .about-right p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+    .about-main-img {
+        height: 350px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 }
