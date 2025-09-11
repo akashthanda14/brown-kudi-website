@@ -1,33 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ExportSection.css";
 import { useLanguage } from "../context/LanguageContext";
-
-
-
-const cardData = [
-  {
-    image: "/img/p1.jpg",
-  },
-  {
-    image: "/img/p2.jpg",
-  },
-  {
-    image: "/img/p3.jpg",
-  },
-  {
-    image: "/img/p4.jpg",
-  },
-  {
-    image: "/img/p5.jpg",
-  },
-
-];
 
 const heading = {
   english: "Our Global Exports",
   hindi: "हमारा वैश्विक निर्यात",
   punjabi: "ਸਾਡੇ ਗਲੋਬਲ ਨਿਰਯਾਤ",
 };
+
 const para = {
   english:
     "Brown Kudi exports high-quality products to USA, Canada and Australia. We focus on authentic taste and consistent quality.",
@@ -39,7 +19,6 @@ const para = {
 
 export default function ExportSection() {
   const { language } = useLanguage();
-  const [stopScroll, setStopScroll] = useState(false);
 
   return (
     <section className="export-section">
@@ -47,34 +26,10 @@ export default function ExportSection() {
       <div className="export-bg"></div>
       <div className="overlay"></div>
 
-      {/* ✅ Centered Text */}
+      {/* ✅ Centered Text only */}
       <div className="export-text">
         <h2>{heading[language]}</h2>
         <p>{para[language]}</p>
-      </div>
-
-      {/* ✅ Infinite Slider */}
-      <div className="slider-container">
-        <div
-          className="marquee-inner"
-          style={{
-            animationPlayState: stopScroll ? "paused" : "running",
-            animationDuration: cardData.length * 9999000 + "ms", 
-          }}
-        >
-          <div className="slider-track">
-            {[...cardData, ...cardData, ...cardData].map((card, index) => (
-              <div
-                className="slider-card"
-                key={index}
-                onMouseEnter={() => setStopScroll(true)} 
-                onMouseLeave={() => setStopScroll(false)} 
-              >
-                <img src={card.image} alt="export-img" />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

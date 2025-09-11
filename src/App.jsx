@@ -17,6 +17,7 @@ import Gallery from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import ExportSection from "./Components/ExportSection";
 import Testimonials from "./Components/Testmonials";
+import ImageSlider from "./Components/ImageSlider";
 function App() {
   return (
     <LanguageProvider>
@@ -33,6 +34,7 @@ function App() {
                 <TradeSection />
                 <TyreSection />
                 <ExportSection />
+                <ImageSlider />
                 <About />
                 <Testimonials />
                 <ThanksSection />
