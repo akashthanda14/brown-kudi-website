@@ -5,7 +5,7 @@ import Hero from "./Components/Hero";
 import TradeSection from "./Components/TradeSection";
 import "./App.css";
 import TyreSection from "./Components/TyresSection";
-import SocialSection from "./Components/SocialSection";
+import SocialPage from "./Components/SocialPage";
 import About from "./Components/AboutSection";
 import ThanksSection from "./Components/ThanksSection";
 import Footer from "./Components/Footer";
@@ -17,6 +17,7 @@ import Gallery from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import ExportSection from "./Components/ExportSection";
 import Testimonials from "./Components/Testmonials";
+import ImageSlider from "./Components/ImageSlider";
 function App() {
   return (
     <LanguageProvider>
@@ -33,7 +34,9 @@ function App() {
                 <TradeSection />
                 <TyreSection />
                 <ExportSection />
+                <ImageSlider />
                 <About />
+                <SocialPage />
                 <Testimonials />
                 <ThanksSection />
                 <Footer />

@@ -1,78 +1,84 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaQuoteLeft } from "react-icons/fa"; // Quote icon
 import "./Testimonials.css";
 
 export default function Testimonials() {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const testimonials = [
+    {
+      name: "Fatima Khoury",
+      username: "dilatory_curtains_98",
+      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    },
+    {
+      name: "Hassan Ali",
+      username: "turbulent_unicorn_29",
+      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    },
+    {
+      name: "Jorge Martínez",
+      username: "nefarious_jellybeans_91",
+      img: "https://randomuser.me/api/portraits/men/75.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    },
+    {
+      name: "Nicolás Sánchez",
+      username: "pervasive_inker_83",
+      img: "https://randomuser.me/api/portraits/men/41.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    },
+    {
+      name: "Noel Jensen",
+      username: "nefarious_shop_47",
+      img: "https://randomuser.me/api/portraits/men/21.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    },
+    {
+      name: "Ahmad Khan",
+      username: "antic_circus_76",
+      img: "https://randomuser.me/api/portraits/men/14.jpg",
+      text: "The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has a great mix of common and challenging words."
+    }
+  ];
 
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        }
-    }, [controls, inView]);
+  return (
+    <section className="testimonials-section">
+      <span className="testimonials-label">TESTIMONIALS</span>
+      <h2 className="testimonials-heading">Our trusted clients</h2>
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, delay: i * 0.2 },
-        }),
-    };
+      <div className="testimonials-grid">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={i}
+            className="testimonial-card"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
+            viewport={{ once: true }}
+          >
+            <FaQuoteLeft className="quote-icon" />
 
-    return (
-        <section className="testimonials-section" ref={ref}>
-            <h2 className="testimonials-heading">What Our Customers Say</h2>
+            <p className="testimonial-text">
+              {t.text.split("challenging")[0]}
+              <span className="highlight">challenging</span>
+              {t.text.split("challenging")[1]}
+            </p>
 
-            <div className="testimonials-container">
-                {[ 
-                    {
-                        name: "Donald Jackman",
-                        role: "Content Creator",
-                        img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    },
-                    {
-                        name: "Richard Nelson",
-                        role: "Instagram Influencer",
-                        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    },
-                    {
-                        name: "James",
-                        role: "Digital Content Creator",
-                        img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop",
-                        text: "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier."
-                    }
-                ].map((card, i) => (
-                    <motion.div
-                        key={i}
-                        className="testimonial-card"
-                        variants={cardVariants}
-                        initial="hidden"
-                        animate={controls}
-                        custom={i}
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        <div className="testimonial-header">
-                            <img
-                                className="testimonial-avatar"
-                                src={card.img}
-                                alt={card.name}
-                            />
-                            <div>
-                                <h1 className="testimonial-name">{card.name}</h1>
-                                <p className="testimonial-role">{card.role}</p>
-                            </div>
-                        </div>
-                        <div className="testimonial-body">
-                            <p className="testimonial-text">"{card.text}"</p>
-                        </div>
-                    </motion.div>
-                ))}
+            {/* Divider line */}
+            <div className="testimonial-divider"></div>
+
+            <div className="testimonial-footer">
+              <img src={t.img} alt={t.name} className="testimonial-avatar" />
+              <div>
+                <h4 className="testimonial-name">{t.name}</h4>
+                <p className="testimonial-username">{t.username}</p>
+              </div>
             </div>
-        </section>
-    );
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 }
