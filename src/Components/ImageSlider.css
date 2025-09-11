@@ -1,15 +1,16 @@
 .slider-container {
   position: relative;
   overflow: hidden;
+  background-color: white;
   width: 100%;
-  max-width: 1100px;
-  margin: 50px auto; /* ऊपर-नीचे spacing */
-  padding: 40px 0;   /* ✅ top-bottom padding */
+  max-width: 1380px;
+  margin: 50px auto; 
+  padding: 40px 0; 
 }
 
 .marquee-inner {
   display: flex;
-  min-width: 300%; /* ✅ लंबा ताकि continuous लगे */
+  min-width: 300%; 
   animation: marqueeScroll 20s linear infinite;
   will-change: transform;
 }
@@ -28,10 +29,10 @@
 }
 
 .slider-card {
-  width: 220px;      /* ✅ थोड़ी छोटी width */
-  height: 300px;     /* ✅ height भी कम */
+  width: 220px;    
+  height: 300px; 
   margin: 0 15px;
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
   transition: transform 0.3s ease;
