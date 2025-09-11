@@ -15,11 +15,8 @@ import TyresPage from "./Pages/TyresPage";
 import AboutPage from "./Pages/AboutPage";
 import Gallery from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
-import ReactVideoSlider from "./Components/ReactVideoSlider";
-import VideoCardSlider from "./Components/VideoCardSlider";
 import ExportSection from "./Components/ExportSection";
-import FeedbackSection from "./Components/FeedbackSection";
-import SocialPage from "./Components/SocialPage";
+import Testimonials from "./Components/Testmonials";
 function App() {
   return (
     <LanguageProvider>
@@ -37,8 +34,7 @@ function App() {
                 <TyreSection />
                 <ExportSection />
                 <About />
-                <SocialPage />
-                <FeedbackSection />
+                <Testimonials />
                 <ThanksSection />
                 <Footer />
               </>

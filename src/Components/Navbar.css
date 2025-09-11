@@ -457,8 +457,8 @@
 .navbar__cta:hover,
 .navbar__cta:focus {
   background: transparent;
-  border-color: var(--clr-primary);
-  color: var(--clr-primary);
+  border-color: white !important;
+  color:  white !important;
   transform: translateY(-2px);
 }
 
