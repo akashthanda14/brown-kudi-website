@@ -5,6 +5,7 @@ import "../Components/ProductDetail.css";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import Footer from "./Footer";
 import { useScrollToTop } from "../hooks/useScrollToTop";
+import TradeSection from "./TradeSection";
 
 const button = {
   english: "Go Back",
@@ -53,12 +54,12 @@ const products = [
   },
   {
     id: 2,
-    img: "/img/rotavator1.png",
-    gallery: ["/img/rotavator1.png", "/img/rotavator2.png"],
+    img: "/img/tradeimg2.png",
+    gallery: ["/img/tradeimg2.png", "/img/tradeimg3.png","/img/tradeimg4.png", "/img/tradeimg5.png"],
     name: {
-      english: "Rotavator",
-      hindi: "रोटावेटर",
-      punjabi: "ਰੋਟਾਵੇਟਰ",
+      english: "Reversible MB Plough",
+      hindi: "रिवर्सिबल एमबी प्लाउ",
+      punjabi: "ਰਿਵਰਸਿਬਲ ਐਮਬੀ ਪਲਾਊ",
     },
     points: {
       english: [
@@ -86,12 +87,12 @@ const products = [
   },
   {
     id: 3,
-    img: "/img/harvester1.png",
-    gallery: ["/img/harvester1.png", "/img/harvester2.png"],
+    img: "/img/tradeimg4.png",
+    gallery: ["/img/tradeimg4.png", "/img/tradeimg5.png","/img/tradeimg6.png", "/img/tradeimg7.png"],
     name: {
-      english: "Harvester",
-      hindi: "हार्वेस्टर",
-      punjabi: "ਹਾਰਵੇਸਟਰ",
+      english: "Disc Harrow",
+      hindi: "डिस्क हैरो",
+      punjabi: "ਡਿਸਕ ਹੈਰੋ",
     },
     points: {
       english: [
@@ -119,12 +120,12 @@ const products = [
   },
   {
     id: 4,
-    img: "/img/baler1.png",
-    gallery: ["/img/baler1.png", "/img/baler2.png"],
+    img: "/img/tradeimg5.png",
+    gallery: ["/img/tradeimg5.png", "/img/tradeimg6.png","/img/tradeimg7.png", "/img/tradeimg8.png"],
     name: {
-      english: "Baler",
-      hindi: "बेइलर मशीन",
-      punjabi: "ਬੇਲਰ ਮਸ਼ੀਨ",
+      english: "Roary Tiller",
+      hindi: "रोरी टिलर",
+      punjabi: "ਰੋਰੀ ਟਿਲਰ",
     },
     points: {
       english: [
@@ -150,18 +151,157 @@ const products = [
       ],
     },
   },
+  {
+    id: 5,
+    img: "/img/tradeimg3.png",
+    gallery: ["/img/tradeimg2.png", "/img/tradeimg3.png","/img/tradeimg4.png", "/img/tradeimg5.png"],
+    name: {
+      english: "Subsoiler",
+      hindi: "सबसोइलर",
+      punjabi: "ਸਬਸੋਇਲਰ",
+    },
+    points: {
+      english: [
+        "Breaks hard and compact soil layers.",
+        "Improves root growth and water infiltration.",
+        "Increases crop yield significantly.",
+        "Works smoothly in large fields.",
+        "Built for long durability.",
+      ],
+      hindi: [
+        "कई फसलों की कटाई एक साथ करता है।",
+        "मानव श्रम की ज़रूरत घटाता है।",
+        "किसान की उत्पादकता बढ़ाता है।",
+        "बड़े खेतों में आसानी से चलता है।",
+        "लंबे समय तक चलने के लिए बनाया गया।",
+      ],
+      punjabi: [
+        "ਕਈ ਫਸਲਾਂ ਨੂੰ ਇਕੱਠੇ ਕੱਟਣ ਯੋਗ।",
+        "ਹੱਥੀਂ ਮਿਹਨਤ ਬਹੁਤ ਘਟਾਉਂਦਾ ਹੈ।",
+        "ਕਿਸਾਨ ਦੀ ਉਤਪਾਦਕਤਾ ਵਧਦਾ ਹੈ।",
+        "ਵੱਡੇ ਖੇਤਾਂ ਵਿੱਚ ਆਸਾਨੀ ਨਾਲ ਚਲਦਾ ਹੈ।",
+        "ਲੰਬੇ ਸਮੇਂ ਲਈ ਬਣਾਇਆ ਗਿਆ।",
+      ],
+    },
+  },
+  {
+    id: 6,
+    img: "/img/tradeimg6.png",
+    gallery: ["/img/tradeimg6.png", "/img/tradeimg7.png","/img/tradeimg8.png", "/img/tradeimg1.png"],
+    name: {
+      english: "Disc Plough",
+      hindi: "डिस्क प्लाउ",
+      punjabi: "ਡਿਸਕ ਪਲਾਅ",
+    },
+    points: {
+      english: [
+        "Cuts through tough soil and residue.",
+        "Improves soil aeration and mixing.",
+        "Increases water retention in soil.",
+        "Reduces soil erosion.",
+        "Built for long durability.",
+      ],
+      hindi: [
+        "कई फसलों की कटाई एक साथ करता है।",
+        "मानव श्रम की ज़रूरत घटाता है।",
+        "किसान की उत्पादकता बढ़ाता है।",
+        "बड़े खेतों में आसानी से चलता है।",
+        "लंबे समय तक चलने के लिए बनाया गया।",
+      ],
+      punjabi: [
+        "ਕਈ ਫਸਲਾਂ ਨੂੰ ਇਕੱਠੇ ਕੱਟਣ ਯੋਗ।",
+        "ਹੱਥੀਂ ਮਿਹਨਤ ਬਹੁਤ ਘਟਾਉਂਦਾ ਹੈ।",
+        "ਕਿਸਾਨ ਦੀ ਉਤਪਾਦਕਤਾ ਵਧਦਾ ਹੈ।",
+        "ਵੱਡੇ ਖੇਤਾਂ ਵਿੱਚ ਆਸਾਨੀ ਨਾਲ ਚਲਦਾ ਹੈ।",
+        "ਲੰਬੇ ਸਮੇਂ ਲਈ ਬਣਾਇਆ ਗਿਆ।",
+      ],
+    },
+  },
+  {
+    id: 7,
+    img: "/img/tradeimg7.png",
+    gallery: ["/img/tradeimg7.png", "/img/tradeimg8.png","/img/tradeimg6.png", "/img/tradeimg5.png"],
+    name: {
+      english: "Disc Plough",
+      hindi: "डिस्क प्लाउ",
+      punjabi: "ਡਿਸਕ ਪਲਾਅ",
+    },
+    points: {
+      english: [
+        "Cuts through tough soil and residue.",
+        "Improves soil aeration and mixing.",
+        "Increases water retention in soil.",
+        "Reduces soil erosion.",
+        "Built for long durability.",
+      ],
+      hindi: [
+        "कई फसलों की कटाई एक साथ करता है।",
+        "मानव श्रम की ज़रूरत घटाता है।",
+        "किसान की उत्पादकता बढ़ाता है।",
+        "बड़े खेतों में आसानी से चलता है।",
+        "लंबे समय तक चलने के लिए बनाया गया।",
+      ],
+      punjabi: [
+        "ਕਈ ਫਸਲਾਂ ਨੂੰ ਇਕੱਠੇ ਕੱਟਣ ਯੋਗ।",
+        "ਹੱਥੀਂ ਮਿਹਨਤ ਬਹੁਤ ਘਟਾਉਂਦਾ ਹੈ।",
+        "ਕਿਸਾਨ ਦੀ ਉਤਪਾਦਕਤਾ ਵਧਦਾ ਹੈ।",
+        "ਵੱਡੇ ਖੇਤਾਂ ਵਿੱਚ ਆਸਾਨੀ ਨਾਲ ਚਲਦਾ ਹੈ।",
+        "ਲੰਬੇ ਸਮੇਂ ਲਈ ਬਣਾਇਆ ਗਿਆ।",
+      ],
+    },
+  },
+  {
+    id: 8,
+    img: "/img/tradeimg8.png",
+    gallery: ["/img/tradeimg8.png", "/img/tradeimg7.png","/img/tradeimg6.png","/img/tradeimg5.png"],
+    name: {
+      english: "Disc Plough",
+      hindi: "डिस्क प्लाउ",
+      punjabi: "ਡਿਸਕ ਪਲਾਅ",
+    },
+    points: {
+      english: [
+        "Cuts through tough soil and residue.",
+        "Improves soil aeration and mixing.",
+        "Increases water retention in soil.",
+        "Reduces soil erosion.",
+        "Built for long durability.",
+      ],
+      hindi: [
+        "कई फसलों की कटाई एक साथ करता है।",
+        "मानव श्रम की ज़रूरत घटाता है।",
+        "किसान की उत्पादकता बढ़ाता है।",
+        "बड़े खेतों में आसानी से चलता है।",
+        "लंबे समय तक चलने के लिए बनाया गया।",
+      ],
+      punjabi: [
+        "ਕਈ ਫਸਲਾਂ ਨੂੰ ਇਕੱਠੇ ਕੱਟਣ ਯੋਗ।",
+        "ਹੱਥੀਂ ਮਿਹਨਤ ਬਹੁਤ ਘਟਾਉਂਦਾ ਹੈ।",
+        "ਕਿਸਾਨ ਦੀ ਉਤਪਾਦਕਤਾ ਵਧਦਾ ਹੈ।",
+        "ਵੱਡੇ ਖੇਤਾਂ ਵਿੱਚ ਆਸਾਨੀ ਨਾਲ ਚਲਦਾ ਹੈ।",
+        "ਲੰਬੇ ਸਮੇਂ ਲਈ ਬਣਾਇਆ ਗਿਆ।",
+      ],
+    },
+  },
 ];
 
 const ProductDetail = () => {
-    const { id } = useParams();
-    const { language } = useLanguage();
-    const navigate = useNavigate();
+  const { id } = useParams();
+  const { language } = useLanguage();
+  const navigate = useNavigate();
 
-    // Scroll to top when component mounts
-    useScrollToTop();
+  // Scroll to top when component mounts
+  useScrollToTop();
 
   const product = products.find((p) => p.id === parseInt(id));
   const [mainImage, setMainImage] = useState(product?.img);
+
+  // ✅ Fix: update main image when product changes
+  useEffect(() => {
+    if (product) {
+      setMainImage(product.img);
+    }
+  }, [product]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -209,27 +349,25 @@ const ProductDetail = () => {
                 <li key={index}>✔ {point}</li>
               ))}
             </ul>
-
             {/* Buttons */}
             <div className="product-detail-buttons">
-              <button className="back-btn" onClick={handleBack}>
-                {button[language]}
-              </button>
               <a
                 href="https://wa.me/919999999999"
                 target="_blank"
                 rel="noreferrer"
-                className="icon-btn whatsapp"
+                className="main-btn whatsapp-btn"
               >
-                <FaWhatsapp />
+                <FaWhatsapp style={{ marginRight: "8px" }} /> WhatsApp
               </a>
-              <a href="tel:+919999999999" className="icon-btn call">
-                <FaPhone />
+              <a href="tel:+919999999999" className="main-btn call-btn">
+                <FaPhone style={{ marginRight: "8px" }} /> Call Now
               </a>
             </div>
+
           </div>
         </div>
       </div>
+      <TradeSection />
       <Footer />
     </>
   );
