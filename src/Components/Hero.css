@@ -95,7 +95,7 @@
     background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.4) 0%,
         rgba(109, 163, 77, 0.2) 50%,
-        rgba(0, 0, 0, 0.4) 100%), url('/img/IMG1.jpg') left center/cover no-repeat;
+        rgba(0, 0, 0, 0.4) 100%), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat;
     background-position: 25% center;
   }
 }
