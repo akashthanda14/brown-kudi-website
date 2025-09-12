@@ -41,6 +41,16 @@ const About = () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
+  
+  const handleCTAClick = () => {
+    const about = document.getElementById("about");
+    if (about) {
+      about.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
 
   // Counter animation
   useEffect(() => {
@@ -65,7 +75,7 @@ const About = () => {
 
   return (
 <>
-    <section className="about" ref={sectionRef}>
+    <section id="about" className="about" ref={sectionRef}>
       {/* Top Section Heading */}
       <div className="about-top">
         <p className="small-heading">About Us</p>

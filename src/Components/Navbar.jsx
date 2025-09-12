@@ -20,7 +20,8 @@ import {
   Phone,        // ✅ Contact icon
   Share2,       // ✅ Social Media icon
   Circle,       // ✅ Tyre icon
-  Truck         // ✅ Added Truck icon
+  Truck,
+  Globe       // ✅ Added Globe icon
 } from "lucide-react";
 import "./Navbar.css";
 
@@ -174,11 +175,23 @@ export default function Navbar() {
                       Social Media
                     </a>
                   </li>
-                  <li role="none">
-                    <Link to="/contact" className="navbar__dropdown-link" role="menuitem">
-                      <Phone size={16} aria-hidden="true" />
-                      Get In Touch
-                    </Link>
+                  <li>
+                    <a
+                      href="#export"
+                      className="navbar__dropdown-link"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const exportSec = document.getElementById("export");
+                        if (exportSec) {
+                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Globe size={16} />
+                      Global Export
+                    </a>
                   </li>
                 </ul>
               </li>

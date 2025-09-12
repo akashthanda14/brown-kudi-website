@@ -169,17 +169,12 @@
 .bottom .icon {
     font-size: 24px;
 }
-
-/* Responsive */
 @media (max-width: 900px) {
     .top {
         flex-direction: column;
         text-align: center;
-
-    }
-
-    .left p {
-        margin: 0 auto;
+        justify-content: flex-start; /* ✅ gap remove */
+        gap: 15px; /* ✅ smaller spacing */
     }
 
     .right {
@@ -190,18 +185,6 @@
         flex-direction: column;
     }
 
-    .bottom {
-        display: flex;
-        justify-content: space-;
-        align-items: center;
-        padding: 15px;
-        border-radius: 12px;
-        margin-top: 15px;
-        flex-direction: column;
-        row-gap: 15px;
-        background-color: #42603500;
-    }
-    
     .bottom {
         display: none;
         visibility: hidden;
@@ -209,56 +192,23 @@
 }
 
 @media (max-width: 768px) {
-    .bottom {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 15px;
-        border-radius: 12px;
-        margin-top: 15px;
+    .top {
         flex-direction: column;
-        row-gap: 15px;
-        background-color: #42603500;
-    }
-
-    .bottom .btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .icons {
         text-align: center;
-    }
-
-    .right {
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: flex-start; /* ✅ gap fix */
+        gap: 15px; /* ✅ small gap */
     }
 
     .bottom {
         display: none;
         visibility: hidden;
     }
-}
-
-@media (max-width: 480px) {
-    .profile-img {
-        width: 250px;
-        height: 250px;
+    .center{
+        justify-content: center;
+        align-items: center;
     }
-
-    .right h2 {
-        font-size: 2rem;
-    }
-
-    .right p {
-        font-size: 1rem;
-    }
-
-    .container {
-        padding-top: 50px;
+    .profile-img{
+        width: 300px;
+        height: 300px;
     }
 }
