@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../Components/AboutSection.css";
 
 const stats = [
-  { id: 1, number: "3.5", label: "Years Experience" },
-  { id: 2, number: "23", label: "Project Challenge" },
-  { id: 3, number: "830+", label: "Positive Reviews" },
-  { id: 4, number: "100K", label: "Trusted Clients" },
+  { id: 1, number: "8+", label: "Years Experience" },
+  { id: 2, number: "1.9M+", label: "Social Media Followers" },
+  { id: 3, number: "500+", label: "Satisfied Customers" },
 ];
 
 const About = () => {
