@@ -218,6 +218,32 @@
   outline-offset: 2px;
   border-radius: 4px;
 }
+/* ===== SCROLL TO TOP BTN ===== */
+.scroll-top-btn {
+  border: 2px solid #ffffff !important;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  color: #6da34d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: #6da34d;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.scroll-top-icon {
+  transform: rotate(-90deg); /* right arrow को ↑ बनाने के लिए */
+}
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 

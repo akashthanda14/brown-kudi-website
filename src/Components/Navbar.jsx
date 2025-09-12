@@ -7,9 +7,6 @@ import {
   User,
   Camera,
   ChevronDown,
-  Sprout,
-  Wrench,
-  Wheat,
   Images,
   Video,
   PenTool,
@@ -19,21 +16,21 @@ import {
   Youtube,
   Menu,
   X,
-  Leaf
+  Leaf,
+  Phone,        // ✅ Contact icon
+  Share2,       // ✅ Social Media icon
+  Circle,       // ✅ Tyre icon
+  Truck         // ✅ Added Truck icon
 } from "lucide-react";
 import "./Navbar.css";
 
-/**
- * Brown Kudi Navigation Component
- * Features: Glassmorphism design, responsive dropdowns, accessibility-first
- */
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const { language, setLanguage } = useLanguage();
 
-  // Menu controls with proper cleanup
+  // Menu controls
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -43,13 +40,13 @@ export default function Navbar() {
     setActiveDropdown(current => current === dropdownName ? null : dropdownName);
   };
 
-  // Language handler with dropdown cleanup
+  // Language handler
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
     setActiveDropdown(null);
   };
 
-  // Outside click detection for dropdowns
+  // Outside click detection
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest('.navbar__dropdown-container')) {
@@ -60,20 +57,20 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Scroll detection for glassmorphism effect
+  // Scroll detection
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Body scroll lock for mobile menu
+  // Body scroll lock
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
-  // Keyboard navigation support
+  // Keyboard support
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -88,6 +85,7 @@ export default function Navbar() {
   return (
     <>
       <nav
+        id="navbar"
         className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}
         role="navigation"
         aria-label="Main navigation"
@@ -120,6 +118,8 @@ export default function Navbar() {
                   <span>Home</span>
                 </Link>
               </li>
+
+              {/* ✅ Farm Work Dropdown */}
               <li className="navbar__item navbar__dropdown-container" role="none">
                 <div
                   className="navbar__link navbar__dropdown-trigger"
@@ -131,25 +131,58 @@ export default function Navbar() {
                 </div>
                 <ul className="navbar__dropdown" role="menu">
                   <li role="none">
-                    <Link to="/tyres" className="navbar__dropdown-link" role="menuitem">
-                      <Sprout size={16} aria-hidden="true" />
+                    <a
+                      href="#tyres"
+                      className="navbar__dropdown-link"
+                      role="menuitem"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const tyres = document.getElementById("tyres");
+                        if (tyres) {
+                          tyres.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Truck size={16} aria-hidden="true" />
                       Tyres & Equipment
-                    </Link>
+                    </a>
                   </li>
                   <li role="none">
-                    <Link to="/about" className="navbar__dropdown-link" role="menuitem">
-                      <Wrench size={16} aria-hidden="true" />
-                      About Brown Kudi
-                    </Link>
+                    <a
+                      href="#social"
+                      className="navbar__dropdown-link"
+                      role="menuitem"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const social = document.getElementById("social");
+                        if (social) {
+                          social.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Share2 size={16} aria-hidden="true" />
+                      Social Media
+                    </a>
                   </li>
                   <li role="none">
                     <Link to="/contact" className="navbar__dropdown-link" role="menuitem">
-                      <Wheat size={16} aria-hidden="true" />
+                      <Phone size={16} aria-hidden="true" />
                       Get In Touch
                     </Link>
                   </li>
                 </ul>
               </li>
+
               <li className="navbar__item" role="none">
                 <Link
                   to="/about"
@@ -162,6 +195,7 @@ export default function Navbar() {
                 </Link>
               </li>
 
+              {/* Content Dropdown */}
               <li className="navbar__item navbar__dropdown-container" role="none">
                 <button
                   className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'content' ? 'navbar__dropdown-trigger--active' : ''}`}
@@ -310,7 +344,6 @@ export default function Navbar() {
             <span className="navbar__brand-brown">Brown</span>
             <span className="navbar__brand-kudi">ਕੁੜੀ</span>
           </span>
-          <Leaf className="navbar__mobile-icon" size={20} aria-hidden="true" />
         </div>
 
         <ul className="navbar__mobile-menu" role="menu">
@@ -382,8 +415,3 @@ export default function Navbar() {
     </>
   );
 }
-
-
-
-
-

@@ -1,87 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
 .about {
     position: relative;
     padding: 60px 20px;
-    background: #f5f5f5;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: #f7f6f6;
+    text-align: center;
 }
 
+/* Top Section */
+.about-top .small-heading {
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-top .main-heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #484848;
+    margin-bottom: 40px;
+}
+
+/* Wrapper Section */
 .about-wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
-    max-width: 1100px;
+    gap: 50px;
+    max-width: 1580px;
     margin: auto;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    /* ye shadow full section ko dega */
-    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-    padding: 30px;
-
-    background: #fff;
-    /* taki shadow clear dikh sake */
+    margin-bottom: 60px;
 }
 
-/* LEFT SIDE IMAGE */
 .about-left {
-    position: relative;
-    max-width: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    /* niche white extra shadow cut hoga */
-    flex-shrink: 0;
-
-    /* shadow jo image box par lagega */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
 }
 
 .about-main-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* RIGHT SIDE CONTENT */
 .about-right {
+    flex: 1;
+    min-width: 300px;
     max-width: 500px;
-    color: #374151;
+    text-align: left;
 }
 
-.about-right h1 {
-    font-size: 24px;
-    text-transform: uppercase;
+.about-right h2 {
+    font-size: 30px;
     font-weight: 600;
     color: #1e293b;
-}
-
-.about-right .line {
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(to right, #7BB35C, #c6ffbc);
-    border-radius: 5px;
-    margin: 8px 0 20px 0;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .about-right p {
     margin-bottom: 15px;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.7;
     color: #4b5563;
 }
 
 .about-btn {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 12px 30px;
     background: linear-gradient(to right, #7BB35C, #8A7DFF);
     border: none;
@@ -90,9 +76,6 @@
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     transition: 0.3s;
 }
 
@@ -100,69 +83,70 @@
     transform: translateY(-3px);
 }
 
-
-
-/* Tablet */
-@media (max-width: 768px) {
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .about-left {
-        max-width: 100%;
-    }
-
-    .about-right {
-        max-width: 100%;
-    }
-
-    .about-right h1 {
-        font-size: 22px;
-        text-align: left;
-    }
-
-    .about-right p {
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .about-btn {
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-    }
+/* Stats Section */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 100px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-    .about-wrapper {
-        gap: 20px;
-        padding: 15px;
-    }
+.stat-card {
+    background: #f9fafb;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
 
-    .about-left {
-        max-width: 100%;
-    }
+.stat-card:hover {
+    transform: translateY(-5px);
+}
 
-    .about-main-img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-    }
+.stat-icon {
+    margin-bottom: 20px;
+    color: #717171;
+    display: flex;
+    justify-content: center;
+}
 
-    .about-right h1 {
-        font-size: 18px;
-    }
+.stat-card h2 {
+    font-size: 35px;
+    /* Number thoda bada */
+    font-weight: 700;
+    color: #1e293b;
+}
 
+.stat-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    /* Label thoda bada */
+    font-weight: 500;
+    color: #6b7280;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .about-right {
+        text-align: center;
+    }
     .about-right p {
-        font-size: 13px;
-        line-height: 1.4;
-    }
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+}
 
-    .about-btn {
-        padding: 10px 20px;
-        font-size: 13px;
+/* Responsive */
+@media (max-width: 320px) {
+    .about-main-img {
+        height: 350px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 }

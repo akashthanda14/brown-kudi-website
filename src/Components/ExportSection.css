@@ -1,43 +1,31 @@
 .export-section {
   position: relative;
-  width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end;  /* ⬅️ नीचे लाया */
-  padding-bottom: 120px;  /* ⬅️ text को नीचे face से दूर किया */
+  align-items: center;
   overflow: hidden;
+  text-align: center;
+  color: white;
 }
 
-/* ✅ Background */
 .export-bg {
+  background: url("/img/EXBG2.jpg") center/cover no-repeat;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("/img/IMG_1890.jpg") no-repeat center center/cover;
-  z-index: 0;
+  inset: 0;
+  z-index: -2;
 }
 
 .overlay {
+  background: rgba(0, 0, 0, 0.742);
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
+  inset: 0;
+  z-index: -1;
 }
 
-/* ✅ Text */
 .export-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
+  max-width: 800px;
   padding: 20px;
-  max-width: 900px;
 }
 
 .export-text h2 {
@@ -61,7 +49,8 @@
 @media (max-width: 768px) {
   .export-section {
     align-items: flex-end;
-    padding-bottom: 80px;  /* mobile पर थोड़ा कम space */
+    padding-bottom: 0px;
+    /* mobile पर थोड़ा कम space */
   }
 
   .export-text h2 {

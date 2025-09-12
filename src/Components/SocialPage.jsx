@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 const ownername = {
-    english: "I'm Harpal Kaur Dhanjal",
+    english: "Harpal Kaur Dhanjal",
     hindi: "हरपाल कौर धांजल ",
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
 };
@@ -21,7 +21,7 @@ export default function SocialPage() {
     const { language } = useLanguage();
 
     return (
-        <div className="container">
+        <div className="container" id="social">
             <div className="wrapper">
                 <div className="top">
                     {/* Left Section with Image */}

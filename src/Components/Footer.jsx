@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  FaFacebookF, 
-  FaInstagram, 
-  FaYoutube, 
-  FaArrowRight, 
-  FaEnvelope, 
-  FaPhone, 
-  FaMapMarkerAlt 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaArrowRight,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 import "../Components/Footer.css";
+import Navbar from "./Navbar";
 
 const Footer = () => {
   const footerVariants = {
@@ -25,14 +26,25 @@ const Footer = () => {
     }
   };
 
+  const handleCTAClick = () => {
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <motion.footer 
+    <motion.footer
       className="footer"
+      id="footer"
       variants={footerVariants}
       initial="hidden"
       whileInView="visible"
@@ -48,7 +60,9 @@ const Footer = () => {
               <span className="brand-punjabi">ਕੁੜੀ</span>
             </div>
             <p className="brand-description">
-              Pioneering agricultural innovation through engineering excellence, empowering farmers with cutting-edge technology and sustainable solutions.
+              Pioneering agricultural innovation through engineering excellence,
+              empowering farmers with cutting-edge technology and sustainable
+              solutions.
             </p>
             <div className="footer-contact-info">
               <div className="contact-item">
@@ -120,6 +134,16 @@ const Footer = () => {
         <div className="footer-bottom-content">
           <div className="footer-social">
             <span className="social-label">Follow Our Journey</span>
+
+            {/* Scroll-to-Top Button (अब हमेशा footer में रहेगा) */}
+            <button
+              className="scroll-top-btn"
+              aria-label="Back to top"
+              onClick={handleCTAClick}
+            >
+              <FaArrowRight className="scroll-top-icon" />
+            </button>
+
             <div className="social-links">
               <motion.a
                 href="https://www.facebook.com/BrownKudiofficial"

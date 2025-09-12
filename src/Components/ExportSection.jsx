@@ -1,6 +1,7 @@
 import React from "react";
 import "./ExportSection.css";
 import { useLanguage } from "../context/LanguageContext";
+import { motion } from "framer-motion";
 
 const heading = {
   english: "Our Global Exports",
@@ -21,16 +22,22 @@ export default function ExportSection() {
   const { language } = useLanguage();
 
   return (
-    <section className="export-section">
+    <section id="exportsection" className="export-section">
       {/* ✅ Background with black overlay */}
       <div className="export-bg"></div>
       <div className="overlay"></div>
 
-      {/* ✅ Centered Text only */}
-      <div className="export-text">
+      {/* ✅ Animated Text */}
+      <motion.div
+        className="export-text"
+        initial={{ y: 50, opacity: 0 }} // niche + invisible
+        whileInView={{ y: 0, opacity: 1 }} // upar aayega + visible
+        transition={{ duration: 0.8, ease: "easeOut" }} // smooth effect
+        viewport={{ once: false, amount: 0.3 }} // jitna scroll hoga utna trigger
+      >
         <h2>{heading[language]}</h2>
         <p>{para[language]}</p>
-      </div>
+      </motion.div>
     </section>
   );
 }

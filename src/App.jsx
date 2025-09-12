@@ -5,7 +5,7 @@ import Hero from "./Components/Hero";
 import TradeSection from "./Components/TradeSection";
 import "./App.css";
 import TyreSection from "./Components/TyresSection";
-import SocialSection from "./Components/SocialSection";
+import SocialPage from "./Components/SocialPage";
 import About from "./Components/AboutSection";
 import ThanksSection from "./Components/ThanksSection";
 import Footer from "./Components/Footer";
@@ -36,6 +36,7 @@ function App() {
                 <ExportSection />
                 <ImageSlider />
                 <About />
+                <SocialPage />
                 <Testimonials />
                 <ThanksSection />
                 <Footer />
