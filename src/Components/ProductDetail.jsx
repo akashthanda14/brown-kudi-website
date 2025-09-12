@@ -349,21 +349,7 @@ const ProductDetail = () => {
                 <li key={index}>✔ {point}</li>
               ))}
             </ul>
-            {/* Buttons */}
-            <div className="product-detail-buttons">
-              <a
-                href="https://wa.me/919999999999"
-                target="_blank"
-                rel="noreferrer"
-                className="main-btn whatsapp-btn"
-              >
-                <FaWhatsapp style={{ marginRight: "8px" }} /> WhatsApp
-              </a>
-              <a href="tel:+919999999999" className="main-btn call-btn">
-                <FaPhone style={{ marginRight: "8px" }} /> Call Now
-              </a>
-            </div>
-
+            <button onClick={handleBack} className="more-info-btn">Back to Products</button>
           </div>
         </div>
       </div>
