@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
-                <span>Punjab, India</span>
+                <span>Village Gura, Punjab, 144418</span>
               </div>
             </div>
           </motion.div>
@@ -83,22 +83,22 @@ const Footer = () => {
           {/* Navigation Columns */}
           <motion.div className="footer-columns" variants={itemVariants}>
             <div className="footer-column">
-              <h3>Company</h3>
+              <h3>Use Full Page</h3>
               <ul>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/tyres">Tyres & Equipment</Link></li>
                 <li><Link to="/gallery">Our Gallery</Link></li>
-                <li><Link to="/portfolio">Portfolio</Link></li>
-                <li><Link to="/team">Our Team</Link></li>
+                <li><Link to="/tradesection">Products</Link></li>
+                <li><Link to="/social">Social Media</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h3>Solutions</h3>
+              <h3>Importents</h3>
               <ul>
-                <li><Link to="/precision-farming">Precision Farming</Link></li>
-                <li><Link to="/agricultural-tools">Agricultural Tools</Link></li>
-                <li><Link to="/tyre-solutions">Tyre Solutions</Link></li>
+                <li><Link to="/testmonials">Testmonials</Link></li>
+                <li><Link to="/tradesection">Agricultural Tools</Link></li>
+                <li><Link to="/tyres">Tyre Solutions</Link></li>
                 <li><Link to="/custom-engineering">Custom Engineering</Link></li>
                 <li><Link to="/consultation">Consultation</Link></li>
               </ul>

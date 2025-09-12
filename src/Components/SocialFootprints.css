@@ -1,0 +1,322 @@
+.social-section {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    background: #f3f3f3;
+    align-items: center;
+}
+
+.social-container {
+    max-width: 1400px;
+    width: 100%;
+    border: 2px solid rgb(90, 174, 62);
+    border-radius: 10px;
+    padding: 30px;
+    background: #fff;
+}
+
+.section-heading {
+    display: inline-block;
+    background: rgb(105, 180, 96);
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    gap: 10px;
+    /* ✅ gap हटाया */
+    transition: transform 0.4s ease-in-out;
+}
+
+.card {
+    flex: 0 0 25%;
+    /* ✅ 4 cards desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    max-width: 325px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.insta-icon {
+    color: #5a5859;
+    /* ✅ Instagram pink */
+    font-size: 18px;
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.card-bottom {
+    font-size: 14px;
+    color: #444;
+    padding: 10px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #666;
+}
+
+.stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stats svg {
+    color: #e74c3c;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    display: none;
+    visibility: hidden;
+}
+
+.slider-buttons button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: rgba(105, 180, 96, 0.8);
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.slider-buttons button:hover {
+    background: rgb(90, 174, 62);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.slider-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* ✅ Responsive */
+@media (max-width: 1440px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 1414px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 310px;
+    }
+}
+
+@media (max-width: 1360px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 1336px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 1295px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 273px;
+    }
+}
+
+@media (max-width: 1238px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 264px;
+    }
+}
+
+@media (max-width: 1194px) {
+    .card {
+        flex: 0 0 33.33%;
+        max-width: 264px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 0 0 33.33%;
+        /* 3 cards */
+    }
+}
+
+@media (max-width: 900px) {
+    .social-section {
+        padding: 60px 15px;
+    }
+
+    .social-container {
+        padding: 20px;
+        min-height: 60vh;
+    }
+
+    .card {
+        flex: 0 0 50%;
+        /* 2 cards */
+        min-height: 320px;
+    }
+
+    .image-box img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .social-section {
+        padding: 40px 10px;
+    }
+
+    .social-container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        /* 1 card */
+        min-height: 300px;
+        margin: 0;
+    }
+
+    .image-box img {
+        height: 200px;
+    }
+
+    .card-bottom {
+        font-size: 13px;
+    }
+
+    .stats {
+        font-size: 13px;
+    }
+
+    .slider-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .slider-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        display: none;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-section {
+        padding: 30px 8px;
+    }
+
+    .section-heading {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .card {
+        padding: 5px;
+        min-height: 464px;
+        max-width: 263px;
+    }
+
+    .image-box img {
+        height: 300px;
+    }
+
+    .card-bottom p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 466px) {
+    .social-section {
+        padding: 30px 8px;
+    }
+
+    .section-heading {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .card {
+        padding: 5px;
+        min-height: 464px;
+        max-width: 407px;
+    }
+
+    .image-box img {
+        height: 300px;
+    }
+
+    .card-bottom p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}

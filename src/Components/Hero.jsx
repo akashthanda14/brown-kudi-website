@@ -110,7 +110,7 @@ const Hero = () => {
   }, []);
 
   const handleCTAClick = () => {
-    const tyresSection = document.getElementById('tyres');
+    const tyresSection = document.getElementById('export');
     if (tyresSection) {
       tyresSection.scrollIntoView({ 
         behavior: 'smooth',

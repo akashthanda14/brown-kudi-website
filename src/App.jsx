@@ -13,13 +13,15 @@ import ProductDetail from "./Components/ProductDetail";
 import ScrollToTop from "./Components/ScrollToTop";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
 import TyresPage from "./Pages/TyresPage";
-import AboutPage from "./Pages/AboutPage";
+import AboutPage_ from "./Pages/AboutPage_Enhanced";
 import Gallery from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import ExportSection from "./Components/ExportSection";
 import Testimonials from "./Components/Testmonials";
 import ImageSlider from "./Components/ImageSlider";
 import { useEffect } from "react";
+import SocialFootprints from "./Components/SocialFootprints";
+import AboutPage_Enhanced from "./Pages/AboutPage_Enhanced";
 function App() {
   // Ensure scroll starts at top when app loads
   useEffect(() => {
@@ -45,9 +47,9 @@ function App() {
                 <TyreSection />
                 <ExportSection />
                 <ImageSlider />
-                <About />
                 <SocialPage />
                 <Testimonials />
+                <SocialFootprints />
                 <ThanksSection />
                 <Footer />
               </>
@@ -55,11 +57,12 @@ function App() {
           />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
           <Route path="/tyres" element={<TyresPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage_ />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactPage />} />
-
-
+          <Route path="/tradesection" element={<TradeSection />} />
+          <Route path="/social" element={<SocialPage />} />
+          <Route path="/testmonials" element={<Testimonials />} />
         </Routes>
 
       </BrowserRouter>

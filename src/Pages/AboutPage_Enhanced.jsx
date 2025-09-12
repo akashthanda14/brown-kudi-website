@@ -18,7 +18,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Harpal Kaur Dhanjal",
-    role: "Founder & CEO - Brown Kudi Enterprises",
+    role: "Co-Founder & Operations Director",
     image: "/img/owner.jpg",
     description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized agricultural equipment trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
     achievements: ["1.9M+ Social Media Following", "Australia-Canada Trade Partner", "Professional Welder & Fabricator", "Agricultural Innovation Leader"]
@@ -26,8 +26,8 @@ const teamMembers = [
   {
     id: 2,
     name: "Mr. Dhanjal",
-    role: "Co-Founder & Operations Director",
-    image: "/img/father.png",
+    role: "Founder & CEO - Brown Kudi Enterprises",
+    image: "src/assets/father.png",
     description: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
     achievements: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"]
   },
@@ -64,7 +64,7 @@ const values = [
   }
 ];
 
-const About = () => {
+const AboutPage_ = () => {
   const navigate = useNavigate();
   const [additionalInView, setAdditionalInView] = useState(false);
   const [additionalCounts, setAdditionalCounts] = useState(additionalStats.map(() => 0));
@@ -1562,4 +1562,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage_;

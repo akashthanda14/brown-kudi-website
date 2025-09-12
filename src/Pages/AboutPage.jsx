@@ -5,7 +5,6 @@ import AboutSection from "../Components/AboutSection";
 import "../Components/AboutSection.css";
 import { Users, Briefcase, CheckCircle2, ClipboardList, Award, Target, Heart, Star } from "lucide-react";
 import Footer from "../Components/Footer";
-import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const additionalStats = [
   { id: 1, icon: <Award size={50} strokeWidth={1.5} />, number: 15, label: "Years Experience" },
