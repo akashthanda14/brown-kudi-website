@@ -19,6 +19,8 @@
     font-weight: 100;
     font-family: "Anton";
     color: #506d38;
+    margin-top: 50px;
+
 }
 
 .trade-container {
@@ -122,7 +124,7 @@
     background: #5a8c3e;
 }
 
-.icon-btn {
+#icon-btnn {
     display: flex;
     align-items: center;
     justify-content: center;

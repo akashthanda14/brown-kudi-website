@@ -153,6 +153,24 @@ export default function Navbar() {
                       Tyres & Equipment
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="#export"
+                      className="navbar__dropdown-link"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const exportSec = document.getElementById("export");
+                        if (exportSec) {
+                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Globe size={16} />
+                      Global Export
+                    </a>
+                  </li>
                   <li role="none">
                     <a
                       href="#social"
@@ -175,24 +193,7 @@ export default function Navbar() {
                       Social Media
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#export"
-                      className="navbar__dropdown-link"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const exportSec = document.getElementById("export");
-                        if (exportSec) {
-                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
-                    >
-                      <Globe size={16} />
-                      Global Export
-                    </a>
-                  </li>
+
                 </ul>
               </li>
 

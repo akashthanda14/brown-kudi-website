@@ -259,10 +259,10 @@ const TradeSection = () => {
                 <Link to={`/product-detail/${item.id}`} className="more-info-btn">
                   {button[language]}
                 </Link>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="icon-btn whatsapp">
+                <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" id="icon-btnn" className="icon-btn whatsapp">
                   <FaWhatsapp />
                 </a>
-                <a href="tel:+1234567890" className="icon-btn call">
+                <a href="tel:+1234567890" id="icon-btnn" className="icon-btn call">
                   <FaPhoneAlt />
                 </a>
               </div>

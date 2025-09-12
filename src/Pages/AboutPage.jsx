@@ -115,9 +115,6 @@ const About = () => {
             professionals ensures that every detail, from concept to execution,
             aligns with your vision.
           </p>
-          <button className="about-btn" onClick={handleNavigate}>
-            <span>Contact Us</span>
-          </button>
         </div>
       </div>
 

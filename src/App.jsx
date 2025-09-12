@@ -58,8 +58,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactPage />} />
-
-
+          <Route path="/tradesection" element={<TradeSection />} />
+          <Route path="/social" element={<SocialPage />} />
+          <Route path="/testmonials" element={<Testimonials />} />
         </Routes>
 
       </BrowserRouter>
