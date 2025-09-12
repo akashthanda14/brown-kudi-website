@@ -47,7 +47,7 @@ const About = () => {
           <div className="about-image-card">
             <img
               className="about-main-img"
-              src="/img/aboutimg1.png"
+              src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750351/aboutimg1_rqsp1b.png"
               alt="About Us"
             />
           </div>

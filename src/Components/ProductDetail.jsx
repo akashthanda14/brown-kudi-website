@@ -16,12 +16,12 @@ const button = {
 const products = [
   {
     id: 1,
-    img: "/img/tradeimg1.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
     gallery: [
-      "/img/tradeimg1.png",
-      "/img/tradeimg2.png",
-      "/img/tradeimg3.png",
-      "/img/tradeimg4.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
+      "",
+      "",
+      "",
     ],
     name: {
       english: "Super Seeder",
@@ -54,8 +54,8 @@ const products = [
   },
   {
     id: 2,
-    img: "/img/tradeimg2.png",
-    gallery: ["/img/tradeimg2.png", "/img/tradeimg3.png","/img/tradeimg4.png", "/img/tradeimg5.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png", "","", ""],
     name: {
       english: "Reversible MB Plough",
       hindi: "रिवर्सिबल एमबी प्लाउ",
@@ -87,8 +87,8 @@ const products = [
   },
   {
     id: 3,
-    img: "/img/tradeimg4.png",
-    gallery: ["/img/tradeimg4.png", "/img/tradeimg5.png","/img/tradeimg6.png", "/img/tradeimg7.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg4_okphxy.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg4_okphxy.png", "","", ""],
     name: {
       english: "Disc Harrow",
       hindi: "डिस्क हैरो",
@@ -120,8 +120,8 @@ const products = [
   },
   {
     id: 4,
-    img: "/img/tradeimg5.png",
-    gallery: ["/img/tradeimg5.png", "/img/tradeimg6.png","/img/tradeimg7.png", "/img/tradeimg8.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png", "","", ""],
     name: {
       english: "Roary Tiller",
       hindi: "रोरी टिलर",
@@ -153,8 +153,8 @@ const products = [
   },
   {
     id: 5,
-    img: "/img/tradeimg3.png",
-    gallery: ["/img/tradeimg2.png", "/img/tradeimg3.png","/img/tradeimg4.png", "/img/tradeimg5.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750794/tradeimg3_lycnff.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750794/tradeimg3_lycnff.png", "","", ""],
     name: {
       english: "Subsoiler",
       hindi: "सबसोइलर",
@@ -186,8 +186,8 @@ const products = [
   },
   {
     id: 6,
-    img: "/img/tradeimg6.png",
-    gallery: ["/img/tradeimg6.png", "/img/tradeimg7.png","/img/tradeimg8.png", "/img/tradeimg1.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png", "","", ""],
     name: {
       english: "Disc Plough",
       hindi: "डिस्क प्लाउ",
@@ -219,8 +219,8 @@ const products = [
   },
   {
     id: 7,
-    img: "/img/tradeimg7.png",
-    gallery: ["/img/tradeimg7.png", "/img/tradeimg8.png","/img/tradeimg6.png", "/img/tradeimg5.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png", "","", ""],
     name: {
       english: "Disc Plough",
       hindi: "डिस्क प्लाउ",
@@ -252,8 +252,8 @@ const products = [
   },
   {
     id: 8,
-    img: "/img/tradeimg8.png",
-    gallery: ["/img/tradeimg8.png", "/img/tradeimg7.png","/img/tradeimg6.png","/img/tradeimg5.png"],
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750810/tradeimg8_l5z0t8.png",
+    gallery: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750810/tradeimg8_l5z0t8.png", "","",""],
     name: {
       english: "Disc Plough",
       hindi: "डिस्क प्लाउ",

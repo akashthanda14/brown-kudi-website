@@ -21,25 +21,25 @@ export default function TyresPage() {
     {
       id: 1,
       name: "All Season Tyre",
-      image: "/img/tyre1.png",
+      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750817/tyre1_bavlxv.png",
       description: "Perfect for all weather conditions with balanced grip and durability."
     },
     {
       id: 2,
       name: "Performance Tyre",
-      image: "/img/tyre2.png",
+      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752948/Pngtree_exploring_tire_technology_innovations_and_15498626_dda0ta.png",
       description: "High performance tyres designed for speed and superior handling."
     },
     {
       id: 3,
       name: "Off-Road Tyre",
-      image: "/img/tyre3.png",
+      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752541/tyre3_u1kaui.png",
       description: "Built tough for rugged terrains and off-road adventures."
     },
     {
       id: 4,
       name: "Eco Tyre",
-      image: "/img/tyre4.png",
+      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752529/tyre4_ulqjkf.png",
       description: "Fuel-efficient tyres designed for city driving and long-lasting wear."
     }
   ];
@@ -55,7 +55,7 @@ export default function TyresPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/img/IMG1.jpg" alt="Brown Kudi Owner" />
+            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" alt="Brown Kudi Owner" />
           </motion.div>
 
           <motion.div

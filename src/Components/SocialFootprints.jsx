@@ -5,28 +5,28 @@ import "./SocialFootprints.css";
 const posts = [
     {
         id: 1,
-        img: "/img/footprint1.png",
+        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint1_oqpgib.png",
         likes: "26.9k",
         comments: "31",
         desc: "ਕੋਈ ਮੁੰਡਾ ਜਦੋ ਤਰਕੀ ਕਰਦਾ ਹੈ ਤਾ ਓਹਨੂੰ ਗੋਲ਼ੀ 🔫 ਮਿਲਦੀ ਆ ਜਦ ਕੋਈ ਕੁੜੀ ਤਰਕੀ ਕਰਦੀ ਓਦੋ ਬਦਨਾਮ ਹੁੰਦੀ"
     },
     {
         id: 2,
-        img: "/img/footprint2.png",
+        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint2_mzlobt.png",
         likes: "25.8K",
         comments: "21",
         desc: "I am soo proud of you di  Waheguru Aanewale Time mein Aap ko jada jada taraki de 🤌🏻"
     },
     {
         id: 3,
-        img: "/img/footprint3.png",
+        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/c_crop,ar_3:4/v1757750722/footprint3_h6yajd.png",
         likes: "433.1k",
         comments: "1.1k",
         desc: "Brown Kudi Tyre ship to Australia 🇦🇺"
     },
     {
         id: 4,
-        img: "/img/footprint4.png",
+        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint4_krad46.png",
         likes: "25.5K",
         comments: "40",
         desc: "4 Taste of Babu just dropped and its a VIBE! 🎶 Dive into the latest Punjabi beats."
