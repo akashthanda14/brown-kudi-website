@@ -14,6 +14,12 @@ const ownername = {
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
 };
 
+const ownerDescription = {
+    english: "Harpal Kaur Dhanjal, Punjab's pioneering welder girl and Instagram influencer with 1.9 million followers, breaks barriers as \"Brown Kudi.\" She imports/exports tyres to Australia and Canada, while distributing agriculture equipment across India, inspiring empowerment through her craft and business acumen.",
+    hindi: "हरपाल कौर धांजल, पंजाब की अग्रणी वेल्डर गर्ल और 1.9 मिलियन फॉलोअर्स के साथ इंस्टाग्राम इन्फ्लुएंसर, \"ब्राउन कुड़ी\" के रूप में बाधाओं को तोड़ती है। वह ऑस्ट्रेलिया और कनाडा में टायरों का आयात/निर्यात करती है, भारत भर में कृषि उपकरणों का वितरण करती है, अपने शिल्प और व्यावसायिक कुशलता के माध्यम से सशक्तिकरण को प्रेरित करती है।",
+    punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ, ਪੰਜਾਬ ਦੀ ਮੋਹਰੀ ਵੈਲਡਰ ਕੁੜੀ ਅਤੇ 1.9 ਮਿਲੀਅਨ ਫਾਲੋਅਰਾਂ ਵਾਲੀ ਇੰਸਟਾਗ੍ਰਾਮ ਇਨਫਲੂਐਂਸਰ, \"ਬ੍ਰਾਊਨ ਕੁੜੀ\" ਵਜੋਂ ਰੁਕਾਵਟਾਂ ਤੋੜਦੀ ਹੈ। ਉਹ ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕਨਾਡਾ ਨੂੰ ਟਾਇਰਾਂ ਦਾ ਆਯਾਤ/ਨਿਰਯਾਤ ਕਰਦੀ ਹੈ, ਭਾਰਤ ਭਰ ਵਿੱਚ ਖੇਤੀ ਉਪਕਰਣਾਂ ਦੀ ਵੰਡ ਕਰਦੀ ਹੈ, ਆਪਣੇ ਹੁਨਰ ਅਤੇ ਕਾਰੋਬਾਰੀ ਸੂਝ-ਬੂਝ ਰਾਹੀਂ ਸਸ਼ਕਤੀਕਰਣ ਨੂੰ ਪ੍ਰੇਰਿਤ ਕਰਦੀ ਹੈ।"
+};
+
 // Counter Animation Component
 const AnimatedCounter = ({ end, duration = 2000, suffix = "", inView }) => {
     const [count, setCount] = useState(0);
@@ -77,9 +83,7 @@ export default function SocialPage() {
                     >
                         <h2>{ownername[language]}</h2>
                         <p>
-                            A freelancer who provides services for digital programming and
-                            design content needs, for all businesses with more than 10 years
-                            of experience
+                            {ownerDescription[language]}
                         </p>
                         <div className="icons">
                             <a href="http://www.facebook.com/BrownKudiofficial" target="_blank" rel="noreferrer">

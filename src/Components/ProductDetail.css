@@ -1,74 +1,200 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-
-/* Background wrapper */
-.product-detail-container {
-  height: 93VH;
-  background-image: url("/img/IMG31.JPEG");
-
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.product-container {
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  background: #f3f3f3;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Card */
 .product-detail-card {
-  background: #000000aa;
-  padding: 30px;
+  display: flex;
+  gap: 80px;
+  background: #fff;
+  padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  max-width: 700px;
-  text-align: center;
-  width: 90%;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
 }
 
-/* Product image */
-.product-detail-card img {
+.product-detail-image {
+  flex: 1;
+  min-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-detail-image .main-image {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: 450px;
+  object-fit: contain;
   border-radius: 12px;
   margin-bottom: 20px;
+  background: #fafafa;
 }
 
-/* Title */
-.product-title {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
+.thumbnail-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  background: #f0f0f0;
+}
+
+.thumbnail:hover {
+  border-color: #4caf50;
+}
+
+.thumbnail.active {
+  border-color: #4caf50;
+}
+
+.product-detail-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-detail-info h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.product-detail-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.product-detail-info li {
   margin-bottom: 15px;
-  color: #ffffff;
-  font-family: "Bebas Neue", sans-serif;
-}
-
-/* Description */
-.product-description {
   font-size: 18px;
   line-height: 1.6;
-  color: #ececec;
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 25px;
+  color: #444;
 }
 
-/* Button */
-.back-button {
-  background: #6DA34D;
+.product-detail-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.back-btn {
+  padding: 12px 24px;
+  background: #4caf50;
   color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
   font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
   transition: 0.3s;
 }
 
-.back-button:hover {
-  background: #5a8f42;
+.back-btn:hover {
+  background: #43a047;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+}
+
+.icon-btn.whatsapp {
+  background: #25d366;
+}
+
+.icon-btn.call {
+  background: #0d6efd;
+}
+
+.icon-btn:hover {
+  opacity: 0.85;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .product-detail-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .product-detail-image .main-image {
+    height: 380px;
+  }
+
+  .thumbnail {
+    width: 75px;
+    height: 75px;
+  }
+
+  .product-detail-info h2 {
+    font-size: 28px;
+  }
+
+  .product-detail-info li {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .product-detail-card {
+    padding: 20px;
+  }
+
+  .product-detail-image .main-image {
+    height: 280px;
+  }
+
+  .thumbnail-wrapper {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .thumbnail {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+  }
+
+  .product-detail-info h2 {
+    font-size: 22px;
+  }
+
+  .product-detail-info li {
+    font-size: 15px;
+  }
+
+  .product-detail-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

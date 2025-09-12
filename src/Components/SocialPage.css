@@ -50,10 +50,13 @@
 }
 
 .right p {
-    color: #7e7d7d;
-    max-width: 400px;
-    line-height: 1.5;
+    color: #555;
+    max-width: 450px;
+    line-height: 1.6;
     font-size: 1.1rem;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 5px;
 }
 
 /* Center Image */
@@ -234,13 +237,13 @@
     }
 
     .icons {
-        display: none; /* Hide green social icons on mobile */
+        display: flex; /* Show green social icons on mobile */
+        justify-content: center;
+        margin-top: 20px;
     }
 
     .bottom {
-        flex-direction: column;
-        gap: 20px;
-        padding: 25px 20px;
+        display: none; /* Hide bottom social buttons on mobile */
     }
 
     .social-btn {
@@ -276,15 +279,13 @@
     }
 
     .icons {
-        display: none; /* Hide green social icons on mobile */
+        display: flex; /* Show green social icons on mobile */
+        justify-content: center;
+        margin-top: 20px;
     }
 
     .bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px 15px;
-        margin-bottom: 50px;
+        display: none; /* Hide bottom social buttons on mobile */
     }
 
     .social-btn {
