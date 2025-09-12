@@ -3,14 +3,14 @@
   justify-content: center;
   padding: 80px 20px;
   background: #f3f3f3;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 
 .social-container {
   max-width: 1400px;
   width: 100%;
-  height: 70%;
+  min-height: 70vh;
   border: 2px solid rgb(90, 174, 62);
   border-radius: 10px;
   padding: 30px;
@@ -34,19 +34,25 @@
 
 .slider {
   display: flex;
-  transition: transform 0.6s ease-in-out;
   gap: 15px;
+  /* Desktop: No animation, static layout */
+  transition: none;
+  /* Performance optimizations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .card {
-  flex: 0 0 25%; /* 4 cards per view */
+  flex: 0 0 calc(25% - 11.25px); /* 4 cards per view with gap compensation */
   padding: 12px;
-  border: 1px solid #ddd; /* Grey border */
+  border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 350px;
 }
 
 .card-top {
@@ -57,7 +63,7 @@
 }
 
 .image-box {
-  flex: 1; /* sab cards ki height equal banane ke liye */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,42 +97,169 @@
 }
 
 .stats svg {
-  color: #e74c3c; /* heart red */
+  color: #e74c3c;
 }
 
 .slider-buttons {
-  display: flex;
+  display: none; /* Hidden on desktop */
   justify-content: center;
   margin-top: 20px;
   gap: 10px;
 }
 
 .slider-buttons button {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border: none;
-  background: #eee;
+  background: rgba(105, 180, 96, 0.8);
+  color: white;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
 }
 
 .slider-buttons button:hover {
-  background: orange;
-  color: #fff;
+  background: rgb(90, 174, 62);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.slider-buttons button:active {
+  transform: scale(0.95);
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
-  .card { flex: 0 0 33.33%; } /* 3 cards */
+  .card { 
+    flex: 0 0 calc(33.33% - 10px); /* 3 cards */
+  }
 }
 
 @media (max-width: 900px) {
-  .card { flex: 0 0 50%; } /* 2 cards */
+  .social-section {
+    padding: 60px 15px;
+  }
+  
+  .social-container {
+    padding: 20px;
+    min-height: 60vh;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: pan-y;
+  }
+
+  .slider-wrapper:active {
+    cursor: grabbing;
+  }
+  
+  .slider {
+    /* Enable smooth animations for mobile */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  .card { 
+    flex: 0 0 calc(50% - 7.5px); /* 2 cards */
+    min-height: 320px;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .slider-buttons {
+    display: flex; /* Show buttons on mobile */
+  }
+  
+  .image-box img {
+    max-height: 180px;
+  }
 }
 
 @media (max-width: 600px) {
-  .card { flex: 0 0 100%; } /* 1 card */
+  .social-section {
+    padding: 40px 10px;
+  }
+  
+  .social-container {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .slider-wrapper {
+    cursor: grab;
+    touch-action: pan-y;
+  }
+
+  .slider-wrapper:active {
+    cursor: grabbing;
+  }
+  
+  .slider {
+    /* Optimized animation for small screens */
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+  
+  .card { 
+    flex: 0 0 100%; /* 1 card */
+    min-height: 300px;
+    margin: 0 5px;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .image-box img {
+    max-height: 160px;
+  }
+  
+  .card-bottom {
+    font-size: 13px;
+  }
+  
+  .stats {
+    font-size: 13px;
+  }
+  
+  .slider-buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-section {
+    padding: 30px 8px;
+  }
+  
+  .section-heading {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+  
+  .card {
+    padding: 10px;
+    min-height: 280px;
+  }
+  
+  .image-box img {
+    max-height: 140px;
+  }
+  
+  .card-bottom p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
