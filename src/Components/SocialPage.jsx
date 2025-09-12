@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import "./SocialPage.css";
 import {
     FaFacebookF,
-    FaTwitter,
     FaInstagram,
-    FaPinterestP,
     FaYoutube,
-    FaSnapchatGhost,
 } from "react-icons/fa";
 
 const ownername = {
@@ -17,8 +14,45 @@ const ownername = {
     punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
 };
 
+// Counter Animation Component
+const AnimatedCounter = ({ end, duration = 2000, suffix = "", inView }) => {
+    const [count, setCount] = useState(0);
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+    useEffect(() => {
+        if (inView && !hasAnimated) {
+            let startTime;
+            let animationId;
+
+            const animate = (currentTime) => {
+                if (!startTime) startTime = currentTime;
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                
+                // Handle decimal numbers for millions
+                if (suffix === "M") {
+                    setCount(Math.floor(progress * end * 10) / 10);
+                } else {
+                    setCount(Math.floor(progress * end));
+                }
+                
+                if (progress < 1) {
+                    animationId = requestAnimationFrame(animate);
+                } else {
+                    setHasAnimated(true);
+                }
+            };
+            
+            animationId = requestAnimationFrame(animate);
+            return () => cancelAnimationFrame(animationId);
+        }
+    }, [end, duration, hasAnimated, suffix, inView]);
+
+    return <span>{count.toLocaleString()}{suffix}</span>;
+};
+
 export default function SocialPage() {
     const { language } = useLanguage();
+    const [bottomInView, setBottomInView] = useState(false);
 
     return (
         <div className="container" id="social">
@@ -68,23 +102,58 @@ export default function SocialPage() {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
+                    onViewportEnter={() => setBottomInView(true)}
                 >
-                    <a href="http://www.youtube.com/@BrownKudiThewelderGirl" target="_blank" rel="noreferrer" className="social-btn">
+                    <motion.a 
+                        href="http://www.youtube.com/@BrownKudiThewelderGirl" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="social-btn youtube-btn"
+                        whileHover={{ scale: 1.08, y: -3 }}
+                        transition={{ duration: 0.3 }}
+                    >
                         <img className="iconimg" src="/img/youtube.png" alt="YouTube" />
-                        <span>YouTube</span>
-                    </a>
-                    <a href="https://www.facebook.com/BrownKudiofficial" target="_blank" rel="noreferrer" className="social-btn">
-                        <img className="iconimg" src="/img/facebook.png" alt="Facebook" />
-                        <span>Facebook</span>
-                    </a>
-                    <a href="https://www.instagram.com/brown_kudi1/" target="_blank" rel="noreferrer" className="social-btn">
+                        <div className="btn-content">
+                            <span className="platform-name">YouTube</span>
+                            <span className="follower-count">
+                                <AnimatedCounter end={416} suffix="K" inView={bottomInView} /> Subscribers
+                            </span>
+                        </div>
+                    </motion.a>
+                    
+                    <motion.a 
+                        href="https://www.instagram.com/brown_kudi1/" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="social-btn instagram-btn"
+                        whileHover={{ scale: 1.08, y: -3 }}
+                        transition={{ duration: 0.3 }}
+                    >
                         <img className="iconimg" src="/img/instagram.png" alt="Instagram" />
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://snapchat.com/t/dqxVx8h6" target="_blank" rel="noreferrer" className="social-btn">
-                        <img className="iconimg" src="/img/snapchat.png" alt="Snapchat" />
-                        <span>Snapchat</span>
-                    </a>
+                        <div className="btn-content">
+                            <span className="platform-name">Instagram</span>
+                            <span className="follower-count">
+                                <AnimatedCounter end={1.9} suffix="M" inView={bottomInView} /> Followers
+                            </span>
+                        </div>
+                    </motion.a>
+                    
+                    <motion.a 
+                        href="https://www.facebook.com/BrownKudiofficial" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="social-btn facebook-btn"
+                        whileHover={{ scale: 1.08, y: -3 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <img className="iconimg" src="/img/facebook.png" alt="Facebook" />
+                        <div className="btn-content">
+                            <span className="platform-name">Facebook</span>
+                            <span className="follower-count">
+                                <AnimatedCounter end={786} suffix="K" inView={bottomInView} /> Followers
+                            </span>
+                        </div>
+                    </motion.a>
                 </motion.div>
             </div>
         </div>

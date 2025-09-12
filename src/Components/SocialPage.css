@@ -117,11 +117,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #7ab35c00;
-    padding: 20px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px 20px;
+    border-radius: 20px;
     margin-bottom: 100px;
-    /* thoda margin niche se */
+    gap: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .bottom .btn {
@@ -135,35 +136,82 @@
     font-weight: bold;
 }
 
-.bottom a {
+.social-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #fff;
+    gap: 15px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 200px;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-5px);
 }
 
-.bottom .social-btn img {
-    width: 45px;
-    height: 45px;
+.social-btn:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+    transform: translateY(-8px);
 }
 
-.social-btn span {
-    color: black;
-    font-size: 2rem;
-    font-family: "Dosis";
+.youtube-btn {
+    border-color: #ff0000;
+    background: linear-gradient(135deg, #ffffff 0%, #fff5f5 100%);
 }
 
-.social-btn span:hover {
-    color: black;
-    font-family: "Dosis";
+.facebook-btn {
+    border-color: #1877f2;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
 }
 
-.bottom a:hover {
-    transition: 200ms;
+.instagram-btn {
+    border-color: #e91e63;
+    background: linear-gradient(135deg, #ffffff 0%, #fef7ff 100%);
+}
+
+.social-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    transform: scale(1.1);
+}
+
+.social-btn:hover img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.platform-name {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Dosis", sans-serif;
+    margin-bottom: 2px;
+}
+
+.follower-count {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Dosis", sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 1px 2px rgba(44, 62, 80, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .bottom .icon {
@@ -185,9 +233,37 @@
         flex-direction: column;
     }
 
+    .icons {
+        display: none; /* Hide green social icons on mobile */
+    }
+
     .bottom {
-        display: none;
-        visibility: hidden;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .social-btn {
+        min-width: 220px;
+        justify-content: center;
+        padding: 20px;
+        /* Keep permanent hover effects */
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        transform: translateY(-5px);
+    }
+
+    .social-btn img {
+        /* Keep permanent icon scaling */
+        transform: scale(1.1);
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    }
+
+    .platform-name {
+        font-size: 18px;
+    }
+
+    .follower-count {
+        font-size: 15px;
     }
 }
 
@@ -199,10 +275,44 @@
         gap: 15px; /* ✅ small gap */
     }
 
-    .bottom {
-        display: none;
-        visibility: hidden;
+    .icons {
+        display: none; /* Hide green social icons on mobile */
     }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        margin-bottom: 50px;
+    }
+
+    .social-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        padding: 18px 15px;
+        /* Keep permanent hover effects */
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        transform: translateY(-5px);
+    }
+
+    .social-btn img {
+        width: 50px;
+        height: 50px;
+        /* Keep permanent icon scaling */
+        transform: scale(1.1);
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    }
+
+    .platform-name {
+        font-size: 17px;
+    }
+
+    .follower-count {
+        font-size: 14px;
+    }
+    
     .center{
         justify-content: center;
         align-items: center;
