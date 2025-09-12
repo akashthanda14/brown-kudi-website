@@ -489,7 +489,7 @@
   cursor: pointer;
   padding: 0;
   z-index: 1001;
-  color: var(--clr-text);
+  color: white;
   transition: all var(--transition-duration) var(--ease-smooth);
 }
 
@@ -558,14 +558,16 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
+
 }
 
 .navbar__mobile-brand .navbar__brand-brown {
-  color: var(--clr-primary);
+  color: white !important;
 }
 
 .navbar__mobile-brand .navbar__brand-kudi {
   color: var(--clr-text);
+  text-shadow: none;
 }
 
 .navbar__mobile-icon {

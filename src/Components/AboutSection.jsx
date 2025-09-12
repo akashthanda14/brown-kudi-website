@@ -7,7 +7,7 @@ const stats = [
   { id: 1, icon: <Briefcase size={50} strokeWidth={1.5} />, number: 260, label: "Expert Consultants" },
   { id: 2, icon: <Users size={50} strokeWidth={1.5} />, number: 975, label: "Active Clients" },
   { id: 3, icon: <CheckCircle2 size={50} strokeWidth={1.5} />, number: 724, label: "Projects Delivered" },
-  { id: 4, icon: <ClipboardList size={50} strokeWidth={1.5} />, number: 89, label: "Orders in Queue" },
+  { id: 4, icon: <ClipboardList size={50} strokeWidth={1.5} />, number: 600, label: "Orders in Queue" },
 ];
 
 

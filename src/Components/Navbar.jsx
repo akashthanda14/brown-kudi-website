@@ -344,7 +344,6 @@ export default function Navbar() {
             <span className="navbar__brand-brown">Brown</span>
             <span className="navbar__brand-kudi">ਕੁੜੀ</span>
           </span>
-          <Leaf className="navbar__mobile-icon" size={20} aria-hidden="true" />
         </div>
 
         <ul className="navbar__mobile-menu" role="menu">
