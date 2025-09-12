@@ -108,15 +108,7 @@ const About = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="about-stats">
-        {stats.map((stat, index) => (
-          <div key={stat.id} className="stat-card">
-            <div className="stat-icon">{stat.icon}</div>
-            <h2>{counts[index]}+</h2>
-            <p>{stat.label}</p>
-          </div>
-        ))}
-      </div>
+   
     </section>
     <Footer />
 </>

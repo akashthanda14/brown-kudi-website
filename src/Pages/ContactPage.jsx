@@ -73,9 +73,10 @@ const ContactPage = () => {
             <div className="follow-us">
               <p>Follow us</p>
               <div className="social-icons">
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaInstagram /></a>
-                <a href="#"><FaYoutube /></a>
+                
+                <a href="http://www.facebook.com/BrownKudiofficial"><FaFacebookF /></a>
+                <a href="https://www.instagram.com/brown_kudi1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram /></a>
+                <a href="http://www.youtube.com/@BrownKudiThewelderGirl"><FaYoutube /></a>
               </div>
             </div>
           </div>
