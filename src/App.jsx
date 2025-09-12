@@ -20,6 +20,7 @@ import ExportSection from "./Components/ExportSection";
 import Testimonials from "./Components/Testmonials";
 import ImageSlider from "./Components/ImageSlider";
 import { useEffect } from "react";
+import SocialFootprints from "./Components/SocialFootprints";
 function App() {
   // Ensure scroll starts at top when app loads
   useEffect(() => {
@@ -48,6 +49,7 @@ function App() {
                 <About />
                 <SocialPage />
                 <Testimonials />
+                <SocialFootprints />
                 <ThanksSection />
                 <Footer />
               </>
