@@ -4,6 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 import "../Components/ProductDetail.css";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import Footer from "./Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const button = {
   english: "Go Back",
@@ -152,9 +153,12 @@ const products = [
 ];
 
 const ProductDetail = () => {
-  const { id } = useParams();
-  const { language } = useLanguage();
-  const navigate = useNavigate();
+    const { id } = useParams();
+    const { language } = useLanguage();
+    const navigate = useNavigate();
+
+    // Scroll to top when component mounts
+    useScrollToTop();
 
   const product = products.find((p) => p.id === parseInt(id));
   const [mainImage, setMainImage] = useState(product?.img);

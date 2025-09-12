@@ -3,6 +3,7 @@ import "../Pages/GalleryPage.css"
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 import Footer from "../Components/Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 const Gallery = () => {
     const ownername = {
         english: "Our Gallery",
@@ -10,6 +11,9 @@ const Gallery = () => {
         punjabi: "ਸਾਡੀ ਗੈਲਰੀ",
     };
     const { language } = useLanguage();
+
+    // Scroll to top when component mounts
+    useScrollToTop();
 
     const images = [
         { src: "/img/gallery1.jpg" },

@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 import Footer from "../Components/Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 import "./TyresPage.css";
 
 export default function TyresPage() {
   const { language } = useLanguage();
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  
+  // Scroll to top when component mounts
+  useScrollToTop();
 
   const tyresbrand = {
     english: "Our Tyers",

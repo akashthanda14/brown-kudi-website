@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Components/AboutSection.css";
 import { Users, Briefcase, CheckCircle2, ClipboardList } from "lucide-react"; // ✅ Lucide icons
 import Footer from "../Components/Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const stats = [
   { id: 1, icon: <Briefcase size={50} strokeWidth={1.5} />, number: 260, label: "Expert Consultants" },
@@ -17,6 +18,9 @@ const About = () => {
   const [inView, setInView] = useState(false);
   const [counts, setCounts] = useState(stats.map(() => 0));
   const sectionRef = useRef(null);
+
+  // Scroll to top when component mounts
+  useScrollToTop();
 
   const handleNavigate = () => {
     navigate("/about");

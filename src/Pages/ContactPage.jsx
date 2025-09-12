@@ -3,10 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MapPin, Mail, Phone } from "lucide-react";  // Lucide icons import
 import Footer from "../Components/Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 import "./Contactpage.css";
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Scroll to top when component mounts
+  useScrollToTop();
 
   const handleSubmit = (e) => {
     e.preventDefault();
