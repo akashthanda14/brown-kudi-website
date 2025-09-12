@@ -108,69 +108,183 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="navbar__nav">
             <ul className="navbar__menu" role="menubar">
-              <li className="navbar__item" role="none">
-                <Link
-                  to="/"
-                  className="navbar__link"
-                  role="menuitem"
-                  onClick={closeMenu}
-                >
-                  <Home className="navbar__link-icon" size={18} aria-hidden="true" />
-                  <span>Home</span>
-                </Link>
-              </li>
-
-              {/* ✅ Farm Work Dropdown */}
+              {/* ✅ Agriculture Equipment Dropdown */}
               <li className="navbar__item navbar__dropdown-container" role="none">
-                <div
-                  className="navbar__link navbar__dropdown-trigger"
+                <button
+                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'equipment' ? 'navbar__dropdown-trigger--active' : ''}`}
+                  onClick={() => toggleDropdown('equipment')}
+                  aria-expanded={activeDropdown === 'equipment'}
+                  aria-haspopup="true"
                   role="menuitem"
                 >
-                  <Tractor className="navbar__link-icon" size={18} aria-hidden="true" />
-                  <span>Farm Work</span>
+                  <span>Agri Equipment</span>
                   <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
-                </div>
-                <ul className="navbar__dropdown" role="menu">
+                </button>
+                <ul className={`navbar__dropdown ${activeDropdown === 'equipment' ? 'navbar__dropdown--visible' : ''}`} role="menu">
                   <li role="none">
-                    <a
-                      href="#tyres"
+                    <Link
+                      to="/product-detail/1"
                       className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const tyres = document.getElementById("tyres");
-                        if (tyres) {
-                          tyres.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                          });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
+                    >
+                      <Leaf size={16} aria-hidden="true" />
+                      Super Seeder
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/2"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <PenTool size={16} aria-hidden="true" />
+                      Reversible MB Plough
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/3"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      Disc Harrow
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/4"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Globe size={16} aria-hidden="true" />
+                      Rotary Tiller
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/5"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
                     >
                       <Truck size={16} aria-hidden="true" />
-                      Tyres & Equipment
-                    </a>
+                      Subsoiler
+                    </Link>
                   </li>
-                  <li>
-                    <a
-                      href="#export"
+                  <li role="none">
+                    <Link
+                      to="/product-detail/6"
                       className="navbar__dropdown-link"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const exportSec = document.getElementById("export");
-                        if (exportSec) {
-                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
                     >
-                      <Globe size={16} />
-                      Global Export
-                    </a>
+                      <PenTool size={16} aria-hidden="true" />
+                      Disc Plough
+                    </Link>
                   </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/7"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      Hydraulic
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/product-detail/8"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Truck size={16} aria-hidden="true" />
+                      Tractor Trolley
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              {/* ✅ Tyres Dropdown */}
+              <li className="navbar__item navbar__dropdown-container" role="none">
+                <button
+                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'tyres' ? 'navbar__dropdown-trigger--active' : ''}`}
+                  onClick={() => toggleDropdown('tyres')}
+                  aria-expanded={activeDropdown === 'tyres'}
+                  aria-haspopup="true"
+                  role="menuitem"
+                >
+                  <span>Tyres</span>
+                  <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
+                </button>
+                <ul className={`navbar__dropdown ${activeDropdown === 'tyres' ? 'navbar__dropdown--visible' : ''}`} role="menu">
+                  <li role="none">
+                    <Link
+                      to="/tyres"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      All Season Tyre
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/tyres"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      Performance Tyre
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/tyres"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      Off-Road Tyre
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      to="/tyres"
+                      className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
+                      role="menuitem"
+                    >
+                      <Circle size={16} aria-hidden="true" />
+                      Eco Tyre
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              {/* ✅ Work Dropdown */}
+              <li className="navbar__item navbar__dropdown-container" role="none">
+                <button
+                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'work' ? 'navbar__dropdown-trigger--active' : ''}`}
+                  onClick={() => toggleDropdown('work')}
+                  aria-expanded={activeDropdown === 'work'}
+                  aria-haspopup="true"
+                  role="menuitem"
+                >
+                  <span>Work</span>
+                  <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
+                </button>
+                <ul className={`navbar__dropdown ${activeDropdown === 'work' ? 'navbar__dropdown--visible' : ''}`} role="menu">
                   <li role="none">
                     <a
                       href="#social"
@@ -193,7 +307,44 @@ export default function Navbar() {
                       Social Media
                     </a>
                   </li>
-
+                  <li role="none">
+                    <a
+                      href="#export"
+                      className="navbar__dropdown-link"
+                      role="menuitem"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const exportSec = document.getElementById("export");
+                        if (exportSec) {
+                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Globe size={16} aria-hidden="true" />
+                      Global Import/Export
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a
+                      href="#export"
+                      className="navbar__dropdown-link"
+                      role="menuitem"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const exportSec = document.getElementById("export");
+                        if (exportSec) {
+                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                        setActiveDropdown(null);
+                        closeMenu();
+                      }}
+                    >
+                      <Leaf size={16} aria-hidden="true" />
+                      Agri Import/Export
+                    </a>
+                  </li>
                 </ul>
               </li>
 
@@ -207,56 +358,6 @@ export default function Navbar() {
                   <User className="navbar__link-icon" size={18} aria-hidden="true" />
                   <span>About</span>
                 </Link>
-              </li>
-
-              {/* Content Dropdown */}
-              <li className="navbar__item navbar__dropdown-container" role="none">
-                <button
-                  className={`navbar__link navbar__dropdown-trigger ${activeDropdown === 'content' ? 'navbar__dropdown-trigger--active' : ''}`}
-                  onClick={() => toggleDropdown('content')}
-                  aria-expanded={activeDropdown === 'content'}
-                  aria-haspopup="true"
-                  role="menuitem"
-                >
-                  <Camera className="navbar__link-icon" size={18} aria-hidden="true" />
-                  <span>Content</span>
-                  <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
-                </button>
-                <ul className={`navbar__dropdown ${activeDropdown === 'content' ? 'navbar__dropdown--visible' : ''}`} role="menu">
-                  <li role="none">
-                    <Link
-                      to="/gallery"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      <Images size={16} aria-hidden="true" />
-                      Photo Gallery
-                    </Link>
-                  </li>
-                  <li role="none">
-                    <Link
-                      to="/gallery"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      <Video size={16} aria-hidden="true" />
-                      Farm Videos
-                    </Link>
-                  </li>
-                  <li role="none">
-                    <Link
-                      to="/about"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      <PenTool size={16} aria-hidden="true" />
-                      Farm Stories
-                    </Link>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -367,22 +468,91 @@ export default function Navbar() {
               Home
             </Link>
           </li>
-          <li role="none">
-            <Link to="/tyres" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
-              <Tractor size={20} aria-hidden="true" />
-              Tyres
-            </Link>
+          
+          {/* Agriculture Equipment Section */}
+          <li role="none" className="navbar__mobile-section">
+            <div className="navbar__mobile-section-title">
+              <Tractor size={18} aria-hidden="true" />
+              Agri Equipment
+            </div>
+            <ul className="navbar__mobile-submenu">
+              <li>
+                <Link to="/product-detail/1" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Super Seeder
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/2" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Reversible MB Plough
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/3" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Disc Harrow
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/4" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Rotary Tiller
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/5" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Subsoiler
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/6" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Disc Plough
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/7" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Hydraulic
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-detail/8" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Tractor Trolley
+                </Link>
+              </li>
+            </ul>
           </li>
+          
+          {/* Tyres Section */}
+          <li role="none" className="navbar__mobile-section">
+            <div className="navbar__mobile-section-title">
+              <Circle size={18} aria-hidden="true" />
+              Tyres
+            </div>
+            <ul className="navbar__mobile-submenu">
+              <li>
+                <Link to="/tyres" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  All Season Tyre
+                </Link>
+              </li>
+              <li>
+                <Link to="/tyres" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Performance Tyre
+                </Link>
+              </li>
+              <li>
+                <Link to="/tyres" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Off-Road Tyre
+                </Link>
+              </li>
+              <li>
+                <Link to="/tyres" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Eco Tyre
+                </Link>
+              </li>
+            </ul>
+          </li>
+          
           <li role="none">
             <Link to="/about" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
               <User size={20} aria-hidden="true" />
               About
-            </Link>
-          </li>
-          <li role="none">
-            <Link to="/gallery" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
-              <Camera size={20} aria-hidden="true" />
-              Content
             </Link>
           </li>
           <li role="none">
