@@ -1,18 +1,25 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function ScrollToTop() {
+function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth", 
-      });
-    }, 100);
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
+    
+    // Also reset scroll for any scrollable containers
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // Reset scroll for any overflow containers
+    const scrollableElements = document.querySelectorAll('[style*="overflow"]');
+    scrollableElements.forEach(element => {
+      element.scrollTop = 0;
+    });
   }, [pathname]);
 
   return null;
 }
+
+export default ScrollToTop;

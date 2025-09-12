@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import "../Components/ProductDetail.css";
 import Footer from "./Footer";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const button = {
     english: "Go Back",
@@ -115,6 +116,9 @@ const ProductDetail = () => {
     const { id } = useParams();
     const { language } = useLanguage();
     const navigate = useNavigate();
+
+    // Scroll to top when component mounts
+    useScrollToTop();
 
     const product = products.find((p) => p.id === parseInt(id));
 

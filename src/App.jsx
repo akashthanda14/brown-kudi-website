@@ -11,6 +11,7 @@ import ThanksSection from "./Components/ThanksSection";
 import Footer from "./Components/Footer";
 import ProductDetail from "./Components/ProductDetail";
 import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTopButton from "./Components/ScrollToTopButton";
 import TyresPage from "./Pages/TyresPage";
 import AboutPage from "./Pages/AboutPage";
 import Gallery from "./Pages/GalleryPage";
@@ -18,11 +19,20 @@ import ContactPage from "./Pages/ContactPage";
 import ExportSection from "./Components/ExportSection";
 import Testimonials from "./Components/Testmonials";
 import ImageSlider from "./Components/ImageSlider";
+import { useEffect } from "react";
 function App() {
+  // Ensure scroll starts at top when app loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   return (
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
+        <ScrollToTopButton />
 
         <Navbar />
         <Routes>
