@@ -1,186 +1,179 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { FaHeart, FaRegComment } from "react-icons/fa";
+import { FaHeart, FaRegComment, FaInstagram } from "react-icons/fa"; // ✅ Instagram icon import
 import "./SocialFootprints.css";
 
 const posts = [
-  {
-    id: 1,
-    img: "/img/gallery1.jpg",
-    likes: "283",
-    comments: "1",
-    desc: "What is the most frustrating truth about politics? In an exclusive podcast with renowned YouTuber & podcaster Raj Shamani,"
-  },
-  {
-    id: 2,
-    img: "/img/gallery2.jpg",
-    likes: "1.9K",
-    comments: "21",
-    desc: "Innovation is in our DNA at LPU! Watch how! In an exclusive podcast with renowned YouTuber & podcaster Raj Shamani,"
-  },
-  {
-    id: 3,
-    img: "/img/gallery3.jpg",
-    likes: "767",
-    comments: "12",
-    desc: "On our Hon’ble Chancellor & MP Rajya Sabha, Dr. Ashok Kumar Mittal’s birthday, the entire #LPUFamily comes together to celebrate the"
-  },
-  {
-    id: 4,
-    img: "/img/gallery4.jpg",
-    likes: "4.1K",
-    comments: "10",
-    desc: "From campus corridors to the couture runway, LPU students lit up the stage at the iconic Chandigarh Times Fashion Week 2025 with their"
-  },
+    {
+        id: 1,
+        img: "/img/footprint1.png",
+        likes: "26.9k",
+        comments: "31",
+        desc: "ਕੋਈ ਮੁੰਡਾ ਜਦੋ ਤਰਕੀ ਕਰਦਾ ਹੈ ਤਾ ਓਹਨੂੰ ਗੋਲ਼ੀ 🔫 ਮਿਲਦੀ ਆ ਜਦ ਕੋਈ ਕੁੜੀ ਤਰਕੀ ਕਰਦੀ ਓਦੋ ਬਦਨਾਮ ਹੁੰਦੀ"
+    },
+    {
+        id: 2,
+        img: "/img/footprint2.png",
+        likes: "25.8K",
+        comments: "21",
+        desc: "I am soo proud of you di  Waheguru Aanewale Time mein Aap ko jada jada taraki de 🤌🏻"
+    },
+    {
+        id: 3,
+        img: "/img/footprint3.png",
+        likes: "433.1k",
+        comments: "1.1k",
+        desc: "Brown Kudi Tyre ship to Australia 🇦🇺"
+    },
+    {
+        id: 4,
+        img: "/img/footprint4.png",
+        likes: "25.5K",
+        comments: "40",
+        desc: "4 Taste of Babu just dropped and its a VIBE! 🎶 Dive into the latest Punjabi beats."
+    },
 ];
 
 const SocialFootprints = () => {
-  const [index, setIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [cardsPerView, setCardsPerView] = useState(4);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+    const [index, setIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+    const [cardsPerView, setCardsPerView] = useState(4);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
 
-  // Check screen size and update responsive state
-  const updateScreenSize = useCallback(() => {
-    const width = window.innerWidth;
-    
-    if (width <= 600) {
-      setCardsPerView(1);
-      setIsMobile(true);
-    } else if (width <= 900) {
-      setCardsPerView(2);
-      setIsMobile(true);
-    } else if (width <= 1200) {
-      setCardsPerView(3);
-      setIsMobile(false);
-    } else {
-      setCardsPerView(4);
-      setIsMobile(false);
-    }
-  }, []);
+    const updateScreenSize = useCallback(() => {
+        const width = window.innerWidth;
 
-  useEffect(() => {
-    updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-    return () => window.removeEventListener('resize', updateScreenSize);
-  }, [updateScreenSize]);
+        if (width <= 600) {
+            setCardsPerView(1);
+            setIsMobile(true);
+        } else if (width <= 900) {
+            setCardsPerView(2);
+            setIsMobile(true);
+        } else if (width <= 1200) {
+            setCardsPerView(3);
+            setIsMobile(true);
+        } else {
+            setCardsPerView(4);
+            setIsMobile(false);
+        }
+    }, []);
 
-  // Calculate max index based on cards per view
-  const maxIndex = Math.max(0, posts.length - cardsPerView);
+    useEffect(() => {
+        updateScreenSize();
+        window.addEventListener("resize", updateScreenSize);
+        return () => window.removeEventListener("resize", updateScreenSize);
+    }, [updateScreenSize]);
 
-  const prevSlide = useCallback(() => {
-    if (!isMobile) return; // Disable on desktop
-    setIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-  }, [isMobile, maxIndex]);
+    const maxIndex = Math.max(0, posts.length - cardsPerView);
 
-  const nextSlide = useCallback(() => {
-    if (!isMobile) return; // Disable on desktop
-    setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  }, [isMobile, maxIndex]);
+    const prevSlide = useCallback(() => {
+        setIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
+    }, [maxIndex]);
 
-  // Reset index when screen size changes
-  useEffect(() => {
-    setIndex(0);
-  }, [cardsPerView]);
+    const nextSlide = useCallback(() => {
+        setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, [maxIndex]);
 
-  // Touch handlers for swipe gestures
-  const handleTouchStart = (e) => {
-    if (!isMobile) return;
-    setTouchStart(e.targetTouches[0].clientX);
-  };
+    useEffect(() => {
+        setIndex(0);
+    }, [cardsPerView]);
 
-  const handleTouchMove = (e) => {
-    if (!isMobile) return;
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+    const handleTouchStart = (e) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
 
-  const handleTouchEnd = () => {
-    if (!isMobile || !touchStart || !touchEnd) return;
-    
-    const distance = touchStart - touchEnd;
-    const minSwipeDistance = 50;
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
 
-    if (distance > minSwipeDistance) {
-      nextSlide(); // Swipe left - next slide
-    } else if (distance < -minSwipeDistance) {
-      prevSlide(); // Swipe right - previous slide
-    }
-    
-    setTouchStart(0);
-    setTouchEnd(0);
-  };
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
 
-  // Calculate transform percentage based on cards per view
-  const getTransformValue = () => {
-    if (!isMobile) return 0; // No transform on desktop
-    return (index * 100) / cardsPerView;
-  };
+        const distance = touchStart - touchEnd;
+        const minSwipeDistance = 50;
 
-  return (
-    <div className="social-section">
-      <div className="social-container">
-        <h2 className="section-heading"># Social Footprints</h2>
-        <div 
-          className="slider-wrapper"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          style={{ touchAction: isMobile ? 'pan-y' : 'auto' }}
-        >
-          <div
-            className="slider"
-            style={{ 
-              transform: `translateX(-${getTransformValue()}%)`,
-              WebkitTransform: `translateX(-${getTransformValue()}%)` // Safari support
-            }}
-          >
-            {posts.map((post) => (
-              <div className="card" key={post.id}>
-                <div className="card-top">
-                  <span className="profile">lpuuniversity</span>
-                  <span className="insta-icon">📷</span>
+        if (distance > minSwipeDistance) {
+            nextSlide();
+        } else if (distance < -minSwipeDistance) {
+            prevSlide();
+        }
+
+        setTouchStart(0);
+        setTouchEnd(0);
+    };
+
+    const getTransformValue = () => {
+        return (index * 100) / cardsPerView;
+    };
+
+    return (
+        <div className="social-section">
+            <div className="social-container">
+                <h2 className="section-heading"># Social Footprints</h2>
+                <div
+                    className="slider-wrapper"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div
+                        className="slider"
+                        style={{
+                            transform: `translateX(-${getTransformValue()}%)`,
+                            WebkitTransform: `translateX(-${getTransformValue()}%)`,
+                        }}
+                    >
+                        {posts.map((post) => (
+                            <div className="card" key={post.id}>
+                                <div className="card-top">
+                                    <span className="profile">brown_kudi1
+                                    </span>
+                                    {/* ✅ Instagram actual icon */}
+                                    <FaInstagram className="insta-icon" />
+                                </div>
+                                <div className="image-box">
+                                    <img src={post.img} alt="post" loading="lazy" />
+                                </div>
+                                <div className="card-bottom">
+                                    <div className="stats">
+                                        <span>
+                                            <FaHeart /> {post.likes}
+                                        </span>
+                                        <span>
+                                            <FaRegComment /> {post.comments}
+                                        </span>
+                                    </div>
+                                    <p>{post.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="slider-buttons">
+                        <button
+                            onClick={prevSlide}
+                            disabled={index === 0}
+                            style={{
+                                opacity: index === 0 ? 0.5 : 1,
+                                cursor: index === 0 ? "not-allowed" : "pointer",
+                            }}
+                        >
+                            ‹
+                        </button>
+                        <button
+                            onClick={nextSlide}
+                            disabled={index >= maxIndex}
+                            style={{
+                                opacity: index >= maxIndex ? 0.5 : 1,
+                                cursor: index >= maxIndex ? "not-allowed" : "pointer",
+                            }}
+                        >
+                            ›
+                        </button>
+                    </div>
                 </div>
-                <div className="image-box">
-                  <img src={post.img} alt="post" loading="lazy" />
-                </div>
-                <div className="card-bottom">
-                  <div className="stats">
-                    <span><FaHeart /> {post.likes}</span>
-                    <span><FaRegComment /> {post.comments}</span>
-                  </div>
-                  <p>{post.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          {isMobile && (
-            <div className="slider-buttons">
-              <button 
-                onClick={prevSlide}
-                disabled={index === 0}
-                style={{ 
-                  opacity: index === 0 ? 0.5 : 1,
-                  cursor: index === 0 ? 'not-allowed' : 'pointer'
-                }}
-              >
-                ‹
-              </button>
-              <button 
-                onClick={nextSlide}
-                disabled={index >= maxIndex}
-                style={{ 
-                  opacity: index >= maxIndex ? 0.5 : 1,
-                  cursor: index >= maxIndex ? 'not-allowed' : 'pointer'
-                }}
-              >
-                ›
-              </button>
             </div>
-          )}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default SocialFootprints;
