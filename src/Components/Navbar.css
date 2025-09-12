@@ -265,14 +265,14 @@
 }
 
 .navbar__link,
-.navbar__link:link{
+.navbar__link:link {
   color: white !important;
 }
 
 
-.navbar__link:hover{
-  color: #7BB35C  !important;
-  
+.navbar__link:hover {
+  color: #7BB35C !important;
+
 }
 
 /* ==========================================================================
@@ -337,6 +337,18 @@
   font-size: 0.95rem;
   font-weight: 400;
   transition: all var(--transition-duration) var(--ease-smooth);
+  border-radius: 0;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  background-color: #1876f200 !important;
   border-radius: 0;
 }
 
@@ -458,7 +470,7 @@
 .navbar__cta:focus {
   background: transparent;
   border-color: white !important;
-  color:  white !important;
+  color: white !important;
   transform: translateY(-2px);
 }
 
@@ -631,7 +643,8 @@
   margin: 0;
   letter-spacing: 0.5px;
 }
-.navbar__mobile-link{
+
+.navbar__mobile-link {
   color: white !important;
 }
 

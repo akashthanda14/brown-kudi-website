@@ -21,7 +21,7 @@ export default function SocialPage() {
     const { language } = useLanguage();
 
     return (
-        <div className="container">
+        <div className="container" id="social">
             <div className="wrapper">
                 <div className="top">
                     {/* Left Section with Image */}
