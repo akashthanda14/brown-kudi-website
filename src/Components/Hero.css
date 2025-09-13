@@ -52,9 +52,8 @@
   border: 0;
 }
 
-/* Reduced motion accessibility */
+/* Reduced motion accessibility - PERFORMANCE FIRST */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -73,6 +72,52 @@
         rgba(59, 47, 47, 0.85),
         rgba(59, 47, 47, 0.75)), url("/images/bg-fallback.jpg") center/cover no-repeat;
   }
+
+  /* Disable all decorative animations for performance */
+  .hero__decorative {
+    display: none;
+  }
+}
+
+/* Performance optimizations for all devices */
+@media (max-width: 768px) {
+  /* Disable complex animations on mobile for better performance */
+  .hero__decorative {
+    display: none !important;
+  }
+  
+  .hero__badge,
+  .hero__heading > *,
+  .hero__cta,
+  .hero__language,
+  .hero__scroll {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Low-end device optimizations */
+.hero--low-end .hero__decorative {
+  display: none !important;
+}
+
+.hero--low-end .hero__badge,
+.hero--low-end .hero__heading > *,
+.hero--low-end .hero__cta,
+.hero--low-end .hero__language,
+.hero--low-end .hero__scroll {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.hero--low-end .hero__video {
+  filter: none !important; /* Remove expensive filters */
+}
+
+.hero--low-end .hero__content {
+  will-change: auto !important; /* Disable hardware acceleration hints */
 }
 
 /* === HERO FOUNDATION === */
@@ -95,7 +140,7 @@
     background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.4) 0%,
         rgba(109, 163, 77, 0.2) 50%,
-        rgba(0, 0, 0, 0.4) 100%), url('/img/IMG1.jpg') left center/cover no-repeat;
+        rgba(0, 0, 0, 0.4) 100%), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat;
     background-position: 25% center;
   }
 }
@@ -124,6 +169,10 @@
   opacity: 0;
   filter: sepia(20%) saturate(80%) brightness(1.1);
   animation: videoReveal 2s var(--ease-gentle) 0.5s forwards;
+  /* Hardware acceleration for smooth video playback */
+  will-change: opacity;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .hero__overlay {
@@ -177,6 +226,9 @@
   opacity: 0;
   transform: translateY(2rem);
   transition: all 1.2s var(--ease-gentle);
+  /* Hardware acceleration for smooth parallax */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .hero--visible .hero__content {
@@ -373,16 +425,28 @@
 }
 
 .hero__scroll-seed {
-  animation: seedGrow 3s ease-in-out infinite;
   color: var(--color-leaf);
+  /* Simplified animation for performance */
+  animation: seedGrow 3s ease-in-out infinite;
+  /* Hardware acceleration */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-/* Decorative Elements */
+/* Decorative Elements - PERFORMANCE OPTIMIZED */
 .hero__decorative {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 1;
+  /* Hide on mobile and tablets for performance */
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__decorative {
+    display: block;
+  }
 }
 
 .hero__crop-row {
@@ -393,27 +457,28 @@
       var(--color-wheat) 50%,
       transparent 100%);
   opacity: 0.4;
+  /* Disable expensive scaling animations */
+  animation: none;
+  /* Hardware acceleration */
+  will-change: auto;
 }
 
 .hero__crop-row--1 {
   width: 300px;
   top: 25%;
   left: 10%;
-  animation: rowGrow 4s ease-in-out infinite;
 }
 
 .hero__crop-row--2 {
   width: 200px;
   top: 60%;
   right: 15%;
-  animation: rowGrow 4s ease-in-out infinite 1s;
 }
 
 .hero__crop-row--3 {
   width: 150px;
   bottom: 30%;
   left: 20%;
-  animation: rowGrow 4s ease-in-out infinite 2s;
 }
 
 .hero__sun {
@@ -423,7 +488,10 @@
   font-size: 2rem;
   color: var(--color-wheat);
   opacity: 0.6;
+  /* Simplified float animation only for desktop */
   animation: sunFloat 8s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .hero__tractor {
@@ -433,10 +501,14 @@
   font-size: 1.5rem;
   color: var(--color-earth);
   opacity: 0.4;
-  animation: tractorIdle 6s ease-in-out infinite;
+  /* Disable expensive idle animation */
+  animation: none;
 }
 
 /* === ANIMATIONS === */
+/* === PERFORMANCE-OPTIMIZED KEYFRAMES === */
+/* Using only transform and opacity for hardware acceleration */
+
 @keyframes videoReveal {
   to {
     opacity: 0.7;
@@ -452,12 +524,11 @@
 @keyframes titleSlideIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
   }
-
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -491,53 +562,30 @@
   }
 }
 
-@keyframes seedGrow {
-
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
+/* Simplified decorative animations - only for desktop */
+@media (min-width: 769px) {
+  @keyframes seedGrow {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(0, -4px, 0) scale(1.05);
+    }
   }
 
-  50% {
-    transform: translateY(-8px) scale(1.1);
-  }
-}
-
-@keyframes rowGrow {
-
-  0%,
-  100% {
-    transform: scaleX(1);
-  }
-
-  50% {
-    transform: scaleX(1.2);
+  @keyframes sunFloat {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -5px, 0);
+    }
   }
 }
 
-@keyframes sunFloat {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotate(180deg);
-  }
-}
-
-@keyframes tractorIdle {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(5px);
-  }
-}
+/* Disable expensive animations completely */
+@keyframes rowGrow { /* Disabled - too expensive */ }
+@keyframes tractorIdle { /* Disabled - too expensive */ }
 
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
