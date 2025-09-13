@@ -139,6 +139,31 @@
 .slider-buttons button:active {
     transform: scale(0.95);
 }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  text-decoration: none;  /* underline remove */
+  color: inherit;         /* text ka original color preserve */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* agar andar ka p, span wagairah bhi anchor ke effect se underline ho rahe hain */
+.card p,
+.card span,
+.card h3 {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* ✅ Responsive */
 @media (max-width: 1440px) {

@@ -639,7 +639,7 @@
 
 .navbar__mobile-tagline {
   text-align: center;
-  color:white;
+  color: white;
   font-size: 0.85rem;
   font-style: italic;
   margin: 0;
@@ -648,6 +648,40 @@
 
 .navbar__mobile-link {
   color: white !important;
+}
+
+.navbar__mobile-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.navbar__mobile-submenu.open {
+  max-height: 600px;
+  /* enough for list */
+  opacity: 1;
+}
+
+.navbar__mobile-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
 }
 
 /* ==========================================================================
@@ -711,7 +745,7 @@
   gap: 0.75rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color:white ;
+  color: white;
   padding: 0.75rem 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -738,7 +772,7 @@
 .navbar__mobile-sublink:focus {
   color: var(--clr-primary);
   background: rgba(108, 163, 77, 0.044);
-  border-left-color:white !important;
+  border-left-color: white !important;
   transform: translateX(4px);
 }
 
