@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import "./Hero.css";
 import { useLanguage } from "../context/LanguageContext"; 
 
@@ -11,6 +11,21 @@ const Hero = () => {
   const heroRef = useRef(null);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+
+  // Performance check - disable animations on low-end devices
+  const isLowEndDevice = useMemo(() => {
+    // Check for performance hints
+    if (typeof navigator !== 'undefined') {
+      // Check device memory (if available)
+      const deviceMemory = navigator.deviceMemory;
+      if (deviceMemory && deviceMemory < 4) return true;
+      
+      // Check for mobile devices
+      const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      return isMobile;
+    }
+    return false;
+  }, []);
 
   const translations = {
     english: { 
@@ -33,6 +48,9 @@ const Hero = () => {
     },
   };
 
+  // Memoize translation lookup to prevent object access on every render
+  const t = useMemo(() => translations[language], [language]);
+
   // Intersection Observer for entrance animations
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,9 +67,9 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Video brightness detection for accessibility
+  // Video brightness detection for accessibility - optimized for performance
   useEffect(() => {
-    if (!videoLoaded || !videoRef.current) return;
+    if (!videoLoaded || !videoRef.current || isLowEndDevice) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -81,31 +99,64 @@ const Hero = () => {
       }
     };
 
-    const interval = setInterval(checkBrightness, 1000);
-    return () => clearInterval(interval);
-  }, [videoLoaded]);
+    // Performance optimization: longer intervals for low-end devices
+    const interval = isLowEndDevice ? 3000 : 1000;
+    
+    const scheduleCheck = () => {
+      checkBrightness();
+      setTimeout(() => {
+        if (videoLoaded) {
+          requestAnimationFrame(scheduleCheck);
+        }
+      }, interval);
+    };
 
-  // Gentle parallax scroll effect
+    const id = requestAnimationFrame(scheduleCheck);
+    return () => cancelAnimationFrame(id);
+  }, [videoLoaded, isLowEndDevice]);
+
+  // Gentle parallax scroll effect - disabled on low-end devices
   useEffect(() => {
+    if (isLowEndDevice) return; // Skip parallax on low-end devices
+    
     const handleScroll = () => {
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setScrollY(window.scrollY);
+        setScrollY(prev => {
+          const newY = window.scrollY;
+          return Math.abs(newY - prev) > 4 ? newY : prev;
+        });
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isLowEndDevice]);
 
-  // Optimized video preloader
+  // Optimized video preloader with performance hints
   useEffect(() => {
     const vid = document.createElement("video");
     vid.preload = "metadata";
+    vid.muted = true; // Ensure autoplay works
+    vid.playsInline = true; // Mobile optimization
     vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4";
-    vid.onloadedmetadata = () => {
+    
+    const handleLoad = () => {
       if (vid.readyState >= 2) {
         setVideoLoaded(true);
       }
+    };
+    
+    const handleError = () => {
+      // Fallback to image background if video fails
+      setVideoLoaded(false);
+    };
+    
+    vid.addEventListener('loadedmetadata', handleLoad);
+    vid.addEventListener('error', handleError);
+    
+    return () => {
+      vid.removeEventListener('loadedmetadata', handleLoad);
+      vid.removeEventListener('error', handleError);
     };
   }, []);
 
@@ -122,17 +173,19 @@ const Hero = () => {
   return (
     <header 
       id="hero" 
-      className={`hero ${isVisible ? 'hero--visible' : ''} ${videoBrightness === 'bright' ? 'hero--bright-scene' : ''}`}
+      className={`hero ${isVisible ? 'hero--visible' : ''} ${videoBrightness === 'bright' ? 'hero--bright-scene' : ''} ${isLowEndDevice ? 'hero--low-end' : ''}`}
       ref={heroRef}
       role="banner"
       aria-label="Brown Kudi farming influencer homepage"
     >
       {/* Hidden canvas for brightness detection */}
-      <canvas 
-        ref={canvasRef} 
-        style={{ position: 'absolute', top: '-9999px', left: '-9999px' }}
-        aria-hidden="true"
-      />
+      {!isLowEndDevice && (
+        <canvas 
+          ref={canvasRef} 
+          style={{ position: 'absolute', top: '-9999px', left: '-9999px' }}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Background Media */}
       <div className="hero__background">
@@ -168,7 +221,7 @@ const Hero = () => {
       <div 
         className="hero__content"
         style={{
-          transform: `translateY(${scrollY * 0.05}px)`
+          transform: !isLowEndDevice ? `translateY(${scrollY * 0.05}px)` : 'none'
         }}
       >
         {/* Brand Badge */}
@@ -185,11 +238,11 @@ const Hero = () => {
           </h1>
           
           <h2 className="hero__subtitle">
-            {translations[language].subtitle}
+            {t.subtitle}
           </h2>
           
           <p className="hero__tagline">
-            {translations[language].tagline}
+            {t.tagline}
           </p>
         </div>
 
@@ -198,10 +251,10 @@ const Hero = () => {
           <button
             className="hero__cta"
             onClick={handleCTAClick}
-            aria-label={`${translations[language].cta} - Navigate to tyres section`}
+            aria-label={`${t.cta} - Navigate to tyres section`}
           >
             <i className="fas fa-tractor hero__cta-icon" aria-hidden="true" />
-            <span>{translations[language].cta}</span>
+            <span>{t.cta}</span>
           </button>
 
           {/* Language Selector */}
