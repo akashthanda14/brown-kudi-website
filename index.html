@@ -6,17 +6,45 @@
   <link rel="icon" type="image/svg+xml"
     href="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750786/logo_zxkiwh.png" />
   
-  <!-- Critical Resource Preloads -->
+  <!-- Mobile-first Critical Resource Preloads -->
   <link rel="preload" href="/font/pfont.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/font/efont.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" as="image" href="/img/IMG10.jpg" />
-  <link rel="preload" as="image" href="/img/IMG19.jpg" />
-  <link rel="preload" as="image" href="/img/IMG11.jpg" />
-  <link rel="preload" href="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" as="video">
+  
+  <!-- Mobile hero background image (highest priority) -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" media="(max-width: 768px)">
+  
+  <!-- Desktop images (lower priority) -->
+  <link rel="preload" as="image" href="/img/IMG10.jpg" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="/img/IMG19.jpg" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="/img/IMG11.jpg" media="(min-width: 769px)">
+  
+  <!-- Video only for desktop -->
+  <link rel="preload" href="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" as="video" media="(min-width: 1024px)">
   
   <!-- DNS Prefetch -->
   <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- Mobile viewport optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- Critical inline CSS for mobile-first loading -->
+  <style>
+    /* Critical above-the-fold styles for mobile */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 100vh;
+        background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(109,163,77,0.3) 50%, rgba(0,0,0,0.6) 100%), 
+                    url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat;
+        background-position: 25% center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero__content { opacity: 1; transform: none; }
+      .hero__decorative, .hero__scroll, .hero__video { display: none; }
+    }
+  </style>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brown kudi</title>

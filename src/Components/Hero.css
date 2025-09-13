@@ -79,22 +79,91 @@
   }
 }
 
-/* Performance optimizations for all devices */
+/* AGGRESSIVE MOBILE OPTIMIZATIONS FOR MAXIMUM SPEED */
 @media (max-width: 768px) {
-  /* Disable complex animations on mobile for better performance */
-  .hero__decorative {
+  .hero {
+    /* Simplified mobile layout */
+    padding-top: 3rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Force image background on mobile - no video */
+  .hero__fallback {
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(109, 163, 77, 0.3) 50%,
+        rgba(0, 0, 0, 0.6) 100%), 
+        url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat !important;
+    background-position: 25% center;
+  }
+  
+  /* Disable ALL animations on mobile */
+  .hero__decorative,
+  .hero__scroll,
+  .hero__text-backdrop {
     display: none !important;
   }
   
   .hero__badge,
   .hero__heading > *,
   .hero__cta,
-  .hero__language,
-  .hero__scroll {
+  .hero__language {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
   }
+
+  /* Simplified mobile content */
+  .hero__content {
+    padding: 1rem;
+    max-width: 95vw;
+    will-change: auto !important;
+    transform: none !important;
+  }
+
+  /* Mobile typography optimizations */
+  .hero__title {
+    font-size: 2.5rem !important;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  .hero__tagline {
+    font-size: 0.9rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero__badge {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Mobile-specific class optimizations */
+.hero--mobile {
+  /* Additional mobile optimizations */
+  background-attachment: scroll !important; /* Prevent parallax issues */
+}
+
+.hero--mobile .hero__video {
+  display: none !important; /* Force disable video */
+}
+
+.hero--mobile .hero__content {
+  will-change: auto !important;
+  transform: none !important;
+}
+
+.hero--mobile * {
+  /* Disable all transforms and animations */
+  animation: none !important;
+  transition: none !important;
 }
 
 /* Low-end device optimizations */
