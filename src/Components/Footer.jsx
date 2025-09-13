@@ -184,7 +184,7 @@ const Footer = () => {
         <div className="footer-bottom-content">
           <div className="footer-social">
             <span className="social-label">{footerText.follow[language]}</span>
-            <button className="scroll-top-btn" aria-label="Back to top" onClick={handleCTAClick}>
+            <button className="scroll-top-btn"  aria-label="Back to top" onClick={handleCTAClick}>
               <FaArrowRight className="scroll-top-icon" />
             </button>
             <div className="social-links">

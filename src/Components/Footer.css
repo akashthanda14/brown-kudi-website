@@ -222,11 +222,11 @@
 }
 /* ===== SCROLL TO TOP BTN ===== */
 .scroll-top-btn {
-  border: 2px solid #ffffff !important;
+  border: 2px solid #101010 !important;
   width: 44px;
   height: 44px;
-  background: #ffffff;
-  color: #6da34d;
+  background: #458242f1;
+  color: #6da34d !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
