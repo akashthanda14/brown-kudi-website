@@ -2,7 +2,6 @@ import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import "./TradeSection.css";
 
 const TradeSection = () => {
@@ -94,7 +93,7 @@ const TradeSection = () => {
     },
     {
       id: 3,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg4_okphxy.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/a_hflip/v1757771043/erasebg-transformed_yqjo4s.png",
       name: { english: "Disc Harrow", hindi: "डिस्क हैरो", punjabi: "ਡਿਸਕ ਹੈਰੋ" },
       points: {
         english: [
@@ -138,7 +137,7 @@ const TradeSection = () => {
     },
     {
       id: 5,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750794/tradeimg3_lycnff.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769961/pngegg_2_fxnwbe.png",
       name: { english: "Subsoiler", hindi: "सब-सोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
       points: {
         english: [
@@ -183,7 +182,11 @@ const TradeSection = () => {
     {
       id: 7,
       img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
-      name: { english: "Hydraulic", hindi: "हाइड्रोलिक", punjabi: "ਹਾਈਡ੍ਰੋਲਿਕ" },
+      name: {
+        english: "Hydraulic Harrow",
+        hindi: "हाइड्रोलिक हैरो",
+        punjabi: "ਹਾਈਡ੍ਰੋਲਿਕ ਹੈਰੋ",
+      },
       points: {
         english: [
           "Prepares fine soil texture for seed germination",
@@ -192,12 +195,12 @@ const TradeSection = () => {
         ],
         hindi: [
           "बीज अंकुरण के लिए मिट्टी को महीन बनाता है",
-          "जुताई के बाद सतह को और मुलायम व चिकना करता है",
+          "जुताई के बाद सतह को और समतल और मुलायम करता है",
           "बेहतर फसल उत्पादन के लिए समान मिट्टी का बिस्तर तैयार करता है",
         ],
         punjabi: [
           "ਬੀਜ ਅੰਕੁਰਣ ਲਈ ਮਿੱਟੀ ਨੂੰ ਬਾਰੀਕ ਬਣਾਉਂਦਾ ਹੈ",
-          "ਜੁੱਤਾਈ ਤੋਂ ਬਾਅਦ ਸਤਹ ਨੂੰ ਹੋਰ ਮੋਲਾਇਮ ਤੇ ਸਮਾਨ ਕਰਦਾ ਹੈ",
+          "ਜੁੱਤਾਈ ਤੋਂ ਬਾਅਦ ਸਤਹ ਨੂੰ ਹੋਰ ਸਮਾਨ ਤੇ ਮੋਲਾਇਮ ਕਰਦਾ ਹੈ",
           "ਵਧੀਆ ਫਸਲ ਲਈ ਇਕਸਾਰ ਮਿੱਟੀ ਦਾ ਬਿਸਤਰਾ ਤਿਆਰ ਕਰਦਾ ਹੈ",
         ],
       },
@@ -245,7 +248,12 @@ const TradeSection = () => {
               transform: `perspective(1000px) rotateX(${tilt[item.id]?.x || 0}deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
             }}
           >
-            <img src={item.img} alt={item.name[language]} className="trade-img" loading="lazy" />
+            <img
+              src={item.img}
+              alt={item.name[language]}
+              className="trade-img"
+              loading="lazy"
+            />
             <div className="trade-content">
               <h3 className="trade-name">{item.name[language]}</h3>
 
@@ -259,7 +267,6 @@ const TradeSection = () => {
                 <Link to={`/product-detail/${item.id}`} className="more-info-btn">
                   {button[language]}
                 </Link>
-
               </div>
             </div>
           </motion.div>

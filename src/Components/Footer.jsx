@@ -99,8 +99,8 @@ const Footer = () => {
                 <li><Link to="/testmonials">Testmonials</Link></li>
                 <li><Link to="/tradesection">Agricultural Tools</Link></li>
                 <li><Link to="/tyres">Tyre Solutions</Link></li>
-                <li><Link to="/custom-engineering">Custom Engineering</Link></li>
-                <li><Link to="/consultation">Consultation</Link></li>
+                <li><Link to="/agriequipments">Agri Inport/Export</Link></li>
+                <li><Link to="/agrijourney">AgriJourney</Link></li>
               </ul>
             </div>
 

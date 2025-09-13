@@ -44,7 +44,7 @@ const teamMembers = [
 const values = [
   {
     icon: <Target size={40} strokeWidth={1.5} />,
-    title: "Quality Assurance",
+    title: "Our Core Values",
     description: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers in Australia and Canada, ensuring durability and performance in Indian conditions."
   },
   {
@@ -57,11 +57,6 @@ const values = [
     title: "Authentic Content",
     description: "Through genuine storytelling and real farming experiences, we've built a community of 1.9M+ followers who trust our expertise in welding, farming, and agricultural equipment selection."
   },
-  {
-    icon: <Award size={40} strokeWidth={1.5} />,
-    title: "Technical Excellence",
-    description: "From professional welding services to complex agricultural machinery imports, we maintain the highest technical standards. Every project showcases our commitment to craftsmanship and innovation."
-  }
 ];
 
 const AboutPage_ = () => {
@@ -86,7 +81,7 @@ const AboutPage_ = () => {
       if (additionalRef.current) observer.unobserve(additionalRef.current);
     };
   }, []);
-  
+
   // Counter animation for additional stats
   useEffect(() => {
     if (additionalInView) {
@@ -138,7 +133,7 @@ const AboutPage_ = () => {
       `}</style>
 
       {/* Enhanced Hero Section */}
-      <motion.section 
+      <motion.section
         className="about-hero"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -190,7 +185,7 @@ const AboutPage_ = () => {
           borderRadius: '50%',
           animation: 'float 10s ease-in-out infinite'
         }} />
-        
+
         <div style={{ maxWidth: '1000px', position: 'relative', zIndex: 2 }}>
           {/* Badge */}
           <motion.div
@@ -211,14 +206,14 @@ const AboutPage_ = () => {
               🌾 PIONEERING AGRICULTURAL EXCELLENCE SINCE 2015
             </span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            style={{ 
-              fontSize: '4.5rem', 
-              fontWeight: '800', 
+            style={{
+              fontSize: '4.5rem',
+              fontWeight: '800',
               marginBottom: '25px',
               lineHeight: '1.1',
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
@@ -226,14 +221,14 @@ const AboutPage_ = () => {
           >
             About <span style={{ color: '#8bc34a' }}>Brown Kudi</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            style={{ 
-              fontSize: '1.5rem', 
-              lineHeight: '1.6', 
+            style={{
+              fontSize: '1.5rem',
+              lineHeight: '1.6',
               opacity: 0.95,
               marginBottom: '50px',
               maxWidth: '800px',
@@ -242,7 +237,7 @@ const AboutPage_ = () => {
           >
             From Mastering Welding in Punjab to Building International Tyre & Agricultural Equipment Empire - Connecting Australia, Canada & India Through Quality Trade and Authentic Content Creation
           </motion.p>
-          
+
           {/* Hero Stats */}
           <motion.div
             className="hero-stats"
@@ -284,7 +279,7 @@ const AboutPage_ = () => {
               </motion.div>
             ))}
           </motion.div>
-          
+
           {/* Call to Action Buttons */}
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -292,7 +287,7 @@ const AboutPage_ = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}
           >
-            <motion.button 
+            <motion.button
               onClick={() => navigate("/contact")}
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
@@ -311,7 +306,7 @@ const AboutPage_ = () => {
             >
               Connect With Us
             </motion.button>
-            <motion.button 
+            <motion.button
               onClick={() => navigate("/gallery")}
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
@@ -334,11 +329,8 @@ const AboutPage_ = () => {
         </div>
       </motion.section>
 
-      {/* Main About Section - Using AboutSection Component */}
-      <AboutSection />
-
       {/* Journey & Expertise Section */}
-      <motion.section 
+      <motion.section
         className="journey-expertise"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -351,242 +343,24 @@ const AboutPage_ = () => {
         }}
       >
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{
-                display: 'inline-block',
-                background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
-                color: 'white',
-                padding: '12px 30px',
-                borderRadius: '50px',
-                marginBottom: '25px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                letterSpacing: '1px'
-              }}
-            >
-              🔥 THE BROWN KUDI JOURNEY
-            </motion.div>
-            
-            <motion.h2 
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{ 
-                fontSize: '3.2rem', 
-                color: '#2c3e50', 
-                marginBottom: '25px',
-                fontWeight: '800'
-              }}
-            >
-              From <span style={{ color: '#6da34d' }}>Welding Sparks</span> to Global Success
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              style={{ 
-                fontSize: '1.3rem', 
-                color: '#6c757d', 
-                maxWidth: '800px', 
-                margin: '0 auto',
-                lineHeight: '1.7'
-              }}
-            >
-              Discover how passion for welding transformed into a multi-million dollar agricultural empire spanning three continents
-            </motion.p>
+          <div style={{ textAlign: 'center', marginBottom: '0px' }}>
+
+
           </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 2fr))',
             gap: '50px',
-            alignItems: 'stretch'
+            alignItems: 'stretch',
+            alignItems: 'center',
+            justifyContent:"center",
           }}>
             {/* Content Creation Journey */}
-            <motion.div
-              initial={{ x: -60, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              style={{
-                background: 'white',
-                padding: '50px 40px',
-                borderRadius: '25px',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.08)',
-                border: '1px solid #f0f0f0',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              <div style={{
-                position: 'absolute',
-                top: '-50%',
-                right: '-50%',
-                width: '200%',
-                height: '200%',
-                background: 'linear-gradient(45deg, rgba(109, 163, 77, 0.03), rgba(139, 195, 74, 0.06))',
-                borderRadius: '50%',
-                zIndex: 0
-              }} />
-              
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
-                  borderRadius: '50%',
-                  marginBottom: '30px'
-                }}>
-                  📱
-                </div>
-                
-                <h3 style={{ 
-                  fontSize: '2rem', 
-                  marginBottom: '25px',
-                  color: '#2c3e50',
-                  fontWeight: '700'
-                }}>
-                  Content Creation Mastery
-                </h3>
-                
-                <p style={{ 
-                  fontSize: '1.1rem', 
-                  lineHeight: '1.7',
-                  color: '#6c757d',
-                  marginBottom: '30px'
-                }}>
-                  Started sharing authentic farming and welding content, growing from zero to 1.9M+ Instagram followers. Our content showcases real agricultural work, professional welding techniques, and genuine farmer stories that resonate with millions.
-                </p>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                  {[
-                    '1.9M+ Instagram followers organically grown',
-                    'Authentic agricultural content creation',
-                    'Professional welding technique demonstrations',
-                    'Real farmer stories and equipment reviews'
-                  ].map((point, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        fontSize: '1rem',
-                        color: '#6da34d',
-                        fontWeight: '500'
-                      }}
-                    >
-                      <CheckCircle2 size={18} />
-                      <span>{point}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+
 
             {/* Welding & Technical Expertise */}
-            <motion.div
-              initial={{ x: 60, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              style={{
-                background: 'white',
-                padding: '50px 40px',
-                borderRadius: '25px',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.08)',
-                border: '1px solid #f0f0f0',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              <div style={{
-                position: 'absolute',
-                top: '-50%',
-                right: '-50%',
-                width: '200%',
-                height: '200%',
-                background: 'linear-gradient(45deg, rgba(109, 163, 77, 0.03), rgba(139, 195, 74, 0.06))',
-                borderRadius: '50%',
-                zIndex: 0
-              }} />
-              
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, #8bc34a, #6da34d)',
-                  borderRadius: '50%',
-                  marginBottom: '30px'
-                }}>
-                  🔧
-                </div>
-                
-                <h3 style={{ 
-                  fontSize: '2rem', 
-                  marginBottom: '25px',
-                  color: '#2c3e50',
-                  fontWeight: '700'
-                }}>
-                  Professional Welding Excellence
-                </h3>
-                
-                <p style={{ 
-                  fontSize: '1.1rem', 
-                  lineHeight: '1.7',
-                  color: '#6c757d',
-                  marginBottom: '30px'
-                }}>
-                  Punjab's pioneering female welder with expertise in arc welding, MIG/TIG welding, and heavy machinery fabrication. From custom agricultural equipment to structural steel work, delivering precision craftsmanship that sets industry standards.
-                </p>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                  {[
-                    'Certified in multiple welding techniques',
-                    'Custom agricultural equipment fabrication',
-                    'Heavy machinery repair and modification',
-                    'Breaking gender barriers in skilled trades'
-                  ].map((point, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ x: 20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        fontSize: '1rem',
-                        color: '#6da34d',
-                        fontWeight: '500'
-                      }}
-                    >
-                      <CheckCircle2 size={18} />
-                      <span>{point}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+    
 
             {/* International Trade Success */}
             <motion.div
@@ -614,9 +388,9 @@ const AboutPage_ = () => {
               }}>
                 🌍
               </div>
-              
-              <div style={{ display: 'flex', alignItems: 'center', gap: '50px', flexWrap: 'wrap' }}>
-                <div style={{ flex: 1, minWidth: '300px' }}>
+
+              <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center", gap: '50px', flexWrap: 'wrap' }}>
+                <div style={{ flex: 1, minWidth: '250px' }}>
                   <div style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -629,17 +403,17 @@ const AboutPage_ = () => {
                   }}>
                     🚢
                   </div>
-                  
-                  <h3 style={{ 
-                    fontSize: '2.5rem', 
+
+                  <h3 style={{
+                    fontSize: '2.5rem',
                     marginBottom: '25px',
                     fontWeight: '700'
                   }}>
                     International Import-Export Empire
                   </h3>
-                  
-                  <p style={{ 
-                    fontSize: '1.2rem', 
+
+                  <p style={{
+                    fontSize: '1.2rem',
                     lineHeight: '1.7',
                     opacity: 0.95,
                     marginBottom: '30px'
@@ -647,12 +421,12 @@ const AboutPage_ = () => {
                     Built a thriving international trade business importing premium tyres and agricultural equipment from Australia and Canada. Our direct relationships with manufacturers ensure competitive pricing and guaranteed quality for Indian farmers.
                   </p>
                 </div>
-                
-                <div style={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: 'repeat(2, 1fr)', 
-                  gap: '30px',
-                  minWidth: '400px'
+
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: '20px',
+                  minWidth: '300px'
                 }}>
                   {[
                     { number: '250+', label: 'Equipment Delivered', icon: '🚜' },
@@ -686,268 +460,10 @@ const AboutPage_ = () => {
         </div>
       </motion.section>
 
-      {/* Mission & Vision Section */}
-      <motion.section 
-        className="mission-vision"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        style={{
-          padding: '100px 20px',
-          background: 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)',
-          color: 'white',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
-        {/* Background Pattern */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(109, 163, 77, 0.1) 0%, transparent 70%),
-            radial-gradient(circle at 75% 75%, rgba(139, 195, 74, 0.1) 0%, transparent 70%)
-          `,
-          opacity: 0.5
-        }} />
-        
-        <div style={{ maxWidth: '1400px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{
-                display: 'inline-block',
-                background: 'rgba(139, 195, 74, 0.2)',
-                padding: '12px 30px',
-                borderRadius: '50px',
-                marginBottom: '25px',
-                border: '2px solid rgba(139, 195, 74, 0.3)',
-                fontSize: '1rem',
-                fontWeight: '600',
-                letterSpacing: '1px'
-              }}
-            >
-              🎯 OUR MISSION & VISION
-            </motion.div>
-            
-            <motion.h2 
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{ 
-                fontSize: '3.5rem', 
-                marginBottom: '25px',
-                fontWeight: '800',
-                lineHeight: '1.2'
-              }}
-            >
-              Driving <span style={{ color: '#8bc34a' }}>Agricultural Revolution</span>
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              style={{ 
-                fontSize: '1.3rem', 
-                opacity: 0.9,
-                maxWidth: '800px',
-                margin: '0 auto',
-                lineHeight: '1.6'
-              }}
-            >
-              Empowering farmers worldwide with innovative solutions while preserving traditional wisdom and sustainable practices
-            </motion.p>
-          </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', 
-            gap: '60px',
-            alignItems: 'stretch'
-          }}>
-            {/* Mission */}
-            <motion.div
-              initial={{ x: -60, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                padding: '50px 40px',
-                borderRadius: '25px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                position: 'relative'
-              }}
-            >
-              <div style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                fontSize: '4rem',
-                opacity: 0.1
-              }}>
-                🚀
-              </div>
-              
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '80px',
-                height: '80px',
-                background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
-                borderRadius: '50%',
-                marginBottom: '30px'
-              }}>
-                <Target size={40} color="white" />
-              </div>
-              
-              <h3 style={{ 
-                fontSize: '2.2rem', 
-                marginBottom: '25px',
-                color: '#8bc34a',
-                fontWeight: '700'
-              }}>
-                Our Mission
-              </h3>
-              
-              <p style={{ 
-                fontSize: '1.2rem', 
-                lineHeight: '1.7',
-                opacity: 0.9,
-                marginBottom: '30px'
-              }}>
-                To bridge international agricultural markets through authentic content creation and quality equipment trading. We connect premium Australian and Canadian agricultural technology with Indian farmers while inspiring millions through genuine storytelling and professional welding expertise.
-              </p>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                {[
-                  'Import premium tyres and equipment from Australia & Canada',
-                  'Provide authentic agricultural content to 1.9M+ followers',
-                  'Deliver professional welding and fabrication services',
-                  'Ensure 95%+ customer satisfaction in equipment delivery'
-                ].map((point, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ x: -20, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                      fontSize: '1rem',
-                      opacity: 0.8
-                    }}
-                  >
-                    <CheckCircle2 size={18} color="#8bc34a" />
-                    <span>{point}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
 
-            {/* Vision */}
-            <motion.div
-              initial={{ x: 60, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                padding: '50px 40px',
-                borderRadius: '25px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                position: 'relative'
-              }}
-            >
-              <div style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                fontSize: '4rem',
-                opacity: 0.1
-              }}>
-                🌟
-              </div>
-              
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '80px',
-                height: '80px',
-                background: 'linear-gradient(135deg, #8bc34a, #6da34d)',
-                borderRadius: '50%',
-                marginBottom: '30px'
-              }}>
-                <Star size={40} color="white" />
-              </div>
-              
-              <h3 style={{ 
-                fontSize: '2.2rem', 
-                marginBottom: '25px',
-                color: '#8bc34a',
-                fontWeight: '700'
-              }}>
-                Our Vision
-              </h3>
-              
-              <p style={{ 
-                fontSize: '1.2rem', 
-                lineHeight: '1.7',
-                opacity: 0.9,
-                marginBottom: '30px'
-              }}>
-                To become the most trusted name in international agricultural equipment trading between India, Australia, and Canada. We envision expanding our content creation to reach 5M+ followers while maintaining our commitment to quality welding services and authentic storytelling that inspires the next generation of agricultural entrepreneurs.
-              </p>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                {[
-                  'Leading tyre & equipment importer across 3 continents',
-                  'Content creation inspiring 5M+ agricultural enthusiasts',
-                  'Professional welding services recognized internationally',
-                  'Empowering women entrepreneurs in male-dominated industries'
-                ].map((point, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ x: 20, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                      fontSize: '1rem',
-                      opacity: 0.8
-                    }}
-                  >
-                    <Star size={18} color="#8bc34a" />
-                    <span>{point}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
 
       {/* Our Values Section */}
-      <motion.section 
+      <motion.section
         className="about-values"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -960,7 +476,7 @@ const AboutPage_ = () => {
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <motion.h2 
+            <motion.h2
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -969,7 +485,7 @@ const AboutPage_ = () => {
             >
               Our Core Values
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -979,11 +495,11 @@ const AboutPage_ = () => {
               The principles that drive our passion for agricultural excellence and sustainable farming
             </motion.p>
           </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-            gap: '30px' 
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '30px'
           }}>
             {values.map((value, index) => (
               <motion.div
@@ -1028,7 +544,7 @@ const AboutPage_ = () => {
       </motion.section>
 
       {/* Additional Stats Section */}
-      <motion.section 
+      <motion.section
         ref={additionalRef}
         className="additional-stats"
         initial={{ opacity: 0, y: 50 }}
@@ -1042,7 +558,7 @@ const AboutPage_ = () => {
         }}
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-          <motion.h2 
+          <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -1051,7 +567,7 @@ const AboutPage_ = () => {
           >
             Our Journey in Numbers
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1060,11 +576,11 @@ const AboutPage_ = () => {
           >
             Celebrating milestones that reflect our commitment to agricultural excellence
           </motion.p>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-            gap: '40px' 
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '40px'
           }}>
             {additionalStats.map((stat, index) => (
               <motion.div
@@ -1098,18 +614,18 @@ const AboutPage_ = () => {
       </motion.section>
 
       {/* Enhanced Team Section */}
-      <motion.section 
+      <motion.section
         className="about-team"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        style={{ 
-          padding: '100px 20px', 
-          background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' 
+        style={{
+          padding: '100px 10px',
+          background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'
         }}
       >
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto',justifyContent:'center',alignItems:'center', }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
@@ -1130,43 +646,44 @@ const AboutPage_ = () => {
             >
               👥 OUR LEADERSHIP TEAM
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              style={{ 
-                fontSize: '3.2rem', 
-                color: '#2c3e50', 
+              style={{
+                fontSize: '3.2rem',
+                color: '#2c3e50',
                 marginBottom: '25px',
                 fontWeight: '800'
               }}
             >
               Meet Our <span style={{ color: '#6da34d' }}>Visionary Team</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              style={{ 
-                fontSize: '1.3rem', 
-                color: '#6c757d', 
-                maxWidth: '800px', 
+              style={{
+                fontSize: '1.3rem',
+                color: '#6c757d',
+                maxWidth: '500px',
                 margin: '0 auto',
-                lineHeight: '1.7'
+                lineHeight: '1.7',
+                alignItems:'center',
               }}
             >
               Passionate innovators dedicated to transforming agriculture through expertise, tradition, and cutting-edge technology
             </motion.p>
           </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
             gap: '60px',
-            justifyItems: 'center'
+            justifyItems: 'center',
           }}>
             {teamMembers.map((member, index) => (
               <motion.div
@@ -1178,11 +695,11 @@ const AboutPage_ = () => {
                 whileHover={{ y: -20, scale: 1.03 }}
                 style={{
                   background: 'white',
-                  padding: '50px 40px',
+                  padding: '50px 30px',
                   borderRadius: '30px',
                   boxShadow: '0 25px 80px rgba(0,0,0,0.08)',
                   textAlign: 'center',
-                  maxWidth: '420px',
+                  maxWidth: '460px',
                   width: '100%',
                   border: '1px solid #f0f0f0',
                   position: 'relative',
@@ -1199,7 +716,7 @@ const AboutPage_ = () => {
                   background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
                   zIndex: 1
                 }} />
-                
+
                 {/* Background Pattern */}
                 <div style={{
                   position: 'absolute',
@@ -1211,9 +728,9 @@ const AboutPage_ = () => {
                   borderRadius: '50%',
                   zIndex: 0
                 }} />
-                
+
                 <div style={{ position: 'relative', zIndex: 2 }}>
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     style={{
                       width: '180px',
@@ -1226,8 +743,8 @@ const AboutPage_ = () => {
                       position: 'relative'
                     }}
                   >
-                    <img 
-                      src={member.image} 
+                    <img
+                      src={member.image}
                       alt={member.name}
                       style={{
                         width: '100%',
@@ -1250,16 +767,16 @@ const AboutPage_ = () => {
                       animation: 'pulse 3s ease-in-out infinite'
                     }} />
                   </motion.div>
-                  
-                  <h3 style={{ 
-                    fontSize: '1.8rem', 
-                    color: '#2c3e50', 
+
+                  <h3 style={{
+                    fontSize: '1.8rem',
+                    color: '#2c3e50',
                     marginBottom: '12px',
                     fontWeight: '700'
                   }}>
                     {member.name}
                   </h3>
-                  
+
                   <div style={{
                     display: 'inline-block',
                     background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
@@ -1274,16 +791,16 @@ const AboutPage_ = () => {
                   }}>
                     {member.role}
                   </div>
-                  
-                  <p style={{ 
-                    color: '#6c757d', 
+
+                  <p style={{
+                    color: '#6c757d',
                     lineHeight: '1.8',
                     fontSize: '1.1rem',
                     marginBottom: '30px'
                   }}>
                     {member.description}
                   </p>
-                  
+
                   {/* Achievements */}
                   <div style={{
                     display: 'flex',
@@ -1324,7 +841,7 @@ const AboutPage_ = () => {
       </motion.section>
 
       {/* Enhanced Call to Action */}
-      <motion.section 
+      <motion.section
         className="about-cta"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -1360,7 +877,7 @@ const AboutPage_ = () => {
           borderRadius: '50%',
           animation: 'float 6s ease-in-out infinite reverse'
         }} />
-        
+
         {/* Background Pattern */}
         <div style={{
           position: 'absolute',
@@ -1375,7 +892,7 @@ const AboutPage_ = () => {
           backgroundSize: '60px 60px',
           opacity: 0.4
         }} />
-        
+
         <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
@@ -1396,14 +913,14 @@ const AboutPage_ = () => {
               🚀 START YOUR AGRICULTURAL JOURNEY
             </span>
           </motion.div>
-          
-          <motion.h2 
+
+          <motion.h2
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            style={{ 
-              fontSize: '3.5rem', 
+            style={{
+              fontSize: '3.5rem',
               marginBottom: '30px',
               fontWeight: '800',
               lineHeight: '1.2',
@@ -1412,15 +929,15 @@ const AboutPage_ = () => {
           >
             Ready to <span style={{ color: '#fff' }}>Transform</span> Your Agriculture?
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            style={{ 
-              fontSize: '1.4rem', 
-              marginBottom: '50px', 
+            style={{
+              fontSize: '1.4rem',
+              marginBottom: '50px',
               opacity: 0.95,
               lineHeight: '1.6',
               maxWidth: '700px',
@@ -1429,7 +946,7 @@ const AboutPage_ = () => {
           >
             Join thousands of farmers worldwide who trust Brown Kudi for innovative agricultural solutions, sustainable practices, and exceptional results
           </motion.p>
-          
+
           {/* Benefits Grid */}
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -1449,7 +966,6 @@ const AboutPage_ = () => {
               { icon: '🚜', title: 'Quality Equipment', desc: 'Premium tyres & machinery from Australia/Canada' },
               { icon: '📈', title: 'Proven Results', desc: '95% customer satisfaction rate' },
               { icon: '🌍', title: 'International Trade', desc: 'Direct imports from 12+ countries' },
-              { icon: '🔧', title: 'Professional Welding', desc: 'Expert fabrication & repair services' }
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -1473,7 +989,7 @@ const AboutPage_ = () => {
               </motion.div>
             ))}
           </motion.div>
-          
+
           {/* Call to Action Buttons */}
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -1482,7 +998,7 @@ const AboutPage_ = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', gap: '25px', justifyContent: 'center', flexWrap: 'wrap' }}
           >
-            <motion.button 
+            <motion.button
               onClick={handleNavigate}
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
@@ -1505,8 +1021,8 @@ const AboutPage_ = () => {
               <span>Get Started Today</span>
               <span style={{ fontSize: '1.5rem' }}>🚀</span>
             </motion.button>
-            
-            <motion.button 
+
+            <motion.button
               onClick={() => navigate("/gallery")}
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
@@ -1529,8 +1045,8 @@ const AboutPage_ = () => {
               <span>View Our Work</span>
               <span style={{ fontSize: '1.2rem' }}>📸</span>
             </motion.button>
-            
-            <motion.button 
+
+            <motion.button
               onClick={() => navigate("/contact")}
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
