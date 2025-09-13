@@ -11,18 +11,35 @@ export default function Testimonials() {
 
   return (
     <section className="testimonials-section">
-      <span className="testimonials-label">{t.label[language]}</span>
-      <h2 className="testimonials-heading">{t.heading[language]}</h2>
+      {/* Label */}
+      <motion.span
+        className="testimonials-label"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        {t.label[language]}
+      </motion.span>
 
+      {/* Heading */}
+      <motion.h2
+        className="testimonials-heading"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        {t.heading[language]}
+      </motion.h2>
+
+      {/* Grid */}
       <div className="testimonials-grid">
         {t.list[language].map((item, i) => (
           <motion.div
             key={i}
             className="testimonial-card"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.15 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 + i * 0.2 }}
           >
             <FaQuoteLeft className="quote-icon" />
 

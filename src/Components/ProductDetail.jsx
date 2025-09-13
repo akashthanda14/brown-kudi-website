@@ -20,7 +20,7 @@ const products = [
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770767/blade-1024x718_reopnl.png",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG17_b4nsi7.jpg",
       "",
     ],
     name: {
@@ -58,8 +58,8 @@ const products = [
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
-      "",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757778139/pngegg_7_w3f4k2.png",
     ],
     name: {
       english: "Reversible MB Plough",
@@ -134,8 +134,8 @@ const products = [
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769578/pngegg_1_kwd5k1.png",
-      "",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750752/IMG18_wjl53c.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750746/IMG9_o5apkz.jpg",
     ],
     name: {
       english: "Rotary Tiller",
@@ -172,8 +172,8 @@ const products = [
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750794/tradeimg3_lycnff.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757772240/pngegg_5_qhp3w0.png",
-      "",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757777686/pngegg_6_wjbei2.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750735/IMG8_xqasvo.jpg",
     ],
     name: {
       english: "Subsoiler",
@@ -209,9 +209,9 @@ const products = [
     img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
-      "",
-      "",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750757/IMG28_vlaqgx.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750761/IMG29_ixij4w.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750766/IMG25_icuqxr.jpg",
     ],
     name: {
       english: "Disc Plough",
@@ -247,9 +247,9 @@ const products = [
     img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
-      "",
-      "",
-      "",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG15_kuclg9.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG16_lqsqht.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG7_qfkwuw.jpg",
     ],
     name: {
       english: "Hydraulic Reversible Plough",

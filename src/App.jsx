@@ -68,9 +68,7 @@ function App() {
           <Route path="/export-section" element={<ExportSection />} />
           <Route path="/agriequipments" element={<AgriEquipments />} />
           <Route path="/agrijourney" element={<AgriJourney />} />
-
-
-          
+          <Route path="/socialfootprints" element={<SocialFootprints />} />
 
         </Routes>
       </BrowserRouter>

@@ -5,7 +5,7 @@ import "./SocialFootprints.css";
 const posts = [
     {
         id: 1,
-        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint1_oqpgib.png",
+        img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757754895/Screenshot_2025-09-12_144447_k4nylm.png",
         likes: "26.9k",
         comments: "31",
         desc: "ਕੋਈ ਮੁੰਡਾ ਜਦੋ ਤਰਕੀ ਕਰਦਾ ਹੈ ਤਾ ਓਹਨੂੰ ਗੋਲ਼ੀ 🔫 ਮਿਲਦੀ ਆ ਜਦ ਕੋਈ ਕੁੜੀ ਤਰਕੀ ਕਰਦੀ ਓਦੋ ਬਦਨਾਮ ਹੁੰਦੀ"
@@ -22,7 +22,7 @@ const posts = [
         img: "https://res.cloudinary.com/dnyv7wabr/image/upload/c_crop,ar_3:4/v1757750722/footprint3_h6yajd.png",
         likes: "433.1k",
         comments: "1.1k",
-        desc: "Brown Kudi Tyre ship to Australia 🇦🇺"
+        desc: "Brown Kudi Tyre ship to Australia , canada if you are intersted then contact us "
     },
     {
         id: 4,
