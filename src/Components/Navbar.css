@@ -531,7 +531,7 @@
   right: 0;
   height: 100vh;
   width: min(85vw, 320px);
-  background: rgba(245, 241, 230, 0.95);
+  background: rgba(245, 241, 230, 0.897);
   backdrop-filter: blur(var(--blur-amount));
   z-index: 1000;
   transform: translateX(100%);
@@ -653,7 +653,7 @@
 
 .navbar__mobile-link {
   color: rgb(255, 255, 255) !important;
-  background-color: #6DA34D!important;
+  background-color: #6ca34d00!important;
 }
 
 .navbar__mobile-submenu {
@@ -682,7 +682,9 @@
   justify-content: left;
   color: rgb(255, 255, 255);
 }
-
+.navbar__mobile-section-title{
+  background-color: rgb(156, 62, 62) !important;
+}
 .chevron {
   transition: transform 0.3s ease;
 }

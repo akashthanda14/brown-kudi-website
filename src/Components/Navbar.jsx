@@ -449,7 +449,7 @@ export default function Navbar() {
           </li>
 
           {/* ✅ Agriculture Equipment Section */}
-          <li role="none" className="navbar__mobile-section">
+          <li role="none" className="navbar__mobile-section1">
             <button
               className="navbar__mobile-section-title"
               onClick={() => toggleMobileSection("equipment")}
@@ -510,13 +510,13 @@ export default function Navbar() {
           </li>
 
           {/* ✅ Tyres Section */}
-          <li role="none" className="navbar__mobile-section">
+          <li role="none" className="navbar__mobile-section1">
             <button
               className="navbar__mobile-section-title"
               onClick={() => toggleMobileSection("tyres")}
             >
               <Circle size={18} aria-hidden="true" />
-              Tyres
+              <p>Tyre</p>
               <ChevronDown
                 className={`chevron ${openMobileSection === "tyres" ? "rotate" : ""
                   }`}
@@ -549,7 +549,7 @@ export default function Navbar() {
               </li>
             </ul>
           </li>
-          <li role="none" className="navbar__mobile-section">
+          <li role="none" className="navbar__mobile-section1">
             <button
               className="navbar__mobile-section-title"
               onClick={() => toggleMobileSection("works")}
