@@ -66,11 +66,11 @@ const translations = {
     },
     description: {
       english:
-        "High-performance tyres designed for strength, durability, and smooth rides. Perfect for tractors, trucks, and heavy-duty vehicles. Built with premium quality for Indian roads.",
+        "High-performance tyres designed for strength, durability, and smooth rides. Ideal for tractors, trucks, and heavy-duty vehicles. Exported worldwide with premium quality and unmatched reliability.",
       hindi:
-        "उच्च प्रदर्शन वाले टायर जो मजबूती, टिकाऊपन और आरामदायक सवारी के लिए डिज़ाइन किए गए हैं। ट्रैक्टर, ट्रक और भारी वाहनों के लिए परफेक्ट। भारतीय सड़कों के लिए प्रीमियम गुणवत्ता से बने।",
+        "उच्च प्रदर्शन वाले टायर जो मजबूती, टिकाऊपन और आरामदायक सवारी के लिए डिज़ाइन किए गए हैं। ट्रैक्टर, ट्रक और भारी वाहनों के लिए उपयुक्त। विश्वभर में निर्यातित, प्रीमियम गुणवत्ता और अतुलनीय विश्वसनीयता के साथ।",
       punjabi:
-        "ਉੱਚ-ਪ੍ਰਦਰਸ਼ਨ ਵਾਲੇ ਟਾਇਰ ਜੋ ਮਜ਼ਬੂਤੀ, ਟਿਕਾਊਪਨ ਅਤੇ ਆਰਾਮਦਾਇਕ ਸਵਾਰੀਆਂ ਲਈ ਡਿਜ਼ਾਇਨ ਕੀਤੇ ਗਏ ਹਨ। ਟਰੈਕਟਰ, ਟਰੱਕ ਅਤੇ ਭਾਰੀ-ਡਿਊਟੀ ਵਾਹਨਾਂ ਲਈ ਬਿਹਤਰ। ਭਾਰਤੀ ਸੜਕਾਂ ਲਈ ਪ੍ਰੀਮਿਅਮ ਕੁਆਲਿਟੀ ਨਾਲ ਬਣਾਏ ਗਏ।",
+        "ਉੱਚ-ਪ੍ਰਦਰਸ਼ਨ ਵਾਲੇ ਟਾਇਰ ਜੋ ਮਜ਼ਬੂਤੀ, ਟਿਕਾਊਪਨ ਅਤੇ ਆਰਾਮਦਾਇਕ ਸਵਾਰੀਆਂ ਲਈ ਡਿਜ਼ਾਇਨ ਕੀਤੇ ਗਏ ਹਨ। ਟਰੈਕਟਰ, ਟਰੱਕ ਅਤੇ ਭਾਰੀ-ਡਿਊਟੀ ਵਾਹਨਾਂ ਲਈ ਉਚਿਤ। ਪ੍ਰੀਮੀਅਮ ਗੁਣਵੱਤਾ ਅਤੇ ਬੇਮਿਸਾਲ ਭਰੋਸੇਯੋਗਤਾ ਨਾਲ ਵਿਸ਼ਵ ਭਰ ਵਿੱਚ ਨਿਰਿਆਤ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
     },
     button: {
       english: "More Info",
