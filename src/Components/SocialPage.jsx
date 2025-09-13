@@ -67,7 +67,7 @@ export default function SocialPage() {
                     {/* Left Section with Image */}
                     <div className="center">
                         <img
-                            src="/img/owner.jpg"
+                            src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg"
                             alt="profile"
                             className="profile-img"
                         />
@@ -116,7 +116,7 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="/img/youtube.png" alt="YouTube" />
+                        <img className="iconimg" src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757751534/youtube_b9borz.png" alt="YouTube" />
                         <div className="btn-content">
                             <span className="platform-name">YouTube</span>
                             <span className="follower-count">
@@ -133,7 +133,7 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="/img/instagram.png" alt="Instagram" />
+                        <img className="iconimg" src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750774/instagram_voftum.png" alt="Instagram" />
                         <div className="btn-content">
                             <span className="platform-name">Instagram</span>
                             <span className="follower-count">
@@ -150,7 +150,7 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="/img/facebook.png" alt="Facebook" />
+                        <img className="iconimg" src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750717/facebook_yn82x7.png" alt="Facebook" />
                         <div className="btn-content">
                             <span className="platform-name">Facebook</span>
                             <span className="follower-count">

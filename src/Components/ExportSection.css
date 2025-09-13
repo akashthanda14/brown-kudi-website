@@ -10,7 +10,7 @@
 }
 
 .export-bg {
-  background: url("/img/EXBG2.jpg") center/cover no-repeat;
+  background: url("https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750720/EXBG2_qxv0q0.jpg") center/cover no-repeat;
   position: absolute;
   inset: 0;
   z-index: -2;

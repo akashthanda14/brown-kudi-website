@@ -101,7 +101,7 @@ const Hero = () => {
   useEffect(() => {
     const vid = document.createElement("video");
     vid.preload = "metadata";
-    vid.src = "/video/vd6.mp4";
+    vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4";
     vid.onloadedmetadata = () => {
       if (vid.readyState >= 2) {
         setVideoLoaded(true);
@@ -155,8 +155,8 @@ const Hero = () => {
             preload="metadata"
             aria-hidden="true"
           >
-            <source src="/video/vd6.webm" type="video/webm" />
-            <source src="/video/vd6.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" type="video/webm" />
+            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" type="video/mp4" />
           </video>
         )}
         

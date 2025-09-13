@@ -26,7 +26,7 @@ export default function TyreSection() {
             viewport={{ once: true, amount: 0.4 }}
             className="tyre-image"
           >
-            <img src="/img/browntyre.png" alt="Brown Kudi Tyres" />
+            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750716/browntyre_zsfk2x.png" alt="Brown Kudi Tyres" />
           </motion.div>
 
           {/* Right - Content */}

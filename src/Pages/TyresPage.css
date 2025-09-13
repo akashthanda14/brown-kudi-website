@@ -7,7 +7,7 @@
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/tyrebg.jpeg");
+  background-image: url("https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752532/tyrebg_p1s2n5.jpg");
   z-index: 1;
   overflow: hidden;
 }

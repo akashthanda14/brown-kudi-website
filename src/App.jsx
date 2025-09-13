@@ -63,8 +63,8 @@ function App() {
           <Route path="/tradesection" element={<TradeSection />} />
           <Route path="/social" element={<SocialPage />} />
           <Route path="/testmonials" element={<Testimonials />} />
+          <Route path="/export-section" element={<ExportSection />} />
         </Routes>
-
       </BrowserRouter>
     </LanguageProvider>
   );

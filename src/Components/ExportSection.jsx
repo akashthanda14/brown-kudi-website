@@ -22,7 +22,7 @@ export default function ExportSection() {
   const { language } = useLanguage();
 
   return (
-    <section id="export" className="export-section">
+    <section id="export-section" className="export-section">
       {/* ✅ Background with black overlay */}
       <div className="export-bg"></div>
       <div className="overlay"></div>

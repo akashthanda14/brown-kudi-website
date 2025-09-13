@@ -286,45 +286,26 @@ export default function Navbar() {
                 </button>
                 <ul className={`navbar__dropdown ${activeDropdown === 'work' ? 'navbar__dropdown--visible' : ''}`} role="menu">
                   <li role="none">
-                    <a
-                      href="#social"
+                    <Link
+                      to="/social"
                       className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const social = document.getElementById("social");
-                        if (social) {
-                          social.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                          });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
                     >
-                      <Share2 size={16} aria-hidden="true" />
+                      <Circle size={16} aria-hidden="true" />
                       Social Media
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a
-                      href="#export"
+                    <Link
+                      to="/export-section"
                       className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const exportSec = document.getElementById("export");
-                        if (exportSec) {
-                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
                     >
-                      <Globe size={16} aria-hidden="true" />
-                      Global Import/Export
-                    </a>
+                     <Globe size={16} aria-hidden="true" />
+                      Global Export
+                    </Link>
                   </li>
                   <li role="none">
                     <a
@@ -468,7 +449,7 @@ export default function Navbar() {
               Home
             </Link>
           </li>
-          
+
           {/* Agriculture Equipment Section */}
           <li role="none" className="navbar__mobile-section">
             <div className="navbar__mobile-section-title">
@@ -518,7 +499,7 @@ export default function Navbar() {
               </li>
             </ul>
           </li>
-          
+
           {/* Tyres Section */}
           <li role="none" className="navbar__mobile-section">
             <div className="navbar__mobile-section-title">
@@ -548,7 +529,7 @@ export default function Navbar() {
               </li>
             </ul>
           </li>
-          
+
           <li role="none">
             <Link to="/about" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
               <User size={20} aria-hidden="true" />
