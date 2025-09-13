@@ -178,7 +178,6 @@ const About = () => {
               The principles that drive our passion for agricultural excellence and sustainable farming
             </motion.p>
           </div>
-          
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 

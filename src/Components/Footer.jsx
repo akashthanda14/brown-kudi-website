@@ -99,30 +99,27 @@ const Footer = () => {
                 <li><Link to="/testmonials">Testmonials</Link></li>
                 <li><Link to="/tradesection">Agricultural Tools</Link></li>
                 <li><Link to="/tyres">Tyre Solutions</Link></li>
-                <li><Link to="/custom-engineering">Custom Engineering</Link></li>
-                <li><Link to="/consultation">Consultation</Link></li>
+                <li><Link to="/agriequipments">Agri Inport/Export</Link></li>
+                <li><Link to="/agrijourney">AgriJourney</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h3>Resources</h3>
+              <h3>Main Equipments</h3>
               <ul>
-                <li><Link to="/blog">Blog & Insights</Link></li>
-                <li><Link to="/case-studies">Case Studies</Link></li>
-                <li><Link to="/tutorials">How-to Guides</Link></li>
-                <li><Link to="/downloads">Downloads</Link></li>
-                <li><Link to="/support">Support Center</Link></li>
+                <li><Link to="/product-detail/3">Disc Harrow</Link></li>
+                <li><Link to="/product-detail/5">Subsoiler</Link></li>
+                <li><Link to="/product-detail/1">Super Seeder</Link></li>
+                <li><Link to="/product-detail/7">Hydraulic Harrow</Link></li>
+                <li><Link to="/product-detail/8">Trolly</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h3>Connect</h3>
               <ul>
+                <li><Link to="/socialfootprints">SocialFootprints</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><Link to="/careers">Careers</Link></li>
-                <li><Link to="/partnerships">Partnerships</Link></li>
-                <li><Link to="/newsletter">Newsletter</Link></li>
-                <li><Link to="/events">Events</Link></li>
               </ul>
             </div>
           </motion.div>
@@ -186,9 +183,9 @@ const Footer = () => {
               © {new Date().getFullYear()} Brown Kudi. All rights reserved.
             </p>
             <div className="legal-links">
-              <Link to="/privacy">Privacy Policy</Link>
-              <Link to="/terms">Terms of Service</Link>
-              <Link to="/cookies">Cookie Policy</Link>
+              <Link to="">Privacy Policy</Link>
+              <Link to="">Terms of Service</Link>
+              <Link to="">Cookie Policy</Link>
             </div>
           </div>
         </div>

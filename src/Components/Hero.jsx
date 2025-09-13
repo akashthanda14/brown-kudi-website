@@ -12,20 +12,24 @@ const Hero = () => {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
 
-  // Performance check - disable animations on low-end devices
-  const isLowEndDevice = useMemo(() => {
-    // Check for performance hints
-    if (typeof navigator !== 'undefined') {
-      // Check device memory (if available)
-      const deviceMemory = navigator.deviceMemory;
-      if (deviceMemory && deviceMemory < 4) return true;
-      
-      // Check for mobile devices
-      const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      return isMobile;
-    }
-    return false;
+  // Enhanced mobile detection for maximum performance
+  const isMobile = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    
+    // Multiple mobile detection methods for accuracy
+    const userAgent = navigator.userAgent;
+    const isMobileUA = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    const isTouchDevice = 'ontouchstart' in window;
+    const hasSmallScreen = window.innerWidth <= 768;
+    const hasLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+    
+    return isMobileUA || (isTouchDevice && hasSmallScreen) || hasLowMemory;
   }, []);
+
+  // Disable video completely on mobile for faster loading
+  const shouldLoadVideo = useMemo(() => {
+    return !isMobile && window.innerWidth > 1024;
+  }, [isMobile]);
 
   const translations = {
     english: { 
@@ -51,8 +55,14 @@ const Hero = () => {
   // Memoize translation lookup to prevent object access on every render
   const t = useMemo(() => translations[language], [language]);
 
-  // Intersection Observer for entrance animations
+  // Simplified intersection observer - mobile optimized
   useEffect(() => {
+    if (isMobile) {
+      // Immediately show content on mobile for faster perceived load
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -65,18 +75,18 @@ const Hero = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isMobile]);
 
-  // Video brightness detection for accessibility - optimized for performance
+  // Video brightness detection - completely disabled on mobile
   useEffect(() => {
-    if (!videoLoaded || !videoRef.current || isLowEndDevice) return;
+    if (isMobile || !shouldLoadVideo || !videoLoaded || !videoRef.current) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    canvas.width = 100;
-    canvas.height = 56;
+    canvas.width = 50; // Reduced canvas size for better performance
+    canvas.height = 28;
 
     const checkBrightness = () => {
       try {
@@ -85,59 +95,64 @@ const Hero = () => {
         const data = imageData.data;
         
         let totalBrightness = 0;
-        for (let i = 0; i < data.length; i += 4) {
+        // Sample every 4th pixel for better performance
+        for (let i = 0; i < data.length; i += 16) {
           const r = data[i];
           const g = data[i + 1];
           const b = data[i + 2];
           totalBrightness += (r * 0.299 + g * 0.587 + b * 0.114);
         }
         
-        const avgBrightness = totalBrightness / (data.length / 4);
+        const avgBrightness = totalBrightness / (data.length / 16);
         setVideoBrightness(avgBrightness > 170 ? 'bright' : 'normal');
       } catch (e) {
         // Silently handle canvas errors
       }
     };
 
-    // Performance optimization: longer intervals for low-end devices
-    const interval = isLowEndDevice ? 3000 : 1000;
-    
+    // Much longer interval for better performance
     const scheduleCheck = () => {
       checkBrightness();
       setTimeout(() => {
-        if (videoLoaded) {
+        if (videoLoaded && shouldLoadVideo) {
           requestAnimationFrame(scheduleCheck);
         }
-      }, interval);
+      }, 2000); // 2 second intervals
     };
 
     const id = requestAnimationFrame(scheduleCheck);
     return () => cancelAnimationFrame(id);
-  }, [videoLoaded, isLowEndDevice]);
+  }, [videoLoaded, isMobile, shouldLoadVideo]);
 
-  // Gentle parallax scroll effect - disabled on low-end devices
+  // Parallax completely disabled on mobile
   useEffect(() => {
-    if (isLowEndDevice) return; // Skip parallax on low-end devices
+    if (isMobile) return; // No parallax on mobile at all
     
     const handleScroll = () => {
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         setScrollY(prev => {
           const newY = window.scrollY;
-          return Math.abs(newY - prev) > 4 ? newY : prev;
+          // Larger threshold for better performance
+          return Math.abs(newY - prev) > 8 ? newY : prev;
         });
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isLowEndDevice]);
+  }, [isMobile]);
 
-  // Optimized video preloader with performance hints
+  // Video loading completely disabled on mobile for faster performance
   useEffect(() => {
+    if (!shouldLoadVideo) {
+      // Skip video loading entirely on mobile
+      return;
+    }
+
     const vid = document.createElement("video");
-    vid.preload = "metadata";
-    vid.muted = true; // Ensure autoplay works
-    vid.playsInline = true; // Mobile optimization
+    vid.preload = "none"; // Change from metadata to none for faster load
+    vid.muted = true;
+    vid.playsInline = true;
     vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4";
     
     const handleLoad = () => {
@@ -147,18 +162,22 @@ const Hero = () => {
     };
     
     const handleError = () => {
-      // Fallback to image background if video fails
       setVideoLoaded(false);
     };
     
-    vid.addEventListener('loadedmetadata', handleLoad);
-    vid.addEventListener('error', handleError);
+    // Delay video loading to prioritize other resources
+    const timer = setTimeout(() => {
+      vid.addEventListener('loadedmetadata', handleLoad);
+      vid.addEventListener('error', handleError);
+      vid.preload = "metadata"; // Start loading after delay
+    }, 500);
     
     return () => {
+      clearTimeout(timer);
       vid.removeEventListener('loadedmetadata', handleLoad);
       vid.removeEventListener('error', handleError);
     };
-  }, []);
+  }, [shouldLoadVideo]);
 
   const handleCTAClick = () => {
     const tyresSection = document.getElementById('export');
@@ -173,13 +192,13 @@ const Hero = () => {
   return (
     <header 
       id="hero" 
-      className={`hero ${isVisible ? 'hero--visible' : ''} ${videoBrightness === 'bright' ? 'hero--bright-scene' : ''} ${isLowEndDevice ? 'hero--low-end' : ''}`}
+      className={`hero ${isVisible ? 'hero--visible' : ''} ${videoBrightness === 'bright' ? 'hero--bright-scene' : ''} ${isMobile ? 'hero--mobile' : ''}`}
       ref={heroRef}
       role="banner"
       aria-label="Brown Kudi farming influencer homepage"
     >
-      {/* Hidden canvas for brightness detection */}
-      {!isLowEndDevice && (
+      {/* Canvas only for desktop - completely removed on mobile */}
+      {!isMobile && shouldLoadVideo && (
         <canvas 
           ref={canvasRef} 
           style={{ position: 'absolute', top: '-9999px', left: '-9999px' }}
@@ -187,9 +206,10 @@ const Hero = () => {
         />
       )}
 
-      {/* Background Media */}
+      {/* Background Media - Mobile optimized */}
       <div className="hero__background">
-        {!videoLoaded && (
+        {/* Always show fallback on mobile, video only on desktop */}
+        {(isMobile || !videoLoaded) && (
           <div 
             className="hero__fallback"
             role="img"
@@ -197,7 +217,8 @@ const Hero = () => {
           />
         )}
         
-        {videoLoaded && (
+        {/* Video only loads on desktop for performance */}
+        {!isMobile && shouldLoadVideo && videoLoaded && (
           <video
             ref={videoRef}
             className="hero__video"
@@ -205,7 +226,7 @@ const Hero = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             aria-hidden="true"
           >
             <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" type="video/webm" />
@@ -214,20 +235,20 @@ const Hero = () => {
         )}
         
         <div className="hero__overlay" aria-hidden="true" />
-        <div className="hero__text-backdrop" aria-hidden="true" />
+        {!isMobile && <div className="hero__text-backdrop" aria-hidden="true" />}
       </div>
 
-      {/* Main Content */}
+      {/* Main Content - Mobile optimized */}
       <div 
         className="hero__content"
         style={{
-          transform: !isLowEndDevice ? `translateY(${scrollY * 0.05}px)` : 'none'
+          transform: !isMobile ? `translateY(${scrollY * 0.05}px)` : 'none'
         }}
       >
         {/* Brand Badge */}
         <div className="hero__badge">
           <i className="fas fa-seedling hero__badge-icon" aria-hidden="true" />
-          <span className="hero__badge-text">Farm • Grow • Inspire</span>
+          <span className="hero__badge-text">The • Welder • Girl</span>
         </div>
 
         {/* Main Heading */}
@@ -277,22 +298,26 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="hero__scroll" aria-hidden="true">
-        <div className="hero__scroll-text">Discover More</div>
-        <div className="hero__scroll-seed">
-          <i className="fas fa-seedling" />
+      {/* Scroll Indicator - Hidden on mobile for cleaner look */}
+      {!isMobile && (
+        <div className="hero__scroll" aria-hidden="true">
+          <div className="hero__scroll-text">Discover More</div>
+          <div className="hero__scroll-seed">
+            <i className="fas fa-seedling" />
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Decorative Elements */}
-      <div className="hero__decorative" aria-hidden="true">
-        <div className="hero__crop-row hero__crop-row--1" />
-        <div className="hero__crop-row hero__crop-row--2" />
-        <div className="hero__crop-row hero__crop-row--3" />
-        <i className="fas fa-sun hero__sun" />
-        <i className="fas fa-tractor hero__tractor" />
-      </div>
+      {/* Decorative Elements - Completely removed on mobile */}
+      {!isMobile && (
+        <div className="hero__decorative" aria-hidden="true">
+          <div className="hero__crop-row hero__crop-row--1" />
+          <div className="hero__crop-row hero__crop-row--2" />
+          <div className="hero__crop-row hero__crop-row--3" />
+          <i className="fas fa-sun hero__sun" />
+          <i className="fas fa-tractor hero__tractor" />
+        </div>
+      )}
     </header>
   );
 };

@@ -307,25 +307,18 @@ export default function Navbar() {
                       Global Export
                     </Link>
                   </li>
-                  <li role="none">
-                    <a
-                      href="#export"
+                    <li role="none">
+                    <Link
+                      to="/agriequipments"
                       className="navbar__dropdown-link"
+                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const exportSec = document.getElementById("export");
-                        if (exportSec) {
-                          exportSec.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                        setActiveDropdown(null);
-                        closeMenu();
-                      }}
                     >
-                      <Leaf size={16} aria-hidden="true" />
-                      Agri Import/Export
-                    </a>
+                     <Globe size={16} aria-hidden="true" />
+                      Agri Inport/Export
+                    </Link>
                   </li>
+            
                 </ul>
               </li>
 

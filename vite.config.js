@@ -17,11 +17,30 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          animations: ['framer-motion', 'gsap', 'aos'],
-          carousel: ['react-slick', 'slick-carousel', 'swiper']
+        manualChunks: (id) => {
+          // Vendor chunk for core dependencies
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'vendor';
+          }
+          // Router chunk
+          if (id.includes('node_modules/react-router')) {
+            return 'router';
+          }
+          // Animation libraries
+          if (id.includes('node_modules/framer-motion') || 
+              id.includes('node_modules/gsap') || 
+              id.includes('node_modules/aos')) {
+            return 'animations';
+          }
+          // Swiper components
+          if (id.includes('node_modules/swiper')) {
+            return 'swiper';
+          }
+          // Icons and UI libraries
+          if (id.includes('node_modules/lucide-react') || 
+              id.includes('node_modules/react-icons')) {
+            return 'icons';
+          }
         }
       }
     },

@@ -22,6 +22,8 @@ import ImageSlider from "./Components/ImageSlider";
 import { useEffect } from "react";
 import SocialFootprints from "./Components/SocialFootprints";
 import AboutPage_Enhanced from "./Pages/AboutPage_Enhanced";
+import AgriEquipments from "./Pages/AgriEquipments";
+import AgriJourney from "./Pages/AgriJourney";
 function App() {
   // Ensure scroll starts at top when app loads
   useEffect(() => {
@@ -64,6 +66,10 @@ function App() {
           <Route path="/social" element={<SocialPage />} />
           <Route path="/testmonials" element={<Testimonials />} />
           <Route path="/export-section" element={<ExportSection />} />
+          <Route path="/agriequipments" element={<AgriEquipments />} />
+          <Route path="/agrijourney" element={<AgriJourney />} />
+          <Route path="/socialfootprints" element={<SocialFootprints />} />
+
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
