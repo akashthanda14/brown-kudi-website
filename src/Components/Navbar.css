@@ -579,6 +579,11 @@
   list-style: none;
   margin: 0;
   padding: 1rem 0;
+  display: flex;
+  align-items: unset;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 12px;
 }
 
 .navbar__mobile-link {
@@ -603,7 +608,7 @@
 }
 
 .navbar__mobile-link svg {
-  color: var(--clr-primary);
+  color: "";
 }
 
 .navbar__mobile-footer {
@@ -647,7 +652,8 @@
 }
 
 .navbar__mobile-link {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: #6DA34D!important;
 }
 
 .navbar__mobile-submenu {
@@ -671,9 +677,10 @@
   background: transparent;
   border: none;
   font-size: 16px;
-  padding: 12px;
+  padding: 2px;
   cursor: pointer;
-  color: white;
+  justify-content: left;
+  color: rgb(255, 255, 255);
 }
 
 .chevron {

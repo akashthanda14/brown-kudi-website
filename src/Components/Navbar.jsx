@@ -549,6 +549,42 @@ export default function Navbar() {
               </li>
             </ul>
           </li>
+          <li role="none" className="navbar__mobile-section">
+            <button
+              className="navbar__mobile-section-title"
+              onClick={() => toggleMobileSection("works")}
+            >
+              <Globe size={16} aria-hidden="true" />
+
+              Works
+              <ChevronDown
+                className={`chevron ${openMobileSection === "works" ? "rotate" : ""
+                  }`}
+                size={16}
+              />
+            </button>
+            <ul
+              className={`navbar__mobile-submenu ${openMobileSection === "works" ? "open" : ""
+                }`}
+            >
+              <li>
+                <Link to="/agriequipments" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Agri Inport/Export
+                </Link>
+              </li>
+              <li>
+                <Link to="/export-section" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Global Export
+                </Link>
+              </li>
+              <li>
+                <Link to="/social" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Social Media
+                </Link>
+              </li>
+
+            </ul>
+          </li>
 
           <li role="none">
             <Link to="/about" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">

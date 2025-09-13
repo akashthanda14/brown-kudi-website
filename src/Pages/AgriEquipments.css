@@ -155,3 +155,16 @@
     font-size: 22px;
   }
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .equipments-hero-img {
+    min-width: 93vw;
+    min-height: 60vh;
+    object-fit: cover;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.448);
+    padding: 1px;
+  }
+}
