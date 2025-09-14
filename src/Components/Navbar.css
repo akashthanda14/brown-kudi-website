@@ -531,7 +531,7 @@
   right: 0;
   height: 100vh;
   width: min(85vw, 320px);
-  background: rgba(245, 241, 230, 0.95);
+  background: rgba(245, 241, 230, 0.897);
   backdrop-filter: blur(var(--blur-amount));
   z-index: 1000;
   transform: translateX(100%);
@@ -579,6 +579,11 @@
   list-style: none;
   margin: 0;
   padding: 1rem 0;
+  display: flex;
+  align-items: unset;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 12px;
 }
 
 .navbar__mobile-link {
@@ -603,7 +608,7 @@
 }
 
 .navbar__mobile-link svg {
-  color: var(--clr-primary);
+  color: "";
 }
 
 .navbar__mobile-footer {
@@ -639,7 +644,7 @@
 
 .navbar__mobile-tagline {
   text-align: center;
-  color:white;
+  color: white;
   font-size: 0.85rem;
   font-style: italic;
   margin: 0;
@@ -647,7 +652,53 @@
 }
 
 .navbar__mobile-link {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: #6ca34d00!important;
+}
+
+.navbar__mobile-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.navbar__mobile-submenu.open {
+  max-height: 600px;
+  /* enough for list */
+  opacity: 1;
+}
+
+.navbar__mobile-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 2px;
+  cursor: pointer;
+  justify-content: left;
+  color: rgb(255, 255, 255);
+}
+.navbar__mobile-section-title{
+  background-color: rgb(156, 62, 62) !important;
+}
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* force transparency back on your mobile section toggles */
+.navbar__mobile-section1 button,
+.navbar__mobile-section-title {
+  background: transparent !important;
+  color: white !important;  /* if you need to keep the text white */
+  border-color: transparent !important;
 }
 
 /* ==========================================================================
@@ -711,7 +762,7 @@
   gap: 0.75rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color:white ;
+  color: white;
   padding: 0.75rem 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -734,11 +785,12 @@
   margin-bottom: 1px;
 }
 
+
 .navbar__mobile-sublink:hover,
 .navbar__mobile-sublink:focus {
   color: var(--clr-primary);
   background: rgba(108, 163, 77, 0.044);
-  border-left-color:white !important;
+  border-left-color: white !important;
   transform: translateX(4px);
 }
 
@@ -793,3 +845,33 @@
     border-color: var(--clr-primary);
   }
 }
+
+/* Mobile Dropdown Overrides */
+@media (max-width: 767px) {
+  /* Section list item background */
+  .navbar__mobile-section1 {
+    background: transparent !important;
+  }
+
+  /* Dropdown toggle buttons */
+  .navbar__mobile-section-title {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  /* Sub-menu links */
+  .navbar__mobile-sublink {
+    background: transparent !important;
+    color: white !important;
+    border-left-color: transparent !important;
+  }
+
+  /* Top-level mobile links */
+  .navbar__mobile-link {
+    background: transparent !important;
+    color: white !important;
+    border: none !important;
+  }
+}
+

@@ -8,28 +8,32 @@ const posts = [
         img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757754895/Screenshot_2025-09-12_144447_k4nylm.png",
         likes: "26.9k",
         comments: "31",
-        desc: "ਕੋਈ ਮੁੰਡਾ ਜਦੋ ਤਰਕੀ ਕਰਦਾ ਹੈ ਤਾ ਓਹਨੂੰ ਗੋਲ਼ੀ 🔫 ਮਿਲਦੀ ਆ ਜਦ ਕੋਈ ਕੁੜੀ ਤਰਕੀ ਕਰਦੀ ਓਦੋ ਬਦਨਾਮ ਹੁੰਦੀ"
+        desc: "ਕੋਈ ਮੁੰਡਾ ਜਦੋ ਤਰਕੀ ਕਰਦਾ ਹੈ ਤਾ ਓਹਨੂੰ ਗੋਲ਼ੀ 🔫 ਮਿਲਦੀ ਆ ਜਦ ਕੋਈ ਕੁੜੀ ਤਰਕੀ ਕਰਦੀ ਓਦੋ ਬਦਨਾਮ ਹੁੰਦੀ",
+        link: "https://www.instagram.com/brown_kudi1/reel/DN7Q_W_knqg/" // 🔗 reel link
     },
     {
         id: 2,
         img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint2_mzlobt.png",
         likes: "25.8K",
         comments: "21",
-        desc: "I am soo proud of you di  Waheguru Aanewale Time mein Aap ko jada jada taraki de 🤌🏻"
+        desc: "I am soo proud of you di  Waheguru Aanewale Time mein Aap ko jada jada taraki de 🤌🏻",
+        link: "https://www.instagram.com/reel/DJtRgPJz7In/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" // 🔗 reel link
     },
     {
         id: 3,
         img: "https://res.cloudinary.com/dnyv7wabr/image/upload/c_crop,ar_3:4/v1757750722/footprint3_h6yajd.png",
         likes: "433.1k",
         comments: "1.1k",
-        desc: "Brown Kudi Tyre ship to Australia , canada if you are intersted then contact us "
+        desc: "Thanks to Mr Nag @speedwaystyresindia kade ni socheya k etho tak awage ..",
+        link: "https://www.instagram.com/reel/DK7LpzITB39/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" // 🔗 reel link
     },
     {
         id: 4,
         img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint4_krad46.png",
         likes: "25.5K",
         comments: "40",
-        desc: "4 Taste of Babu just dropped and its a VIBE! 🎶 Dive into the latest Punjabi beats."
+        desc: "4 Taste of Babu just dropped and its a VIBE! 🎶 Dive into the latest Punjabi beats.",
+        link: "https://www.instagram.com/brown_kudi1/reel/DLJh0q2TC1U/" // 🔗 reel link
     },
 ];
 
@@ -124,11 +128,15 @@ const SocialFootprints = () => {
                         }}
                     >
                         {posts.map((post) => (
-                            <div className="card" key={post.id}>
+                            <a
+                                key={post.id}
+                                href={post.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="card"
+                            >
                                 <div className="card-top">
-                                    <span className="profile">brown_kudi1
-                                    </span>
-                                    {/* ✅ Instagram actual icon */}
+                                    <span className="profile">brown_kudi1</span>
                                     <FaInstagram className="insta-icon" />
                                 </div>
                                 <div className="image-box">
@@ -145,7 +153,7 @@ const SocialFootprints = () => {
                                     </div>
                                     <p>{post.desc}</p>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                     <div className="slider-buttons">

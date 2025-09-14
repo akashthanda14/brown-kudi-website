@@ -155,7 +155,7 @@ const Hero = () => {
     vid.preload = "none"; // Change from metadata to none for faster load
     vid.muted = true;
     vid.playsInline = true;
-    vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4";
+    vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757788630/vd6.mp4_kq7opc.mp4";
     
     const handleLoad = () => {
       if (vid.readyState >= 2) {
@@ -263,8 +263,8 @@ const Hero = () => {
             preload="none"
             aria-hidden="true"
           >
-            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" type="video/webm" />
-            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757753332/vd6_lltink.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757788630/vd6.mp4_kq7opc.mp4" type="video/webm" />
+            <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757788630/vd6.mp4_kq7opc.mp4" type="video/mp4" />
           </video>
         )}
         

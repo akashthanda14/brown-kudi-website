@@ -21,7 +21,8 @@ import {
   Share2,       // ✅ Social Media icon
   Circle,       // ✅ Tyre icon
   Truck,
-  Globe       // ✅ Added Globe icon
+  Globe,       // ✅ Added Globe icon
+  Share
 } from "lucide-react";
 import "./Navbar.css";
 
@@ -83,6 +84,16 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // --- inside Navbar component ---
+
+  // ✅ New state for mobile dropdowns
+  const [openMobileSection, setOpenMobileSection] = useState(null);
+
+  const toggleMobileSection = (section) => {
+    setOpenMobileSection((prev) => (prev === section ? null : section));
+  };
+
+
   return (
     <>
       <nav
@@ -128,7 +139,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Leaf size={16} aria-hidden="true" />
                       Super Seeder
                     </Link>
                   </li>
@@ -139,7 +149,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <PenTool size={16} aria-hidden="true" />
                       Reversible MB Plough
                     </Link>
                   </li>
@@ -150,7 +159,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       Disc Harrow
                     </Link>
                   </li>
@@ -161,7 +169,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Globe size={16} aria-hidden="true" />
                       Rotary Tiller
                     </Link>
                   </li>
@@ -172,7 +179,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Truck size={16} aria-hidden="true" />
                       Subsoiler
                     </Link>
                   </li>
@@ -183,7 +189,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <PenTool size={16} aria-hidden="true" />
                       Disc Plough
                     </Link>
                   </li>
@@ -194,7 +199,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       Hydraulic
                     </Link>
                   </li>
@@ -205,7 +209,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Truck size={16} aria-hidden="true" />
                       Tractor Trolley
                     </Link>
                   </li>
@@ -232,7 +235,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       All Season Tyre
                     </Link>
                   </li>
@@ -243,7 +245,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       Performance Tyre
                     </Link>
                   </li>
@@ -254,7 +255,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       Off-Road Tyre
                     </Link>
                   </li>
@@ -265,7 +265,6 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
                       Eco Tyre
                     </Link>
                   </li>
@@ -292,7 +291,7 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                      <Circle size={16} aria-hidden="true" />
+                      <Share2 size={16} aria-hidden="true" />
                       Social Media
                     </Link>
                   </li>
@@ -303,22 +302,22 @@ export default function Navbar() {
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                     <Globe size={16} aria-hidden="true" />
+                      <Globe size={16} aria-hidden="true" />
                       Global Export
                     </Link>
                   </li>
-                    <li role="none">
+                  <li role="none">
                     <Link
                       to="/agriequipments"
                       className="navbar__dropdown-link"
                       onClick={() => { setActiveDropdown(null); closeMenu(); }}
                       role="menuitem"
                     >
-                     <Globe size={16} aria-hidden="true" />
+                      <Globe size={16} aria-hidden="true" />
                       Agri Inport/Export
                     </Link>
                   </li>
-            
+
                 </ul>
               </li>
 
@@ -423,9 +422,10 @@ export default function Navbar() {
       />
 
       {/* Mobile Navigation Panel */}
+
       <nav
         id="mobile-navigation"
-        className={`navbar__mobile ${isMenuOpen ? 'navbar__mobile--open' : ''}`}
+        className={`navbar__mobile ${isMenuOpen ? "navbar__mobile--open" : ""}`}
         aria-label="Mobile navigation"
       >
         <div className="navbar__mobile-header">
@@ -437,19 +437,35 @@ export default function Navbar() {
 
         <ul className="navbar__mobile-menu" role="menu">
           <li role="none">
-            <Link to="/" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
+            <Link
+              to="/"
+              className="navbar__mobile-link"
+              onClick={toggleMenu}
+              role="menuitem"
+            >
               <Home size={20} aria-hidden="true" />
               Home
             </Link>
           </li>
 
-          {/* Agriculture Equipment Section */}
-          <li role="none" className="navbar__mobile-section">
-            <div className="navbar__mobile-section-title">
+          {/* ✅ Agriculture Equipment Section */}
+          <li role="none" className="navbar__mobile-section1">
+            <button
+              className="navbar__mobile-section-title"
+              onClick={() => toggleMobileSection("equipment")}
+            >
               <Tractor size={18} aria-hidden="true" />
               Agri Equipment
-            </div>
-            <ul className="navbar__mobile-submenu">
+              <ChevronDown
+                className={`chevron ${openMobileSection === "equipment" ? "rotate" : ""
+                  }`}
+                size={16}
+              />
+            </button>
+            <ul
+              className={`navbar__mobile-submenu ${openMobileSection === "equipment" ? "open" : ""
+                }`}
+            >
               <li>
                 <Link to="/product-detail/1" className="navbar__mobile-sublink" onClick={toggleMenu}>
                   Super Seeder
@@ -493,13 +509,24 @@ export default function Navbar() {
             </ul>
           </li>
 
-          {/* Tyres Section */}
-          <li role="none" className="navbar__mobile-section">
-            <div className="navbar__mobile-section-title">
+          {/* ✅ Tyres Section */}
+          <li role="none" className="navbar__mobile-section1">
+            <button
+              className="navbar__mobile-section-title"
+              onClick={() => toggleMobileSection("tyres")}
+            >
               <Circle size={18} aria-hidden="true" />
-              Tyres
-            </div>
-            <ul className="navbar__mobile-submenu">
+              <p>Tyre</p>
+              <ChevronDown
+                className={`chevron ${openMobileSection === "tyres" ? "rotate" : ""
+                  }`}
+                size={16}
+              />
+            </button>
+            <ul
+              className={`navbar__mobile-submenu ${openMobileSection === "tyres" ? "open" : ""
+                }`}
+            >
               <li>
                 <Link to="/tyres" className="navbar__mobile-sublink" onClick={toggleMenu}>
                   All Season Tyre
@@ -522,6 +549,42 @@ export default function Navbar() {
               </li>
             </ul>
           </li>
+          <li role="none" className="navbar__mobile-section1">
+            <button
+              className="navbar__mobile-section-title"
+              onClick={() => toggleMobileSection("works")}
+            >
+              <Globe size={16} aria-hidden="true" />
+
+              Works
+              <ChevronDown
+                className={`chevron ${openMobileSection === "works" ? "rotate" : ""
+                  }`}
+                size={16}
+              />
+            </button>
+            <ul
+              className={`navbar__mobile-submenu ${openMobileSection === "works" ? "open" : ""
+                }`}
+            >
+              <li>
+                <Link to="/agriequipments" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Agri Inport/Export
+                </Link>
+              </li>
+              <li>
+                <Link to="/export-section" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Global Export
+                </Link>
+              </li>
+              <li>
+                <Link to="/social" className="navbar__mobile-sublink" onClick={toggleMenu}>
+                  Social Media
+                </Link>
+              </li>
+
+            </ul>
+          </li>
 
           <li role="none">
             <Link to="/about" className="navbar__mobile-link" onClick={toggleMenu} role="menuitem">
@@ -536,40 +599,8 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-
-        <div className="navbar__mobile-footer">
-          <div className="navbar__mobile-socials">
-            <a
-              href="https://instagram.com/brown_kudi1"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="navbar__mobile-social"
-            >
-              <Instagram size={20} aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.facebook.com/BrownKudiofficial"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="navbar__mobile-social"
-            >
-              <Facebook size={20} aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.youtube.com/@BrownKudiThewelderGirl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="navbar__mobile-social"
-            >
-              <Youtube size={20} aria-hidden="true" />
-            </a>
-          </div>
-          <p className="navbar__mobile-tagline">Cultivating Dreams • Growing Stories</p>
-        </div>
       </nav>
+
     </>
   );
 }
