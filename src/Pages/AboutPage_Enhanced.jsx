@@ -352,7 +352,6 @@ const AboutPage_ = () => {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 2fr))',
             gap: '50px',
-            alignItems: 'stretch',
             alignItems: 'center',
             justifyContent:"center",
           }}>

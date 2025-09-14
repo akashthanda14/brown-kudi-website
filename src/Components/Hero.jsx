@@ -193,12 +193,16 @@ const Hero = () => {
   }, [shouldLoadVideo]);
 
   const handleCTAClick = () => {
-    const tyresSection = document.getElementById('tyres');
-    if (tyresSection) {
-      tyresSection.scrollIntoView({ 
+    const tradeSection = document.getElementById('trade-section');
+    if (tradeSection) {
+      tradeSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
+      // Focus the section for screen readers
+      setTimeout(() => {
+        tradeSection.focus();
+      }, 500);
     }
   };
 
@@ -327,7 +331,7 @@ const Hero = () => {
           <button
             className="hero__cta"
             onClick={handleCTAClick}
-            aria-label={`${t.cta} - Navigate to tyres section`}
+            aria-label={`${t.cta} - Navigate to trade products section`}
           >
             <i className="fas fa-tractor hero__cta-icon" aria-hidden="true" />
             <span>{t.cta}</span>
