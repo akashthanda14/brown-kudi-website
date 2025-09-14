@@ -141,7 +141,7 @@
 .expertise-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: var(--agricultural-accent);
+    color: #6da34d;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -150,13 +150,12 @@
 }
 
 .tyre-content h2 {
-    font-size: 3.2rem;
+  font-size: 4rem;
+    margin-bottom: 24px;
+    font-family: "Oswald", sans-serif;
     font-weight: 700;
-    margin: 0;
-    color: var(--agricultural-soil);
-    font-family: 'Playfair Display', serif;
-    line-height: 1.1;
-    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .title-underline {
@@ -228,7 +227,7 @@
 }
 
 .feature-text {
-    font-family: 'Inter', sans-serif;
+    font-family: "Oswald";
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--agricultural-soil);
@@ -292,7 +291,7 @@
 }
 
 .tyre-type-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Oswald";
     font-size: 1.2rem;
     margin: 0 0 8px 0;
     color: var(--agricultural-soil);
@@ -354,7 +353,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
-    background: linear-gradient(135deg, var(--agricultural-accent), #A8572F);
+    background: #6da34d;
     border: none;
     border-radius: 12px;
     cursor: pointer;
