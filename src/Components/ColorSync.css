@@ -114,7 +114,6 @@ nav ul li a:hover,
 button:not(.navbar__toggle):not(.back-button):not(.contact-form button):not(.navbar__link):not(.navbar__dropdown-trigger),
 .btn:not(.back-button):not(.navbar__link):not(.navbar__dropdown-link),
 a[id="btn"]:not(.navbar__link) {
-  background: var(--clr-primary) !important;
   color: white !important;
   border-color: var(--clr-primary) !important;
 }
