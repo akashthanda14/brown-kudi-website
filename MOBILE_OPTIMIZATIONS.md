@@ -48,6 +48,42 @@ const isMobile = useMemo(() => {
 }
 ```
 
+### 6. **H1 TAG OPTIMIZATION (NEW)**
+```jsx
+// New optimization for h1 tags to improve loading performance
+{isMobile ? (
+  // Prerendered text for mobile without complex spans for faster initial load
+  <span dangerouslySetInnerHTML={{ __html: "Brown <span class='hero__title-kudi'>ਕੁੜੀ</span>" }} />
+) : (
+  // Full spans for desktop where performance is less critical
+  <>
+    <span className="hero__title-brown">Brown</span>
+    <span className="hero__title-kudi">ਕੁੜੀ </span>
+  </>
+)}
+```
+
+### 7. **HEADING CSS OPTIMIZATIONS (NEW)**
+```css
+/* Mobile optimizations for faster h1 rendering */
+.hero--mobile .hero__title {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  will-change: auto !important;
+  text-shadow: 1px 2px 4px rgba(59, 47, 47, 0.8) !important;
+  text-rendering: optimizeSpeed;
+  font-display: swap;
+}
+```
+
+### 8. **FONT PRELOADING (NEW)**
+```html
+<!-- Preload critical fonts for hero heading -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" as="style">
+<link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDV.woff2" as="font" type="font/woff2" crossorigin>
+```
+
 ## 📊 PERFORMANCE IMPROVEMENTS
 
 ### **Before Optimization:**
@@ -55,12 +91,14 @@ const isMobile = useMemo(() => {
 - 📹 Large video files downloading
 - 🎭 Multiple animations running
 - 🖥️ Desktop-first approach
+- ⏳ Slow h1 tag loading
 
 ### **After Optimization:**
 - ⚡ 0.5-1 second first paint on mobile
 - 🖼️ Lightweight image background only
 - 🚫 Zero animations on mobile
 - 📱 Mobile-first approach
+- 🚀 Instant h1 rendering with optimized spans
 
 ## 🎯 MOBILE-SPECIFIC FEATURES
 

@@ -1,5 +1,5 @@
 // Mobile-First Service Worker for Hero Assets
-const CACHE_NAME = 'brown-kudi-mobile-v1';
+const CACHE_NAME = 'brown-kudi-mobile-v2';
 const CRITICAL_MOBILE_ASSETS = [
   '/',
   '/src/main.jsx',
@@ -8,6 +8,14 @@ const CRITICAL_MOBILE_ASSETS = [
   '/font/pfont.ttf',
   '/font/efont.ttf',
   'https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg', // Mobile hero image
+  'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap', // Hero title font
+  'https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDV.woff2', // Font file
+];
+
+// Add hero title fonts to pre-cache
+const HERO_FONTS = [
+  { url: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap', type: 'style' },
+  { url: 'https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDV.woff2', type: 'font' },
 ];
 
 // Install event - cache critical mobile assets
@@ -17,6 +25,24 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('📱 Caching mobile-critical assets');
         return cache.addAll(CRITICAL_MOBILE_ASSETS);
+      })
+      .then(() => {
+        // Preload hero fonts with higher priority
+        return Promise.all(
+          HERO_FONTS.map(({ url, type }) => {
+            return fetch(url, { 
+              priority: 'high',
+              headers: { 'Purpose': 'prefetch' } 
+            })
+            .then(response => {
+              // Store in cache with font-specific headers
+              const responseToCache = response.clone();
+              return caches.open(CACHE_NAME).then(cache => {
+                return cache.put(url, responseToCache);
+              });
+            });
+          })
+        );
       })
       .then(() => self.skipWaiting())
   );

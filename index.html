@@ -6,9 +6,38 @@
   <link rel="icon" type="image/svg+xml"
     href="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750786/logo_zxkiwh.png" />
   
+  <!-- Critical mobile hero title styling - highest priority -->
+  <style id="critical-hero-title">
+    @media (max-width: 768px) {
+      .hero__title span[style*="color: #6DA34D"] { color: #6DA34D !important; font-weight: 600 !important; }
+      .hero__title span[style*="color: white"] { color: #FFFFFF !important; }
+    }
+  </style>
+  
   <!-- Mobile-first Critical Resource Preloads -->
   <link rel="preload" href="/font/pfont.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/font/efont.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Actually apply the preloaded fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap">
+  <style>
+    /* Ensure custom fonts are loaded immediately */
+    @font-face {
+      font-family: 'pfont';
+      src: url('/font/pfont.ttf') format('truetype');
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'efont';
+      src: url('/font/efont.ttf') format('truetype');
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- Preload font for hero title -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDV.woff2" as="font" type="font/woff2" crossorigin>
   
   <!-- Mobile hero background image (highest priority) -->
   <link rel="preload" as="image" href="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" media="(max-width: 768px)">
@@ -30,6 +59,26 @@
   
   <!-- Critical inline CSS for mobile-first loading -->
   <style>
+    /* Explicitly define critical colors to avoid dependency on CSS variables */
+    :root {
+      --color-leaf: #6DA34D;
+      --color-milk: #FFFFFF;
+      --font-heading: 'Playfair Display', Georgia, serif;
+    }
+    
+    /* Custom font definitions */
+    @font-face {
+      font-family: 'pfont';
+      src: url('/font/pfont.ttf') format('truetype');
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'efont';
+      src: url('/font/efont.ttf') format('truetype');
+      font-display: swap;
+    }
+    
     /* Critical above-the-fold styles for mobile */
     @media (max-width: 768px) {
       .hero {
@@ -43,11 +92,60 @@
       }
       .hero__content { opacity: 1; transform: none; }
       .hero__decorative, .hero__scroll, .hero__video { display: none; }
+      
+      /* Critical title styling for immediate render */
+      .hero__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        line-height: 1.1;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+        margin-bottom: 1rem;
+        text-rendering: optimizeSpeed;
+        opacity: 1 !important;
+      }
+      
+      .hero__title-brown-mobile {
+        color: #6DA34D;
+        font-weight: 600;
+        font-family: 'efont', 'Playfair Display', serif;
+      }
+      
+      .hero__title-kudi {
+        color: #FFFFFF;
+        display: inline;
+        font-family: 'pfont', 'Noto Sans Gurmukhi', sans-serif;
+      }
     }
   </style>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brown kudi</title>
+  
+  <!-- Immediate font loading script -->
+  <script>
+    // Font loader for critical fonts
+    (function() {
+      const fontFiles = [
+        '/font/pfont.ttf',
+        '/font/efont.ttf'
+      ];
+      
+      // Immediate font loading
+      fontFiles.forEach(font => {
+        const fontObj = new FontFace(
+          font.includes('pfont') ? 'pfont' : 'efont',
+          `url(${font}) format('truetype')`,
+          { display: 'swap' }
+        );
+        
+        fontObj.load().then(loadedFace => {
+          document.fonts.add(loadedFace);
+        }).catch(err => {
+          console.warn('Font loading failed:', font, err);
+        });
+      });
+    })();
+  </script>
 </head>
 
 <body>

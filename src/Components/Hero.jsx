@@ -2,6 +2,17 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import "./Hero.css";
 import { useLanguage } from "../context/LanguageContext"; 
 
+// Predefine critical colors to avoid relying on CSS variables
+const COLORS = {
+  leaf: "#6DA34D",
+  white: "#FFFFFF"
+};
+
+const HERO_FONTS = [
+  { url: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap', type: 'style' },
+  { url: 'https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDV.woff2', type: 'font' },
+];
+
 const Hero = () => {
   const { language, setLanguage } = useLanguage();
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -36,21 +47,21 @@ const Hero = () => {
       subtitle: "Cultivating Dreams, Growing Stories",
       tagline: "From soil to soul, sharing the farmer's journey",
       cta: "Discover Products",
-      skipLink: "Skip to Product Cards"
+      skipLink: "Skip to Trade Products"
     },
     hindi: {
       title: "ब्राउन कुड़ी",
       subtitle: "सपने उगाना, कहानियां बढ़ाना",
       tagline: "मिट्टी से आत्मा तक, किसान की यात्रा साझा करना",
       cta: "उत्पाद खोजें",
-      skipLink: "उत्पाद कार्ड पर जाएं"
+      skipLink: "व्यापार उत्पादों पर जाएं"
     },
     punjabi: {
       title: "ਬ੍ਰਾਊਨ ਕੁੜੀ",
       subtitle: "ਸੁਪਨੇ ਉਗਾਉਣਾ, ਕਹਾਣੀਆਂ ਵਧਾਉਣਾ",
       tagline: "ਮਿੱਟੀ ਤੋਂ ਆਤਮਾ ਤੱਕ, ਕਿਸਾਨ ਦੀ ਯਾਤਰਾ ਸਾਂਝੀ ਕਰਨਾ",
       cta: "ਉਤਪਾਦਾਂ ਦੀ ਖੋਜ ਕਰੋ",
-      skipLink: "ਉਤਪਾਦ ਕਾਰਡਾਂ 'ਤੇ ਜਾਓ"
+      skipLink: "ਵਪਾਰ ਉਤਪਾਦਾਂ 'ਤੇ ਜਾਓ"
     }
   };
 
@@ -192,15 +203,15 @@ const Hero = () => {
   };
 
   const handleSkipToProducts = () => {
-    const productCards = document.getElementById('product-cards');
-    if (productCards) {
-      productCards.scrollIntoView({ 
+    const tradeSection = document.getElementById('trade-section');
+    if (tradeSection) {
+      tradeSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
       // Focus the section for screen readers
       setTimeout(() => {
-        productCards.focus();
+        tradeSection.focus();
       }, 500);
     }
   };
@@ -288,8 +299,18 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="hero__heading">
           <h1 className="hero__title">
-            <span className="hero__title-brown">Brown</span>
-            <span className="hero__title-kudi">ਕੁੜੀ </span>
+            {isMobile ? (
+              // Prerendered text for mobile without complex spans for faster initial load
+              <span dangerouslySetInnerHTML={{ 
+                __html: `<span style='color: ${COLORS.leaf}; font-weight: 600; font-family: efont, "Playfair Display", serif;'>Brown</span> <span style='color: ${COLORS.white}; font-family: pfont, "Noto Sans Gurmukhi", sans-serif;'>ਕੁੜੀ</span>` 
+              }} />
+            ) : (
+              // Full spans for desktop where performance is less critical
+              <>
+                <span className="hero__title-brown">Brown</span>
+                <span className="hero__title-kudi">ਕੁੜੀ </span>
+              </>
+            )}
           </h1>
           
           <h2 className="hero__subtitle">

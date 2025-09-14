@@ -15,17 +15,26 @@ body {
 
 @font-face {
   font-family: "pfont";
-  src: url("/public/font/pfont.ttf");
+  src: url("/font/pfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "efont";
-  src: url("/public/font/efont.ttf");
+  src: url("/font/efont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "tfont";
-  src: url("/public/font/tfont.ttf");
+  src: url("/font/tfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .josefin {
