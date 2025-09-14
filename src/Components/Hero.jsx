@@ -153,7 +153,7 @@ const Hero = () => {
     vid.preload = "none"; // Change from metadata to none for faster load
     vid.muted = true;
     vid.playsInline = true;
-    vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757788630/vd6.mp4_kq7opc.mp4";
+    vid.src = "https://res.cloudinary.com/dnyv7wabr/video/upload/v1757885890/vd6.mp4_1_ovl6ut.mp4";
     
     const handleLoad = () => {
       if (vid.readyState >= 2) {
