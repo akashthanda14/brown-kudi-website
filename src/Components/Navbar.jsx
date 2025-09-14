@@ -314,7 +314,11 @@ export default function Navbar() {
                       role="menuitem"
                     >
                       <Globe size={16} aria-hidden="true" />
+
                       Agri Import/Export
+
+                   
+
                     </Link>
                   </li>
 
@@ -569,7 +573,11 @@ export default function Navbar() {
             >
               <li>
                 <Link to="/agriequipments" className="navbar__mobile-sublink" onClick={toggleMenu}>
+
                   Agri Import/Export
+
+
+
                 </Link>
               </li>
               <li>
