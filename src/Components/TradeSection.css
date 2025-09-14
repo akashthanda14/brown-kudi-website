@@ -75,15 +75,19 @@
 }
 
 .trade-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #111;
+    color: #506d38;
+    text-transform: uppercase;
+    text-align: center;
+
 }
 
 .trade-points {
     list-style: none;
     padding-left: 0;
     margin: 0 0 auto 0;
+    text-align: center;
 }
 
 .trade-points li {
@@ -93,6 +97,7 @@
     margin-bottom: 6px;
     position: relative;
     padding-left: 22px;
+    text-align: center;
 }
 
 .trade-points li::before {
