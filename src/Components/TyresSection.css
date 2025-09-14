@@ -1,503 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-/* Agricultural Brand Variables - Matching Website Palette */
-:root {
-  --agricultural-primary: #6DA34D;     /* Primary Green - Nature, growth, agriculture */
-  --agricultural-primary-dark: #5A8A41; /* Darker green for active states */
-  --agricultural-accent: #C46A3C;      /* Accent Clay - Earth, warmth, harvest */
-  --agricultural-neutral: #F5F1E6;     /* Neutral Cream - Clean, organic, minimal */
-  --agricultural-earth: #8B7355;       /* Earth brown for text */
-  --agricultural-soil: #3B2F2F;        /* Rich dark soil */
-  --agricultural-wheat: #D5C586;       /* Golden wheat accents */
-  --agricultural-sage: #87A96B;        /* Sage green hover states */
-}
 
-/* Screen Reader Only */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.tyre-section {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: 308px;
+    box-shadow: inset 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    height: auto;
 }
 
 .tyre-section {
-    background: linear-gradient(135deg, var(--agricultural-neutral) 0%, #ffffff 50%, var(--agricultural-neutral) 100%);
-    color: var(--agricultural-soil);
-    padding: 80px 0;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
+    background-image: url("https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752528/tyrepng_iupto4.png");
+    background-repeat: no-repeat;
+    height: auto;
     position: relative;
+    /* 👈 required */
     z-index: 1;
-    overflow: hidden;
-    width: 100%;
 }
 
-.tyre-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%236DA34D" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23C46A3C" opacity="0.1"/><circle cx="60" cy="80" r="1" fill="%23D5C586" opacity="0.1"/></svg>');
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Container - Fluid Layout */
+/* Container */
 .tyre-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
     width: 100%;
-    max-width: none;
-    align-items: start;
-    padding: 0 40px;
-}
-
-/* Enhanced Tyre Image Section */
-.tyre-image-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
 }
 
-.tyre-image {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Tyre Image with Rotation */
 .tyre-image img {
     width: 400px;
     height: 400px;
     object-fit: contain;
-    filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.2));
-    animation: spin 20s linear infinite;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.tyre-image:hover img {
-    filter: drop-shadow(0px 20px 45px rgba(109, 163, 77, 0.3));
-    transform: scale(1.02);
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+    animation: spin 12s linear infinite;
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* Export Badges */
-.export-badges {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.export-badge {
-    background: linear-gradient(135deg, var(--agricultural-primary), var(--agricultural-sage));
-    color: white;
-    padding: 8px 16px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(109, 163, 77, 0.3);
-    transition: all 0.3s ease;
-}
-
-.export-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(109, 163, 77, 0.4);
-    background: linear-gradient(135deg, var(--agricultural-accent), #D47A4F);
-}
-
-/* Content Section */
-.tyre-content {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.content-header {
-    text-align: left;
-}
-
-.expertise-subtitle {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: var(--agricultural-accent);
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: block;
-}
-
-.tyre-content h2 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--agricultural-soil);
-    font-family: 'Playfair Display', serif;
-    line-height: 1.1;
-    position: relative;
-}
-
-.title-underline {
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--agricultural-primary), var(--agricultural-wheat));
-    border-radius: 2px;
-}
-
-.main-description {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    color: var(--agricultural-earth);
-}
-
-/* Expertise Features */
-.expertise-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin: 8px 0;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px;
-    background: linear-gradient(135deg, var(--agricultural-neutral), #ffffff);
-    border-radius: 12px;
-    border-left: 4px solid var(--agricultural-primary);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.feature-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(109, 163, 77, 0.05), rgba(196, 106, 60, 0.05));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 12px;
-}
-
-.feature-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border-left-color: var(--agricultural-accent);
-}
-
-.feature-item:hover::before {
-    opacity: 1;
-}
-
-.feature-icon {
-    font-size: 1.4rem;
-    z-index: 1;
-    position: relative;
-}
-
-.feature-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--agricultural-soil);
-    z-index: 1;
-    position: relative;
-}
-
-/* Tyre Types Grid */
-.tyre-types-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin: 12px 0;
-}
-
-.tyre-types-grid:focus {
-    outline: 2px solid var(--agricultural-primary);
-    outline-offset: 4px;
-    border-radius: 8px;
-}
-
-.tyre-type-card {
-    background: linear-gradient(135deg, var(--agricultural-neutral), #ffffff);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(109, 163, 77, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.tyre-type-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(109, 163, 77, 0.05), rgba(196, 106, 60, 0.05));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.tyre-type-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    border-color: var(--agricultural-primary);
-}
-
-.tyre-type-card:hover::before {
-    opacity: 1;
-}
-
-.type-icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 12px;
-    position: relative;
-    z-index: 1;
-}
-
-.tyre-type-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    margin: 0 0 8px 0;
-    color: var(--agricultural-soil);
-    font-weight: 600;
-    position: relative;
-    z-index: 1;
-}
-
-.tyre-type-card p {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    margin: 0;
-    color: var(--agricultural-earth);
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-}
-
-/* Stats Row - Above Image */
-.tyre-image-section .stats-row {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(135deg, var(--agricultural-primary), var(--agricultural-sage));
-    padding: 20px;
-    border-radius: 16px;
-    margin: 0;
-    box-shadow: 0 8px 25px rgba(109, 163, 77, 0.3);
-    width: 100%;
-    max-width: 400px;
-}
-
-.tyre-image-section .stat-item {
-    text-align: center;
-    flex: 1;
-    color: white;
-}
-
-.tyre-image-section .stat-number {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 4px;
-}
-
-.tyre-image-section .stat-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    opacity: 0.9;
-}
-
-/* CTA Button - Below Image */
-.tyre-image-section .cta-button {
-    padding: 16px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: white;
-    background: linear-gradient(135deg, var(--agricultural-accent), #A8572F);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 6px 20px rgba(196, 106, 60, 0.3);
-    width: 100%;
-    max-width: 320px;
-    align-self: center;
-}
-
-.tyre-image-section .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(196, 106, 60, 0.4);
-    background: linear-gradient(135deg, #A8572F, #8B4A2A);
-}
-
-/* Underline animation styles */
-.relative {
-    position: relative;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-.absolute {
-    position: absolute;
-}
-
-.left-0 {
-    left: 0;
-}
-
-.-bottom-1 {
-    bottom: -4px;
-}
-
-.h-1 {
-    height: 4px;
-}
-
-.bg-yellow-500 {
-    background: linear-gradient(90deg, var(--agricultural-primary), var(--agricultural-wheat));
-}
-
-.rounded {
-    border-radius: 2px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .tyre-section {
-        padding: 60px 15px;
-        text-align: center;
+    from {
+        transform: rotate(0deg);
     }
-    
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Content Styling */
+.tyre-content h2 {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #b1b1b1;
+    font-family: "Anton", sans-serif;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.tyre-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-family: "Oswald", sans-serif;
+}
+
+.tyre-content button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #3e2723;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tyre-content button:hover {
+    background: #ffffff;
+    color: #3e2723;
+    border: 1px solid #3e2723;
+}
+
+.owner-section {
+    margin-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+    .tyre-content h2 {
+        font-size: 3rem;
+    }
+
+    .tyre-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 430px) {
+    .tyre-content h2 {
+        font-size: 3rem;
+    }
+
+    .tyre-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
     .tyre-container {
         grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-        padding: 0 20px;
-    }
-    
-    .tyre-image-section {
-        align-items: center;
-    }
-    
-    .tyre-image-section .stats-row {
-        max-width: 100%;
-        padding: 16px;
-    }
-    
-    .tyre-image-section .stat-number {
-        font-size: 1.6rem;
-    }
-    
-    .tyre-image-section .stat-label {
-        font-size: 0.7rem;
-    }
-    
-    .tyre-image img {
-        width: 320px;
-        height: 320px;
-    }
-    
-    .tyre-image-section .cta-button {
-        max-width: 300px;
-        padding: 16px 32px;
-        font-size: 1rem;
-    }
-    
-    .tyre-content {
         text-align: center;
     }
-    
-    .tyre-content h2 {
-        font-size: 2.5rem;
-    }
-    
-    .expertise-features {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .tyre-types-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-}
 
-@media (max-width: 480px) {
-    .tyre-image-section .stats-row {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px;
-    }
-    
-    .tyre-image-section .stat-number {
-        font-size: 1.4rem;
-    }
-    
     .tyre-image img {
-        width: 280px;
-        height: 280px;
+        margin: 0 auto;
     }
-    
-    .tyre-content h2 {
-        font-size: 2rem;
+
+    .tyre-section {
+        background: #ffffff;
     }
-    
-    .main-description {
-        font-size: 1rem;
-    }
-    
-    .export-badges {
-        gap: 8px;
-    }
-    
-    .export-badge {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+
+    .tyre-image img {
+        width: 276px;
+        height: 277px;
+        object-fit: contain;
+        filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+        animation: spin 12s linear infinite;
     }
 }

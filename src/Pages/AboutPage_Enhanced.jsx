@@ -19,15 +19,15 @@ const teamMembers = [
     id: 1,
     name: "Harpal Kaur Dhanjal",
     role: "Co-Founder & Operations Director",
-    image: "/img/owner.jpg",
+    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg",
     description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized agricultural equipment trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
     achievements: ["1.9M+ Social Media Following", "Australia-Canada Trade Partner", "Professional Welder & Fabricator", "Agricultural Innovation Leader"]
   },
   {
     id: 2,
-    name: "Mr. Dhanjal",
+    name: "Bhagwan Singh Dhanjal",
     role: "Founder & CEO - Brown Kudi Enterprises",
-    image: "src/assets/father.png",
+    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757875441/father_pr6sen.png",
     description: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
     achievements: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"]
   },
@@ -35,8 +35,8 @@ const teamMembers = [
     id: 3,
     name: "Technical Team",
     role: "Engineering & Support Specialists",
-    image: "/img/aboutimg2.png",
-    description: "Skilled engineers, welders, and agricultural technicians who handle equipment assembly, maintenance, and customer support. Our team ensures every tyre and agricultural machine meets international standards while being perfectly suited for Indian farming conditions.",
+    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750724/gallery8_wopidz.png",
+    description: "experienced welders, and specialized agricultural technicians work with utmost precision in equipment assembly, and customer support. our team ensures that every tyre and agricultural machine not only meets the highest international standards but is also carefully adapted to the unique needs of Indian farming conditions,",
     achievements: ["Certified Technical Expertise", "International Quality Standards", "24/7 Customer Support", "On-site Installation Services"]
   }
 ];
@@ -1003,15 +1003,15 @@ const AboutPage_ = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                background: 'linear-gradient(135deg, #fff, #f8f9fa)',
-                color: '#2c3e50',
-                border: 'none',
-                padding: '20px 50px',
-                fontSize: '1.2rem',
-                fontWeight: '700',
+            background: 'rgba(255, 255, 255, 0.1)',
+                color: 'white',
+                border: '2px solid rgba(255, 255, 255, 0.26)',
+                padding: '18px 45px',
+                fontSize: '1.1rem',
+                fontWeight: '600',
                 borderRadius: '50px',
                 cursor: 'pointer',
-                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.2)',
+                backdropFilter: 'blur(10px)',
                 transition: 'all 0.3s ease',
                 display: 'flex',
                 alignItems: 'center',

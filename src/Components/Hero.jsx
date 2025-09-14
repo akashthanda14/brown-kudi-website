@@ -30,28 +30,26 @@ const Hero = () => {
   const shouldLoadVideo = useMemo(() => {
     return !isMobile && window.innerWidth > 1024;
   }, [isMobile]);
+
   const translations = {
-    english: {
+    english: { 
       title: "Brown Kudi",
       subtitle: "Cultivating Dreams, Growing Stories",
       tagline: "From soil to soul, sharing the farmer's journey",
-      cta: "Discover Products",
-      skipLink: "Skip to Product Cards"
+      cta: "Explore My Work"
     },
-    hindi: {
-      title: "ब्राउन कुड़ी",
+    hindi: { 
+      title: "ब्राउन कुड़ी", 
       subtitle: "सपने उगाना, कहानियां बढ़ाना",
       tagline: "मिट्टी से आत्मा तक, किसान की यात्रा साझा करना",
-      cta: "उत्पाद खोजें",
-      skipLink: "उत्पाद कार्ड पर जाएं"
+      cta: "मेरे खेत देखें"
     },
-    punjabi: {
-      title: "ਬ੍ਰਾਊਨ ਕੁੜੀ",
+    punjabi: { 
+      title: "ਬ੍ਰਾਊਨ ਕੁੜੀ", 
       subtitle: "ਸੁਪਨੇ ਉਗਾਉਣਾ, ਕਹਾਣੀਆਂ ਵਧਾਉਣਾ",
       tagline: "ਮਿੱਟੀ ਤੋਂ ਆਤਮਾ ਤੱਕ, ਕਿਸਾਨ ਦੀ ਯਾਤਰਾ ਸਾਂਝੀ ਕਰਨਾ",
-      cta: "ਉਤਪਾਦਾਂ ਦੀ ਖੋਜ ਕਰੋ",
-      skipLink: "ਉਤਪਾਦ ਕਾਰਡਾਂ 'ਤੇ ਜਾਓ"
-    }
+      cta: "ਮੇਰੇ ਖੇਤ ਵੇਖੋ"
+    },
   };
 
   // Memoize translation lookup to prevent object access on every render
@@ -182,26 +180,12 @@ const Hero = () => {
   }, [shouldLoadVideo]);
 
   const handleCTAClick = () => {
-    const tyresSection = document.getElementById('tyres');
+    const tyresSection = document.getElementById('export');
     if (tyresSection) {
       tyresSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
-    }
-  };
-
-  const handleSkipToProducts = () => {
-    const productCards = document.getElementById('product-cards');
-    if (productCards) {
-      productCards.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-      // Focus the section for screen readers
-      setTimeout(() => {
-        productCards.focus();
-      }, 500);
     }
   };
 
@@ -213,24 +197,6 @@ const Hero = () => {
       role="banner"
       aria-label="Brown Kudi farming influencer homepage"
     >
-      {/* Skip Link to Product Cards */}
-      <a 
-        href="#skip-to-products"
-        className="skip-link"
-        onClick={(e) => {
-          e.preventDefault();
-          handleSkipToProducts();
-        }}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleSkipToProducts();
-          }
-        }}
-      >
-        {t.skipLink}
-      </a>
-      
       {/* Canvas only for desktop - completely removed on mobile */}
       {!isMobile && shouldLoadVideo && (
         <canvas 
