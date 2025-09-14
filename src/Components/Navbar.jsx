@@ -128,7 +128,7 @@ export default function Navbar() {
                   aria-haspopup="true"
                   role="menuitem"
                 >
-                  <span>Agri Equipment</span>
+                  <span>Agri Equipments</span>
                   <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
                 </button>
                 <ul className={`navbar__dropdown ${activeDropdown === 'equipment' ? 'navbar__dropdown--visible' : ''}`} role="menu">
@@ -280,7 +280,7 @@ export default function Navbar() {
                   aria-haspopup="true"
                   role="menuitem"
                 >
-                  <span>Work</span>
+                  <span>Global Presence</span>
                   <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
                 </button>
                 <ul className={`navbar__dropdown ${activeDropdown === 'work' ? 'navbar__dropdown--visible' : ''}`} role="menu">
@@ -314,7 +314,7 @@ export default function Navbar() {
                       role="menuitem"
                     >
                       <Globe size={16} aria-hidden="true" />
-                      Agri Inport/Export
+                      Agri Import/Export
                     </Link>
                   </li>
 
@@ -569,7 +569,7 @@ export default function Navbar() {
             >
               <li>
                 <Link to="/agriequipments" className="navbar__mobile-sublink" onClick={toggleMenu}>
-                  Agri Inport/Export
+                  Agri Import/Export
                 </Link>
               </li>
               <li>
