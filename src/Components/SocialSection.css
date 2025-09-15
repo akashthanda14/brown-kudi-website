@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
 }
 
 .social-bg {
@@ -40,7 +42,6 @@
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 1;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
 /* Owner Image with glow */
