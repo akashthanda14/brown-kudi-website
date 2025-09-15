@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -37,6 +38,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <ScrollToTopButton />
+        <Analytics />
 
         <Navbar />
         <Routes>
