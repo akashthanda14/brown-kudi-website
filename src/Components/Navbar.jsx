@@ -224,7 +224,7 @@ export default function Navbar() {
                   aria-haspopup="true"
                   role="menuitem"
                 >
-                  <span>Tyres</span>
+                  <span>Customised Tyres</span>
                   <ChevronDown className="navbar__chevron" size={14} aria-hidden="true" />
                 </button>
                 <ul className={`navbar__dropdown ${activeDropdown === 'tyres' ? 'navbar__dropdown--visible' : ''}`} role="menu">
@@ -520,7 +520,7 @@ export default function Navbar() {
               onClick={() => toggleMobileSection("tyres")}
             >
               <Circle size={18} aria-hidden="true" />
-              <p>Tyre</p>
+              <p>Customised Tyre</p>
               <ChevronDown
                 className={`chevron ${openMobileSection === "tyres" ? "rotate" : ""
                   }`}

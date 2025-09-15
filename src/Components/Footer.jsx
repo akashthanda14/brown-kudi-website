@@ -54,7 +54,7 @@ const footerText = {
     tools: { english: "Agricultural Tools", hindi: "कृषि उपकरण", punjabi: "ਖੇਤੀਬਾੜੀ ਦੇ ਸੰਦ" },
     tyresol: { english: "Tyre Solutions", hindi: "टायर समाधान", punjabi: "ਟਾਇਰ ਹੱਲ" },
     import: { english: "Agri Import/Export", hindi: "कृषि आयात/निर्यात", punjabi: "ਖੇਤੀਬਾੜੀ ਆਯਾਤ/ਨਿਰਯਾਤ" },
-    journey: { english: "AgriJourney", hindi: "कृषि यात्रा", punjabi: "ਖੇਤੀਬਾੜੀ ਯਾਤਰਾ" },
+    journey: { english: "Agri Journey", hindi: "कृषि यात्रा", punjabi: "ਖੇਤੀਬਾੜੀ ਯਾਤਰਾ" },
 
     disc: { english: "Disc Harrow", hindi: "डिस्क हैरो", punjabi: "ਡਿਸਕ ਹੈਰੋ" },
     subsoiler: { english: "Subsoiler", hindi: "सबसोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
