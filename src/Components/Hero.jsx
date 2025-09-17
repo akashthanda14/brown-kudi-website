@@ -360,7 +360,6 @@ const Hero = () => {
       {/* Scroll Indicator - Hidden on mobile for cleaner look */}
       {!isMobile && (
         <div className="hero__scroll" aria-hidden="true">
-          <div className="hero__scroll-text">Discover More</div>
           <div className="hero__scroll-seed">
             <i className="fas fa-seedling" />
           </div>
