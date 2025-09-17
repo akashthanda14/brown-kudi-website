@@ -131,26 +131,36 @@
     background: #5a8c3e;
 }
 
-#icon-btnn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    font-size: 1rem;
-    color: #fff;
-    transition: all 0.3s ease;
+.trade-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
 }
 
-.icon-btn.whatsapp {
-    background: #25D366;
+.whatsapp-icon-btn,
+.phone-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  transition: background 0.3s ease;
 }
 
-.icon-btn.call {
-    background: #007BFF;
+.whatsapp-icon-btn {
+  background-color: #25d366;
 }
 
-.icon-btn:hover {
-    opacity: 0.8;
+.whatsapp-icon-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.phone-icon-btn {
+  background-color: #2563eb; /* blue */
+}
+
+.phone-icon-btn:hover {
+  background-color: #1e40af;
 }
