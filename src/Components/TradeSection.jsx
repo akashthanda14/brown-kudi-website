@@ -3,6 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./TradeSection.css";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const TradeSection = () => {
   const { language } = useLanguage();
@@ -37,11 +38,21 @@ const TradeSection = () => {
     hindi: "और जानें",
     punjabi: "ਹੋਰ ਜਾਣੋ",
   };
+  const defaultmsgw = {
+    english: "Hello, I want to know more about",
+    hindi: "नमस्ते, मैं इसके बारे में और जानना चाहता हूँ",
+    punjabi: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੈਂ ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ",
+  };
+  const defaultmsgp = {
+    english: "Calling about",
+    hindi: "इसके बारे में कॉल कर रहा हूँ",
+    punjabi: "ਇਸ ਬਾਰੇ ਕਾਲ ਕਰ ਰਿਹਾ ਹਾਂ",
+  };
 
   const products = [
     {
       id: 1,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770767/blade-1024x718_reopnl.png",
       name: {
         english: "Super Seeder",
         hindi: "सुपर सीडर मशीन",
@@ -67,7 +78,7 @@ const TradeSection = () => {
     },
     {
       id: 2,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
       name: {
         english: "Reversible MB Plough",
         hindi: "रिवर्सेबल एम.बी. हल",
@@ -159,7 +170,7 @@ const TradeSection = () => {
     },
     {
       id: 6,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129955/LIGHT-DUTY_vxmqkz.png",
       name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
       points: {
         english: [
@@ -246,7 +257,9 @@ const TradeSection = () => {
             onMouseLeave={() => handleLeave(item.id)}
             style={{
               transform: `perspective(1000px) rotateX(${tilt[item.id]?.x || 0}deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
+              cursor: "pointer",
             }}
+            onClick={() => (window.location.href = `/product-detail/${item.id}`)} // ✅ पूरा card click
           >
             <img
               src={item.img}
@@ -254,6 +267,7 @@ const TradeSection = () => {
               className="trade-img"
               loading="lazy"
             />
+
             <div className="trade-content">
               <h3 className="trade-name">{item.name[language]}</h3>
 
@@ -264,9 +278,35 @@ const TradeSection = () => {
               </ul>
 
               <div className="trade-actions">
-                <Link to={`/product-detail/${item.id}`} className="more-info-btn">
+                {/* ✅ Learn More button */}
+                <Link
+                  to={`/product-detail/${item.id}`}
+                  className="more-info-btn"
+                  onClick={(e) => e.stopPropagation()} // prevent card click
+                >
                   {button[language]}
                 </Link>
+
+                {/* ✅ WhatsApp Icon Button */}
+                <a
+                  href={`https://wa.me/919855119079?text=${defaultmsgw[language]} ${item.name[language]}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-icon-btn"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaWhatsapp size={22} />
+                </a>
+
+                {/* ✅ Phone Call Icon Button */}
+                <a
+                  href={`tel:+919855119079`}
+                  className="phone-icon-btn"
+                  title={`${defaultmsgp[language]} ${item.name[language]}`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaPhoneAlt size={20} />
+                </a>
               </div>
             </div>
           </motion.div>

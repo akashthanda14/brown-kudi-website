@@ -103,7 +103,7 @@
   gap: 8px;
   width: 200px;
   padding: 12px 26px;
-  background: linear-gradient(135deg, #4cafef, #5fa155);
+  background: linear-gradient(135deg, #529d11bd, #5fa155);
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -113,12 +113,6 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.5px;
-}
-
-.back-btn:hover {
-  background: linear-gradient(135deg, #1976d2, #0d47a1);
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .back-btn:active {
@@ -145,7 +139,6 @@
   height: 50px;
   font-size: 24px;
   border-radius: 50%;
-  color: white;
   transition: 0.3s;
 }
 

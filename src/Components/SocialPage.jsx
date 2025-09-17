@@ -137,7 +137,7 @@ export default function SocialPage() {
                         <div className="btn-content">
                             <span className="platform-name">Instagram</span>
                             <span className="follower-count">
-                                <AnimatedCounter end={1.9} suffix="M" inView={bottomInView} /> Followers
+                                <AnimatedCounter end={2} suffix="M" inView={bottomInView} /> Followers
                             </span>
                         </div>
                     </motion.a>
