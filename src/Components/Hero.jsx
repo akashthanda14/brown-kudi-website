@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
+import { createPortal } from 'react-dom';
 import "./Hero.css";
 import { useLanguage } from "../context/LanguageContext"; 
 
@@ -22,6 +23,62 @@ const Hero = () => {
   const heroRef = useRef(null);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+
+  // Simple accessible custom dropdown for language selection
+  function LanguageDropdown({ value, onChange }) {
+    const [open, setOpen] = React.useState(false);
+    const ref = React.useRef(null);
+    const options = [
+      { key: 'english', label: 'English' },
+      { key: 'hindi', label: 'हिन्दी' },
+      { key: 'punjabi', label: 'ਪੰਜਾਬੀ' },
+    ];
+
+    useEffect(() => {
+      function handleClick(e) {
+        if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      }
+      document.addEventListener('click', handleClick);
+      return () => document.removeEventListener('click', handleClick);
+    }, []);
+
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+
+    return (
+      <div className="lang-dropdown" ref={ref} onKeyDown={handleKey}>
+        <button
+          className="lang-dropdown__button"
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          onClick={() => setOpen((s) => !s)}
+          type="button"
+        >
+          {options.find((o) => o.key === value)?.label || 'Language'}
+          <span className="lang-dropdown__caret">▾</span>
+        </button>
+
+        {open && (
+          <ul className="lang-dropdown__list" role="listbox">
+            {options.map((opt) => (
+              <li
+                key={opt.key}
+                role="option"
+                aria-selected={value === opt.key}
+                tabIndex={0}
+                className={`lang-dropdown__option ${value === opt.key ? 'selected' : ''}`}
+                onClick={() => { onChange(opt.key); setOpen(false); }}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { onChange(opt.key); setOpen(false); } }}
+              >
+                {opt.label}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  }
 
   // Toggle to disable expensive visual effects for speed
   const NO_EFFECTS = true; // set to false to re-enable parallax/video analysis
@@ -344,20 +401,9 @@ const Hero = () => {
 
           {/* Language Selector */}
           <div className="hero__language">
-            <label htmlFor="language-select" className="sr-only">
-              Select Language
-            </label>
-            <select
-              id="language-select"
-              className="hero__language-select"
-              value={language}
-              onChange={(e) => setLanguage(e.target.value)}
-              aria-label="Language selection"
-            >
-              <option value="english">English</option>
-              <option value="hindi">हिन्दी</option>
-              <option value="punjabi">ਪੰਜਾਬੀ</option>
-            </select>
+            <label className="sr-only">Select Language</label>
+            {/* Inline custom dropdown for consistent behavior */}
+            <LanguageDropdown value={language} onChange={(v) => setLanguage(v)} />
           </div>
         </div>
       </div>
