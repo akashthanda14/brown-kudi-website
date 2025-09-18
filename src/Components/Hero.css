@@ -126,7 +126,7 @@
   rgba(0, 0, 0, 0.6) 0%,
   rgba(109, 163, 77, 0.3) 50%,
   rgba(0, 0, 0, 0.6) 100%), 
-  url('/img/aboutbg.png') left center/cover no-repeat !important;
+  url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat !important;
     background-position: 25% center;
   }
   
@@ -246,7 +246,7 @@
   background: linear-gradient(135deg,
     rgba(0, 0, 0, 0.4) 0%,
     rgba(109, 163, 77, 0.2) 50%,
-    rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') left center/cover no-repeat;
+    rgba(0, 0, 0, 0.4) 100%), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat;
   background-position: 25% center;
   }
 }
@@ -281,7 +281,7 @@
   inset: 0;
   background: linear-gradient(45deg,
       rgba(59, 47, 47, 0.75),
-      rgba(59, 47, 47, 0.65)), url('/img/aboutbg.png') center/cover no-repeat;
+      rgba(59, 47, 47, 0.65)), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') center/cover no-repeat;
 }
 
 .hero__video {
