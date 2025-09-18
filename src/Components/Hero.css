@@ -258,6 +258,7 @@
   }
   /* keep hero fallback area simple on desktop */
   .hero__fallback {
+    /* Desktop: gradient only, no fallback image */
     background: linear-gradient(45deg, rgba(59,47,47,0.75), rgba(59,47,47,0.65));
   }
 }
@@ -276,13 +277,11 @@
   }
 }
 
+  /* fallback element positioning; background set per media-query to avoid desktop image */
   .hero__fallback {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg,
-      rgba(59, 47, 47, 0.75),
-      rgba(59, 47, 47, 0.65)), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') center/cover no-repeat;
-}
+    position: absolute;
+    inset: 0;
+  }
 
 .hero__video {
   position: absolute;
