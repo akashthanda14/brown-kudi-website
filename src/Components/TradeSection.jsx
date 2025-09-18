@@ -257,9 +257,7 @@ const TradeSection = () => {
             onMouseLeave={() => handleLeave(item.id)}
             style={{
               transform: `perspective(1000px) rotateX(${tilt[item.id]?.x || 0}deg) rotateY(${tilt[item.id]?.y || 0}deg)`,
-              cursor: "pointer",
             }}
-            onClick={() => (window.location.href = `/product-detail/${item.id}`)} // ✅ पूरा card click
           >
             <img
               src={item.img}

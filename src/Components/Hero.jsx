@@ -16,12 +16,15 @@ const HERO_FONTS = [
 const Hero = () => {
   const { language, setLanguage } = useLanguage();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [videoBrightness, setVideoBrightness] = useState('normal');
   const heroRef = useRef(null);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+
+  // Toggle to disable expensive visual effects for speed
+  const NO_EFFECTS = true; // set to false to re-enable parallax/video analysis
 
   // Enhanced mobile detection for maximum performance
   const isMobile = useMemo(() => {
@@ -90,8 +93,9 @@ const Hero = () => {
     return () => observer.disconnect();
   }, [isMobile]);
 
-  // Video brightness detection - completely disabled on mobile
+  // Video brightness detection - disabled when NO_EFFECTS is true
   useEffect(() => {
+    if (NO_EFFECTS) return;
     if (isMobile || !shouldLoadVideo || !videoLoaded || !videoRef.current) return;
 
     const canvas = canvasRef.current;
@@ -137,8 +141,9 @@ const Hero = () => {
     return () => cancelAnimationFrame(id);
   }, [videoLoaded, isMobile, shouldLoadVideo]);
 
-  // Parallax completely disabled on mobile
+  // Parallax completely disabled when NO_EFFECTS is true
   useEffect(() => {
+    if (NO_EFFECTS) return;
     if (isMobile) return; // No parallax on mobile at all
     
     const handleScroll = () => {
@@ -266,8 +271,8 @@ const Hero = () => {
           />
         )}
         
-        {/* Video only loads on desktop for performance */}
-        {!isMobile && shouldLoadVideo && videoLoaded && (
+        {/* Desktop: render video (fallback still present while loading) */}
+        {!isMobile && shouldLoadVideo && (
           <video
             ref={videoRef}
             className="hero__video"
@@ -275,7 +280,7 @@ const Hero = () => {
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             aria-hidden="true"
           >
             <source src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1757788630/vd6.mp4_kq7opc.mp4" type="video/webm" />

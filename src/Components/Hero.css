@@ -100,7 +100,7 @@
   .hero__fallback {
     background: linear-gradient(45deg,
         rgba(59, 47, 47, 0.85),
-        rgba(59, 47, 47, 0.75)), url("/images/bg-fallback.jpg") center/cover no-repeat;
+  rgba(59, 47, 47, 0.75)), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
   }
 
   /* Disable all decorative animations for performance */
@@ -123,10 +123,10 @@
   /* Force image background on mobile - no video */
   .hero__fallback {
     background: linear-gradient(135deg,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(109, 163, 77, 0.3) 50%,
-        rgba(0, 0, 0, 0.6) 100%), 
-        url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat !important;
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(109, 163, 77, 0.3) 50%,
+  rgba(0, 0, 0, 0.6) 100%), 
+  url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') left center/cover no-repeat !important;
     background-position: 25% center;
   }
   
@@ -233,14 +233,21 @@
   /* Account for fixed navbar */
 }
 
+/* Disable all animations and transitions inside hero for speed */
+.hero,
+.hero * {
+  animation: none !important;
+  transition: none !important;
+}
+
 /* Mobile-first background fallback */
 @media (max-width: 768px) {
   .hero {
-    background: linear-gradient(135deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(109, 163, 77, 0.2) 50%,
-        rgba(0, 0, 0, 0.4) 100%), url('https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg') left center/cover no-repeat;
-    background-position: 25% center;
+  background: linear-gradient(135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(109, 163, 77, 0.2) 50%,
+    rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') left center/cover no-repeat;
+  background-position: 25% center;
   }
 }
 
@@ -251,12 +258,12 @@
   z-index: -3;
 }
 
-.hero__fallback {
+  .hero__fallback {
   position: absolute;
   inset: 0;
   background: linear-gradient(45deg,
       rgba(59, 47, 47, 0.75),
-      rgba(59, 47, 47, 0.65)), url("/images/bg-fallback.jpg") center/cover no-repeat;
+      rgba(59, 47, 47, 0.65)), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
 }
 
 .hero__video {
@@ -265,11 +272,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  filter: sepia(20%) saturate(80%) brightness(1.1);
-  animation: videoReveal 2s var(--ease-gentle) 0.5s forwards;
-  /* Hardware acceleration for smooth video playback */
-  will-change: opacity;
+  opacity: 1; /* make visible by default to avoid JS-dependent reveal */
+  filter: sepia(20%) saturate(80%) brightness(1.05);
+  animation: none; /* remove delayed reveal animation */
+  will-change: auto;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
 }
@@ -322,17 +328,18 @@
   max-width: min(90vw, 800px);
   text-align: center;
   padding: var(--space-lg);
-  opacity: 0;
-  transform: translateY(2rem);
-  transition: all 1.2s var(--ease-gentle);
+  opacity: 1; /* visible by default to avoid JS timing issues */
+  transform: none;
+  transition: none;
   /* Hardware acceleration for smooth parallax */
   will-change: transform;
   backface-visibility: hidden;
 }
 
 .hero--visible .hero__content {
+  /* kept for compatibility; no-op when JS toggles */
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* Brand Badge */
@@ -351,8 +358,8 @@
   color: var(--color-soil);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  opacity: 0;
-  animation: badgeAppear 1s var(--ease-gentle) 0.8s forwards;
+  opacity: 1; /* visible by default */
+  animation: none; /* remove JS-tied animation */
 }
 
 .hero__badge-icon {
@@ -379,9 +386,9 @@
 .hero__title-brown {
   color: var(--color-leaf, #6DA34D);
   display: inline-block;
-  opacity: 0;
+  opacity: 1; /* visible by default */
   font-family: "efont";
-  animation: titleSlideIn 1s var(--ease-organic) 1s forwards;
+  animation: none;
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 
@@ -390,9 +397,9 @@
   font-family: 'Noto Sans Gurmukhi', var(--font-heading);
   margin-left: 0.2em;
   display: inline-block;
-  opacity: 0;
+  opacity: 1; /* visible by default */
   font-family: "pfont";
-  animation: titleSlideIn 1s var(--ease-organic) 1.3s forwards;
+  animation: none;
   text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
 
@@ -406,9 +413,9 @@
   max-width: 28ch;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
+  opacity: 1; /* visible by default */
   text-shadow: 1px 2px 6px rgba(59, 47, 47, 0.9), 0 0 12px rgba(59, 47, 47, 0.5);
-  animation: subtitleFade 1s var(--ease-gentle) 1.6s forwards;
+  animation: none;
 }
 
 .hero__tagline {
@@ -419,9 +426,9 @@
   line-height: 1.5;
   max-width: 40ch;
   margin: 0 auto var(--space-xl);
-  opacity: 0;
+  opacity: 1; /* visible by default */
   text-shadow: 1px 2px 4px rgba(59, 47, 47, 0.8);
-  animation: taglineFade 1s var(--ease-gentle) 1.9s forwards;
+  animation: none;
 }
 
 /* Actions */
@@ -450,10 +457,10 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   box-shadow: var(--shadow-soft);
-  transition: all 0.3s var(--ease-natural);
-  transform: translateY(0);
-  opacity: 0;
-  animation: ctaAppear 1s var(--ease-gentle) 2.2s forwards;
+  transition: all 0.15s var(--ease-natural);
+  transform: none;
+  opacity: 1; /* visible immediately */
+  animation: none;
 }
 
 .hero__cta:hover {
@@ -487,8 +494,8 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s var(--ease-natural);
-  opacity: 0;
-  animation: languageAppear 1s var(--ease-gentle) 2.5s forwards;
+  opacity: 1;
+  animation: none;
 }
 
 .hero__language-select:hover {
@@ -509,8 +516,8 @@
   transform: translateX(-50%);
   text-align: center;
   color: var(--color-earth);
-  opacity: 0;
-  animation: scrollAppear 1s var(--ease-gentle) 3.5s forwards;
+  opacity: 0.85;
+  animation: none;
 }
 
 .hero__scroll-text {
