@@ -52,7 +52,7 @@ const TradeSection = () => {
   const products = [
     {
       id: 1,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770767/blade-1024x718_reopnl.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215139/IMG17_cleanup_xz1cji.png",
       name: {
         english: "Super Seeder",
         hindi: "सुपर सीडर मशीन",
@@ -78,7 +78,7 @@ const TradeSection = () => {
     },
     {
       id: 2,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750734/IMG5_cyovh5.jpg",
       name: {
         english: "Reversible MB Plough",
         hindi: "रिवर्सेबल एम.बी. हल",
@@ -104,7 +104,7 @@ const TradeSection = () => {
     },
     {
       id: 3,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/a_hflip/v1757771043/erasebg-transformed_yqjo4s.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758221888/IMG_4559_pgv628.jpg",
       name: { english: "Disc Harrow", hindi: "डिस्क हैरो", punjabi: "ਡਿਸਕ ਹੈਰੋ" },
       points: {
         english: [
@@ -126,7 +126,7 @@ const TradeSection = () => {
     },
     {
       id: 4,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215336/IMG18_cleanup_erweaz.png",
       name: { english: "Rotary Tiller", hindi: "रोटावेटर टिलर", punjabi: "ਰੋਟਾਵੇਟਰ ਟਿਲਰ" },
       points: {
         english: [
@@ -148,7 +148,7 @@ const TradeSection = () => {
     },
     {
       id: 5,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769961/pngegg_2_fxnwbe.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222712/Bown_kudi_4_dle67f.png",
       name: { english: "Subsoiler", hindi: "सब-सोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
       points: {
         english: [
@@ -170,7 +170,7 @@ const TradeSection = () => {
     },
     {
       id: 6,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129955/LIGHT-DUTY_vxmqkz.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750761/IMG29_ixij4w.jpg",
       name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
       points: {
         english: [
@@ -192,7 +192,7 @@ const TradeSection = () => {
     },
     {
       id: 7,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG7_qfkwuw.jpg",
       name: {
         english: "Hydraulic Harrow",
         hindi: "हाइड्रोलिक हैरो",
@@ -218,7 +218,7 @@ const TradeSection = () => {
     },
     {
       id: 8,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750810/tradeimg8_l5z0t8.png",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
       name: { english: "Tractor Trolley", hindi: "ट्रैक्टर ट्रॉली", punjabi: "ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ" },
       points: {
         english: [

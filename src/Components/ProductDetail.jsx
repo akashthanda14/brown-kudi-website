@@ -16,12 +16,12 @@ const button = {
 const products = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770767/blade-1024x718_reopnl.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226360/Bown_kudi_5_vidsdi.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770767/blade-1024x718_reopnl.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226360/Bown_kudi_5_vidsdi.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG17_b4nsi7.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129430/new-super-seeder112_foq6uc.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226536/IMG17_cleanup_rnm3yc.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226697/new-super-seeder112_1__cleanup_xnevkw.png",
     ],
     name: {
       english: "Super Seeder",
@@ -54,11 +54,11 @@ const products = [
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
     gallery: [
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757778139/pngegg_7_w3f4k2.png",
     ],
     name: {
@@ -95,9 +95,9 @@ const products = [
     img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771043/erasebg-transformed_yqjo4s.png",
     gallery: [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771043/erasebg-transformed_yqjo4s.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770366/pngegg_4_iyactb.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/a_hflip/v1757771043/erasebg-transformed_yqjo4s.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg4_okphxy.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222038/Bown_kudi_2_qntfrc.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750758/IMG27_xywtho.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222339/Bown_kudi_3_htyfpu.png",
     ],
     name: {
       english: "Disc Harrow",
@@ -130,10 +130,10 @@ const products = [
   },
   {
     id: 4,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215336/IMG18_cleanup_erweaz.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg5_ihn1yp.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769578/pngegg_1_kwd5k1.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215336/IMG18_cleanup_erweaz.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215650/rotavator-new3_cleanup_lvofrw.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129310/ROTAVATOR-HAWK_vima8a.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129309/ROTAVATOR-ECO_s0a8yt.png",
     ],
@@ -168,12 +168,12 @@ const products = [
   },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769961/pngegg_2_fxnwbe.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222712/Bown_kudi_4_dle67f.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750794/tradeimg3_lycnff.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758128829/Sadhu-implements-cultivator-cover_xy82xz.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758128828/Basic-Model-Cultivator_mxk7rz.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758128829/Deluxe-Cutivator_hcoxyl.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222712/Bown_kudi_4_dle67f.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223166/Basic-Model-Cultivator_cleanup_rmhrxo.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223321/Sadhu-implements-cultivator-cover_cleanup_xv0plg.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223463/Deluxe-Cutivator_cleanup_gj0zl2.png",
     ],
     name: {
       english: "Cultivator",
@@ -282,9 +282,9 @@ const products = [
   },
   {
     id: 8,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750810/tradeimg8_l5z0t8.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750810/tradeimg8_l5z0t8.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771733/Untitled_design_2_piruqp.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771916/Untitled_design_3_ryv6mk.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757772141/Untitled_design_4_xvohsf.png",

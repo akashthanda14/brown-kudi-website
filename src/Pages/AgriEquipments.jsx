@@ -24,37 +24,37 @@ const equipments = [
   {
     id: 1,
     name: {
-      english: "TRACTOR",
-      hindi: "ट्रैक्टर",
-      punjabi: "ਟ੍ਰੈਕਟਰ",
+      english: "Super Seeder",
+      hindi: "सुपर सीडर मशीन",
+      punjabi: "ਸੁਪਰ ਸੀਡਰ ਮਸ਼ੀਨ",
     },
     desc: {
-      english: "Powerful tractors for farming, hauling, and versatile agricultural use.",
-      hindi: "खेती, ढुलाई और बहुउपयोगी कृषि कार्यों के लिए शक्तिशाली ट्रैक्टर।",
-      punjabi: "ਖੇਤੀ, ਢੋਈ ਅਤੇ ਕਈ ਕਿਸਮ ਦੇ ਖੇਤੀ ਕੰਮਾਂ ਲਈ ਸ਼ਕਤੀਸ਼ਾਲੀ ਟ੍ਰੈਕਟਰ।"
+      english: "Sows seeds directly into standing stubble without tillage.",
+      hindi: "बिना जुताई के खड़े अवशेष में सीधे बीज बोता है",
+      punjabi: "ਖੜ੍ਹੇ ਅਵਸ਼ੇਸ਼ਾਂ ਵਿੱਚ ਬਿਨਾਂ ਜੋਤਾਈ ਦੇ ਸਿੱਧਾ ਬੀਜ ਬੋਣ ਵਾਲੀ ਮਸ਼ੀਨ"
     },
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769051/Green-John-Deere-Tractor-Download-PNG-Image_mjiwux.png"
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226360/Bown_kudi_5_vidsdi.png"
   },
   {
     id: 2,
     name: {
-      english: "Harrow",
-      hindi: "हल",
-      punjabi: "ਹਲ",
+      english: "Disc Harrow",
+      hindi: "डिस्क हैरो",
+      punjabi: "ਡਿਸਕ ਹੈਰੋ",
     },
     desc: {
       english: "Durable ploughs designed for soil preparation and efficient farming.",
       hindi: "मिट्टी की तैयारी और कुशल खेती के लिए मजबूत हल।",
       punjabi: "ਮਿੱਟੀ ਦੀ ਤਿਆਰੀ ਅਤੇ ਕੁਸ਼ਲ ਖੇਤੀ ਲਈ ਮਜ਼ਬੂਤ ਹਲ।"
     },
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757769225/pngegg_urdjxp.png"
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771043/erasebg-transformed_yqjo4s.png"
   },
   {
     id: 3,
     name: {
-      english: "HARVESTER",
-      hindi: "हार्वेस्टर",
-      punjabi: "ਹਾਰਵੇਸਟਰ",
+      english: "Rotary Tiller",
+      hindi: "रोटरी टिलर",
+      punjabi: "ਰੋਟਰੀ ਟਿਲਰ",
     },
     desc: {
       english: "Advanced harvesters for crop cutting, threshing, and productivity.",
@@ -66,9 +66,9 @@ const equipments = [
   {
     id: 4,
     name: {
-      english: "SEEDER",
-      hindi: "सीडर",
-      punjabi: "ਸੀਡਰ",
+      english: "Cultivator",
+      hindi: "कल्टीवेटर",
+      punjabi: "ਕਲਟੀਵੇਟਰ",
     },
     desc: {
       english: "Efficient seeders ensuring uniform crop plantation and soil balance.",
