@@ -5,6 +5,7 @@ import AboutSection from "../Components/AboutSection";
 import "../Components/AboutSection.css";
 import { Users, Briefcase, CheckCircle2, ClipboardList, Award, Target, Heart, Star } from "lucide-react";
 import Footer from "../Components/Footer";
+import { useLanguage } from "../context/LanguageContext";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const additionalStats = [
@@ -18,47 +19,198 @@ const teamMembers = [
   {
     id: 1,
     name: "Harpal Kaur Dhanjal",
-    role: "Co-Founder & Operations Director",
+    role: {
+      english: "Co-Founder & Operations Director",
+      hindi: "सह-संस्थापक और संचालन निदेशक",
+      punjabi: "ਸਹਿ-ਸੰਸਥਾਪਕ ਅਤੇ ਓਪਰੇਸ਼ਨ ਡਾਇਰੈਕਟਰ"
+    },
     image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg",
-    description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized agricultural equipment trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
-    achievements: ["1.9M+ Social Media Following", "Australia-Canada Trade Partner", "Professional Welder & Fabricator", "Agricultural Innovation Leader"]
+    description: {
+      english: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she has revolutionized agricultural equipment trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she has redefined what's possible for women in agriculture.",
+      hindi: "पंजाब की पहली पेशेवर महिला वेल्डर जो अंतरराष्ट्रीय उद्यमी बनीं। 1.9M इंस्टाग्राम फॉलोअर्स के साथ, उन्होंने भारत, ऑस्ट्रेलिया और कनाडा के बीच कृषि उपकरण व्यापार में क्रांति ला दी। आर्क वेल्डिंग में महारत हासिल करने से लेकर मल्टी-मिलियन डॉलर के आयात-निर्यात व्यवसाय तक, उन्होंने कृषि में महिलाओं के लिए संभावनाओं को फिर से परिभाषित किया।",
+      punjabi: "ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ ਪ੍ਰੋਫੈਸ਼ਨਲ ਮਹਿਲਾ ਵੇਲਡਰ ਜੋ ਅੰਤਰਰਾਸ਼ਟਰੀ ਉਦਯੋਗਪਤੀ ਬਣ ਗਈ। 1.9M ਇੰਸਟਾਗ੍ਰਾਮ ਫਾਲੋਅਰਾਂ ਨਾਲ, ਉਸਨੇ ਭਾਰਤ, ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕੈਨੇਡਾ ਵਿਚ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਵਪਾਰ ਵਿੱਚ ਇਨਕਲਾਬ ਲਿਆ। ਆਰਕ ਵੇਲਡਿੰਗ ਵਿੱਚ ਮਹਾਰਤ ਤੋਂ ਲੈ ਕੇ ਮਲਟੀ-ਮਿਲੀਅਨ ਡਾਲਰ ਆਯਾਤ-ਨਿਰਯਾਤ ਵਪਾਰ ਤੱਕ, ਉਸਨੇ ਖੇਤੀ ਵਿੱਚ ਔਰਤਾਂ ਲਈ ਸੰਭਾਵਨਾਵਾਂ ਨੂੰ ਨਵਾਂ ਰੂਪ ਦਿੱਤਾ।"
+    },
+    achievements: {
+      english: ["1.9M+ Social Media Following", "Australia-Canada Trade Partner", "Professional Welder & Fabricator", "Agricultural Innovation Leader"],
+      hindi: ["1.9M+ सोशल मीडिया फॉलोअर्स", "ऑस्ट्रेलिया-कनाडा व्यापार भागीदार", "पेशेवर वेल्डर और फेब्रिकेटर", "कृषि नवाचार नेता"],
+      punjabi: ["1.9M+ ਸੋਸ਼ਲ ਮੀਡੀਆ ਫਾਲੋਅਰ", "ਆਸਟ੍ਰੇਲੀਆ-ਕੈਨੇਡਾ ਵਪਾਰ ਸਾਥੀ", "ਪ੍ਰੋਫੈਸ਼ਨਲ ਵੇਲਡਰ ਅਤੇ ਫੈਬ੍ਰਿਕੇਟਰ", "ਖੇਤੀਬਾੜੀ ਨਵੋਨਮੈਸ਼ਨ ਲੀਡਰ"]
+    }
   },
   {
     id: 2,
     name: "Bhagwan Singh Dhanjal",
-    role: "Founder & CEO - Brown Kudi Enterprises",
+    role: {
+      english: "Founder & CEO - Brown Kudi Enterprises",
+      hindi: "संस्थापक और सीईओ - ब्राउन कुड़ी एंटरप्राइजेज",
+      punjabi: "ਸੰਸਥਾਪਕ ਅਤੇ ਸੀਈਓ - ਬ੍ਰਾਊਨ ਕੁੜੀ ਏਂਟਰਪ੍ਰਾਈਜ਼ਸ"
+    },
     image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757875441/father_pr6sen.png",
-    description: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
-    achievements: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"]
+    description: {
+      english: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
+      hindi: "30+ वर्षों के कृषि अनुभव वाले विशेषज्ञ। सभी आयातित मशीनरी के लिए गुणवत्ता नियंत्रण की निगरानी करते हैं और उपकरण चयन के लिए तकनीकी मार्गदर्शन प्रदान करते हैं। भारतीय कृषि आवश्यकताओं की उनकी गहरी समझ सुनिश्चित करती है कि हर उपकरण स्थानीय आवश्यकताओं को पूरा करे।",
+      punjabi: "30+ ਸਾਲਾਂ ਦੇ ਖੇਤੀਬਾੜੀ ਅਨੁਭਵ ਵਾਲੇ ਮਾਹਿਰ। ਸਾਰੀ ਆਯਾਤ ਕੀਤੀ ਮਸ਼ੀਨਰੀ ਲਈ ਗੁਣਵੱਤਾ ਨਿਯੰਤਰਣ ਦੀ ਨਿਗਰਾਨੀ ਕਰਦੇ ਹਨ ਅਤੇ ਉਪਕਰਣ ਚੋਣ ਲਈ ਤਕਨੀਕੀ ਮਾਰਗਦਰਸ਼ਨ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ। ਭਾਰਤੀ ਖੇਤੀ ਦੀਆਂ ਜ਼ਰੂਰਤਾਂ ਦੀਆਂ ਉਹਨਾਂ ਦੀ ਗਹਿਰੀ ਸਮਝ ਯਕੀਨੀ ਬਣਾਉਂਦੀ ਹੈ ਕਿ ਹਰ ਉਪਕਰਣ ਸਥਾਨਕ ਮਿਆਰਾਂ ਨੂੰ ਪੂਰਾ ਕਰੇ।"
+    },
+    achievements: {
+      english: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"],
+      hindi: ["30+ वर्षों का कृषि अनुभव", "उपकरण गुणवत्ता विशेषज्ञ", "कृषि संचालन विशेषज्ञ", "तकनीकी सलाहकार नेता"],
+      punjabi: ["30+ ਸਾਲ ਖੇਤੀਬਾੜੀ ਅਨੁਭਵ", "ਉਪਕਰਣ ਗੁਣਵੱਤਾ ਵਿਸ਼ੇਸ਼ਜ্ঞান", "ਖੇਤੀਚਾਲੂ ਮਾਹਿਰ", "ਤਕਨੀਕੀ ਸਲਾਹਕਾਰ ਲੀਡਰ"]
+    }
   },
   {
     id: 3,
     name: "Technical Team",
-    role: "Engineering & Support Specialists",
+    role: {
+      english: "Engineering & Support Specialists",
+      hindi: "इंजीनियरिंग और समर्थन विशेषज्ञ",
+      punjabi: "ਇੰਜੀਨੀਅਰਿੰਗ ਅਤੇ ਸਹਾਇਤਾ ਵਿਸ਼ੇਸ਼ਜਨ"
+    },
     image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750724/gallery8_wopidz.png",
-    description: "experienced welders, and specialized agricultural technicians work with utmost precision in equipment assembly, and customer support. our team ensures that every tyre and agricultural machine not only meets the highest international standards but is also carefully adapted to the unique needs of Indian farming conditions,",
-    achievements: ["Certified Technical Expertise", "International Quality Standards", "24/7 Customer Support", "On-site Installation Services"]
+    description: {
+      english: "Experienced welders and specialized agricultural technicians work with utmost precision in equipment assembly and customer support. Our team ensures that every tyre and agricultural machine meets the highest international standards and is adapted to the unique needs of Indian farming conditions.",
+      hindi: "अनुभवी वेल्डर और विशेष कृषि तकनीशियन उपकरण असेंबली और ग्राहक सहायता में पूरी सटीकता के साथ काम करते हैं। हमारी टीम सुनिश्चित करती है कि हर टायर और कृषि मशीन उच्चतम अंतरराष्ट्रीय मानकों को पूरा करे और भारतीय कृषि परिस्थितियों की अनूठी आवश्यकताओं के अनुसार अनुकूलित हो।",
+      punjabi: "ਅਨੁਭਵੀ ਵੇਲਡਰ ਅਤੇ ਵਿਸ਼ੇਸ਼ ਖੇਤੀਬਾੜੀ ਤਕਨੀਸ਼ੀਅਨ ਉਪਕਰਣ ਅਸੰਬਲੀ ਅਤੇ ਗਾਹਕ ਸਹਾਇਤਾ ਵਿੱਚ ਪੂਰੀ ਸਹੀਤਾ ਨਾਲ ਕੰਮ ਕਰਦੇ ਹਨ। ਸਾਡੀ ਟੀਮ ਯਕੀਨੀ ਬਣਾਉਂਦੀ ਹੈ ਕਿ ਹਰ ਟਾਇਰ ਅਤੇ ਖੇਤੀਬਾੜੀ ਮਸ਼ੀਨ ਉੱਚਤਮ ਅੰਤਰਰਾਸ਼ਟਰੀ ਮਿਆਰਾਂ ਨੂੰ ਪੂਰਾ ਕਰੇ ਅਤੇ ਭਾਰਤੀ ਖੇਤੀ ਦੀਆਂ ਵਿਲੱਖਣ ਜ਼ਰੂਰਤਾਂ ਅਨੁਸਾਰ ਅਨੁਕੂਲ ਹੋਵੇ।"
+    },
+    achievements: {
+      english: ["Certified Technical Expertise", "International Quality Standards", "24/7 Customer Support", "On-site Installation Services"],
+      hindi: ["प्रमाणित तकनीकी विशेषज्ञता", "अंतरराष्ट्रीय गुणवत्ता मानक", "24/7 ग्राहक सहायता", "स्थल पर स्थापना सेवाएं"],
+      punjabi: ["ਪ੍ਰਮਾਣਿਤ ਤਕਨੀਕੀ ਵਿਸ਼ੇਸ਼ਜ্ঞান", "ਅੰਤਰਰਾਸ਼ਟਰੀ ਗੁਣਵੱਤਾ ਮਿਆਰ", "24/7 ਗਾਹਕ ਸਹਾਇਤਾ", "ਸਾਈਟ ਤੇ ਇੰਸਟਾਲੇਸ਼ਨ ਸੇਵਾਵਾਂ"]
+    }
   }
 ];
 
 const values = [
   {
     icon: <Target size={40} strokeWidth={1.5} />,
-    title: "Our Core Values",
-    description: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers in Australia and Canada, ensuring durability and performance in Indian conditions."
+    title: {
+      english: "Our Core Values",
+      hindi: "हमारे मूल मूल्य",
+      punjabi: "ਸਾਡੇ ਮੁੱਢਲੇ ਮੁੱਲ"
+    },
+    description: {
+      english: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers in Australia and Canada, ensuring durability and performance in Indian conditions.",
+      hindi: "हर टायर और कृषि उपकरण कड़े गुणवत्ता परीक्षण से गुजरता है। हम केवल ऑस्ट्रेलिया और कनाडा के प्रमाणित निर्माताओं से आयात करते हैं, जिससे भारतीय परिस्थितियों में स्थायित्व और प्रदर्शन सुनिश्चित होता है।",
+      punjabi: "ਹਰ ਟਾਇਰ ਅਤੇ ਖੇਤੀਬਾੜੀ ਦਾ ਉਪਕਰਣ ਕਠੋਰ ਗੁਣਵੱਤਾ ਜਾਂਚ ਤੋਂ ਲੰਘਦਾ ਹੈ। ਅਸੀਂ ਸਿਰਫ਼ ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕੈਨੇਡਾ ਦੇ ਪ੍ਰਮਾਣਿਤ ਨਿਰਮਾਤਿਆਂ ਤੋਂ ਆਯਾਤ ਕਰਦੇ ਹਾਂ, ਜਿਸ ਨਾਲ ਭਾਰਤੀ ਹਾਲਾਤਾਂ ਵਿੱਚ ਟਿਕਾਊਪਨ ਅਤੇ ਕਾਰਗੁਜ਼ਾਰੀ ਯਕੀਨੀ ਬਣਦੀ ਹੈ।"
+    }
   },
   {
     icon: <Heart size={40} strokeWidth={1.5} />,
-    title: "Customer Success",
-    description: "From small farmers to large agricultural enterprises, we provide personalized solutions. Our 95% customer satisfaction rate reflects our commitment to understanding and meeting each client's unique needs."
+    title: {
+      english: "Customer Success",
+      hindi: "ग्राहक सफलता",
+      punjabi: "ਗਾਹਕ ਸਫਲਤਾ"
+    },
+    description: {
+      english: "From small farmers to large agricultural enterprises, we provide personalized solutions. Our 95% customer satisfaction rate reflects our commitment to understanding and meeting each client's unique needs.",
+      hindi: "छोटे किसानों से लेकर बड़े कृषि उद्यमों तक, हम व्यक्तिगत समाधान प्रदान करते हैं। हमारे 95% ग्राहक संतोष दर से यह पता चलता है कि हम प्रत्येक ग्राहक की अनोखी जरूरतों को समझने और पूरा करने के लिए प्रतिबद्ध हैं।",
+      punjabi: "ਛੋਟੇ ਕਿਸਾਨਾਂ ਤੋਂ ਵੱਡੇ ਖੇਤੀਬਾੜੀ ਉਦਯੋਗਾਂ ਤੱਕ, ਅਸੀਂ ਵਿਅਕਤੀਗਤ ਹੱਲ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਾਂ। ਸਾਡੇ 95% ਗਾਹਕ ਸੰਤੋਸ਼ ਦਰ ਇਹ ਦਰਸਾਉਂਦੀ ਹੈ ਕਿ ਅਸੀਂ ਹਰ ਗਾਹਕ ਦੀ ਵਿਲੱਖਣ ਜ਼ਰੂਰਤ ਨੂੰ ਸਮਝਣ ਅਤੇ ਪੂਰਾ ਕਰਨ ਲਈ ਪ੍ਰਤਿਬੱਧ ਹਾਂ।"
+    }
   },
   {
     icon: <Users size={40} strokeWidth={1.5} />,
-    title: "Authentic Content",
-    description: "Through genuine storytelling and real farming experiences, we've built a community of 1.9M+ followers who trust our expertise in welding, farming, and agricultural equipment selection."
+    title: {
+      english: "Authentic Content",
+      hindi: "असली सामग्री",
+      punjabi: "ਅਸਲੀ ਸਮੱਗਰੀ"
+    },
+    description: {
+      english: "Through genuine storytelling and real farming experiences, we've built a community of 1.9M+ followers who trust our expertise in welding, farming, and agricultural equipment selection.",
+      hindi: "सच्ची कहानियों और वास्तविक खेती के अनुभवों के माध्यम से, हमने 1.9M+ अनुयायियों की एक समुदाय बनाई है जो वेल्डिंग, खेती और कृषि उपकरण चयन में हमारी विशेषज्ञता पर भरोसा करते हैं।",
+      punjabi: "ਸੱਚੀ ਕਹਾਣੀਆਂ ਅਤੇ ਅਸਲੀ ਖੇਤੀ ਦੇ ਤਜਰਬਿਆਂ ਰਾਹੀਂ, ਅਸੀਂ 1.9M+ ਫਾਲੋਅਰਾਂ ਦੀ ਇੱਕ ਕਮਿਊਨਿਟੀ ਬਣਾਈ ਹੈ ਜੋ ਵੈਲਡਿੰਗ, ਖੇਤੀ ਅਤੇ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਚੋਣ ਵਿੱਚ ਸਾਡੇ ਤਜਰਬੇ 'ਤੇ ਭਰੋਸਾ ਕਰਦੀ ਹੈ।"
+    }
   },
 ];
+const stats = [
+  {
+    number: '250+',
+    icon: '🚜',
+    label: {
+      english: 'Equipment Delivered',
+      hindi: 'उपकरण वितरित',
+      punjabi: 'ਉਪਕਰਣ ਸੌਂਪੇ ਗਏ'
+    }
+  },
+  {
+    number: '12+',
+    icon: '🌍',
+    label: {
+      english: 'Countries Served',
+      hindi: 'देश सेवा किए गए',
+      punjabi: 'ਦੇਸ਼ ਸੇਵਾ ਕੀਤੇ'
+    }
+  },
+  {
+    number: '95%',
+    icon: '⭐',
+    label: {
+      english: 'Client Satisfaction',
+      hindi: 'ग्राहक संतुष्टि',
+      punjabi: 'ਗਾਹਕ ਸੰਤੋਸ਼'
+    }
+  },
+  {
+    number: '8+',
+    icon: '📈',
+    label: {
+      english: 'Years Trading',
+      hindi: 'वर्षों का व्यापार',
+      punjabi: 'ਸਾਲਾਂ ਦਾ ਵਪਾਰ'
+    }
+  }
+];
 
+
+const heading1 = {
+  english: "🌾 PIONEERING AGRICULTURAL EXCELLENCE SINCE 2015",
+  hindi: "🌾 2015 से कृषि उत्कृष्टता में अग्रणी ",
+  punjabi: "🌾 2015 ਤੋਂ ਖੇਤੀਬਾੜੀ ਉੱਤਮਤਾ ਦਾ ਪਾਇਨੀਅਰਿੰਗ",
+};
+
+const heading2 = {
+  english: <>About <span style={{ color: '#6da34d' }}> Brown</span> Kudi</>,
+  hindi: <>ब्राउन कुड़ी<span style={{ color: '#6da34d' }}> के बारे</span> बारे में</>,
+  punjabi: <>ਬ੍ਰਾਊਨ<span style={{ color: '#6da34d' }}> ਕੁੜੀ</span> ਬਾਰੇ</>
+};
+const p = {
+  english: "From Mastering Welding in Punjab to Building International Tyre & Agricultural Equipment Empire - Connecting Australia, Canada & India Through Quality Trade and Authentic Content Creation",
+  hindi: "पंजाब में वेल्डिंग में महारत से लेकर अंतरराष्ट्रीय टायर और कृषि उपकरण साम्राज्य बनाने तक – गुणवत्ता-आधारित व्यापार और प्रामाणिक कंटेंट निर्माण के माध्यम से ऑस्ट्रेलिया, कनाडा और भारत को जोड़ना।",
+  punjabi: "ਪੰਜਾਬ ਵਿੱਚ ਵੈਲਡਿੰਗ ਵਿੱਚ ਮਹਾਰਤ ਤੋਂ ਲੈ ਕੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਟਾਇਰ ਅਤੇ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਸਾਮਰਾਜ ਬਣਾਉਣ ਤੱਕ – ਗੁਣਵੱਤਾ ਵਾਲੇ ਵਪਾਰ ਅਤੇ ਅਸਲੀ ਸਮੱਗਰੀ ਸਿਰਜਣ ਰਾਹੀਂ ਆਸਟ੍ਰੇਲੀਆ, ਕੈਨੇਡਾ ਅਤੇ ਭਾਰਤ ਨੂੰ ਜੋੜਨਾ।",
+};
+const btn = {
+  english: "Contact With Us",
+  hindi: "हमारे साथ संपर्क करें ",
+  punjabi: "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+};
+const btn2 = {
+  english: "View Our Journey",
+  hindi: " हमारी यात्रा देखें",
+  punjabi: "ਸਾਡਾ ਸਫ਼ਰ ਵੇਖੋ",
+};
+const exportheading = {
+  english: "International Import-Export Empire",
+  hindi: "अंतरराष्ट्रीय आयात-निर्यात साम्राज्य",
+  punjabi: "ਅੰਤਰਰਾਸ਼ਟਰੀ ਆਯਾਤ-ਨਿਰਯਾਤ ਸਾਮਰਾਜ",
+};
+const exportheadingp = {
+  english: "Built a thriving international trade business importing premium tyres and agricultural equipment from Australia and Canada. Our direct relationships with manufacturers ensure competitive pricing and guaranteed quality for Indian farmers.",
+  hindi: "ऑस्ट्रेलिया और कनाडा से प्रीमियम टायर और कृषि उपकरण आयात करके एक सफल अंतरराष्ट्रीय व्यापार स्थापित किया। निर्माताओं के साथ हमारे सीधे संबंध भारतीय किसानों के लिए प्रतिस्पर्धी मूल्य और गारंटीकृत गुणवत्ता सुनिश्चित करते हैं।",
+  punjabi: "ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕੈਨੇਡਾ ਤੋਂ ਪ੍ਰੀਮੀਅਮ ਟਾਇਰ ਅਤੇ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਆਯਾਤ ਕਰਕੇ ਇੱਕ ਕਾਮਯਾਬ ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਪਾਰ ਖੜ੍ਹਾ ਕੀਤਾ। ਨਿਰਮਾਤਾਵਾਂ ਨਾਲ ਸਾਡੇ ਸਿੱਧੇ ਸੰਬੰਧ ਭਾਰਤੀ ਕਿਸਾਨਾਂ ਲਈ ਮੁਕਾਬਲੇ ਵਾਲੀਆਂ ਕੀਮਤਾਂ ਅਤੇ ਗਾਰੰਟੀਸ਼ੁਦਾ ਗੁਣਵੱਤਾ ਯਕੀਨੀ ਬਣਾਉਂਦੇ ਹਨ।",
+};
+const coreheading = {
+  english: "Our Core Values",
+  hindi: "हमारे मूल मूल्य",
+  punjabi: "ਸਾਡੇ ਮੁੱਢਲੇ ਮੁੱਲ",
+};
+
+const corep = {
+  english: "The principles that drive our passion for agricultural excellence and sustainable farming",
+  hindi: "वे सिद्धांत जो कृषि उत्कृष्टता और सतत खेती के प्रति हमारे जुनून को प्रेरित करते हैं",
+  punjabi: "ਉਹ ਸਿਧਾਂਤ ਜੋ ਖੇਤੀਬਾੜੀ ਵਿੱਚ ਸ਼੍ਰੇਸ਼ਠਤਾ ਅਤੇ ਟਿਕਾਊ ਖੇਤੀ ਪ੍ਰਤੀ ਸਾਡੇ ਜਜ਼ਬੇ ਨੂੰ ਤਾਕਤ ਦਿੰਦੇ ਹਨ",
+};
+const teamHeading = {
+  english: <>Meet Our <span style={{ color: '#6da34d' }}>Visionary Team</span></>,
+  hindi: <>मिलिए हमारी <span style={{ color: '#6da34d' }}>दूरदर्शी टीम</span> से</>,
+  punjabi: <>ਮਿਲੋ ਸਾਡੀ <span style={{ color: '#6da34d' }}>ਦੂਰਦਰਸ਼ੀ ਟੀਮ</span> ਨਾਲ</>
+};
 const AboutPage_ = () => {
   const navigate = useNavigate();
   const [additionalInView, setAdditionalInView] = useState(false);
@@ -106,6 +258,7 @@ const AboutPage_ = () => {
   const handleNavigate = () => {
     navigate("/contact");
   };
+  const { language } = useLanguage();
 
   return (
     <>
@@ -203,7 +356,7 @@ const AboutPage_ = () => {
             }}
           >
             <span style={{ fontSize: '1.1rem', fontWeight: '600', letterSpacing: '1px' }}>
-              🌾 PIONEERING AGRICULTURAL EXCELLENCE SINCE 2015
+              {heading1[language]}
             </span>
           </motion.div>
 
@@ -219,7 +372,7 @@ const AboutPage_ = () => {
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
             }}
           >
-            About <span style={{ color: '#8bc34a' }}>Brown Kudi</span>
+            {heading2[language]}
           </motion.h1>
 
           <motion.p
@@ -235,7 +388,7 @@ const AboutPage_ = () => {
               margin: '0 auto 50px'
             }}
           >
-            From Mastering Welding in Punjab to Building International Tyre & Agricultural Equipment Empire - Connecting Australia, Canada & India Through Quality Trade and Authentic Content Creation
+            {p[language]}
           </motion.p>
 
           {/* Hero Stats */}
@@ -304,7 +457,8 @@ const AboutPage_ = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              Connect With Us
+              {btn[language]}
+
             </motion.button>
             <motion.button
               onClick={() => navigate("/gallery")}
@@ -323,7 +477,8 @@ const AboutPage_ = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              View Our Journey
+              {btn2[language]}
+
             </motion.button>
           </motion.div>
         </div>
@@ -353,13 +508,13 @@ const AboutPage_ = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 2fr))',
             gap: '50px',
             alignItems: 'center',
-            justifyContent:"center",
+            justifyContent: "center",
           }}>
             {/* Content Creation Journey */}
 
 
             {/* Welding & Technical Expertise */}
-    
+
 
             {/* International Trade Success */}
             <motion.div
@@ -388,7 +543,7 @@ const AboutPage_ = () => {
                 🌍
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center", gap: '50px', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: "center", gap: '50px', flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: '250px' }}>
                   <div style={{
                     display: 'inline-flex',
@@ -408,7 +563,8 @@ const AboutPage_ = () => {
                     marginBottom: '25px',
                     fontWeight: '700'
                   }}>
-                    International Import-Export Empire
+                    {exportheading[language]}
+
                   </h3>
 
                   <p style={{
@@ -417,7 +573,8 @@ const AboutPage_ = () => {
                     opacity: 0.95,
                     marginBottom: '30px'
                   }}>
-                    Built a thriving international trade business importing premium tyres and agricultural equipment from Australia and Canada. Our direct relationships with manufacturers ensure competitive pricing and guaranteed quality for Indian farmers.
+                    {exportheadingp[language]}
+
                   </p>
                 </div>
 
@@ -427,12 +584,7 @@ const AboutPage_ = () => {
                   gap: '20px',
                   minWidth: '300px'
                 }}>
-                  {[
-                    { number: '250+', label: 'Equipment Delivered', icon: '🚜' },
-                    { number: '12+', label: 'Countries Served', icon: '🌍' },
-                    { number: '95%', label: 'Client Satisfaction', icon: '⭐' },
-                    { number: '8+', label: 'Years Trading', icon: '📈' }
-                  ].map((stat, index) => (
+                  {stats.map((stat, index) => (
                     <motion.div
                       key={index}
                       initial={{ scale: 0.8, opacity: 0 }}
@@ -449,7 +601,7 @@ const AboutPage_ = () => {
                     >
                       <div style={{ fontSize: '2rem', marginBottom: '10px' }}>{stat.icon}</div>
                       <div style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '5px' }}>{stat.number}</div>
-                      <div style={{ fontSize: '0.9rem', opacity: 0.9 }}>{stat.label}</div>
+                      <div style={{ fontSize: '0.9rem', opacity: 0.9 }}>{stat.label[language]}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -482,7 +634,8 @@ const AboutPage_ = () => {
               viewport={{ once: true }}
               style={{ fontSize: '2.5rem', color: '#2c3e50', marginBottom: '20px' }}
             >
-              Our Core Values
+              {coreheading[language]}
+
             </motion.h2>
             <motion.p
               initial={{ y: 30, opacity: 0 }}
@@ -491,7 +644,8 @@ const AboutPage_ = () => {
               viewport={{ once: true }}
               style={{ fontSize: '1.1rem', color: '#6c757d', maxWidth: '600px', margin: '0 auto' }}
             >
-              The principles that drive our passion for agricultural excellence and sustainable farming
+              {corep[language]}
+
             </motion.p>
           </div>
 
@@ -531,10 +685,10 @@ const AboutPage_ = () => {
                   {value.icon}
                 </div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2c3e50', marginBottom: '15px' }}>
-                  {value.title}
+                  {value.title[language]}
                 </h3>
                 <p style={{ color: '#6c757d', lineHeight: '1.6' }}>
-                  {value.description}
+                  {value.description[language]}
                 </p>
               </motion.div>
             ))}
@@ -624,7 +778,7 @@ const AboutPage_ = () => {
           background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'
         }}
       >
-        <div style={{ maxWidth: '1400px', margin: '0 auto',justifyContent:'center',alignItems:'center', }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', justifyContent: 'center', alignItems: 'center', }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
@@ -658,7 +812,8 @@ const AboutPage_ = () => {
                 fontWeight: '800'
               }}
             >
-              Meet Our <span style={{ color: '#6da34d' }}>Visionary Team</span>
+              <h2>{teamHeading[language]}</h2>
+
             </motion.h2>
             <motion.p
               initial={{ y: 30, opacity: 0 }}
@@ -671,7 +826,7 @@ const AboutPage_ = () => {
                 maxWidth: '500px',
                 margin: '0 auto',
                 lineHeight: '1.7',
-                alignItems:'center',
+                alignItems: 'center',
               }}
             >
               Passionate innovators dedicated to transforming agriculture through expertise, tradition, and cutting-edge technology
@@ -773,7 +928,7 @@ const AboutPage_ = () => {
                     marginBottom: '12px',
                     fontWeight: '700'
                   }}>
-                    {member.name}
+                    {member.name[language]}
                   </h3>
 
                   <div style={{
@@ -788,7 +943,7 @@ const AboutPage_ = () => {
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px'
                   }}>
-                    {member.role}
+                    {member.role[language]}
                   </div>
 
                   <p style={{
@@ -797,7 +952,7 @@ const AboutPage_ = () => {
                     fontSize: '1.1rem',
                     marginBottom: '30px'
                   }}>
-                    {member.description}
+                    {member.description[language]}
                   </p>
 
                   {/* Achievements */}
@@ -807,7 +962,7 @@ const AboutPage_ = () => {
                     gap: '10px',
                     marginTop: '25px'
                   }}>
-                    {member.achievements.map((achievement, achIndex) => (
+                    {member.achievements[language].map((achievement, achIndex) => (
                       <motion.div
                         key={achIndex}
                         initial={{ x: -20, opacity: 0 }}
@@ -828,7 +983,7 @@ const AboutPage_ = () => {
                         }}
                       >
                         <CheckCircle2 size={16} />
-                        <span>{achievement}</span>
+                        <span key={index}>{achievement}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -1002,7 +1157,7 @@ const AboutPage_ = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+                background: 'rgba(255, 255, 255, 0.1)',
                 color: 'white',
                 border: '2px solid rgba(255, 255, 255, 0.26)',
                 padding: '18px 45px',
