@@ -128,9 +128,9 @@ const AboutPage_ = () => {
       {/* Enhanced Hero Section */}
       <motion.section
         className="about-hero"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.04 }}
         style={{
           background: 'linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(109, 163, 77, 0.8)), url("/img/aboutbg.png")',
           backgroundSize: 'cover',
@@ -182,9 +182,9 @@ const AboutPage_ = () => {
         <div style={{ maxWidth: '1000px', position: 'relative', zIndex: 2 }}>
           {/* Badge */}
           <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.04 }}
             style={{
               display: 'inline-block',
               background: 'rgba(139, 195, 74, 0.2)',
@@ -201,9 +201,9 @@ const AboutPage_ = () => {
           </motion.div>
 
           <motion.h1
-            initial={{ y: 60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.04 }}
             style={{
               fontSize: '4.5rem',
               fontWeight: '800',
@@ -216,9 +216,9 @@ const AboutPage_ = () => {
           </motion.h1>
 
           <motion.p
-            initial={{ y: 60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.04 }}
             style={{
               fontSize: '1.5rem',
               lineHeight: '1.6',
@@ -234,9 +234,9 @@ const AboutPage_ = () => {
           {/* Hero Stats */}
           <motion.div
             className="hero-stats"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.04 }}
             style={{
               display: 'flex',
               gap: '40px',
@@ -253,9 +253,9 @@ const AboutPage_ = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.04 }}
                 style={{
                   textAlign: 'center',
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -275,15 +275,15 @@ const AboutPage_ = () => {
 
           {/* Call to Action Buttons */}
           <motion.div
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.04 }}
             style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}
           >
             <motion.button
               onClick={() => navigate("/contact")}
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{}}
+              whileTap={{}}
               style={{
                 background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
                 color: 'white',
@@ -301,8 +301,8 @@ const AboutPage_ = () => {
             </motion.button>
             <motion.button
               onClick={() => navigate("/gallery")}
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{}}
+              whileTap={{}}
               style={{
                 background: 'rgba(255, 255, 255, 0.1)',
                 color: 'white',
@@ -325,9 +325,9 @@ const AboutPage_ = () => {
       {/* Our Values Section */}
       <motion.section
         className="about-values"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.04 }}
         viewport={{ once: true }}
         style={{
           padding: '80px 20px',
@@ -337,18 +337,18 @@ const AboutPage_ = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <motion.h2
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ opacity: 1 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.04 }}
               viewport={{ once: true }}
               style={{ fontSize: '2.5rem', color: '#2c3e50', marginBottom: '20px' }}
             >
               Our Core Values
             </motion.h2>
             <motion.p
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ opacity: 1 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.04 }}
               viewport={{ once: true }}
               style={{ fontSize: '1.1rem', color: '#6c757d', maxWidth: '600px', margin: '0 auto' }}
             >
@@ -364,11 +364,11 @@ const AboutPage_ = () => {
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 50, opacity: 0 }}
+                initial={{ opacity: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.04 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{}}
                 style={{
                   background: 'white',
                   padding: '40px 30px',
@@ -407,9 +407,9 @@ const AboutPage_ = () => {
       <motion.section
         ref={additionalRef}
         className="additional-stats"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.04 }}
         viewport={{ once: true }}
         style={{
           padding: '80px 20px',
@@ -419,18 +419,18 @@ const AboutPage_ = () => {
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <motion.h2
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ opacity: 1 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.04 }}
             viewport={{ once: true }}
             style={{ fontSize: '2.5rem', marginBottom: '20px' }}
           >
             Our Journey in Numbers
           </motion.h2>
           <motion.p
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ opacity: 1 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.04 }}
             viewport={{ once: true }}
             style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '60px', maxWidth: '600px', margin: '0 auto 60px' }}
           >
@@ -445,11 +445,11 @@ const AboutPage_ = () => {
             {additionalStats.map((stat, index) => (
               <motion.div
                 key={stat.id}
-                initial={{ scale: 0.8, opacity: 0 }}
+                initial={{ opacity: 1 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.04 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{}}
                 style={{
                   background: 'rgba(255,255,255,0.1)',
                   padding: '40px 20px',
@@ -476,9 +476,9 @@ const AboutPage_ = () => {
       {/* Enhanced Team Section */}
       <motion.section
         className="about-team"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.04 }}
         viewport={{ once: true }}
         style={{
           padding: '100px 10px',
@@ -488,9 +488,9 @@ const AboutPage_ = () => {
         <div style={{ maxWidth: '1400px', margin: '0 auto',justifyContent:'center',alignItems:'center', }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ opacity: 1 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.04 }}
               viewport={{ once: true }}
               style={{
                 display: 'inline-block',
@@ -508,9 +508,9 @@ const AboutPage_ = () => {
             </motion.div>
 
             <motion.h2
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ opacity: 1 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.04 }}
               viewport={{ once: true }}
               style={{
                 fontSize: '3.2rem',
@@ -522,9 +522,9 @@ const AboutPage_ = () => {
               Meet Our <span style={{ color: '#6da34d' }}>Visionary Team</span>
             </motion.h2>
             <motion.p
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ opacity: 1 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.04 }}
               viewport={{ once: true }}
               style={{
                 fontSize: '1.3rem',
@@ -548,11 +548,11 @@ const AboutPage_ = () => {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
-                initial={{ y: 80, opacity: 0 }}
+                initial={{ opacity: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.7, delay: index * 0.2 }}
+                transition={{ duration: 0.04 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -20, scale: 1.03 }}
+                whileHover={{}}
                 style={{
                   background: 'white',
                   padding: '50px 30px',
@@ -653,12 +653,8 @@ const AboutPage_ = () => {
                     marginTop: '25px'
                   }}>
                     {member.achievements.map((achievement, achIndex) => (
-                      <motion.div
+                      <div
                         key={achIndex}
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: achIndex * 0.1 }}
-                        viewport={{ once: true }}
                         style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -674,7 +670,7 @@ const AboutPage_ = () => {
                       >
                         <CheckCircle2 size={16} />
                         <span>{achievement}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>

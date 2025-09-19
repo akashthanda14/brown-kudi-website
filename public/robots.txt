@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow potential build artifacts or private paths (none currently)
+# Disallow: /admin
+
+Sitemap: https://brownkudi.com/sitemap.xml
