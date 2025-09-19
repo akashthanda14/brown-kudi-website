@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import AboutSection from "../Components/AboutSection";
 import "../Components/AboutSection.css";
 import { Users, Briefcase, CheckCircle2, ClipboardList, Award, Target, Heart, Star } from "lucide-react";
 import Footer from "../Components/Footer";
@@ -20,8 +19,8 @@ const teamMembers = [
     name: "Harpal Kaur Dhanjal",
     role: "Co-Founder & Operations Director",
     image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg",
-    description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized agricultural equipment trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
-    achievements: ["1.9M+ Social Media Following", "Australia-Canada Trade Partner", "Professional Welder & Fabricator", "Agricultural Innovation Leader"]
+    description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
+    achievements: ["2M+ Social Media Following", "Australia-Canada Trade Partner","Agricultural Innovation Leader"]
   },
   {
     id: 2,
@@ -31,21 +30,15 @@ const teamMembers = [
     description: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
     achievements: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"]
   },
-  {
-    id: 3,
-    name: "Technical Team",
-    role: "Engineering & Support Specialists",
-    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750724/gallery8_wopidz.png",
-    description: "experienced welders, and specialized agricultural technicians work with utmost precision in equipment assembly, and customer support. our team ensures that every tyre and agricultural machine not only meets the highest international standards but is also carefully adapted to the unique needs of Indian farming conditions,",
-    achievements: ["Certified Technical Expertise", "International Quality Standards", "24/7 Customer Support", "On-site Installation Services"]
-  }
+  
 ];
+
 
 const values = [
   {
     icon: <Target size={40} strokeWidth={1.5} />,
     title: "Our Core Values",
-    description: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers in Australia and Canada, ensuring durability and performance in Indian conditions."
+    description: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers ensuring durability and performance"
   },
   {
     icon: <Heart size={40} strokeWidth={1.5} />,
@@ -55,7 +48,7 @@ const values = [
   {
     icon: <Users size={40} strokeWidth={1.5} />,
     title: "Authentic Content",
-    description: "Through genuine storytelling and real farming experiences, we've built a community of 1.9M+ followers who trust our expertise in welding, farming, and agricultural equipment selection."
+    description: "Through genuine storytelling and real farming experiences, we've built a community of 2M+ followers who trust our expertise in farming and agricultural equipment selection."
   },
 ];
 
@@ -235,7 +228,7 @@ const AboutPage_ = () => {
               margin: '0 auto 50px'
             }}
           >
-            From Mastering Welding in Punjab to Building International Tyre & Agricultural Equipment Empire - Connecting Australia, Canada & India Through Quality Trade and Authentic Content Creation
+            Harpal Kaur Dhanjal, Punjab's pioneering welder girl and Instagram influencer with 2 million followers, breaks barriers as "Brown Kudi."
           </motion.p>
 
           {/* Hero Stats */}
@@ -253,9 +246,9 @@ const AboutPage_ = () => {
             }}
           >
             {[
-              { number: '1.9M+', label: 'Social Media Followers', icon: '📱' },
-              { number: '12+', label: 'Countries Served', icon: '🌍' },
-              { number: '8+', label: 'Years in Business', icon: '🏆' },
+              { number: '2M+', label: 'Social Media Followers', icon: '📱' },
+              { number: '5+', label: 'Countries Served', icon: '🌍' },
+              { number: '25+', label: 'Years in Business', icon: '🏆' },
               { number: '250+', label: 'Equipment Delivered', icon: '�' }
             ].map((stat, index) => (
               <motion.div
@@ -329,138 +322,6 @@ const AboutPage_ = () => {
         </div>
       </motion.section>
 
-      {/* Journey & Expertise Section */}
-      <motion.section
-        className="journey-expertise"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        style={{
-          padding: '100px 20px',
-          background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-          position: 'relative'
-        }}
-      >
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '0px' }}>
-
-
-          </div>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 2fr))',
-            gap: '50px',
-            alignItems: 'center',
-            justifyContent:"center",
-          }}>
-            {/* Content Creation Journey */}
-
-
-            {/* Welding & Technical Expertise */}
-    
-
-            {/* International Trade Success */}
-            <motion.div
-              initial={{ y: 60, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              style={{
-                background: 'linear-gradient(135deg, #6da34d, #8bc34a)',
-                color: 'white',
-                padding: '50px 40px',
-                borderRadius: '25px',
-                boxShadow: '0 20px 60px rgba(109, 163, 77, 0.3)',
-                gridColumn: 'span 2',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              <div style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                fontSize: '6rem',
-                opacity: 0.1
-              }}>
-                🌍
-              </div>
-
-              <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center", gap: '50px', flexWrap: 'wrap' }}>
-                <div style={{ flex: 1, minWidth: '250px' }}>
-                  <div style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '100px',
-                    height: '100px',
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    borderRadius: '50%',
-                    marginBottom: '30px'
-                  }}>
-                    🚢
-                  </div>
-
-                  <h3 style={{
-                    fontSize: '2.5rem',
-                    marginBottom: '25px',
-                    fontWeight: '700'
-                  }}>
-                    International Import-Export Empire
-                  </h3>
-
-                  <p style={{
-                    fontSize: '1.2rem',
-                    lineHeight: '1.7',
-                    opacity: 0.95,
-                    marginBottom: '30px'
-                  }}>
-                    Built a thriving international trade business importing premium tyres and agricultural equipment from Australia and Canada. Our direct relationships with manufacturers ensure competitive pricing and guaranteed quality for Indian farmers.
-                  </p>
-                </div>
-
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: '20px',
-                  minWidth: '300px'
-                }}>
-                  {[
-                    { number: '250+', label: 'Equipment Delivered', icon: '🚜' },
-                    { number: '12+', label: 'Countries Served', icon: '🌍' },
-                    { number: '95%', label: 'Client Satisfaction', icon: '⭐' },
-                    { number: '8+', label: 'Years Trading', icon: '📈' }
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                      viewport={{ once: true }}
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.15)',
-                        padding: '25px 20px',
-                        borderRadius: '15px',
-                        textAlign: 'center',
-                        backdropFilter: 'blur(10px)'
-                      }}
-                    >
-                      <div style={{ fontSize: '2rem', marginBottom: '10px' }}>{stat.icon}</div>
-                      <div style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '5px' }}>{stat.number}</div>
-                      <div style={{ fontSize: '0.9rem', opacity: 0.9 }}>{stat.label}</div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-
-
       {/* Our Values Section */}
       <motion.section
         className="about-values"
@@ -491,7 +352,7 @@ const AboutPage_ = () => {
               viewport={{ once: true }}
               style={{ fontSize: '1.1rem', color: '#6c757d', maxWidth: '600px', margin: '0 auto' }}
             >
-              The principles that drive our passion for agricultural excellence and sustainable farming
+              The principles that drive our passion for agricultural excellence
             </motion.p>
           </div>
 
@@ -729,16 +590,13 @@ const AboutPage_ = () => {
                 }} />
 
                 <div style={{ position: 'relative', zIndex: 2 }}>
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  <div
                     style={{
                       width: '180px',
                       height: '180px',
                       borderRadius: '50%',
                       overflow: 'hidden',
                       margin: '0 auto 35px',
-                      border: '6px solid #6da34d',
-                      boxShadow: '0 15px 40px rgba(109, 163, 77, 0.2)',
                       position: 'relative'
                     }}
                   >
@@ -748,24 +606,11 @@ const AboutPage_ = () => {
                       style={{
                         width: '100%',
                         height: '100%',
-                        objectFit: 'cover'
+                        objectFit: 'cover',
+                        display: 'block'
                       }}
                     />
-                    {/* Ring animation */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '-6px',
-                      left: '-6px',
-                      right: '-6px',
-                      bottom: '-6px',
-                      borderRadius: '50%',
-                      border: '2px solid transparent',
-                      background: 'linear-gradient(45deg, #6da34d, #8bc34a) border-box',
-                      WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
-                      WebkitMaskComposite: 'exclude',
-                      animation: 'pulse 3s ease-in-out infinite'
-                    }} />
-                  </motion.div>
+                  </div>
 
                   <h3 style={{
                     fontSize: '1.8rem',
@@ -962,9 +807,9 @@ const AboutPage_ = () => {
             }}
           >
             {[
-              { icon: '🚜', title: 'Quality Equipment', desc: 'Premium tyres & machinery from Australia/Canada' },
+              { icon: '🚜', title: 'Quality Equipment', desc: 'Premium tyres & machinery' },
               { icon: '📈', title: 'Proven Results', desc: '95% customer satisfaction rate' },
-              { icon: '🌍', title: 'International Trade', desc: 'Direct imports from 12+ countries' },
+              { icon: '🌍', title: 'International Trade', desc: 'Direct export to 5+ countries' },
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -1041,7 +886,7 @@ const AboutPage_ = () => {
                 gap: '10px'
               }}
             >
-              <span>View Our Work</span>
+              <span>View Our gallery</span>
               <span style={{ fontSize: '1.2rem' }}>📸</span>
             </motion.button>
 

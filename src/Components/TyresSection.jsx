@@ -17,7 +17,7 @@ export default function TyreSection() {
   const expertiseData = {
     english: {
       title: "Premium Tyre Manufacturing & Export",
-      subtitle: "Crafting Excellence Since 2008", 
+      subtitle: "Crafting Excellence Since 2020", 
       features: [
         { icon: "🏭", text: "State-of-the-art manufacturing facility" },
         { icon: "🌍", text: "Exporting to Canada, Australia & USA" },
@@ -91,7 +91,7 @@ export default function TyreSection() {
               className="stats-row"
             >
               <div className="stat-item">
-                <span className="stat-number">50K+</span>
+                <span className="stat-number">1000+</span>
                 <span className="stat-label">Tyres Exported</span>
               </div>
               <div className="stat-item">
@@ -99,7 +99,7 @@ export default function TyreSection() {
                 <span className="stat-label">Countries</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">15+</span>
+                <span className="stat-number">5+</span>
                 <span className="stat-label">Years Experience</span>
               </div>
             </motion.div>
