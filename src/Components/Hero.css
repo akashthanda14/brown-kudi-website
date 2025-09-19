@@ -258,8 +258,9 @@
   }
   /* keep hero fallback area simple on desktop */
   .hero__fallback {
-    /* Desktop: gradient only, no fallback image */
-    background: linear-gradient(45deg, rgba(59,47,47,0.75), rgba(59,47,47,0.65));
+  /* Desktop: use Pexels photo as fallback while video loads or if it fails */
+  background: linear-gradient(45deg, rgba(59,47,47,0.55), rgba(59,47,47,0.35)), url('https://images.pexels.com/photos/21711160/pexels-photo-21711160.jpeg?_gl=1*c1t7h7*_ga*MTIyNzExOTcyMS4xNzQ5NTU4NDIy*_ga_8JE65Q40S6*czE3NTgzMTgyNjAkbzQkZzEkdDE3NTgzMTgyODEkajM5JGwwJGgw') center/cover no-repeat;
+  background-position: center center;
   }
 }
 
