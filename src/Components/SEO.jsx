@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 
 /**
  * Reusable SEO component.
@@ -20,29 +19,44 @@ export default function SEO({
   structuredData,
   lang = 'en'
 }) {
-  const fullTitle = title === 'Brown Kudi' ? title : `${title} | Brown Kudi`;
+  useEffect(() => {
+    const fullTitle = title === 'Brown Kudi' ? title : `${title} | Brown Kudi`;
+    if (document.documentElement.lang !== lang) {
+      document.documentElement.lang = lang;
+    }
+    document.title = fullTitle;
 
-  const sd = Array.isArray(structuredData) ? structuredData : (structuredData ? [structuredData] : []);
+    const managedSelector = 'data-managed-seo';
+    // Cleanup any previously injected tags
+    document.head.querySelectorAll(`[${managedSelector}="true"]`).forEach(n => n.remove());
 
-  return (
-    <Helmet>
-      <html lang={lang} />
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      {image && <meta property="og:image" content={image} />}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      {canonical && <meta property="og:url" content={canonical} />}
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      {image && <meta name="twitter:image" content={image} />}
-      {noIndex && <meta name="robots" content="noindex,follow" />}
-      {sd.map((obj, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
-      ))}
-    </Helmet>
-  );
+    function add(name, attrs) {
+      const el = document.createElement(name);
+      Object.entries(attrs).forEach(([k,v]) => { if (v != null) el.setAttribute(k, v); });
+      el.setAttribute(managedSelector, 'true');
+      document.head.appendChild(el);
+      return el;
+    }
+
+    add('meta', { name: 'description', content: description });
+    add('meta', { property: 'og:title', content: fullTitle });
+    add('meta', { property: 'og:description', content: description });
+    add('meta', { property: 'og:type', content: 'website' });
+    if (canonical) add('meta', { property: 'og:url', content: canonical });
+    if (image) add('meta', { property: 'og:image', content: image });
+    add('meta', { name: 'twitter:card', content: 'summary_large_image' });
+    add('meta', { name: 'twitter:title', content: fullTitle });
+    add('meta', { name: 'twitter:description', content: description });
+    if (image) add('meta', { name: 'twitter:image', content: image });
+    if (canonical) add('link', { rel: 'canonical', href: canonical });
+    if (noIndex) add('meta', { name: 'robots', content: 'noindex,follow' });
+
+    const sdArray = Array.isArray(structuredData) ? structuredData : (structuredData ? [structuredData] : []);
+    sdArray.forEach(obj => {
+      const script = add('script', { type: 'application/ld+json' });
+      script.textContent = JSON.stringify(obj);
+    });
+  }, [title, description, canonical, image, noIndex, structuredData, lang]);
+
+  return null;
 }

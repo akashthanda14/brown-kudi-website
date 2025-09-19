@@ -4,16 +4,32 @@
  * Looks for a SITE_URL environment variable (e.g. https://www.example.com)
  * Falls back to http://localhost:5173 if not provided.
  */
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Accept either SITE_URL or VITE_SITE_URL for convenience
-const RAW_URL = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://www.example.com';
-const SITE_URL = RAW_URL.replace(/\/$/, '');
+// Accept either SITE_URL or VITE_SITE_URL for convenience; fallback to parsing local .env
+let rawUrl = process.env.SITE_URL || process.env.VITE_SITE_URL;
+if (!rawUrl) {
+  try {
+    const envPath = resolve(__dirname, '../.env');
+    if (existsSync(envPath)) {
+      const envContent = readFileSync(envPath, 'utf8');
+      for (const line of envContent.split(/\r?\n/)) {
+        const match = line.match(/^VITE_SITE_URL\s*=\s*(.+)$/);
+        if (match) {
+          rawUrl = match[1].trim().replace(/['"]/g, '');
+          break;
+        }
+      }
+    }
+  } catch {}
+}
+if (!rawUrl) rawUrl = 'https://www.example.com';
+const SITE_URL = rawUrl.replace(/\/$/, '');
 
 // Maintain the route list manually (excluding dynamic product-detail/:id)
 const routes = [
