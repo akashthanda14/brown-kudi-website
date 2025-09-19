@@ -4,7 +4,7 @@ import "../Components/AboutSection.css";
 
 const stats = [
   { id: 1, number: "8+", label: "Years Experience" },
-  { id: 2, number: "1.9M+", label: "Social Media Followers" },
+  { id: 2, number: "2M+", label: "Social Media Followers" },
   { id: 3, number: "500+", label: "Satisfied Customers" },
 ];
 
