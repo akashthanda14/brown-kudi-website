@@ -11,11 +11,11 @@ const heading = {
 
 const para = {
   english:
-    "Brown Kudi exports high-quality products to USA, Canada and Australia. We focus on authentic taste and consistent quality.",
+    "Brown Kudi exports premium quality tyres, furniture, and other products to USA, Canada, and Australia with consistent quality and reliability.",
   hindi:
-    "ब्राउन कुडी अमेरिका, कनाडा और ऑस्ट्रेलिया को उच्च गुणवत्ता वाले उत्पाद निर्यात करती है। हम प्रामाणिक स्वाद और निरंतर गुणवत्ता पर ध्यान केंद्रित करते हैं।",
+    "ब्राउन कुड़ी अमेरिका, कनाडा और ऑस्ट्रेलिया को प्रीमियम क्वालिटी टायर, फ़र्नीचर और अन्य प्रोडक्ट्स एक्सपोर्ट करती है। हम भरोसेमंद और लगातार एक जैसी क्वालिटी देने पर ध्यान रखते हैं।",
   punjabi:
-    "ਬ੍ਰਾਊਨ ਕੁਡੀ ਅਮਰੀਕਾ, ਕੈਨੇਡਾ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਨੂੰ ਉੱਚ-ਗੁਣਵੱਤਾ ਵਾਲੇ ਉਤਪਾਦ ਨਿਰਯਾਤ ਕਰਦੀ  ਹੈ। ਅਸੀਂ ਪ੍ਰਮਾਣਿਕ ​​ਸੁਆਦ ਅਤੇ ਇਕਸਾਰ ਗੁਣਵੱਤਾ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਦੇ ਹਾਂ।",
+    "ਬਰਾਊਨ ਕੁੜੀ ਅਮਰੀਕਾ, ਕੈਨੇਡਾ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਨੂੰ ਪ੍ਰੀਮੀਅਮ ਕੁਆਲਟੀ ਟਾਇਰ, ਫਰਨੀਚਰ ਅਤੇ ਹੋਰ ਪ੍ਰੋਡਕਟ ਐਕਸਪੋਰਟ ਕਰਦੀ ਹੈ। ਅਸੀਂ ਭਰੋਸੇਮੰਦ ਅਤੇ ਇਕੋ ਜਿਹੀ ਕੁਆਲਟੀ ਮੁਹੱਈਆ ਕਰਦੇ ਹਾਂ।",
 };
 
 export default function ExportSection() {
