@@ -5,50 +5,52 @@ import "../Components/AboutSection.css";
 import { Users, Briefcase, CheckCircle2, ClipboardList, Award, Target, Heart, Star } from "lucide-react";
 import Footer from "../Components/Footer";
 import { useScrollToTop } from "../hooks/useScrollToTop";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../translations";
+
+// Small helper to turn the translations subtree into a language-flattened object
+function localize(obj, lang) {
+  if (obj == null) return obj;
+  if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean') return obj;
+  if (Array.isArray(obj)) return obj.map((item) => localize(item, lang));
+  // If object has language keys, pick the language
+  const hasLangKeys = Object.prototype.hasOwnProperty.call(obj, 'english') || Object.prototype.hasOwnProperty.call(obj, 'hindi') || Object.prototype.hasOwnProperty.call(obj, 'punjabi');
+  if (hasLangKeys) {
+    return obj[lang] || obj.english || Object.values(obj)[0];
+  }
+  // Otherwise recurse over keys
+  const out = {};
+  for (const key of Object.keys(obj)) {
+    out[key] = localize(obj[key], lang);
+  }
+  return out;
+}
 
 const additionalStats = [
-  { id: 1, icon: <Award size={50} strokeWidth={1.5} />, number: 8, label: "Years in Business" },
-  { id: 2, icon: <Target size={50} strokeWidth={1.5} />, number: 95, label: "Client Satisfaction %" },
-  { id: 3, icon: <Heart size={50} strokeWidth={1.5} />, number: 250, label: "Equipment Delivered" },
-  { id: 4, icon: <Star size={50} strokeWidth={1.5} />, number: 12, label: "Countries Served" },
+  { id: 1, icon: <Award size={50} strokeWidth={1.5} />, number: 8, labelKey: "business" },
+  { id: 2, icon: <Target size={50} strokeWidth={1.5} />, number: 95, labelKey: "satisfaction" },
+  { id: 3, icon: <Heart size={50} strokeWidth={1.5} />, number: 250, labelKey: "delivered" },
+  { id: 4, icon: <Star size={50} strokeWidth={1.5} />, number: 12, labelKey: "served" },
 ];
-
-const teamMembers = [
-  {
-    id: 1,
-    name: "Harpal Kaur Dhanjal",
-    role: "Co-Founder & Operations Director",
-    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg",
-    description: "Punjab's first professional female welder turned international entrepreneur. With 2M Instagram followers, she's revolutionized trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
-    achievements: ["2M+ Social Media Following", "Australia-Canada Trade Partner","Agricultural Innovation Leader"]
-  },
-  {
-    id: 2,
-    name: "Bhagwan Singh Dhanjal",
-    role: "Founder & CEO - Brown Kudi Enterprises",
-    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757875441/father_pr6sen.png",
-    description: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
-    achievements: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"]
-  },
-  
-];
-
 
 const values = [
   {
     icon: <Target size={40} strokeWidth={1.5} />,
-    title: "Our Core Values",
-    description: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers ensuring durability and performance"
+    titleKey: "values",
+    descriptionKey: "values",
+    index: 0
   },
   {
     icon: <Heart size={40} strokeWidth={1.5} />,
-    title: "Customer Success",
-    description: "From small farmers to large agricultural enterprises, we provide personalized solutions. Our 95% customer satisfaction rate reflects our commitment to understanding and meeting each client's unique needs."
+    titleKey: "values",
+    descriptionKey: "values",
+    index: 1
   },
   {
     icon: <Users size={40} strokeWidth={1.5} />,
-    title: "Authentic Content",
-    description: "Through genuine storytelling and real farming experiences, we've built a community of 2M+ followers who trust our expertise in farming and agricultural equipment selection."
+    titleKey: "values",
+    descriptionKey: "values",
+    index: 2
   },
 ];
 
@@ -57,6 +59,8 @@ const AboutPage_ = () => {
   const [additionalInView, setAdditionalInView] = useState(false);
   const [additionalCounts, setAdditionalCounts] = useState(additionalStats.map(() => 0));
   const additionalRef = useRef(null);
+  const { language } = useLanguage();
+  const t = localize(translations.aboutPage, language);
 
   // Scroll to top when component mounts
   useScrollToTop();
@@ -196,7 +200,7 @@ const AboutPage_ = () => {
             }}
           >
             <span style={{ fontSize: '1.1rem', fontWeight: '600', letterSpacing: '1px' }}>
-              🌾 PIONEERING AGRICULTURAL EXCELLENCE SINCE 2015
+              {t.badge}
             </span>
           </motion.div>
 
@@ -212,7 +216,16 @@ const AboutPage_ = () => {
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
             }}
           >
-            About <span style={{ color: '#8bc34a' }}>Brown Kudi</span>
+            {(() => {
+              const words = t.heroTitle.split(' ');
+              const firstWord = words[0];
+              const remainingWords = words.slice(1).join(' ');
+              return (
+                <>
+                  {firstWord} <span style={{ color: '#8bc34a' }}>{remainingWords}</span>
+                </>
+              );
+            })()}
           </motion.h1>
 
           <motion.p
@@ -228,7 +241,7 @@ const AboutPage_ = () => {
               margin: '0 auto 50px'
             }}
           >
-            Harpal Kaur Dhanjal, Punjab's pioneering welder girl and Instagram influencer with 2 million followers, breaks barriers as "Brown Kudi."
+            {t.heroSubtitle}
           </motion.p>
 
           {/* Hero Stats */}
@@ -246,10 +259,10 @@ const AboutPage_ = () => {
             }}
           >
             {[
-              { number: '2M+', label: 'Social Media Followers', icon: '📱' },
-              { number: '5+', label: 'Countries Served', icon: '🌍' },
-              { number: '25+', label: 'Years in Business', icon: '🏆' },
-              { number: '250+', label: 'Equipment Delivered', icon: '�' }
+              { number: '2M+', label: t.heroStats.followers, icon: '📱' },
+              { number: '5+', label: t.heroStats.countries, icon: '🌍' },
+              { number: '25+', label: t.heroStats.years, icon: '🏆' },
+              { number: '250+', label: t.heroStats.equipment, icon: '🚜' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -297,7 +310,7 @@ const AboutPage_ = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              Connect With Us
+              {t.buttons.connect}
             </motion.button>
             <motion.button
               onClick={() => navigate("/gallery")}
@@ -316,7 +329,7 @@ const AboutPage_ = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              View Our Journey
+              {t.buttons.journey}
             </motion.button>
           </motion.div>
         </div>
@@ -343,7 +356,7 @@ const AboutPage_ = () => {
               viewport={{ once: true }}
               style={{ fontSize: '2.5rem', color: '#2c3e50', marginBottom: '20px' }}
             >
-              Our Core Values
+              {t.valuesTitle}
             </motion.h2>
             <motion.p
               initial={{ opacity: 1 }}
@@ -352,7 +365,7 @@ const AboutPage_ = () => {
               viewport={{ once: true }}
               style={{ fontSize: '1.1rem', color: '#6c757d', maxWidth: '600px', margin: '0 auto' }}
             >
-              The principles that drive our passion for agricultural excellence
+              {t.valuesSubtitle}
             </motion.p>
           </div>
 
@@ -392,10 +405,10 @@ const AboutPage_ = () => {
                   {value.icon}
                 </div>
                 <h3 style={{ fontSize: '1.5rem', color: '#2c3e50', marginBottom: '15px' }}>
-                  {value.title}
+                  {t.values[value.index].title}
                 </h3>
                 <p style={{ color: '#6c757d', lineHeight: '1.6' }}>
-                  {value.description}
+                  {t.values[value.index].description}
                 </p>
               </motion.div>
             ))}
@@ -425,7 +438,7 @@ const AboutPage_ = () => {
             viewport={{ once: true }}
             style={{ fontSize: '2.5rem', marginBottom: '20px' }}
           >
-            Our Journey in Numbers
+            {t.statsTitle}
           </motion.h2>
           <motion.p
             initial={{ opacity: 1 }}
@@ -434,7 +447,7 @@ const AboutPage_ = () => {
             viewport={{ once: true }}
             style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '60px', maxWidth: '600px', margin: '0 auto 60px' }}
           >
-            Celebrating milestones that reflect our commitment to agricultural excellence
+            {t.statsSubtitle}
           </motion.p>
 
           <div style={{
@@ -465,7 +478,7 @@ const AboutPage_ = () => {
                   {additionalCounts[index]}+
                 </h2>
                 <p style={{ fontSize: '1.1rem', opacity: 0.9 }}>
-                  {stat.label}
+                  {t.statsLabels[stat.labelKey][language]}
                 </p>
               </motion.div>
             ))}
@@ -504,7 +517,7 @@ const AboutPage_ = () => {
                 letterSpacing: '1px'
               }}
             >
-              👥 OUR LEADERSHIP TEAM
+              {t.teamBadge}
             </motion.div>
 
             <motion.h2
@@ -519,7 +532,16 @@ const AboutPage_ = () => {
                 fontWeight: '800'
               }}
             >
-              Meet Our <span style={{ color: '#6da34d' }}>Visionary Team</span>
+              {(() => {
+                const words = t.teamTitle.split(' ');
+                const firstTwo = words.slice(0, 2).join(' ');
+                const remaining = words.slice(2).join(' ');
+                return (
+                  <>
+                    {firstTwo} <span style={{ color: '#6da34d' }}>{remaining}</span>
+                  </>
+                );
+              })()}
             </motion.h2>
             <motion.p
               initial={{ opacity: 1 }}
@@ -535,7 +557,7 @@ const AboutPage_ = () => {
                 alignItems:'center',
               }}
             >
-              Passionate innovators dedicated to transforming agriculture through expertise, tradition, and cutting-edge technology
+              {t.teamSubtitle}
             </motion.p>
           </div>
 
@@ -545,9 +567,9 @@ const AboutPage_ = () => {
             gap: '60px',
             justifyItems: 'center',
           }}>
-            {teamMembers.map((member, index) => (
+            {t.teamMembers.map((member, index) => (
               <motion.div
-                key={member.id}
+                key={index}
                 initial={{ opacity: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.04 }}
@@ -601,7 +623,7 @@ const AboutPage_ = () => {
                     }}
                   >
                     <img
-                      src={member.image}
+                      src={member.image || "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg"}
                       alt={member.name}
                       style={{
                         width: '100%',
@@ -750,7 +772,7 @@ const AboutPage_ = () => {
             }}
           >
             <span style={{ fontSize: '1.1rem', fontWeight: '600', letterSpacing: '1px' }}>
-              🚀 START YOUR AGRICULTURAL JOURNEY
+              {t.ctaBadge}
             </span>
           </motion.div>
 
@@ -767,7 +789,17 @@ const AboutPage_ = () => {
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
             }}
           >
-            Ready to <span style={{ color: '#fff' }}>Transform</span> Your Agriculture?
+            {(() => {
+              const words = t.ctaTitle.split(' ');
+              const firstTwo = words.slice(0, 2).join(' ');
+              const thirdWord = words[2];
+              const remaining = words.slice(3, -1).join(' '); // Exclude the last word (question mark)
+              return (
+                <>
+                  {firstTwo} <span style={{ color: '#fff' }}>{thirdWord}</span> {remaining}?
+                </>
+              );
+            })()}
           </motion.h2>
 
           <motion.p
@@ -784,7 +816,7 @@ const AboutPage_ = () => {
               margin: '0 auto 50px'
             }}
           >
-            Join thousands of farmers worldwide who trust Brown Kudi for innovative agricultural solutions, sustainable practices, and exceptional results
+            {t.ctaSubtitle}
           </motion.p>
 
           {/* Benefits Grid */}
@@ -802,11 +834,7 @@ const AboutPage_ = () => {
               margin: '0 auto 60px'
             }}
           >
-            {[
-              { icon: '🚜', title: 'Quality Equipment', desc: 'Premium tyres & machinery' },
-              { icon: '📈', title: 'Proven Results', desc: '95% customer satisfaction rate' },
-              { icon: '🌍', title: 'International Trade', desc: 'Direct export to 5+ countries' },
-            ].map((benefit, index) => (
+            {t.benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -821,11 +849,11 @@ const AboutPage_ = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}
               >
-                <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>{benefit.icon}</div>
+                <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>🚜</div>
                 <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '10px' }}>
-                  {benefit.title}
+                  {benefit.title[language]}
                 </h4>
-                <p style={{ fontSize: '1rem', opacity: 0.9 }}>{benefit.desc}</p>
+                <p style={{ fontSize: '1rem', opacity: 0.9 }}>{benefit.desc[language]}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -858,7 +886,7 @@ const AboutPage_ = () => {
                 gap: '10px'
               }}
             >
-              <span>Get Started Today</span>
+              <span>{t.ctaButtons.started}</span>
               <span style={{ fontSize: '1.5rem' }}>🚀</span>
             </motion.button>
 
@@ -882,7 +910,7 @@ const AboutPage_ = () => {
                 gap: '10px'
               }}
             >
-              <span>View Our gallery</span>
+              <span>{t.ctaButtons.gallery}</span>
               <span style={{ fontSize: '1.2rem' }}>📸</span>
             </motion.button>
 
@@ -906,7 +934,7 @@ const AboutPage_ = () => {
                 gap: '10px'
               }}
             >
-              <span>Contact Us</span>
+              <span>{t.ctaButtons.contact}</span>
               <span style={{ fontSize: '1.2rem' }}>💬</span>
             </motion.button>
           </motion.div>

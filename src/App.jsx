@@ -9,7 +9,6 @@ import TradeSection from "./Components/TradeSection";
 import "./App.css";
 import TyreSection from "./Components/TyresSection";
 import SocialPage from "./Components/SocialPage";
-import About from "./Components/AboutSection";
 import ThanksSection from "./Components/ThanksSection";
 import Footer from "./Components/Footer";
 import ProductDetail from "./Components/ProductDetail";
@@ -24,7 +23,6 @@ import Testimonials from "./Components/Testimonials";
 import ImageSlider from "./Components/ImageSlider";
 import { useEffect } from "react";
 import SocialFootprints from "./Components/SocialFootprints";
-import AboutPage_Enhanced from "./Pages/AboutPage_Enhanced";
 import AgriEquipments from "./Pages/AgriEquipments";
 import AgriJourney from "./Pages/AgriJourney";
 function App() {
@@ -57,7 +55,7 @@ function App() {
             <ThanksSection />
             <Footer />
           </>} />
-          <Route path="/about" element={<><SEO title="About" description="Learn about Brown Kudi's mission, vision, and commitment to quality tyres and sustainable agricultural solutions." canonical={SITE_URL + '/about'} /><AboutPage_ /></>} />
+          <Route path="/about" element={<><SEO title="About" description="Learn about Brown Kudi's mission, vision, and commitment to quality tyres and sustainable agricultural solutions." canonical={SITE_URL + '/about'} /><AboutPage_/></>} />
           <Route path="/tyres" element={<><SEO title="Tyres" description="Explore Brown Kudi's range of durable, high-performance tyres for diverse vehicles and conditions." canonical={SITE_URL + '/tyres'} /><TyresPage /></>} />
           <Route path="/gallery" element={<><SEO title="Gallery" description="Visual showcase of Brown Kudi tyres, equipment, and global trade projects." canonical={SITE_URL + '/gallery'} /><Gallery /></>} />
           <Route path="/contact" element={<><SEO title="Contact" description="Contact Brown Kudi for tyre supply, agricultural equipment, exports, and partnership inquiries." canonical={SITE_URL + '/contact'} /><ContactPage /></>} />

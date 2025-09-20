@@ -79,6 +79,68 @@ const translations = {
     },
   },
 
+  tyres: {
+    brand: {
+      english: "Our Tyres",
+      hindi: "हमारे टायर्स",
+      punjabi: "ਸਾਡੇ ਟਾਇਰ",
+    },
+    list: [
+      {
+        id: 1,
+        name: {
+          english: "All Season Tyre",
+          hindi: "ऑल सीजन टायर",
+          punjabi: "ਆਲ ਸੀਜ਼ਨ ਟਾਇਰ",
+        },
+        description: {
+          english: "Perfect for all weather conditions with balanced grip and durability.",
+          hindi: "सभी मौसम की स्थितियों के लिए परफेक्ट, संतुलित पकड़ और टिकाऊपन के साथ।",
+          punjabi: "ਸਾਰੇ ਮੌਸਮ ਦੀਆਂ ਹਾਲਾਤਾਂ ਲਈ ਸੰਪੂਰਨ, ਸੰਤੁਲਿਤ ਪਕੜ ਅਤੇ ਟਿਕਾਊਪਨ ਨਾਲ।",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          english: "Performance Tyre",
+          hindi: "परफॉर्मेंस टायर",
+          punjabi: "ਪ੍ਰਦਰਸ਼ਨ ਟਾਇਰ",
+        },
+        description: {
+          english: "High-performance tyres designed for speed and superior handling.",
+          hindi: "गति और बेहतर हैंडलिंग के लिए डिज़ाइन किए गए उच्च-प्रदर्शन टायर।",
+          punjabi: "ਗਤੀ ਅਤੇ ਵਧੀਆ ਹੈਂਡਲਿੰਗ ਲਈ ਡਿਜ਼ਾਇਨ ਕੀਤੇ ਉੱਚ-ਪ੍ਰਦਰਸ਼ਨ ਟਾਇਰ।",
+        },
+      },
+      {
+        id: 3,
+        name: {
+          english: "Off-Road Tyre",
+          hindi: "ऑफ-रोड टायर",
+          punjabi: "ਆਫ਼-ਰੋਡ ਟਾਇਰ",
+        },
+        description: {
+          english: "Built tough for rugged terrain and off-road agricultural use.",
+          hindi: "खुरदरे इलाकों और ऑफ-रोड कृषि उपयोग के लिए मजबूत बनाया गया।",
+          punjabi: "ਖੁਰਦਰੇ ਇਲਾਕਿਆਂ ਅਤੇ ਆਫ਼-ਰੋਡ ਖੇਤੀ ਵਰਤੋਂ ਲਈ ਮਜ਼ਬੂਤ ਬਣਾਇਆ ਗਿਆ।",
+        },
+      },
+      {
+        id: 4,
+        name: {
+          english: "Eco Tyre",
+          hindi: "इको टायर",
+          punjabi: "ਇਕੋ ਟਾਇਰ",
+        },
+        description: {
+          english: "Fuel-efficient tyres engineered for long life and reduced operating costs.",
+          hindi: "लंबी उम्र और कम ऑपरेटिंग लागत के लिए ईंधन-कुशल टायर।",
+          punjabi: "ਲੰਬੀ ਉਮਰ ਅਤੇ ਘੱਟ ਓਪਰੇਟਿੰਗ ਲਾਗਤਾਂ ਲਈ ਇੰਧਨ-ਕੁਸ਼ਲ ਟਾਇਰ।",
+        },
+      },
+    ],
+  },
+
   socialSection: {
     heading: {
       english: "Follow us on Social Media",
@@ -245,6 +307,269 @@ const translations = {
         "साहसी बनो। सुंदर बनो। ब्राउन कुड़ी बनो। जहां परंपरा आधुनिकता से मिलती है।",
       punjabi:
         "ਬੋਲਡ ਬਣੋ। ਸੁੰਦਰ ਬਣੋ। ਬ੍ਰਾਊਨ ਕੁੜੀ ਬਣੋ। ਜਿੱਥੇ ਪਰੰਪਰਾ ਅਧੁਨਿਕਤਾ ਨਾਲ ਮਿਲਦੀ ਹੈ।",
+    },
+  },
+
+  aboutPage: {
+    badge: {
+      english: "🌾 PIONEERING AGRICULTURAL EXCELLENCE SINCE 2015",
+      hindi: "🌾 2015 से कृषि उत्कृष्टता का अग्रणी",
+      punjabi: "🌾 2015 ਤੋਂ ਖੇਤੀਬਾੜੀ ਉਤਕਰਸ਼ਤਾ ਦਾ ਅਗਰਣੀ",
+    },
+    heroTitle: {
+      english: "About Brown Kudi",
+      hindi: "ब्राउन कुड़ी के बारे में",
+      punjabi: "ਬ੍ਰਾਊਨ ਕੁੜੀ ਬਾਰੇ",
+    },
+    heroSubtitle: {
+      english: "Harpal Kaur Dhanjal, Punjab's pioneering welder girl and Instagram influencer with 2 million followers, breaks barriers as \"Brown Kudi.\"",
+      hindi: "हरपाल कौर धांजल, पंजाब की पहली महिला वेल्डर और 2 मिलियन फॉलोअर्स वाली इंस्टाग्राम प्रभावितकर्ता, \"ब्राउन कुड़ी\" के रूप में बाधाओं को तोड़ती हैं।",
+      punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ, ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ ਮਹਿਲਾ ਵੈਲਡਰ ਅਤੇ 2 ਮਿਲੀਅਨ ਫਾਲੋਅਰਜ਼ ਵਾਲੀ ਇੰਸਟਾਗ੍ਰਾਮ ਪ੍ਰਭਾਵਿਤ ਕਰਤਾ, \"ਬ੍ਰਾਊਨ ਕੁੜੀ\" ਦੇ ਰੂਪ ਵਿੱਚ ਰੁਕਾਵਟਾਂ ਨੂੰ ਤੋੜਦੀ ਹੈ।",
+    },
+    heroStats: {
+      followers: {
+        english: "Social Media Followers",
+        hindi: "सोशल मीडिया फॉलोअर्स",
+        punjabi: "ਸੋਸ਼ਲ ਮੀਡੀਆ ਫਾਲੋਅਰਜ਼",
+      },
+      countries: {
+        english: "Countries Served",
+        hindi: "सेवित देश",
+        punjabi: "ਸੇਵਿਤ ਦੇਸ਼",
+      },
+      years: {
+        english: "Years in Business",
+        hindi: "व्यापार में साल",
+        punjabi: "ਵਪਾਰ ਵਿੱਚ ਸਾਲ",
+      },
+      equipment: {
+        english: "Equipment Delivered",
+        hindi: "उपकरण वितरित",
+        punjabi: "ਉਪਕਰਣ ਵੰਡੇ",
+      },
+    },
+    buttons: {
+      connect: {
+        english: "Connect With Us",
+        hindi: "हमसे जुड़ें",
+        punjabi: "ਸਾਡੇ ਨਾਲ ਜੁੜੋ",
+      },
+      journey: {
+        english: "View Our Journey",
+        hindi: "हमारी यात्रा देखें",
+        punjabi: "ਸਾਡੀ ਯਾਤਰਾ ਵੇਖੋ",
+      },
+    },
+    valuesTitle: {
+      english: "Our Core Values",
+      hindi: "हमारे मूल मूल्य",
+      punjabi: "ਸਾਡੇ ਮੂਲ ਮੁੱਲ",
+    },
+    valuesSubtitle: {
+      english: "The principles that drive our passion for agricultural excellence",
+      hindi: "कृषि उत्कृष्टता के लिए हमारे जुनून को चलाने वाले सिद्धांत",
+      punjabi: "ਖੇਤੀਬਾੜੀ ਉਤਕਰਸ਼ਤਾ ਲਈ ਸਾਡੇ ਜੋਸ਼ ਨੂੰ ਚਲਾਉਣ ਵਾਲੇ ਸਿਧਾਂਤ",
+    },
+    values: [
+      {
+        title: {
+          english: "Our Core Values",
+          hindi: "हमारे मूल मूल्य",
+          punjabi: "ਸਾਡੇ ਮੂਲ ਮੁੱਲ",
+        },
+        description: {
+          english: "Every tyre and agricultural equipment undergoes rigorous quality checks. We import only from certified manufacturers ensuring durability and performance",
+          hindi: "हर टायर और कृषि उपकरण कठोर गुणवत्ता जांच से गुजरता है। हम केवल प्रमाणित निर्माताओं से आयात करते हैं जो टिकाऊपन और प्रदर्शन सुनिश्चित करते हैं",
+          punjabi: "ਹਰ ਟਾਇਰ ਅਤੇ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਸਖ਼ਤ ਗੁਣਵੱਤਾ ਜਾਂਚ ਤੋਂ ਗੁਜ਼ਰਦਾ ਹੈ। ਅਸੀਂ ਸਿਰਫ਼ ਪ੍ਰਮਾਣਿਤ ਨਿਰਮਾਤਾਵਾਂ ਤੋਂ ਆਯਾਤ ਕਰਦੇ ਹਾਂ ਜੋ ਟਿਕਾਊਪਨ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਂਦੇ ਹਨ",
+        },
+      },
+      {
+        title: {
+          english: "Customer Success",
+          hindi: "ग्राहक सफलता",
+          punjabi: "ਗਾਹਕ ਸਫਲਤਾ",
+        },
+        description: {
+          english: "From small farmers to large agricultural enterprises, we provide personalized solutions. Our 95% customer satisfaction rate reflects our commitment to understanding and meeting each client's unique needs.",
+          hindi: "छोटे किसानों से लेकर बड़े कृषि उद्यमों तक, हम व्यक्तिगत समाधान प्रदान करते हैं। हमारी 95% ग्राहक संतुष्टि दर हमारे प्रत्येक ग्राहक की अनूठी जरूरतों को समझने और पूरा करने के लिए हमारे प्रतिबद्धता को दर्शाती है।",
+          punjabi: "ਛੋਟੇ ਕਿਸਾਨਾਂ ਤੋਂ ਲੈ ਕੇ ਵੱਡੇ ਖੇਤੀਬਾੜੀ ਉਦਯੋਗਾਂ ਤੱਕ, ਅਸੀਂ ਨਿੱਜੀ ਹੱਲ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਾਂ। ਸਾਡੀ 95% ਗਾਹਕ ਸੰਤੁਸ਼ਟੀ ਦਰ ਸਾਡੀ ਹਰੇਕ ਗਾਹਕ ਦੀ ਵਿਲੱਖਣ ਲੋੜਾਂ ਨੂੰ ਸਮਝਣ ਅਤੇ ਪੂਰੀ ਕਰਨ ਲਈ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਨੂੰ ਦਰਸਾਉਂਦੀ ਹੈ।",
+        },
+      },
+      {
+        title: {
+          english: "Authentic Content",
+          hindi: "प्रामाणिक सामग्री",
+          punjabi: "ਪ੍ਰਮਾਣਿਕ ਸਮੱਗਰੀ",
+        },
+        description: {
+          english: "Through genuine storytelling and real farming experiences, we've built a community of 2M+ followers who trust our expertise in farming and agricultural equipment selection.",
+          hindi: "वास्तविक कहानी कहने और वास्तविक कृषि अनुभवों के माध्यम से, हमने 2M+ फॉलोअर्स की एक समुदाय बनाया है जो कृषि और कृषि उपकरण चयन में हमारे विशेषज्ञता पर भरोसा करते हैं।",
+          punjabi: "ਅਸਲੀ ਕਹਾਣੀ ਸੁਣਾਉਣ ਅਤੇ ਅਸਲੀ ਖੇਤੀਬਾੜੀ ਅਨੁਭਵਾਂ ਦੇ ਜ਼ਰੀਏ, ਅਸੀਂ 2M+ ਫਾਲੋਅਰਜ਼ ਦਾ ਇੱਕ ਸਮੂਹ ਬਣਾਇਆ ਹੈ ਜੋ ਖੇਤੀਬਾੜੀ ਅਤੇ ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਚੋਣ ਵਿੱਚ ਸਾਡੀ ਮਾਹਿਰਤਾ 'ਤੇ ਭਰੋਸਾ ਕਰਦੇ ਹਨ।",
+        },
+      },
+    ],
+    statsTitle: {
+      english: "Our Journey in Numbers",
+      hindi: "संख्याओं में हमारी यात्रा",
+      punjabi: "ਅੰਕਾਂ ਵਿੱਚ ਸਾਡੀ ਯਾਤਰਾ",
+    },
+    statsSubtitle: {
+      english: "Celebrating milestones that reflect our commitment to agricultural excellence",
+      hindi: "मील के पत्थर मनाते हुए जो कृषि उत्कृष्टता के लिए हमारे प्रतिबद्धता को दर्शाते हैं",
+      punjabi: "ਮੀਲ ਪੱਥਰ ਮਨਾਉਂਦੇ ਹੋਏ ਜੋ ਖੇਤੀਬਾੜੀ ਉਤਕਰਸ਼ਤਾ ਲਈ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ",
+    },
+    statsLabels: {
+      business: {
+        english: "Years in Business",
+        hindi: "व्यापार में साल",
+        punjabi: "ਵਪਾਰ ਵਿੱਚ ਸਾਲ",
+      },
+      satisfaction: {
+        english: "Client Satisfaction %",
+        hindi: "ग्राहक संतुष्टि %",
+        punjabi: "ਗਾਹਕ ਸੰਤੁਸ਼ਟੀ %",
+      },
+      delivered: {
+        english: "Equipment Delivered",
+        hindi: "उपकरण वितरित",
+        punjabi: "ਉਪਕਰਣ ਵੰਡੇ",
+      },
+      served: {
+        english: "Countries Served",
+        hindi: "सेवित देश",
+        punjabi: "ਸੇਵਿਤ ਦੇਸ਼",
+      },
+    },
+    teamBadge: {
+      english: "👥 OUR LEADERSHIP TEAM",
+      hindi: "👥 हमारी नेतृत्व टीम",
+      punjabi: "👥 ਸਾਡੀ ਨੇਤ੍ਰਿਤਵ ਟੀਮ",
+    },
+    teamTitle: {
+      english: "Meet Our Visionary Team",
+      hindi: "हमारी दूरदर्शी टीम से मिलें",
+      punjabi: "ਸਾਡੀ ਦੂਰਦ੍ਰਿਸ਼ਟੀ ਵਾਲੀ ਟੀਮ ਨਾਲ ਮਿਲੋ",
+    },
+    teamSubtitle: {
+      english: "Passionate innovators dedicated to transforming agriculture through expertise, tradition, and cutting-edge technology",
+      hindi: "निपुणता, परंपरा और अत्याधुनिक तकनीक के माध्यम से कृषि को बदलने के लिए समर्पित भावुक नवप्रवर्तक",
+      punjabi: "ਮਾਹਿਰਤਾ, ਪਰੰਪਰਾ ਅਤੇ ਅਧੁਨਿਕ ਤਕਨਾਲੋਜੀ ਦੇ ਜ਼ਰੀਏ ਖੇਤੀਬਾੜੀ ਨੂੰ ਬਦਲਣ ਲਈ ਸਮਰਪਿਤ ਜੋਸ਼ੀਲੇ ਨਵੀਨਤਾਕਾਰਕ",
+    },
+    teamMembers: [
+      {
+        name: {
+          english: "Harpal Kaur Dhanjal",
+          hindi: "हरपाल कौर धांजल",
+          punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ",
+        },
+        role: {
+          english: "Co-Founder & Operations Director",
+          hindi: "सह-संस्थापक और संचालन निदेशक",
+          punjabi: "ਸਹ-ਸੰਸਥਾਪਕ ਅਤੇ ਸੰਚਾਲਨ ਨਿਰਦੇਸ਼ਕ",
+        },
+        description: {
+          english: "Punjab's first professional female welder turned international entrepreneur. With 2M Instagram followers, she's revolutionized trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
+          hindi: "पंजाब की पहली पेशेवर महिला वेल्डर जो अंतरराष्ट्रीय उद्यमी बनीं। 2M इंस्टाग्राम फॉलोअर्स के साथ, उन्होंने भारत, ऑस्ट्रेलिया और कनाडा के बीच व्यापार में क्रांति ला दी है। आर्क वेल्डिंग में महारत हासिल करने से लेकर बहु-मिलियन डॉलर के आयात-निर्यात व्यवसाय बनाने तक, उन्होंने कृषि में महिलाओं के लिए संभव को फिर से परिभाषित किया है।",
+          punjabi: "ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ ਪੇਸ਼ੇਵਰ ਮਹਿਲਾ ਵੈਲਡਰ ਜੋ ਅੰਤਰਰਾਸ਼ਟਰੀ ਉਦਯੋਗਪਤੀ ਬਣੀ। 2M ਇੰਸਟਾਗ੍ਰਾਮ ਫਾਲੋਅਰਜ਼ ਦੇ ਨਾਲ, ਉਸ ਨੇ ਭਾਰਤ, ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕੈਨੇਡਾ ਵਿਚਕਾਰ ਵਪਾਰ ਵਿੱਚ ਇਨਕਲਾਬ ਲਿਆ ਹੈ। ਆਰਕ ਵੈਲਡਿੰਗ ਵਿੱਚ ਮਾਹਿਰਤਾ ਹਾਸਲ ਕਰਨ ਤੋਂ ਲੈ ਕੇ ਮਲਟੀ-ਮਿਲੀਅਨ ਡਾਲਰ ਦੇ ਆਯਾਤ-ਨਿਰਯਾਤ ਕਾਰੋਬਾਰ ਬਣਾਉਣ ਤੱਕ, ਉਸ ਨੇ ਖੇਤੀਬਾੜੀ ਵਿੱਚ ਮਹਿਲਾਵਾਂ ਲਈ ਸੰਭਵ ਨੂੰ ਦੁਬਾਰਾ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤਾ ਹੈ।",
+        },
+        achievements: {
+          english: ["2M+ Social Media Following", "Australia-Canada Trade Partner","Agricultural Innovation Leader"],
+          hindi: ["2M+ सोशल मीडिया फॉलोइंग", "ऑस्ट्रेलिया-कनाडा व्यापार भागीदार","कृषि नवाचार नेता"],
+          punjabi: ["2M+ ਸੋਸ਼ਲ ਮੀਡੀਆ ਫਾਲੋਇੰਗ", "ਆਸਟ੍ਰੇਲੀਆ-ਕੈਨੇਡਾ ਵਪਾਰ ਭਾਗੀਦਾਰ","ਖੇਤੀਬਾੜੀ ਨਵੀਨਤਾ ਨੇਤਾ"],
+        },
+      },
+      {
+        name: {
+          english: "Bhagwan Singh Dhanjal",
+          hindi: "भगवान सिंह धांजल",
+          punjabi: "ਭਗਵਾਨ ਸਿੰਘ ਧੰਜਲ",
+        },
+        role: {
+          english: "Founder & CEO - Brown Kudi Enterprises",
+          hindi: "संस्थापक और सीईओ - ब्राउन कुड़ी एंटरप्राइजेज",
+          punjabi: "ਸੰਸਥਾਪਕ ਅਤੇ ਸੀਈਓ - ਬ੍ਰਾਊਨ ਕੁੜੀ ਐਂਟਰਪ੍ਰਾਈਜ਼",
+        },
+        description: {
+          english: "Agricultural veteran with 30+ years of farming and equipment expertise. Oversees quality control for all imported machinery and provides technical guidance for equipment selection. His deep understanding of Indian farming needs ensures every piece of equipment meets local requirements.",
+          hindi: "30+ साल के कृषि और उपकरण विशेषज्ञता वाला कृषि दिग्गज। सभी आयातित मशीनरी के लिए गुणवत्ता नियंत्रण की देखरेख करता है और उपकरण चयन के लिए तकनीकी मार्गदर्शन प्रदान करता है। भारतीय कृषि आवश्यकताओं की उनकी गहरी समझ यह सुनिश्चित करती है कि हर उपकरण स्थानीय आवश्यकताओं को पूरा करता है।",
+          punjabi: "30+ ਸਾਲ ਦੀ ਖੇਤੀਬਾੜੀ ਅਤੇ ਉਪਕਰਣ ਮਾਹਿਰਤਾ ਵਾਲਾ ਖੇਤੀਬਾੜੀ ਦਿਗਗਜ। ਸਾਰੀ ਆਯਾਤੀ ਮਸ਼ੀਨਰੀ ਲਈ ਗੁਣਵੱਤਾ ਨਿਯੰਤਰਣ ਦੀ ਨਿਗਰਾਨੀ ਕਰਦਾ ਹੈ ਅਤੇ ਉਪਕਰਣ ਚੋਣ ਲਈ ਤਕਨੀਕੀ ਮਾਰਗਦਰਸ਼ਨ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। ਭਾਰਤੀ ਖੇਤੀਬਾੜੀ ਲੋੜਾਂ ਦੀ ਉਸਦੀ ਗਹਿਰੀ ਸਮਝ ਇਹ ਯਕੀਨੀ ਬਣਾਉਂਦੀ ਹੈ ਕਿ ਹਰ ਉਪਕਰਣ ਸਥਾਨਕ ਲੋੜਾਂ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
+        },
+        achievements: {
+          english: ["30+ Years Agriculture Experience", "Equipment Quality Specialist", "Farming Operations Expert", "Technical Advisory Leader"],
+          hindi: ["30+ साल कृषि अनुभव", "उपकरण गुणवत्ता विशेषज्ञ", "कृषि संचालन विशेषज्ञ", "तकनीकी सलाहकार नेता"],
+          punjabi: ["30+ ਸਾਲ ਖੇਤੀਬਾੜੀ ਅਨੁਭਵ", "ਉਪਕਰਣ ਗੁਣਵੱਤਾ ਮਾਹਿਰ", "ਖੇਤੀਬਾੜੀ ਸੰਚਾਲਨ ਮਾਹਿਰ", "ਤਕਨੀਕੀ ਸਲਾਹਕਾਰ ਨੇਤਾ"],
+        },
+      },
+    ],
+    ctaBadge: {
+      english: "🚀 START YOUR AGRICULTURAL JOURNEY",
+      hindi: "🚀 अपनी कृषि यात्रा शुरू करें",
+      punjabi: "🚀 ਆਪਣੀ ਖੇਤੀਬਾੜੀ ਯਾਤਰਾ ਸ਼ੁਰੂ ਕਰੋ",
+    },
+    ctaTitle: {
+      english: "Ready to Transform Your Agriculture?",
+      hindi: "अपनी कृषि को बदलने के लिए तैयार हैं?",
+      punjabi: "ਆਪਣੀ ਖੇਤੀਬਾੜੀ ਨੂੰ ਬਦਲਣ ਲਈ ਤਿਆਰ ਹੋ?",
+    },
+    ctaSubtitle: {
+      english: "Join thousands of farmers worldwide who trust Brown Kudi for innovative agricultural solutions, sustainable practices, and exceptional results",
+      hindi: "हजारों किसानों में शामिल हों जो दुनिया भर में ब्राउन कुड़ी पर नवीन कृषि समाधानों, टिकाऊ प्रथाओं और असाधारण परिणामों के लिए भरोसा करते हैं",
+      punjabi: "ਹਜ਼ਾਰਾਂ ਕਿਸਾਨਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ ਜੋ ਦੁਨੀਆ ਭਰ ਵਿੱਚ ਬ੍ਰਾਊਨ ਕੁੜੀ 'ਤੇ ਨਵੀਨ ਖੇਤੀਬਾੜੀ ਹੱਲਾਂ, ਟਿਕਾਊ ਅਭਿਆਸਾਂ ਅਤੇ ਅਸਾਧਾਰਣ ਨਤੀਜਿਆਂ ਲਈ ਭਰੋਸਾ ਕਰਦੇ ਹਨ",
+    },
+    benefits: [
+      {
+        title: {
+          english: "Quality Equipment",
+          hindi: "गुणवत्तापूर्ण उपकरण",
+          punjabi: "ਗੁਣਵੱਤਾ ਵਾਲੇ ਉਪਕਰਣ",
+        },
+        desc: {
+          english: "Premium tyres & machinery",
+          hindi: "प्रीमियम टायर और मशीनरी",
+          punjabi: "ਪ੍ਰੀਮੀਅਮ ਟਾਇਰ ਅਤੇ ਮਸ਼ੀਨਰੀ",
+        },
+      },
+      {
+        title: {
+          english: "Proven Results",
+          hindi: "सिद्ध परिणाम",
+          punjabi: "ਸਿੱਧੇ ਨਤੀਜੇ",
+        },
+        desc: {
+          english: "95% customer satisfaction rate",
+          hindi: "95% ग्राहक संतुष्टि दर",
+          punjabi: "95% ਗਾਹਕ ਸੰਤੁਸ਼ਟੀ ਦਰ",
+        },
+      },
+      {
+        title: {
+          english: "International Trade",
+          hindi: "अंतरराष्ट्रीय व्यापार",
+          punjabi: "ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਪਾਰ",
+        },
+        desc: {
+          english: "Direct export to 5+ countries",
+          hindi: "5+ देशों में प्रत्यक्ष निर्यात",
+          punjabi: "5+ ਦੇਸ਼ਾਂ ਵਿੱਚ ਸਿੱਧਾ ਨਿਰਯਾਤ",
+        },
+      },
+    ],
+    ctaButtons: {
+      started: {
+        english: "Get Started Today",
+        hindi: "आज ही शुरू करें",
+        punjabi: "ਅੱਜ ਹੀ ਸ਼ੁਰੂ ਕਰੋ",
+      },
+      gallery: {
+        english: "View Our gallery",
+        hindi: "हमारी गैलरी देखें",
+        punjabi: "ਸਾਡੀ ਗੈਲਰੀ ਵੇਖੋ",
+      },
+      contact: {
+        english: "Contact Us",
+        hindi: "हमसे संपर्क करें",
+        punjabi: "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+      },
     },
   },
 

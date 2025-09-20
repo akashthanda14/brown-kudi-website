@@ -12,35 +12,22 @@ export default function TyresPage() {
   // Scroll to top when component mounts
   useScrollToTop();
 
-  const tyresbrand = {
-    english: "Our Tyres",
-    hindi: "हमारे टायर्स",
-    punjabi: "ਸਾਡੇ ਟਾਇਰ",
-  };
   const tyres = [
     {
       id: 1,
-      name: "All Season Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750817/tyre1_bavlxv.png",
-      description: "Perfect for all weather conditions with balanced grip and durability."
     },
     {
       id: 2,
-      name: "Performance Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752948/Pngtree_exploring_tire_technology_innovations_and_15498626_dda0ta.png",
-  description: "High-performance tyres designed for speed and superior handling."
     },
     {
       id: 3,
-      name: "Off-Road Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752541/tyre3_u1kaui.png",
-  description: "Built tough for rugged terrain and off-road agricultural use."
     },
     {
       id: 4,
-      name: "Eco Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752529/tyre4_ulqjkf.png",
-  description: "Fuel-efficient tyres engineered for long life and reduced operating costs."
     }
   ];
 
@@ -71,21 +58,24 @@ export default function TyresPage() {
 
         {/* Tyres Section */}
         <section className="tyres-section">
-          <h2>{tyresbrand[language]}</h2>
+          <h2>{translations.tyres.brand[language]}</h2>
           <div className="tyres-grid">
-            {tyres.map((tyre, index) => (
-              <motion.div
-                key={tyre.id}
-                className="tyre-card"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <img src={tyre.image} alt={tyre.name} />
-                <h3>{tyre.name}</h3>
-                <p>{tyre.description}</p>
-              </motion.div>
-            ))}
+            {tyres.map((tyre, index) => {
+              const tyreData = translations.tyres.list.find(t => t.id === tyre.id);
+              return (
+                <motion.div
+                  key={tyre.id}
+                  className="tyre-card"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                >
+                  <img src={tyre.image} alt={tyreData.name[language]} />
+                  <h3>{tyreData.name[language]}</h3>
+                  <p>{tyreData.description[language]}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </section>
       </div>
