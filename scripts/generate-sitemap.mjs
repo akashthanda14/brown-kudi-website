@@ -40,7 +40,7 @@ const routes = [
   '/contact',
   '/tradesection',
   '/social',
-  '/testmonials',
+  '/testimonials',
   '/export-section',
   '/agriequipments',
   '/agrijourney',

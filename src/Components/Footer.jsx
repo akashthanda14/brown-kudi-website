@@ -29,7 +29,7 @@ const footerText = {
   // Brand description
   brandDesc: {
     english:
-      "Pioneering agricultural innovation through engineering excellence, empowering farmers with cutting-edge technology and sustainable solutions.",
+      "Pioneering agricultural innovation through engineering excellence—empowering farmers with cutting-edge tyre and equipment solutions that are sustainable and reliable.",
     hindi:
       "कृषि नवाचार को इंजीनियरिंग उत्कृष्टता के माध्यम से आगे बढ़ाते हुए, किसानों को अत्याधुनिक तकनीक और टिकाऊ समाधानों से सशक्त बनाना।",
     punjabi:
@@ -60,7 +60,7 @@ const footerText = {
     subsoiler: { english: "Subsoiler", hindi: "सबसोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
     seeder: { english: "Super Seeder", hindi: "सुपर सीडर", punjabi: "ਸੁਪਰ ਸੀਡਰ" },
     harrow: { english: "Hydraulic Harrow", hindi: "हाइड्रॉलिक हैरो", punjabi: "ਹਾਈਡ੍ਰੌਲਿਕ ਹੈਰੋ" },
-    trolly: { english: "Trolly", hindi: "ट्रॉली", punjabi: "ਟਰੌਲੀ" },
+  trolly: { english: "Trolley", hindi: "ट्रॉली", punjabi: "ਟਰੌਲੀ" },
 
     footprints: { english: "Social Footprints", hindi: "सामाजिक पदचिह्न", punjabi: "ਸਮਾਜਿਕ ਨਿਸ਼ਾਨ" },
     contact: { english: "Contact Us", hindi: "संपर्क करें", punjabi: "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ" },
@@ -149,7 +149,7 @@ const Footer = () => {
             <div className="footer-column">
               <h3>{footerText.important[language]}</h3>
               <ul>
-                <li><Link to="/testmonials">{footerText.links.testimonials[language]}</Link></li>
+                <li><Link to="/testimonials">{footerText.links.testimonials[language]}</Link></li>
                 <li><Link to="/tradesection">{footerText.links.tools[language]}</Link></li>
                 <li><Link to="/tyres">{footerText.links.tyresol[language]}</Link></li>
                 <li><Link to="/agriequipments">{footerText.links.import[language]}</Link></li>
@@ -198,9 +198,10 @@ const Footer = () => {
               © {new Date().getFullYear()} Brown Kudi. {footerText.copyright[language]}
             </p>
             <div className="legal-links">
-              <Link to="">{footerText.privacy[language]}</Link>
-              <Link to="">{footerText.terms[language]}</Link>
-              <Link to="">{footerText.cookies[language]}</Link>
+              {/* TODO: Replace empty routes with actual policy pages when created */}
+              <Link to="/privacy-policy">{footerText.privacy[language]}</Link>
+              <Link to="/terms-of-service">{footerText.terms[language]}</Link>
+              <Link to="/cookie-policy">{footerText.cookies[language]}</Link>
             </div>
           </div>
         </div>

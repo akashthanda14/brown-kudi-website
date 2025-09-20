@@ -26,16 +26,16 @@ const About = () => {
       <div className="about-container">
         {/* Left Side */}
         <div className="about-left">
-          <p className="small-heading">About US</p>
+          <p className="small-heading">About Us</p>
           <h2>
             Our Dream is <br /> Global Learning <br /> Transformation
           </h2>
           <p className="about-desc">
-            Brouwn Kudi was founded with a passion for creativity and
-            innovation. Our shared dream has always been to craft designs that
-            inspire and transform everyday spaces into meaningful experiences.
-            With relentless dedication, our team works to bring ideas to life,
-            creating a community that values beauty, functionality, and growth.
+            Brown Kudi was founded with a passion for practical creativity and
+            innovation. Our shared dream has always been to build solutions that
+            inspire and transform agricultural and commercial environments into meaningful experiences.
+            With dedication, our team works to bring ideas to life,
+            creating a community that values reliability, functionality, and growth.
           </p>
           <button className="about-btn" onClick={handleNavigate}>
             About Us
@@ -48,7 +48,7 @@ const About = () => {
             <img
               className="about-main-img"
               src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750351/aboutimg1_rqsp1b.png"
-              alt="About Us"
+              alt="Brown Kudi team representative image"
             />
           </div>
 

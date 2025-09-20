@@ -359,7 +359,7 @@ const Hero = () => {
         {/* Brand Badge */}
         <div className="hero__badge">
           <i className="fas fa-seedling hero__badge-icon" aria-hidden="true" />
-          <span className="hero__badge-text">The • Welder • Girl</span>
+          <span className="hero__badge-text">The • Welder • Entrepreneur</span>
         </div>
 
         {/* Main Heading */}

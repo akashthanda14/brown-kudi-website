@@ -60,9 +60,9 @@ const TradeSection = () => {
       },
       points: {
         english: [
-          "Sows seeds directly into the soil without extra preparation",
-          "Mulches crop residue evenly for better soil fertility",
-          "Reduces fuel cost and saves valuable time in farming",
+          "Sows seeds directly without additional field preparation",
+          "Mulches crop residue evenly to improve soil fertility",
+          "Reduces fuel costs and saves farming time",
         ],
         hindi: [
           "बीज सीधे मिट्टी में बोता है, बिना अतिरिक्त तैयारी के",
@@ -86,9 +86,9 @@ const TradeSection = () => {
       },
       points: {
         english: [
-          "Turns soil effectively to prepare it for sowing new crops",
-          "Buries crop residues deep inside to improve soil health",
-          "Works efficiently in all types of soil conditions",
+          "Turns soil effectively to prepare for new crops",
+          "Buries crop residues deeply to improve soil health",
+          "Works efficiently in all soil conditions",
         ],
         hindi: [
           "मिट्टी को अच्छे से पलटता है ताकि नई फसल बोने योग्य हो",
@@ -108,9 +108,9 @@ const TradeSection = () => {
       name: { english: "Disc Harrow", hindi: "डिस्क हैरो", punjabi: "ਡਿਸਕ ਹੈਰੋ" },
       points: {
         english: [
-          "Breaks soil clods into smaller particles for fine seedbed",
-          "Levels the entire field surface for even crop growth",
-          "Mixes crop residues thoroughly with the soil for organic matter",
+          "Breaks soil clods into smaller particles for a fine seedbed",
+          "Levels the field surface for even crop growth",
+          "Mixes crop residues into soil to build organic matter",
         ],
         hindi: [
           "मिट्टी की गांठों को तोड़कर बीज बोने योग्य बनाता है",
@@ -130,7 +130,7 @@ const TradeSection = () => {
       name: { english: "Rotary Tiller", hindi: "रोटावेटर टिलर", punjabi: "ਰੋਟਾਵੇਟਰ ਟਿਲਰ" },
       points: {
         english: [
-          "Pulverizes hard soil to make it soft and friable",
+          "Pulverizes hard soil to create a soft, friable seedbed",
           "Mixes manure and fertilizers evenly across the field",
           "Removes weeds effectively and prepares clean land",
         ],
@@ -152,9 +152,9 @@ const TradeSection = () => {
       name: { english: "Subsoiler", hindi: "सब-सोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
       points: {
         english: [
-          "Breaks hard and compact soil layers deep underground",
-          "Improves root growth and helps plants absorb more nutrients",
-          "Increases water infiltration and reduces soil erosion",
+          "Breaks compact soil layers deep underground",
+          "Improves root growth and nutrient uptake",
+          "Increases water infiltration and reduces erosion",
         ],
         hindi: [
           "कठोर और दबे हुए मिट्टी की परतों को गहराई से तोड़ता है",
@@ -174,9 +174,9 @@ const TradeSection = () => {
       name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
       points: {
         english: [
-          "Cuts hard soil easily, even in rough and uneven fields",
-          "Turns soil properly for tough farming conditions",
-          "Works well in areas with deep-rooted weeds",
+          "Cuts hard soil easily, even in rough or uneven fields",
+          "Turns soil reliably in tough farming conditions",
+          "Performs well in fields with deep-rooted weeds",
         ],
         hindi: [
           "कठोर जमीन को आसानी से काटता है, चाहे खेत असमान हो",
@@ -200,9 +200,9 @@ const TradeSection = () => {
       },
       points: {
         english: [
-          "Prepares fine soil texture for seed germination",
+          "Prepares a fine soil texture for seed germination",
           "Used after ploughing to refine and smooth the surface",
-          "Ensures uniform soil bed for better crop yield",
+          "Ensures a uniform soil bed for better crop yield",
         ],
         hindi: [
           "बीज अंकुरण के लिए मिट्टी को महीन बनाता है",
@@ -222,9 +222,9 @@ const TradeSection = () => {
       name: { english: "Tractor Trolley", hindi: "ट्रैक्टर ट्रॉली", punjabi: "ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ" },
       points: {
         english: [
-          "Strong and durable body designed for heavy loads",
-          "Wide tyres provide stability and smooth movement",
-          "Comes with toolbox for farmers’ daily use and repair",
+          "Strong, durable body designed for heavy loads",
+          "Wide tyres provide stability and smoother movement",
+          "Includes toolbox for daily use and quick repairs",
         ],
         hindi: [
           "भारी भार उठाने के लिए मजबूत और टिकाऊ बॉडी",

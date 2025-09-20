@@ -15,9 +15,9 @@ const ownername = {
 };
 
 const ownerDescription = {
-    english: "Harpal Kaur Dhanjal, Punjab's pioneering welder girl and Instagram influencer with 1.9 million followers, breaks barriers as \"Brown Kudi.\" She imports/exports tyres to Australia and Canada, while distributing agriculture equipment across India, inspiring empowerment through her craft and business acumen.",
+    english: "Harpal Kaur Dhanjal, a pioneering professional welder from Punjab and Instagram creator with 1.9 million followers, is known as \"Brown Kudi.\" She manages tyre import–export to Australia and Canada and distributes agricultural equipment across India, inspiring others through skilled craftsmanship and entrepreneurship.",
     hindi: "हरपाल कौर धांजल, पंजाब की अग्रणी वेल्डर गर्ल और 2 मिलियन फॉलोअर्स के साथ इंस्टाग्राम इन्फ्लुएंसर, \"ब्राउन कुड़ी\" के रूप में बाधाओं को तोड़ती है। वह ऑस्ट्रेलिया और कनाडा में टायरों का आयात/निर्यात करती है, भारत भर में कृषि उपकरणों का वितरण करती है, अपने शिल्प और व्यावसायिक कुशलता के माध्यम से सशक्तिकरण को प्रेरित करती है।",
-    punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ, ਪੰਜਾਬ ਦੀ ਮੋਹਰੀ ਵੈਲਡਰ ਕੁੜੀ ਅਤੇ 2 ਮਿਲੀਅਨ ਫਾਲੋਅਰਾਂ ਵਾਲੀ ਇੰਸਟਾਗ੍ਰਾਮ ਇਨਫਲੂਐਂਸਰ, \"ਬ੍ਰਾਊਨ ਕੁੜੀ\" ਵਜੋਂ ਰੁਕਾਵਟਾਂ ਤੋੜਦੀ ਹੈ। ਉਹ ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕਨਾਡਾ ਨੂੰ ਟਾਇਰਾਂ ਦਾ ਆਯਾਤ/ਨਿਰਯਾਤ ਕਰਦੀ ਹੈ, ਭਾਰਤ ਭਰ ਵਿੱਚ ਖੇਤੀ ਉਪਕਰਣਾਂ ਦੀ ਵੰਡ ਕਰਦੀ ਹੈ, ਆਪਣੇ ਹੁਨਰ ਅਤੇ ਕਾਰੋਬਾਰੀ ਸੂਝ-ਬੂਝ ਰਾਹੀਂ ਸਸ਼ਕਤੀਕਰਣ ਨੂੰ ਪ੍ਰੇਰਿਤ ਕਰਦੀ ਹੈ।"
+    punjabi: "ਹਰਪਾਲ ਕੌਰ ਧੰਜਲ, ਪੰਜਾਬ ਦੀ ਅਗਾਊਂ ਪੇਸ਼ੇਵਰ ਵੈਲਡਰ ਅਤੇ 2 ਮਿਲੀਅਨ ਫਾਲੋਅਰਾਂ ਵਾਲੀ ਇੰਸਟਾਗ੍ਰਾਮ ਕ੍ਰਿਏਟਰ \"ਬ੍ਰਾਊਨ ਕੁੜੀ\" ਵਜੋਂ ਜਾਣੀ ਜਾਂਦੀ ਹੈ। ਉਹ ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਕੈਨੇਡਾ ਲਈ ਟਾਇਰ ਆਯਾਤ-ਨਿਰਯਾਤ ਅਤੇ ਭਾਰਤ ਭਰ ਵਿੱਚ ਖੇਤੀ ਉਪਕਰਣ ਵੰਡ ਸੰਭਾਲਦੀ ਹੈ, ਆਪਣੇ ਹੁਨਰ ਅਤੇ ਉਦਯੋਗੀ ਸੋਚ ਰਾਹੀਂ ਹੋਰਨਾਂ ਨੂੰ ਪ੍ਰੇਰਿਤ ਕਰਦੀ ਹੈ।"
 };
 
 // Counter Animation Component
@@ -68,7 +68,7 @@ export default function SocialPage() {
                     <div className="center">
                         <img
                             src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg"
-                            alt="profile"
+                            alt="Founder Harpal Kaur Dhanjal portrait"
                             className="profile-img"
                         />
                     </div>

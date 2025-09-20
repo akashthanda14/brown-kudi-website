@@ -13,7 +13,7 @@ export default function TyresPage() {
   useScrollToTop();
 
   const tyresbrand = {
-    english: "Our Tyers",
+    english: "Our Tyres",
     hindi: "हमारे टायर्स",
     punjabi: "ਸਾਡੇ ਟਾਇਰ",
   };
@@ -28,19 +28,19 @@ export default function TyresPage() {
       id: 2,
       name: "Performance Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752948/Pngtree_exploring_tire_technology_innovations_and_15498626_dda0ta.png",
-      description: "High performance tyres designed for speed and superior handling."
+  description: "High-performance tyres designed for speed and superior handling."
     },
     {
       id: 3,
       name: "Off-Road Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752541/tyre3_u1kaui.png",
-      description: "Built tough for rugged terrains and off-road adventures."
+  description: "Built tough for rugged terrain and off-road agricultural use."
     },
     {
       id: 4,
       name: "Eco Tyre",
       image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752529/tyre4_ulqjkf.png",
-      description: "Fuel-efficient tyres designed for city driving and long-lasting wear."
+  description: "Fuel-efficient tyres engineered for long life and reduced operating costs."
     }
   ];
 
@@ -55,7 +55,7 @@ export default function TyresPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" alt="Brown Kudi Owner" />
+            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" alt="Founder Harpal Kaur Dhanjal in field" />
           </motion.div>
 
           <motion.div

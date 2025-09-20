@@ -36,8 +36,8 @@ const ContactPage = () => {
         <div className="contact-card">
           {/* Left Side */}
           <div className="contact-left">
-            <h2>Contact us</h2>
-            <p>Reach out to us for any inquiry</p>
+            <h2>Contact Us</h2>
+            <p>Reach out with any inquiry</p>
 
             <form
               className="contact-form"
@@ -67,7 +67,7 @@ const ContactPage = () => {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.4 }}
                   >
-                    ✅ Your message has been sent!
+                    Your message has been sent successfully.
                   </motion.p>
                 )}
               </AnimatePresence>
@@ -75,7 +75,7 @@ const ContactPage = () => {
 
             {/* Follow us section */}
             <div className="follow-us">
-              <p>Follow us</p>
+              <p>Follow Us</p>
               <div className="social-icons">
                 
                 <a href="http://www.facebook.com/BrownKudiofficial"><FaFacebookF /></a>

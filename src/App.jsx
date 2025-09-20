@@ -20,7 +20,7 @@ import AboutPage_ from "./Pages/AboutPage_Enhanced";
 import Gallery from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import ExportSection from "./Components/ExportSection";
-import Testimonials from "./Components/Testmonials";
+import Testimonials from "./Components/Testimonials";
 import ImageSlider from "./Components/ImageSlider";
 import { useEffect } from "react";
 import SocialFootprints from "./Components/SocialFootprints";
@@ -63,7 +63,7 @@ function App() {
           <Route path="/contact" element={<><SEO title="Contact" description="Contact Brown Kudi for tyre supply, agricultural equipment, exports, and partnership inquiries." canonical={SITE_URL + '/contact'} /><ContactPage /></>} />
           <Route path="/tradesection" element={<><SEO title="Trade" description="Brown Kudi's trade section highlighting international export capabilities and partnerships." canonical={SITE_URL + '/tradesection'} /><TradeSection /></>} />
             <Route path="/social" element={<><SEO title="Social" description="Social initiatives and community engagement by Brown Kudi." canonical={SITE_URL + '/social'} /><SocialPage /></>} />
-          <Route path="/testmonials" element={<><SEO title="Testimonials" description="What clients and partners say about Brown Kudi's quality and service." canonical={SITE_URL + '/testmonials'} /><Testimonials /></>} />
+          <Route path="/testimonials" element={<><SEO title="Testimonials" description="What clients and partners say about Brown Kudi's quality and service." canonical={SITE_URL + '/testimonials'} /><Testimonials /></>} />
           <Route path="/export-section" element={<><SEO title="Export" description="Export solutions and logistics support from Brown Kudi for global trade." canonical={SITE_URL + '/export-section'} /><ExportSection /></>} />
           <Route path="/agriequipments" element={<><SEO title="Agri Equipments" description="Agricultural equipment and mechanization solutions by Brown Kudi." canonical={SITE_URL + '/agriequipments'} /><AgriEquipments /></>} />
           <Route path="/agrijourney" element={<><SEO title="Agri Journey" description="The agricultural journey and impact initiatives led by Brown Kudi." canonical={SITE_URL + '/agrijourney'} /><AgriJourney /></>} />

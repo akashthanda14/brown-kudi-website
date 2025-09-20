@@ -19,7 +19,7 @@ const teamMembers = [
     name: "Harpal Kaur Dhanjal",
     role: "Co-Founder & Operations Director",
     image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg",
-    description: "Punjab's first professional female welder turned international entrepreneur. With 1.9M Instagram followers, she's revolutionized trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
+    description: "Punjab's first professional female welder turned international entrepreneur. With 2M Instagram followers, she's revolutionized trade between India, Australia, and Canada. From mastering arc welding to building a multi-million dollar import-export business, she's redefined what's possible for women in agriculture.",
     achievements: ["2M+ Social Media Following", "Australia-Canada Trade Partner","Agricultural Innovation Leader"]
   },
   {
