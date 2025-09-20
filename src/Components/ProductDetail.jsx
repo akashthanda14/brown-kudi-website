@@ -176,9 +176,9 @@ const products = [
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223463/Deluxe-Cutivator_cleanup_gj0zl2.png",
     ],
     name: {
-      english: "Cultivator",
-      hindi: "कल्टीवेटर",
-      punjabi: "ਕਲਟੀਵੇਟਰ",
+      english: "Subsoiler",
+      hindi: "सब-सोइलर",
+      punjabi: "ਸਬਸੋਇਲਰ",
     },
     points: {
       english: [
@@ -186,21 +186,21 @@ const products = [
         "Improves root penetration and crop growth.",
         "Increases water infiltration and storage capacity.",
         "Reduces soil compaction and improves yield.",
-        "Durable tynes for long field life.",
+        "Durable tyres for long field life.",
       ],
       hindi: [
         "मिट्टी की गहराई में कठोर परत तोड़ता है।",
         "जड़ों की पैठ और फसल वृद्धि में मदद करता है।",
         "पानी अवशोषण और भंडारण क्षमता बढ़ाता है।",
         "मिट्टी की सघनता घटाकर पैदावार बढ़ाता है।",
-        "मजबूत टाइन लंबे समय तक चलते हैं।",
+        "मजबूत टायर लंबे समय तक चलते हैं।",
       ],
       punjabi: [
         "ਮਿੱਟੀ ਵਿੱਚ ਗਹਿਰਾਈ ਵਾਲੀ ਸਖ਼ਤ ਪਰਤ ਤੋੜਦਾ ਹੈ।",
         "ਜੜਾਂ ਦੀ ਪੈਠ ਅਤੇ ਫਸਲ ਵਾਧੇ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
         "ਪਾਣੀ ਦੀ ਅਵਸ਼ੋਸ਼ਣ ਅਤੇ ਸਟੋਰੇਜ ਸਮਰੱਥਾ ਵਧਾਉਂਦਾ ਹੈ।",
         "ਮਿੱਟੀ ਦੀ ਸਖ਼ਤੀ ਘਟਾ ਕੇ ਪੈਦਾਵਾਰ ਵਧਾਉਂਦਾ ਹੈ।",
-        "ਮਜ਼ਬੂਤ ਟਾਈਨ ਲੰਬੇ ਸਮੇਂ ਚੱਲਦੇ ਹਨ।",
+        "ਮਜ਼ਬੂਤ ਟਾਇਰ ਲੰਬੇ ਸਮੇਂ ਚੱਲਦੇ ਹਨ।",
       ],
     },
   },

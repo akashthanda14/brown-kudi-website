@@ -22,7 +22,7 @@ export default function TyreSection() {
         { icon: "🏭", text: "State-of-the-art manufacturing facility" },
         { icon: "🌍", text: "Exporting to Canada, Australia & USA" },
         { icon: "🏆", text: "ISO 9001:2015 certified quality standards" },
-        { icon: "⚡", text: "15+ years of industry expertise" }
+        { icon: "⚡", text: "15+ years of expertise and since 2020 both are contradicting itself" }
       ]
     },
     hindi: {
@@ -32,7 +32,7 @@ export default function TyreSection() {
         { icon: "🏭", text: "अत्याधुनिक विनिर्माण सुविधा" },
         { icon: "🌍", text: "कनाडा, ऑस्ट्रेलिया और अमेरिका में निर्यात" },
         { icon: "🏆", text: "ISO 9001:2015 प्रमाणित गुणवत्ता मानक" },
-        { icon: "⚡", text: "15+ वर्षों की उद्योग विशेषज्ञता" }
+        { icon: "⚡", text: "15+ वर्षों का अनुभव और 2020 से कार्य — दोनों एक-दूसरे का विरोध करते हैं।" }
       ]
     },
     punjabi: {
@@ -42,7 +42,7 @@ export default function TyreSection() {
         { icon: "🏭", text: "ਅਤਿ-ਆਧੁਨਿਕ ਨਿਰਮਾਣ ਸਹੂਲਤ" },
         { icon: "🌍", text: "ਕੈਨੇਡਾ, ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਅਮਰੀਕਾ ਵਿੱਚ ਨਿਰਯਾਤ" },
         { icon: "🏆", text: "ISO 9001:2015 ਪ੍ਰਮਾਣਿਤ ਗੁਣਵੱਤਾ ਮਾਪਦੰਡ" },
-        { icon: "⚡", text: "15+ ਸਾਲਾਂ ਦੀ ਉਦਯੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ" }
+        { icon: "⚡", text: "15+ ਸਾਲਾਂ ਦਾ ਤਜਰਬਾ ਅਤੇ 2020 ਤੋਂ ਕੰਮ — ਦੋਵੇਂ ਆਪਸ ਵਿੱਚ ਵਿਰੋਧੀ ਹਨ।" }
       ]
     }
   };

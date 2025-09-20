@@ -103,8 +103,8 @@
 .trade-points li::before {
     content: "✔";
     color: #4CAF50;
-    position: absolute;
-    left: 0;
+    position: relative;
+    left: -12px;
     font-weight: bold;
 }
 
