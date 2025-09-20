@@ -238,36 +238,6 @@ export default function Navbar() {
                       All Season Tyre
                     </Link>
                   </li>
-                  <li role="none">
-                    <Link
-                      to="/tyres"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      Performance Tyre
-                    </Link>
-                  </li>
-                  <li role="none">
-                    <Link
-                      to="/tyres"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      Off-Road Tyre
-                    </Link>
-                  </li>
-                  <li role="none">
-                    <Link
-                      to="/tyres"
-                      className="navbar__dropdown-link"
-                      onClick={() => { setActiveDropdown(null); closeMenu(); }}
-                      role="menuitem"
-                    >
-                      Eco Tyre
-                    </Link>
-                  </li>
                 </ul>
               </li>
 
