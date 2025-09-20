@@ -206,9 +206,9 @@ const products = [
   },
   {
     id: 6,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361398/IMG29-min_d6dgyz.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750797/tradeimg6_btlwp4.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361398/IMG29-min_d6dgyz.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750757/IMG28_vlaqgx.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750761/IMG29_ixij4w.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750766/IMG25_icuqxr.jpg",
@@ -244,9 +244,9 @@ const products = [
   },
   {
     id: 7,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361593/IMG7-min_vtgzy3.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750796/tradeimg7_mvbzfa.png",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361593/IMG7-min_vtgzy3.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG15_kuclg9.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG16_lqsqht.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG7_qfkwuw.jpg",
@@ -282,9 +282,9 @@ const products = [
   },
   {
     id: 8,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
+    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361177/IMG_0325-min_kihacx.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
+      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361177/IMG_0325-min_kihacx.jpg",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771733/Untitled_design_2_piruqp.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771916/Untitled_design_3_ryv6mk.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757772141/Untitled_design_4_xvohsf.png",

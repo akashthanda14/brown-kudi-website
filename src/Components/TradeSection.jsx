@@ -78,7 +78,7 @@ const TradeSection = () => {
     },
     {
       id: 2,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750734/IMG5_cyovh5.jpg",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758360901/IMG5-min_mqmorh.jpg",
       name: {
         english: "Reversible MB Plough",
         hindi: "रिवर्सेबल एम.बी. हल",
@@ -170,7 +170,7 @@ const TradeSection = () => {
     },
     {
       id: 6,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750761/IMG29_ixij4w.jpg",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361398/IMG29-min_d6dgyz.jpg",
       name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
       points: {
         english: [
@@ -192,7 +192,7 @@ const TradeSection = () => {
     },
     {
       id: 7,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG7_qfkwuw.jpg",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361593/IMG7-min_vtgzy3.jpg",
       name: {
         english: "Hydraulic Harrow",
         hindi: "हाइड्रोलिक हैरो",
@@ -218,7 +218,7 @@ const TradeSection = () => {
     },
     {
       id: 8,
-      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750729/IMG_0325_usb7of.jpg",
+      img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361177/IMG_0325-min_kihacx.jpg",
       name: { english: "Tractor Trolley", hindi: "ट्रैक्टर ट्रॉली", punjabi: "ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ" },
       points: {
         english: [

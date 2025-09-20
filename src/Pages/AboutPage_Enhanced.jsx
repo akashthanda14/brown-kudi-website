@@ -54,6 +54,45 @@ const values = [
   },
 ];
 
+const stats = [
+  {
+    number: '250+',
+    icon: '🚜',
+    label: {
+      english: 'Equipment Delivered',
+      hindi: 'उपकरण वितरित',
+      punjabi: 'ਉਪਕਰਣ ਸੌਂਪੇ ਗਏ'
+    }
+  },
+  {
+    number: '12+',
+    icon: '🌍',
+    label: {
+      english: 'Countries Served',
+      hindi: 'देश सेवा किए गए',
+      punjabi: 'ਦੇਸ਼ ਸੇਵਾ ਕੀਤੇ'
+    }
+  },
+  {
+    number: '95%',
+    icon: '⭐',
+    label: {
+      english: 'Client Satisfaction',
+      hindi: 'ग्राहक संतुष्टि',
+      punjabi: 'ਗਾਹਕ ਸੰਤੋਸ਼'
+    }
+  },
+  {
+    number: '8+',
+    icon: '📈',
+    label: {
+      english: 'Years Trading',
+      hindi: 'वर्षों का व्यापार',
+      punjabi: 'ਸਾਲਾਂ ਦਾ ਵਪਾਰ'
+    }
+  }
+];
+
 const AboutPage_ = () => {
   const navigate = useNavigate();
   const [additionalInView, setAdditionalInView] = useState(false);
@@ -498,7 +537,7 @@ const AboutPage_ = () => {
           background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'
         }}
       >
-        <div style={{ maxWidth: '1400px', margin: '0 auto',justifyContent:'center',alignItems:'center', }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', justifyContent: 'center', alignItems: 'center', }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <motion.div
               initial={{ opacity: 1 }}
@@ -554,7 +593,7 @@ const AboutPage_ = () => {
                 maxWidth: '500px',
                 margin: '0 auto',
                 lineHeight: '1.7',
-                alignItems:'center',
+                alignItems: 'center',
               }}
             >
               {t.teamSubtitle}
@@ -826,15 +865,14 @@ const AboutPage_ = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '30px',
-              marginBottom: '60px',
-              maxWidth: '900px',
-              margin: '0 auto 60px'
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: "30px",
+              margin: "0 auto 60px",
+              maxWidth: "900px",
             }}
           >
-            {t.benefits.map((benefit, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -842,21 +880,38 @@ const AboutPage_ = () => {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                 viewport={{ once: true }}
                 style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  padding: '30px 20px',
-                  borderRadius: '20px',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                  background: "rgba(255, 255, 255, 0.1)",
+                  padding: "30px 20px",
+                  borderRadius: "20px",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  textAlign: "center",
                 }}
               >
-                <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>🚜</div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '10px' }}>
-                  {benefit.title[language]}
+                {/* Icon */}
+                <div style={{ fontSize: "2.5rem", marginBottom: "15px" }}>
+                  {stat.icon}
+                </div>
+
+                {/* Number */}
+                <div
+                  style={{
+                    fontSize: "1.8rem",
+                    fontWeight: "700",
+                    marginBottom: "10px",
+                  }}
+                >
+                  {stat.number}
+                </div>
+
+                {/* Label (multi-language) */}
+                <h4 style={{ fontSize: "1.2rem", opacity: 0.9 }}>
+                  {stat.label[language]}
                 </h4>
-                <p style={{ fontSize: '1rem', opacity: 0.9 }}>{benefit.desc[language]}</p>
               </motion.div>
             ))}
           </motion.div>
+
 
           {/* Call to Action Buttons */}
           <motion.div
@@ -871,7 +926,7 @@ const AboutPage_ = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+                background: 'rgba(255, 255, 255, 0.1)',
                 color: 'white',
                 border: '2px solid rgba(255, 255, 255, 0.26)',
                 padding: '18px 45px',
