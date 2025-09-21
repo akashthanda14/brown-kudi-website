@@ -17,7 +17,7 @@ export default function TyreSection() {
   const expertiseData = {
     english: {
       title: "Premium Tyre Manufacturing & Export",
-      subtitle: "Crafting Excellence Since 2020", 
+      subtitle: "Crafting Excellence Since 2010", 
       features: [
         { icon: "🏭", text: "State-of-the-art manufacturing facility" },
         { icon: "🌍", text: "Exporting to Canada, Australia & USA" },
