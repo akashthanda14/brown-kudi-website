@@ -128,7 +128,7 @@ const Footer = () => {
             <p className="brand-description">{footerText.brandDesc[language]}</p>
             <div className="footer-contact-info">
               <div className="contact-item"><FaEnvelope className="contact-icon" /><span>brownkuditeam@gmail.com</span></div>
-              <div className="contact-item"><FaPhone className="contact-icon" /><span>+91 8264468285 ,+91 8264468285</span></div>
+              <div className="contact-item"><FaPhone className="contact-icon" /><span>+91 6239562383 ,+91 6239562383</span></div>
               <div className="contact-item"><FaMapMarkerAlt className="contact-icon" /><span>{footerText.address[language]}</span></div>
             </div>
           </motion.div>
