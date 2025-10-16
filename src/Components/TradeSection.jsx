@@ -289,7 +289,7 @@ const TradeSection = () => {
 
                 {/* ✅ WhatsApp Icon Button */}
                 <a
-                  href={`https://wa.me/919855119079?text=${defaultmsgw[language]} ${item.name[language]}`}
+                  href={`https://wa.me/918264468285?text=${defaultmsgw[language]} ${item.name[language]}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-icon-btn"
@@ -300,7 +300,7 @@ const TradeSection = () => {
 
                 {/* ✅ Phone Call Icon Button */}
                 <a
-                  href={`tel:+919855119079`}
+                  href={`tel:+918264468285`}
                   className="phone-icon-btn"
                   title={`${defaultmsgp[language]} ${item.name[language]}`}
                   onClick={(e) => e.stopPropagation()}
