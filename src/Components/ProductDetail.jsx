@@ -16,12 +16,12 @@ const button = {
 const products = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226360/Bown_kudi_5_vidsdi.png",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373312/IMG17_cleanup_oznnzz.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226360/Bown_kudi_5_vidsdi.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg1_zpzhqn.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226536/IMG17_cleanup_rnm3yc.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758226697/new-super-seeder112_1__cleanup_xnevkw.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373312/IMG17_cleanup_oznnzz.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763376181/new-super-seeder112_1__cleanup_klclda.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372462/tradeimg1_s8xqyb.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373312/new-super-seeder112_1__cleanup_xnevkw.png",
     ],
     name: {
       english: "Super Seeder",
@@ -54,11 +54,11 @@ const products = [
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372436/IMG6_o0ezmx.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750751/IMG6_jkyseo.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757770266/pngegg_3_fnrdws.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750795/tradeimg2_s3un5g.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372436/IMG6_o0ezmx.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372461/tradeimg2_otghvh.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372465/tradeimg6_a2kis7.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757778139/pngegg_7_w3f4k2.png",
     ],
     name: {
@@ -92,12 +92,12 @@ const products = [
   },
   {
     id: 3,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771043/erasebg-transformed_yqjo4s.png",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372435/IMG4_zs7aib.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771043/erasebg-transformed_yqjo4s.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222038/Bown_kudi_2_qntfrc.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750758/IMG27_xywtho.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222339/Bown_kudi_3_htyfpu.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372435/IMG4_zs7aib.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372443/IMG11_t1nx9f.jpg",
+      "",
+      "",
     ],
     name: {
       english: "Disc Harrow",
@@ -130,11 +130,11 @@ const products = [
   },
   {
     id: 4,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215336/IMG18_cleanup_erweaz.png",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372446/IMG18_fxafgh.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215336/IMG18_cleanup_erweaz.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758215650/rotavator-new3_cleanup_lvofrw.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129310/ROTAVATOR-HAWK_vima8a.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372446/IMG18_fxafgh.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372439/IMG9_xarhjh.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372463/tradeimg5_ky7dur.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758129309/ROTAVATOR-ECO_s0a8yt.png",
     ],
     name: {
@@ -168,12 +168,12 @@ const products = [
   },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222712/Bown_kudi_4_dle67f.png",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763374719/Bown_kudi_4_mzvghl.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758222712/Bown_kudi_4_dle67f.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223166/Basic-Model-Cultivator_cleanup_rmhrxo.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223321/Sadhu-implements-cultivator-cover_cleanup_xv0plg.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758223463/Deluxe-Cutivator_cleanup_gj0zl2.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763374719/Bown_kudi_4_mzvghl.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372439/IMG8_vyihyu.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763377354/Deluxe-Cutivator_cleanup_ujaoeg.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763377385/Basic-Model-Cultivator_cleanup_bg0yyv.png",
     ],
     name: {
       english: "Subsoiler",
@@ -206,11 +206,11 @@ const products = [
   },
   {
     id: 6,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361398/IMG29-min_d6dgyz.jpg",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372455/IMG29_fxaneu.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361398/IMG29-min_d6dgyz.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750757/IMG28_vlaqgx.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750761/IMG29_ixij4w.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372455/IMG29_fxaneu.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372451/IMG28_xawj1c.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372462/tradeimg4_khpgmn.png",
       "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750766/IMG25_icuqxr.jpg",
     ],
     name: {
@@ -244,12 +244,12 @@ const products = [
   },
   {
     id: 7,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361593/IMG7-min_vtgzy3.jpg",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372437/IMG7_dpz9f7.jpg",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361593/IMG7-min_vtgzy3.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG15_kuclg9.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG16_lqsqht.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750749/IMG7_qfkwuw.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372437/IMG7_dpz9f7.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372444/IMG13_y2qdbg.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372443/IMG16_oz24fx.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372464/tradeimg7_kwb6ca.png",
     ],
     name: {
       english: "Hydraulic Reversible Plough",
@@ -282,12 +282,12 @@ const products = [
   },
   {
     id: 8,
-    img: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361177/IMG_0325-min_kihacx.jpg",
+    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372465/tradeimg8_owi89e.png",
     gallery: [
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1758361177/IMG_0325-min_kihacx.jpg",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771733/Untitled_design_2_piruqp.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757771916/Untitled_design_3_ryv6mk.png",
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757772141/Untitled_design_4_xvohsf.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372465/tradeimg8_owi89e.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372422/IMG_0323_epas9j.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372421/IMG_0320_fv5bdf.jpg",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372426/IMG_0325_nlebyb.jpg",
     ],
     name: {
       english: "Tractor Trolley",

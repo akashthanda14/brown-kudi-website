@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import { MapPin, Mail, Phone } from "lucide-react";  // Lucide icons import
+import { MapPin, Mail, Phone } from "lucide-react"; // Lucide icons import
 import Footer from "../Components/Footer";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 import { useLanguage } from "../context/LanguageContext";
@@ -19,7 +19,7 @@ const translations = {
     followUs: "Follow Us",
     address: "Village Gura, Punjab, 144418",
     email: "brownkuditeam@gmail.com",
-    phone: "+91 8264468285"
+    phone: "+91 8264468285",
   },
   hindi: {
     heading: "हमसे संपर्क करें",
@@ -32,7 +32,7 @@ const translations = {
     followUs: "हमारा अनुसरण करें",
     address: "गाँव गुड़ा, पंजाब, 144418",
     email: "brownkuditeam@gmail.com",
-    phone: "+91 8264468285"
+    phone: "+91 8264468285",
   },
   punjabi: {
     heading: "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
@@ -45,8 +45,8 @@ const translations = {
     followUs: "ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ",
     address: "ਪਿੰਡ ਗੁਰਾ, ਪੰਜਾਬ, 144418",
     email: "brownkuditeam@gmail.com",
-    phone: "+91 8264468285"
-  }
+    phone: "+91 8264468285",
+  },
 };
 
 const ContactPage = () => {
@@ -86,15 +86,26 @@ const ContactPage = () => {
 
             <form
               className="contact-form"
-              action="https://formsubmit.co/5f09eeab7f75d9577b4199c90d0b94f1"
+              // YAHAN CHANGE KIYA GAYA HAI:
+              action="https://formsubmit.co/brownkuditeam@gmail.com"
               method="POST"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
-              <input type="text" name="name" placeholder={t.namePlaceholder} required />
-              <input type="email" name="email" placeholder={t.emailPlaceholder} required />
+              <input
+                type="text"
+                name="name"
+                placeholder={t.namePlaceholder}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder={t.emailPlaceholder}
+                required
+              />
               <textarea
                 name="message"
                 placeholder={t.messagePlaceholder}
@@ -122,10 +133,15 @@ const ContactPage = () => {
             <div className="follow-us">
               <p>{t.followUs}</p>
               <div className="social-icons">
-                
-                <a href="http://www.facebook.com/BrownKudiofficial"><FaFacebookF /></a>
-                <a href="https://www.instagram.com/brown_kudi1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram /></a>
-                <a href="http://www.youtube.com/@BrownKudiThewelderGirl"><FaYoutube /></a>
+                <a href="http://www.facebook.com/BrownKudiofficial">
+                  <FaFacebookF />
+                </a>
+                <a href="https://www.instagram.com/brown_kudi1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                  <FaInstagram />
+                </a>
+                <a href="http://www.youtube.com/@BrownKudiThewelderGirl">
+                  <FaYoutube />
+                </a>
               </div>
             </div>
           </div>
@@ -147,15 +163,21 @@ const ContactPage = () => {
         {/* Bottom Info */}
         <div className="contact-bottom">
           <div className="info-box">
-            <span><MapPin size={26} /></span>
+            <span>
+              <MapPin size={26} />
+            </span>
             <p>{t.address}</p>
           </div>
           <div className="info-box">
-            <span><Mail size={26} /></span>
+            <span>
+              <Mail size={26} />
+            </span>
             <p>{t.email}</p>
           </div>
           <div className="info-box">
-            <span><Phone size={26} /></span>
+            <span>
+              <Phone size={26} />
+            </span>
             <p>{t.phone}</p>
           </div>
         </div>
