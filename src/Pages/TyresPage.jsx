@@ -15,19 +15,19 @@ export default function TyresPage() {
   const tyres = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750817/tyre1_bavlxv.png",
+      image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372476/tyre1_rp1nii.png",
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752948/Pngtree_exploring_tire_technology_innovations_and_15498626_dda0ta.png",
+      image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372470/tyre3_fbffjs.png",
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752541/tyre3_u1kaui.png",
+      image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372466/tyre4_me7l4l.png",
     },
     {
       id: 4,
-      image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757752529/tyre4_ulqjkf.png",
+      image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372470/tyre3_fbffjs.png",
     }
   ];
 
@@ -42,7 +42,7 @@ export default function TyresPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750728/IMG1_vji0th.jpg" alt="Founder Harpal Kaur Dhanjal in field" />
+            <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372427/IMG1_kekagj.jpg" alt="Founder Harpal Kaur Dhanjal in field" />
           </motion.div>
 
           <motion.div

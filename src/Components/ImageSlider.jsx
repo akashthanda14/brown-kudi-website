@@ -4,11 +4,11 @@ import "./ImageSlider.css"; // CSS अलग file में
 const ImageSlider = () => {
   // ✅ अपनी images यहाँ add करो
   const photos = [
-    "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/p1_jet2jz.jpg",
-    "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/p2_ujtszk.jpg",
-    "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750785/p3_jrzijv.jpg",
-    "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750785/p4_frwwpw.jpg",
-    "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750785/p5_tnrj1q.jpg",
+    "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372457/p1_n33ubj.jpg",
+    "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372457/p2_odfeum.jpg",
+    "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372457/p3_mrqotb.jpg",
+    "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372458/p4_ywty0s.jpg",
+    "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372458/p5_kjpfn2.jpg",
   ];
 
   return (

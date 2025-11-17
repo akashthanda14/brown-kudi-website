@@ -133,7 +133,7 @@ const Hero = () => {
         <div
           className="hero__image"
           style={{
-            backgroundImage: 'url(https://res.cloudinary.com/dnyv7wabr/image/upload/v1758360653/Screenshot_2025-09-19_134058-min_r9tqyg.png)',
+            backgroundImage: 'url(https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372578/Screenshot_2025-09-19_134058-min_bgavjn.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',

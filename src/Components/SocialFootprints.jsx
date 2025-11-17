@@ -10,7 +10,7 @@ const posts = [
     username: "brown_kudi1",
     date: "May 15",
     image:
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint2_mzlobt.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372430/footprint2_oyglfl.png",
     likes: "307.3k",
     comments: "1k",
     caption:
@@ -21,7 +21,7 @@ const posts = [
     id: 2,
     username: "brown_kudi1",
     date: "August 28",
-    image: "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757754895/Screenshot_2025-09-12_144447_k4nylm.png",
+    image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763375857/Screenshot_2025-11-16_160921_ernfp2.png",
     likes: "63k",
     comments: "197",
     caption:
@@ -33,7 +33,7 @@ const posts = [
     username: "brown_kudi1",
     date: "June 15",
     image:
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/c_crop,ar_3:4/v1757750722/footprint3_h6yajd.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372433/footprint3_nijeb7.png",
     likes: "200k",
     comments: "2.4k",
     caption:
@@ -45,7 +45,7 @@ const posts = [
     username: "brown_kudi1",
     date: "June 20",
     image:
-      "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750721/footprint4_krad46.png",
+      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372435/footprint4_fhhf83.png",
     likes: "23.6k",
     comments: "111",
     caption:
