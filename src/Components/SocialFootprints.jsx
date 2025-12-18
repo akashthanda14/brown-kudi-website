@@ -10,7 +10,7 @@ const posts = [
     username: "brown_kudi1",
     date: "May 15",
     image:
-      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372430/footprint2_oyglfl.png",
+      "https://ik.imagekit.io/02x2rciof/footprint2.png",
     likes: "307.3k",
     comments: "1k",
     caption:
@@ -21,7 +21,7 @@ const posts = [
     id: 2,
     username: "brown_kudi1",
     date: "August 28",
-    image: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763375857/Screenshot_2025-11-16_160921_ernfp2.png",
+    image: "https://ik.imagekit.io/02x2rciof/Screenshot%202025-11-16%20160921.png",
     likes: "63k",
     comments: "197",
     caption:
@@ -33,7 +33,7 @@ const posts = [
     username: "brown_kudi1",
     date: "June 15",
     image:
-      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372433/footprint3_nijeb7.png",
+      "https://ik.imagekit.io/02x2rciof/footprint3.png",
     likes: "200k",
     comments: "2.4k",
     caption:
@@ -45,7 +45,7 @@ const posts = [
     username: "brown_kudi1",
     date: "June 20",
     image:
-      "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372435/footprint4_fhhf83.png",
+      "https://ik.imagekit.io/02x2rciof/footprint4.png",
     likes: "23.6k",
     comments: "111",
     caption:
