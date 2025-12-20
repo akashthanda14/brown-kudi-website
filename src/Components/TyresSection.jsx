@@ -107,7 +107,7 @@ export default function TyreSection() {
             {/* Tyre Image */}
             <div className="tyre-image">
               <img 
-                src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372418/browntyre_wvb9n0.png" 
+                src="https://ik.imagekit.io/02x2rciof/browntyre.png" 
                 alt="Brown Kudi Premium Tyres" 
               />
               

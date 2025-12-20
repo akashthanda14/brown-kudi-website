@@ -33,7 +33,7 @@ const equipments = [
       hindi: "बिना जुताई के खड़े अवशेष में सीधे बीज बोता है",
       punjabi: "ਖੜ੍ਹੇ ਅਵਸ਼ੇਸ਼ਾਂ ਵਿੱਚ ਬਿਨਾਂ ਜੋਤਾਈ ਦੇ ਸਿੱਧਾ ਬੀਜ ਬੋਣ ਵਾਲੀ ਮਸ਼ੀਨ"
     },
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763376181/new-super-seeder112_1__cleanup_klclda.png"
+    img: "https://ik.imagekit.io/02x2rciof/Bown%20kudi%20(5).png"
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const equipments = [
       hindi: "मिट्टी की तैयारी और कुशल खेती के लिए मजबूत हल।",
       punjabi: "ਮਿੱਟੀ ਦੀ ਤਿਆਰੀ ਅਤੇ ਕੁਸ਼ਲ ਖੇਤੀ ਲਈ ਮਜ਼ਬੂਤ ਹਲ।"
     },
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373311/Bown_kudi_2_wd5a2v.png"
+    img: "https://ik.imagekit.io/02x2rciof/Bown%20kudi%20(2).png"
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const equipments = [
       hindi: "फसल कटाई, मड़ाई और उत्पादकता के लिए उन्नत हार्वेस्टर।",
       punjabi: "ਫਸਲ ਕੱਟਣ, ਮੜ੍ਹਾਈ ਅਤੇ ਉਤਪਾਦਕਤਾ ਲਈ ਅਧੁਨਿਕ ਹਾਰਵੇਸਟਰ।"
     },
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763377811/rotavator-new3_cleanup_f9jp8l.png"
+    img: "https://ik.imagekit.io/02x2rciof/rotavator-new3_cleanup.png"
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const equipments = [
       hindi: "समान फसल रोपण और मिट्टी संतुलन सुनिश्चित करने वाले कुशल सीडर।",
       punjabi: "ਸਮਾਨ ਫਸਲ ਰੋਪਣ ਅਤੇ ਮਿੱਟੀ ਦੇ ਸੰਤੁਲਨ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਵਾਲੇ ਕੁਸ਼ਲ ਸੀਡਰ।"
     },
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372461/tradeimg3_w51icx.png"
+    img: "https://ik.imagekit.io/02x2rciof/tradeimg3.png"
   }
 ];
 
@@ -88,7 +88,7 @@ const AgriEquipments = () => {
         {/* Hero Section */}
         <div className="equipments-hero">
           <motion.img
-            src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372417/gallery7_ajdy7x.jpg"
+            src="https://ik.imagekit.io/02x2rciof/gallery7.jpg"
             alt="Agri Hero"
             className="equipments-hero-img"
             initial={{ opacity: 0, y: -40 }}

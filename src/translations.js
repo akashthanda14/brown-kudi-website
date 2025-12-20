@@ -499,7 +499,7 @@ const translations = {
           hindi: ["30+ साल कृषि अनुभव", "उपकरण गुणवत्ता विशेषज्ञ", "कृषि संचालन विशेषज्ञ", "तकनीकी सलाहकार नेता"],
           punjabi: ["30+ ਸਾਲ ਖੇਤੀਬਾੜੀ ਅਨੁਭਵ", "ਉਪਕਰਣ ਗੁਣਵੱਤਾ ਮਾਹਿਰ", "ਖੇਤੀਬਾੜੀ ਸੰਚਾਲਨ ਮਾਹਿਰ", "ਤਕਨੀਕੀ ਸਲਾਹਕਾਰ ਨੇਤਾ"],
         },
-        image: ["https://res.cloudinary.com/dnyv7wabr/image/upload/v1757875441/father_pr6sen.png"],
+        image: ["https://ik.imagekit.io/02x2rciof/contactimg.jpg"],
       },
     ],
     ctaBadge: {

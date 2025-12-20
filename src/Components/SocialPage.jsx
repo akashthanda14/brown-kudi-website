@@ -86,7 +86,7 @@ export default function SocialPage() {
                     {/* Left Section with Image */}
                     <div className="center">
                         <img
-                            src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372457/owner_alklsw.jpg"
+                            src="https://ik.imagekit.io/02x2rciof/owner.jpg"
                             alt="Founder Harpal Kaur Dhanjal portrait"
                             className="profile-img"
                         />
@@ -135,11 +135,11 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372467/youtube_sj98u0.png" alt="YouTube" />
+                        <img className="iconimg" src="https://ik.imagekit.io/02x2rciof/youtube.png" alt="YouTube" />
                         <div className="btn-content">
                             <span className="platform-name">{t.youtube}</span>
                             <span className="follower-count">
-                                <AnimatedCounter end={416} suffix="K" inView={bottomInView} /> {t.subscribers}
+                                <AnimatedCounter end={421} suffix="K" inView={bottomInView} /> {t.subscribers}
                             </span>
                         </div>
                     </motion.a>
@@ -152,7 +152,7 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372456/instagram_dufdlt.png" alt="Instagram" />
+                        <img className="iconimg" src="https://ik.imagekit.io/02x2rciof/instagram.png" alt="Instagram" />
                         <div className="btn-content">
                             <span className="platform-name">{t.instagram}</span>
                             <span className="follower-count">
@@ -169,11 +169,11 @@ export default function SocialPage() {
                         whileHover={{ scale: 1.08, y: -3 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <img className="iconimg" src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372425/facebook_b2uihy.png" alt="Facebook" />
+                        <img className="iconimg" src="https://ik.imagekit.io/02x2rciof/facebook.png" alt="Facebook" />
                         <div className="btn-content">
                             <span className="platform-name">{t.facebook}</span>
                             <span className="follower-count">
-                                <AnimatedCounter end={786} suffix="K" inView={bottomInView} /> {t.followers}
+                                <AnimatedCounter end={957} suffix="K" inView={bottomInView} /> {t.followers}
                             </span>
                         </div>
                     </motion.a>

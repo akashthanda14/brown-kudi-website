@@ -662,7 +662,7 @@ const AboutPage_ = () => {
                     }}
                   >
                     <img
-                      src={member.image || "https://res.cloudinary.com/dnyv7wabr/image/upload/v1757750775/owner_ehbimh.jpg"}
+                      src={member.image || "https://ik.imagekit.io/02x2rciof/owner.jpg"}
                       alt={member.name}
                       style={{
                         width: '100%',

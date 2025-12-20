@@ -52,7 +52,7 @@ const TradeSection = () => {
  const products = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373312/IMG17_cleanup_oznnzz.png",
+    img: "https://ik.imagekit.io/02x2rciof/IMG17_cleanup.jpg",
     name: {
       english: "Super Seeder",
       hindi: "सुपर सीडर मशीन",
@@ -78,7 +78,7 @@ const TradeSection = () => {
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372436/IMG6_o0ezmx.jpg",
+    img: "https://ik.imagekit.io/02x2rciof/IMG5.jpg",
     name: {
       english: "Reversible MB Plough",
       hindi: "रिवर्सेबल एम.बी. हल",
@@ -105,7 +105,7 @@ const TradeSection = () => {
   },
   {
     id: 3,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372435/IMG4_zs7aib.jpg",
+    img: "https://ik.imagekit.io/02x2rciof/IMG27.jpg",
     name: { english: "Disc Harrow", hindi: "डिस्क हैरो", punjabi: "ਡਿਸਕ ਹੈਰੋ" },
     points: {
       english: [
@@ -127,7 +127,7 @@ const TradeSection = () => {
   },
   {
     id: 4,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763373438/IMG18_cleanup_alv8cy.png",
+    img: "https://ik.imagekit.io/02x2rciof/IMG18_cleanup.jpg",
     name: { english: "Rotary Tiller", hindi: "रोटावेटर टिलर", punjabi: "ਰੋਟਾਵੇਟਰ ਟਿਲਰ" },
     points: {
       english: [
@@ -149,7 +149,7 @@ const TradeSection = () => {
   },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763374719/Bown_kudi_4_mzvghl.png",
+    img: "https://ik.imagekit.io/02x2rciof/Bown%20kudi%20(4).png",
     name: { english: "Subsoiler", hindi: "सब-सोइलर", punjabi: "ਸਬਸੋਇਲਰ" },
     points: {
       english: [
@@ -171,7 +171,7 @@ const TradeSection = () => {
   },
   {
     id: 6,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372455/IMG29_fxaneu.jpg",
+    img: "https://ik.imagekit.io/02x2rciof/IMG29.jpg",
     name: { english: "Disc Plough", hindi: "डिस्क प्लाउ", punjabi: "ਡਿਸਕ ਪਲਾਓ" },
     points: {
       english: [
@@ -193,7 +193,7 @@ const TradeSection = () => {
   },
   {
     id: 7,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372437/IMG7_dpz9f7.jpg",
+    img: "https://ik.imagekit.io/02x2rciof/IMG7.jpg",
     name: {
       english: "Hydraulic Harrow",
       hindi: "हाइड्रोलिक हैरो",
@@ -219,7 +219,7 @@ const TradeSection = () => {
   },
   {
     id: 8,
-    img: "https://res.cloudinary.com/dm9sbfva5/image/upload/v1763372465/tradeimg8_owi89e.png",
+    img: "https://ik.imagekit.io/02x2rciof/tradeimg8.png",
     name: { english: "Tractor Trolley", hindi: "ट्रैक्टर ट्रॉली", punjabi: "ਟ੍ਰੈਕਟਰ ਟਰੌਲੀ" },
     points: {
       english: [
